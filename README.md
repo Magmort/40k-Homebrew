@@ -3,20 +3,24 @@
 Règles maison de Warhammer 40,000 pour la campagne **Front de Vespator**, système 500 Worlds.
 Hybride entre la V7 et la V10, remanié pour une activation alternée.
 
-## Contenu du dépôt
+## Organisation du dépôt
 
-| Fichier | Contenu |
+- **`md/`** : la version lisible en ligne. Cliquez sur un fichier, GitHub l'affiche directement.
+  C'est ici qu'on relit, qu'on commente et qu'on propose des corrections.
+- **`docx/`** : les documents Word d'origine, avec la mise en page. C'est la version à imprimer
+  et à emmener sur la table de jeu.
+
+Les deux contiennent le même texte. Le `.docx` fait foi pour la mise en page, le `.md` pour la
+relecture. Toute correction validée doit être reportée dans les deux.
+
+| Document | Contenu |
 | --- | --- |
-| `regles_wh40k_v4.docx` | Règles de base. Version de référence, mise en page. |
-| `regles_wh40k_v4.md` | Mêmes règles en Markdown, lisibles directement sur GitHub. |
-| `VespatorFront_Missions_FR.docx` | Les 6 missions de campagne, avec cartes. |
-| `Theatres_CinqCentsMondes_FR.docx` | Les 9 théâtres et leurs modificateurs de monde. |
-| `AdMech_Abilities_FR.docx` | Faction Adeptus Mechanicus. |
-| `Votann_Abilities_FR.docx` | Faction Leagues of Votann. |
-| Autres `*_FR.docx` | Factions non encore révisées. |
-
-Le `.docx` fait foi pour la mise en page, le `.md` pour la relecture et les discussions.
-Toute modification du `.md` doit être reportée dans le `.docx`, et inversement.
+| `regles_wh40k_v4` | Règles de base. Le document central. |
+| `VespatorFront_Missions_FR` | Les 6 missions de campagne, avec leurs cartes. |
+| `Theatres_CinqCentsMondes_FR` | Les 9 théâtres et leurs modificateurs de monde. |
+| `AdMech_Abilities_FR` | Faction Adeptus Mechanicus. Révisée. |
+| `Votann_Abilities_FR` | Faction Leagues of Votann. Révisée. |
+| `Tau_Abilities_FR` | Faction T'au Empire. Nettoyée, mais pas encore révisée sur le fond. |
 
 ## Structure des règles
 
