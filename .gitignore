@@ -1,0 +1,9 @@
+# Fichiers de verrouillage OpenOffice / LibreOffice
+.~lock.*#
+# Fichiers temporaires Microsoft Office
+~$*
+*.tmp
+# Systeme
+Thumbs.db
+desktop.ini
+.DS_Store
