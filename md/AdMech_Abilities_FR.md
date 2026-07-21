@@ -28,7 +28,7 @@ Au début de chaque tour de bataille, si un modèle PERSONNAGE ADEPTUS MECHANICU
 
 ## Règles de détachement
 
-*Un détachement Adeptus Mechanicus ne contient que des figurines avec le mot-clé ADEPTUS MECHANICUS (sauf AGENT DE L'IMPERIUM et NON-ALIGNE).*
+*Un détachement Adeptus Mechanicus ne contient que des modèles avec le mot-clé ADEPTUS MECHANICUS (sauf AGENT DE L'IMPERIUM et NON-ALIGNE).*
 
   - Tous les détachements AM : capacité Dogmes du Monde-Forge.
 
@@ -141,7 +141,7 @@ AGRIPINAA uniquement.
 
   - Pour les tests d'Ébranlement : ignorez tous les modificateurs.
 
-  - Les modèles avec ce dogme obtiennent [Insensible à la douleur 5+] contre les Blessures mortelles.
+  - Les modèles avec ce dogme obtiennent Insensible à la douleur 5+ contre les Blessures mortelles.
 
 **Trait de SdG : Mantra de Discipline**
 
@@ -307,7 +307,7 @@ Ce Primaire n'a pas de secondaire associé.
 | Supériorité machine | 1 | Phase de Combat, quand une unité SKITARII est sélectionnée pour combattre. +1 en Force jusqu'à la fin de la phase. |
 | Décharge d'élimination | 1 | Phase d'Action (Tir), quand une unité KATAPHRON est sélectionnée pour tirer. Jusqu'à la fin de la phase, les attaques de cette unité contre une cible à mi-portée ou moins gagnent [TOUCHES FATALES]. |
 | Pointe de données | 1 | Phase de Combat, quand un modèle TECH-PRÊTRE ADEPTUS MECHANICUS est sélectionné pour combattre. Sélectionnez 1 unité VÉHICULE ennemie à Portée d'Engagement. Lancez 1D6 : sur 2-5, D3 blessures mortelles ; sur 6, D3+3 blessures mortelles. |
-| Bienveillance de l'Omnimessie | 1 | N'importe quelle phase, un modèle VÉHICULE ADEPTUS MECHANICUS obtient [Insensible à la douleur 4+] contre les blessures mortelles. |
+| Bienveillance de l'Omnimessie | 1 | N'importe quelle phase, un modèle VÉHICULE ADEPTUS MECHANICUS obtient Insensible à la douleur 4+ contre les blessures mortelles. |
 | Tech-Adepte | 1 | Au début de la phase de Commandement OU au début de la phase d'Action, sélectionnez 1 modèle TECH-PRÊTRE. Phase de Commandement : peut utiliser Machine Focus ou Éveiller la Machine une fois de plus. Phase d'Action : peut utiliser Maître des Machines une fois de plus. |
 | Esprit de la Machine Résurgent | 1 | Phase de Commandement, sélectionnez 1 modèle VÉHICULE ADEPTUS MECHANICUS. Jusqu'au début de la prochaine phase de Commandement : ce modèle est considéré comme n'ayant aucun malus provenant de la table des dégâts des véhicules. |
 | Autosermon Data-Beni | 2 | Phase de Commandement, sélectionnez 1 unité ADEPTUS MECHANICUS à 6" d'un TECH-PRÊTRE ami. Choisissez 1 Cantique non encore actif. Jusqu'au début de la prochaine phase de Commandement : cette unité bénéficie aussi de ce Cantique, en plus du Cantique actif. |
@@ -372,8 +372,8 @@ Pour activer la partie Avancée :
 | Phase de Commandement : sélectionnez 1 unité amie \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ ou \<MONDE-FORGE\> KATAPHRON SERVITORS à 6". Jusqu'à la prochaine phase de Commandement, les attaques de mêlée de cette unité gagnent **[TOUCHES FATALES]**. |
 
 | **Avancée : Physiologie Hypercybernétique** |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phase de Commandement : sélectionnez 1 unité amie \<MONDE-FORGE\> KATAPHRON SERVITORS ou \<MONDE-FORGE\> SERVITORS à 6". Jusqu'à la prochaine phase de Commandement, cette unité bénéficie d'[Insensible à la douleur 6+]. |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Phase de Commandement : sélectionnez 1 unité amie \<MONDE-FORGE\> KATAPHRON SERVITORS ou \<MONDE-FORGE\> SERVITORS à 6". Jusqu'à la prochaine phase de Commandement, cette unité bénéficie d'Insensible à la douleur 6+. |
 
 ## Logi
 
@@ -432,7 +432,7 @@ Pour activer la partie Avancée :
 | **2**  | **Bioniques de Maître-Artisan** | Sauvegarde invulnérable de 4+. Chaque attaque allouée à ce SdG subit -1 à la caractéristique de Dégâts (minimum 1).                                                                                                                                          |
 | **3**  | **Test de Terrain en Direct**   | À la sélection de ce Trait : choisissez 1 arme (hors Reliques) équipée par ce SdG. +1 à la Force et +1 aux Dégâts de cette arme.                                                                                                                             |
 | **4**  | **Necromecanicien**             | Chaque utilisation de la capacité Maître des Machines de ce SdG : le modèle réparé regagne jusqu'à 3 Blessures perdues (au lieu de D3).                                                                                                                      |
-| **5**  | **Cartogrammatiste**            | À la sélection de ce Trait : choisissez 1 unité amie \<MONDE-FORGE\> NON-SKITARII INFANTERIE, MARCHEUR ou MONTÉ ; elle obtient [Frappe en Profondeur].                                                                                                     |
+| **5**  | **Cartogrammatiste**            | À la sélection de ce Trait : choisissez 1 unité amie \<MONDE-FORGE\> NON-SKITARII INFANTERIE, MARCHEUR ou MONTÉ ; elle obtient Frappe en Profondeur.                                                                                                         |
 | **6**  | **Rayonnement de Supervision**  | Au début de la phase de Combat : sélectionnez 1 unité amie \<MONDE-FORGE\> NON-SKITARII INFANTERIE, MARCHEUR ou MONTÉ à 9" de ce SdG. Jusqu'au début de la prochaine phase de Combat, chaque attaque de mêlée de cette unité peut relancer le jet de touche. |
 
 ## Traits de SdG : Skitarii

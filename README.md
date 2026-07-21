@@ -16,6 +16,7 @@ relecture. Toute correction validée doit être reportée dans les deux.
 | Document | Contenu |
 | --- | --- |
 | `regles_wh40k_v4` | Règles de base. Le document central. |
+| `Campagne_FrontDeVespator` | Progression de campagne : Ordre de Bataille, expérience, Honneurs de Bataille, Réquisitions, Cicatrices. |
 | `VespatorFront_Missions_FR` | Les 6 missions de campagne, avec leurs cartes. |
 | `Theatres_CinqCentsMondes_FR` | Les 9 théâtres et leurs modificateurs de monde. |
 | `AdMech_Abilities_FR` | Faction Adeptus Mechanicus. Révisée. |

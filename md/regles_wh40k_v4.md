@@ -40,7 +40,7 @@ La phase de Commandement est jouée l'une après l'autre : le joueur ayant le pr
 
 Dès qu'une unité est réduite à la moitié ou moins de son effectif initial, elle effectue immédiatement un test d'Ébranlement (2D6 ≥ Cd).
 
-Les unités composées d'une seule modèle (monstres, véhicules, personnages seuls) n'effectuent jamais de test d'Ébranlement.
+Les unités composées d'un seul modèle (monstres, véhicules, personnages seuls) n'effectuent jamais de test d'Ébranlement.
 
 Une unité qui réussit son test reste stable : elle ne le refait pas, même si elle perd d'autres modèles par la suite.
 
@@ -191,59 +191,30 @@ Mêlée : un modèle ne combat qu'avec une seule arme de mêlée par phase.
 | [ATTAQUES BONUS] | Le porteur peut effectuer des attaques avec cette arme en plus de l'arme choisie pour combattre. Le nombre d'attaques bonus ne peut pas être modifié. |
 | [ANTI - MOT-CLÉ X+] | Un jet pour blesser non modifié égal ou supérieur à X contre une cible ayant le mot-clé correspondant cause une Blessure Critique. |
 | [BLESSURES DÉVASTATRICES] | Une Blessure Critique double la caractéristique de Dégâts de l'arme, à la place des dégâts normaux. |
-| [DANGEREUX] | Après que l'unité a résolu ses attaques, effectuez un test de dangerosité par arme dangereuse employée : 1D6, sur 1 un modèle porteur subit 3 blessures mortelles. Procédure complète : voir Mots-clés et Aptitudes. |
+| [DANGEREUX] | Chaque fois qu'une unité est sélectionnée pour tirer ou combattre, après qu'elle a résolu toutes ses attaques, elle effectue un test de dangerosité pour chaque arme dangereuse dont les cibles ont été sélectionnées. Lancez 1D6 : sur un 1, le test est raté. Résolvez chaque test raté un par un, dans cet ordre : si possible, sélectionnez un modèle de cette unité ayant subi au moins une blessure et équipé d'une ou plusieurs armes dangereuses ; sinon, si possible, un modèle de cette unité hors PERSONNAGE équipé d'une ou plusieurs armes dangereuses ; sinon, un PERSONNAGE de cette unité équipé d'une ou plusieurs armes dangereuses. Le modèle sélectionné subit 3 blessures mortelles, qui doivent lui être infligées lors de la répartition. Si une unité est choisie comme cible d'un tir en état d'alerte durant une charge adverse, ces blessures mortelles sont réparties après la fin du mouvement de charge de l'unité chargée. |
 
-# Mots-clés et Aptitudes
+# Autres Mots-clés
 
-Cette section détaille les mots-clés et aptitudes dont l'effet ne tient pas dans le tableau des Aptitudes d'Arme.
+| **Mot-clé** | **Effet** |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Insensible à la douleur X+ | Chaque fois qu'un modèle doté de cette aptitude subit des dégâts et devrait donc perdre une blessure, y compris une blessure mortelle, lancez 1D6 : si le résultat est supérieur ou égal à X, cette blessure est ignorée et n'est pas perdue. Si un modèle possède plusieurs aptitudes « Insensible à la douleur », vous ne pouvez en utiliser qu'une seule à chaque fois qu'il subit des dégâts. |
+| Objectif Sécurisé          | À la fin de la phase de Commandement, si cette unité se trouve dans une zone d'objectif que vous contrôlez, cette zone reste sous votre contrôle même si vous n'y avez plus aucun modèle, jusqu'à ce que votre adversaire en prenne le contrôle au début ou à la fin d'un tour.                                                                                                                   |
+| Frappe en Profondeur       | Une unité disposant de cette aptitude est placée depuis la réserve à plus de 6" de tout modèle ennemi. Placée à plus de 9", elle agit normalement ; placée entre 6" et 9" d'un modèle ennemi, elle ne peut pas charger ce tour de bataille.                                                                                                                                                       |
+| Infiltrateur               | Une unité disposant de cette aptitude est déployée après les autres unités, n'importe où sur la table, à plus de 9" de tout modèle ennemi et de toute zone de déploiement ennemie.                                                                                                                                                                                                                |
+| Éclaireurs X               | Juste après le déploiement et avant le premier tour, l'unité peut effectuer un mouvement de X" ; elle ne peut pas finir ce mouvement à Portée d'Engagement d'une unité ennemie.                                                                                                                                                                                                                   |
+| Hors de Combat             | À la fin de la bataille, effectuez un test pour chaque unité détruite : lancez 1D6 ; sur un 1, l'unité subit une Cicatrice de Bataille. Le détail figure dans le document Campagne : Front de Vespator.                                                                                                                                                                                           |
 
-## [DANGEREUX]
+# Actions Psychiques
 
-Chaque fois qu'une unité est sélectionnée pour tirer ou combattre, après qu'elle a résolu toutes ses attaques, elle doit effectuer un test de dangerosité pour chaque arme dangereuse dont les cibles ont été sélectionnées lors de la résolution de ces attaques. Pour ce faire, lancez 1D6 : sur un 1, le test est raté. Résolvez chaque test raté un par un, dans cet ordre :
+Une action psychique est une action, effectuée lors de la phase d'Action. Une unité PSYKER peut tenter 1 pouvoir psychique par activation.
 
-  - Si possible, sélectionnez un modèle de cette unité ayant subi au moins une blessure et équipé d'une ou plusieurs armes dangereuses.
+Pour manifester un pouvoir, le PSYKER lance 2D6 : si le résultat est supérieur ou égal à la valeur de manifestation du pouvoir, celui-ci est lancé.
 
-  - Sinon, si possible, sélectionnez un modèle de cette unité, hors PERSONNAGE, équipé d'une ou plusieurs armes dangereuses.
+Lorsque vous ajoutez une unité PSYKER à votre armée, choisissez un domaine de pouvoirs psychiques et lancez 1D6 pour déterminer le pouvoir qu'elle connaît. Un PSYKER connaît 1 pouvoir.
 
-  - Sinon, sélectionnez un PERSONNAGE de cette unité équipé d'une ou plusieurs armes dangereuses.
+Test de Refus : quand un PSYKER ennemi lance un pouvoir psychique, un modèle PSYKER peut tenter un test de Refus pour l'annuler, à la manière d'une Réaction à une Charge. Il lance 2D6 et doit obtenir un résultat supérieur à celui du PSYKER ennemi. Un PSYKER peut tenter 1 test de Refus par round de bataille. Le test de Refus ne consomme pas son action : le PSYKER peut encore effectuer son action, mais ne peut pas tirer jusqu'à la fin du tour.
 
-Le modèle sélectionné subit 3 blessures mortelles ; lors de la répartition, ces blessures doivent lui être infligées.
-
-Si une unité est choisie comme cible d'un tir en état d'alerte durant une charge adverse, les blessures mortelles infligées par les tests de dangerosité sont réparties après la fin du mouvement de charge de l'unité chargée.
-
-## [Insensible à la douleur X+]
-
-Chaque fois qu'un modèle doté de cette aptitude subit des dégâts et devrait donc perdre une blessure, y compris une blessure mortelle, lancez 1D6 : si le résultat est supérieur ou égal à X, cette blessure est ignorée et n'est pas perdue. Si un modèle possède plusieurs aptitudes « Insensible à la douleur », vous ne pouvez en utiliser qu'une seule à chaque fois qu'il subit des dégâts.
-
-## Objectif Sécurisé
-
-À la fin de la phase de Commandement, si cette unité se trouve dans une zone d'objectif que vous contrôlez, cette zone reste sous votre contrôle même si vous n'y avez plus aucun modèle, jusqu'à ce que votre adversaire en prenne le contrôle au début ou à la fin d'un tour.
-
-## Intervention Héroïque
-
-Aptitude propre à certaines unités ; elle n'est pas accessible à toutes les unités et ne figure pas parmi les Réactions à une Charge.
-
-Une unité dotée de cette aptitude, située à 6" ou moins d'une unité prise pour cible d'une charge adverse, peut utiliser son action pour effectuer un Mouvement Normal. Elle doit finir ce mouvement le plus près possible de l'unité ennemie qui charge et ne peut finir à Portée d'Engagement que de cette unité ; si c'est le cas, la charge est annulée.
-
-Cette action est considérée comme une charge, mais ne donne pas le bonus de charge.
-
-## Frappe en Profondeur
-
-Une unité disposant de cette aptitude est placée depuis la réserve à plus de 6" de tout modèle ennemi. Placée à plus de 9", elle agit normalement ; placée entre 6" et 9" d'un modèle ennemi, elle ne peut pas charger ce tour de bataille.
-
-## Infiltrateur
-
-Une unité disposant de cette aptitude est déployée après les autres unités, n'importe où sur la table, à plus de 9" de tout modèle ennemi et de toute zone de déploiement ennemie.
-
-## Éclaireurs X
-
-Juste après le déploiement et avant le premier tour, l'unité peut effectuer un mouvement de X" ; elle ne peut pas finir ce mouvement à Portée d'Engagement d'une unité ennemie.
-
-## Hors de Combat
-
-À la fin de la bataille, effectuez un test pour chaque unité détruite : lancez 1D6 ; sur un 1, l'unité est gravement blessée.
-
-[À COMPLÉTER : tableau des blessures graves]
+Ouverture du Warp : chaque fois qu'un test de Refus ou une action psychique donne un double 1 ou un double 6, le Warp s'ouvre. Le PSYKER, ainsi que toutes les unités à 6" ou moins de lui, alliées comme ennemies, subissent 1D3 blessures mortelles. Sur un double 6, le pouvoir est tout de même lancé.
 
 # Allocation des Blessures et Retrait des Pertes
 
@@ -473,24 +444,24 @@ Toutes les armées doivent être Battle-forged : chaque unité doit appartenir �
 Pour inclure un détachement, vous devez dépenser un nombre de PC égal à son coût. Si votre Seigneur de Guerre fait partie du détachement, vous gagnez un bonus de PC ajouté à votre pool avant la partie.
 
 | **Détachement** | **Coût** | **Bonus si Seigneur de Guerre inclus** |
-| ----------------------------------------------------- | -------- | -------------------------------------------------------- |
-| **Patrouille**                                        | **2 PC** | **+2 PC**                                                |
+| ----------------------------------------------- | -------- | -------------------------------------------------------- |
+| **Patrouille**                                  | **2 PC** | **+2 PC**                                                |
 | ![](media/regles_wh40k_v4/image1.png) |          |                                                          |
-| **Bataillon**                                         | **3 PC** | **+3 PC**                                                |
+| **Bataillon**                                   | **3 PC** | **+3 PC**                                                |
 | ![](media/regles_wh40k_v4/image2.png) |          |                                                          |
-| **Brigade**                                           | **4 PC** | **+4 PC**                                                |
+| **Brigade**                                     | **4 PC** | **+4 PC**                                                |
 | ![](media/regles_wh40k_v4/image3.png) |          |                                                          |
-| **Avant-garde**                                       | **3 PC** | **Aucun**                                                |
+| **Avant-garde**                                 | **3 PC** | **Aucun**                                                |
 | ![](media/regles_wh40k_v4/image4.png) |          |                                                          |
-| **Fer de Lance**                                      | **3 PC** | **Aucun**                                                |
+| **Fer de Lance**                                | **3 PC** | **Aucun**                                                |
 | ![](media/regles_wh40k_v4/image5.png) |          |                                                          |
-| **Éclaireur**                                         | **3 PC** | **Aucun**                                                |
+| **Éclaireur**                                   | **3 PC** | **Aucun**                                                |
 | ![](media/regles_wh40k_v4/image6.png) |          |                                                          |
-| **Super-lourd Auxiliaire**                            | **3 PC** | **Aucun**                                                |
+| **Super-lourd Auxiliaire**                      | **3 PC** | **Aucun**                                                |
 | ![](media/regles_wh40k_v4/image7.png) |          |                                                          |
-| **Réseau de Fortifications**                          | **1 PC** | **+1 PC si faction homogène avec le Seigneur de Guerre** |
+| **Réseau de Fortifications**                    | **1 PC** | **+1 PC si faction homogène avec le Seigneur de Guerre** |
 | ![](media/regles_wh40k_v4/image8.png) |          |                                                          |
-| **Support Auxiliaire**                                | **2 PC** | **Aucun**                                                |
+| **Support Auxiliaire**                          | **2 PC** | **Aucun**                                                |
 | ![](media/regles_wh40k_v4/image9.png) |          |                                                          |
 
 ## Aptitudes de Détachement
