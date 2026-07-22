@@ -1,0 +1,962 @@
+From 7feb1fa6d4fe61610e136894486057c6d2785e81 Mon Sep 17 00:00:00 2001
+From: Magma <magmamagmort19@gmail.com>
+Date: Wed, 22 Jul 2026 16:37:26 +0200
+Subject: [PATCH] Ajout des fiches d'unites Adeptus Custodes (HTML)
+
+31 datasheets Custodes traduites en francais, rendues avec le template Stat Card et groupees par role (QG, Troupes, Transport Attitre, Elites, Attaque Rapide, Volant, Soutien Lourd). Vocabulaire et aptitudes alignes sur les regles maison (Front de Vespator).
+---
+ html/custodes_fiches_fr.html | 942 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 942 insertions(+)
+ create mode 100755 html/custodes_fiches_fr.html
+
+diff --git a/html/custodes_fiches_fr.html b/html/custodes_fiches_fr.html
+new file mode 100755
+index 0000000..7b33677
+--- /dev/null
++++ b/html/custodes_fiches_fr.html
+@@ -0,0 +1,942 @@
++<!DOCTYPE html>
++<html lang="fr">
++<head>
++<meta charset="utf-8">
++<meta name="viewport" content="width=device-width, initial-scale=1">
++<title>Adeptus Custodes — Fiches d'unités (FR)</title>
++<link rel="preconnect" href="https://fonts.googleapis.com">
++<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
++<style>
++  * { margin:0; padding:0; box-sizing:border-box; }
++  body { background:#141210; font-family:'Inter',sans-serif; padding:32px 16px; }
++  .page-head { max-width:807px; margin:0 auto 26px; color:#e9e3da; }
++  .page-head h1 { font-family:'Oswald',sans-serif; font-weight:700; text-transform:uppercase;
++    letter-spacing:1px; font-size:30px; color:#fff; }
++  .page-head p { font-size:13px; color:#9a9187; margin-top:6px; }
++  .deck { display:flex; flex-direction:column; align-items:center; gap:34px; }
++  .card { width:807px; max-width:100%; font-family:'Inter',sans-serif; background:#1c1a19;
++    border:1px solid #000; box-shadow:0 4px 24px rgba(0,0,0,0.4); color:#e9e3da; }
++  .card-head { position:relative; background:linear-gradient(180deg,#5a1a1e,#3d1114);
++    padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
++    border-bottom:3px solid #000; }
++  .card-head .name { font-family:'Oswald',sans-serif; font-weight:700; font-size:26px;
++    letter-spacing:0.5px; text-transform:uppercase; color:#fff; }
++  .card-head .base { font-size:15px; color:#d8c9c9; margin-left:10px; }
++  .card-head .role { font-family:'Oswald',sans-serif; font-size:12px; text-transform:uppercase;
++    letter-spacing:1px; color:#e7b7ba; text-align:right; }
++  .body-grid { display:grid; grid-template-columns:3fr 2fr; gap:0; }
++  .col-left { padding:16px 18px 20px; border-right:1px solid #000; }
++  .col-right { padding:16px 18px 20px; }
++  .statline { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; text-align:center; }
++  .statline .lbl { font-size:12px; font-weight:700; letter-spacing:1px; color:#c9beae; }
++  .statline .val { background:#3a3532; border:1px solid #55504a; border-radius:3px; padding:8px 0;
++    font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; color:#fff; }
++  .invul { display:flex; align-items:center; gap:10px; margin-top:16px; }
++  .invul .circle { width:46px; height:46px; border-radius:50%; background:#2a2624; border:2px solid #7a2a2f;
++    display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif;
++    font-weight:700; font-size:18px; color:#fff; flex-shrink:0; }
++  .invul .txt { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
++    text-transform:uppercase; color:#d8c9c9; }
++  .wtable { margin-top:20px; }
++  .wrow { display:grid; grid-template-columns:16px 1fr 42px 26px 30px 26px 30px 30px; gap:6px;
++    align-items:center; }
++  .whead { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
++    text-transform:uppercase; color:#d8c9c9; border-bottom:1px solid #4a453f; padding-bottom:6px;
++    margin-bottom:8px; }
++  .whead .sub { font-size:11px; color:#9a9187; text-align:right; text-transform:none; }
++  .wdata { padding:6px 0; border-bottom:1px solid #2a2624; }
++  .wdata .dot { width:14px; height:8px; background:#8a8378; border-radius:2px; }
++  .wdata .wn { font-size:13px; color:#f0ebe3; }
++  .wdata .num { text-align:right; font-size:13px; font-weight:600; }
++  .tag { background:#4a453f; color:#d8c9c9; font-size:10px; padding:2px 5px; border-radius:2px;
++    margin-left:4px; }
++  .section-h { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px;
++    text-transform:uppercase; background:#3a3532; padding:6px 10px; margin-bottom:10px; }
++  .ability { margin-bottom:10px; font-size:13px; line-height:1.5; }
++  .ability .al { font-weight:700; color:#fff; }
++  .ability .at { color:#d8c9c9; }
++  .comp-list { margin:0 0 6px; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
++  .wg-list { margin:0; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
++  .wg-sub { margin:4px 0 2px; padding-left:18px; }
++  .wg-sub li { color:inherit; }
++  .pts-table { border:1px solid #4a453f; border-radius:3px; overflow:hidden; }
++  .pts-row { display:flex; align-items:center; justify-content:space-between; background:#2a2624;
++    padding:7px 12px; }
++  .pts-row + .pts-row { border-top:1px solid #4a453f; }
++  .pts-row .m { font-size:13px; }
++  .pts-row .p { background:#8a1f24; color:#fff; font-weight:700; font-size:13px; padding:3px 10px;
++    border-radius:3px; }
++  .note { font-size:12px; color:#c9beae; line-height:1.5; margin-top:4px; }
++  .lead-intro { font-size:13px; color:#d8c9c9; margin-bottom:6px; }
++  .lead-list { margin:0; padding-left:18px; font-size:13px; }
++  .lead-list li { color:#8fb4d8; }
++  .kw-grid { display:grid; grid-template-columns:3fr 2fr; border-top:1px solid #000; }
++  .kw-cell { padding:10px 18px; }
++  .kw-cell:first-child { border-right:1px solid #000; }
++  .kw-cell .k { font-size:12px; font-weight:700; letter-spacing:0.5px; }
++  .kw-cell .v { font-size:12px; color:#9fc6ea; }
++  @media print { body{background:#fff; padding:0;} .card{break-inside:avoid; box-shadow:none;}
++    .page-head{color:#000;} .page-head h1{color:#000;}
++    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
++  @media (max-width:840px){ .card{width:100%;} }
++</style>
++</head>
++<body>
++<div class="page-head">
++  <h1>Adeptus Custodes — Fiches d'unités</h1>
++  <p>Version française. Profils de jeu (Warhammer 40 000, 10ᵉ édition). Données : Wahapedia. Warhammer 40 000 © Games Workshop — usage personnel.</p>
++</div>
++<div class="deck" id="deck"></div>
++
++<script>
++// M=Mouvement, E=Endurance, Svg=Sauvegarde, PV=Points de Vie, Cd=Commandement, CO=Contrôle d'Objectif
++const STAT_LABELS = ['M','E','Svg','PV','Cd','CO'];
++
++const UNITS = [
++  {
++    name:"Aleya", base:"⌀32mm", role:"QG",
++    stats:['6"','3','3+','4','6+','1'], inv:'5+',
++    ranged:[],
++    melee:[ {n:"Somnus", t:"anti-psyker 5+, blessures dévastatrices", r:"Mêlée", a:"4", sk:"2+", s:"6", ap:"-3", d:"3"} ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Insensible à la Douleur 5+, Meneur, Éclaireurs 6\""},
++      {l:"Perception tactique", t:"Tant que ce modèle fait partie d'une unité, ses modèles ont l'aptitude Attaque en premier."},
++      {l:"Esprit tenace", t:"Tant que ce modèle fait partie d'une unité, chaque attaque de ses modèles gagne +1 pour toucher si l'unité est sous son effectif de départ, et aussi +1 pour blesser si elle est à demi-effectif ou moins."},
++      {l:"Faction", t:"Filles de l'Abîme"}
++    ],
++    comp:["1 Aleya, Héros emblématique"],
++    equip:"Ce modèle est équipé de : Somnus.",
++    pts:[["1 modèle","65"]],
++    leader:["Prosecutors","Vigilators","Witchseekers"],
++    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, IMPERIUM, ANATHEMA PSYKANA, ALEYA",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Blade Champion", base:"⌀40mm", role:"QG",
++    stats:['6"','6','2+','6','6+','2'], inv:'4+',
++    ranged:[],
++    melee:[
++      {n:"Épées du trésor : Behemor", t:"précision", r:"Mêlée", a:"6", sk:"2+", s:"7", ap:"-2", d:"2"},
++      {n:"Épées du trésor : Hurricanus", t:"touches soutenues 1", r:"Mêlée", a:"9", sk:"2+", s:"5", ap:"-1", d:"1"},
++      {n:"Épées du trésor : Victus", t:"blessures dévastatrices", r:"Mêlée", a:"5", sk:"2+", s:"6", ap:"-3", d:"3"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Assaut Rapide", t:"Tant que ce modèle fait partie d'une unité, vous pouvez relancer ses jets de charge."},
++      {l:"Inspiration martiale", t:"Une fois par bataille, lors de son activation, l'unité de ce modèle peut déclarer une charge lors d'un tour où elle a fait une Avance."}
++    ],
++    comp:["1 Blade Champion"],
++    equip:"Ce modèle est équipé de : épées du trésor.",
++    pts:[["1 modèle","120"]],
++    leader:["Custodian Guard","Custodian Wardens"],
++    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, BLADE CHAMPION",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Knight-centura", base:"⌀32mm", role:"QG",
++    stats:['6"','3','3+','4','6+','1'], inv:'5+',
++    ranged:[
++      {n:"Bolter de maître", t:"tir rapide 1", r:'24"', a:"1", sk:"2+", s:"4", ap:"0", d:"2"},
++      {n:"Lance-flammes de répurgatrice", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
++    ],
++    melee:[
++      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"2+", s:"3", ap:"0", d:"1"},
++      {n:"Espadon d'exécutrice", t:"anti-psyker 5+, blessures dévastatrices", r:"Mêlée", a:"3", sk:"2+", s:"5", ap:"-2", d:"2"}
++    ],
++    wargear:[{head:"La espadon d'exécutrice peut être remplacée par l'un des éléments suivants :", items:["1 bolter de maître et 1 arme de corps à corps","1 lance-flammes de répurgatrice et 1 arme de corps à corps"]}],
++    abilities:[
++      {l:"Aptitudes de base", t:"Meneur, Éclaireurs 6\""},
++      {l:"Instinct de Répurgatrice", t:"Tant que ce modèle fait partie d'une unité, +2\" au Mouvement de ses modèles et +2 à ses jets d'Avance et de Charge."},
++      {l:"Faction", t:"Filles de l'Abîme"},
++      {l:"Acculer la proie", t:"Toute unité ennemie (hors MONSTRES/VÉHICULES) à portée d'engagement qui effectue un Désengagement passe un test de Fuite désespérée ; -1 à ces tests si elle est ébranlée."}
++    ],
++    comp:["1 Knight-Centura"],
++    equip:"Ce modèle est équipé de : espadon d'exécutrice.",
++    pts:[["1 modèle","55"]],
++    leader:["Prosecutors","Vigilators","Witchseekers"],
++    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, ANATHEMA PSYKANA, KNIGHT-CENTURA",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Shield-captain", base:"⌀40mm", role:"QG",
++    stats:['6"','6','2+','6','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Hache de Castellan", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lance de gardien", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lance pyrithite", t:"fusion 2", r:'12"', a:"1", sk:"2+", s:"9", ap:"-4", d:"D6"},
++      {n:"Lame de sentinelle", t:"pistolet d'assaut", r:'12"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Hache de Castellan", t:"", r:"Mêlée", a:"6", sk:"2+", s:"9", ap:"-1", d:"3"},
++      {n:"Lance de gardien", t:"", r:"Mêlée", a:"7", sk:"2+", s:"7", ap:"-2", d:"2"},
++      {n:"Lance pyrithite", t:"", r:"Mêlée", a:"7", sk:"2+", s:"7", ap:"-2", d:"2"},
++      {n:"Lame de sentinelle", t:"", r:"Mêlée", a:"7", sk:"2+", s:"6", ap:"-2", d:"1"}
++    ],
++    wargear:[{head:"La lance de gardien peut être remplacée par l'un des éléments suivants :", items:["1 hache de Castellan","1 lame de sentinelle","1 lame de sentinelle et 1 bouclier praesidium","1 lance pyrithite et 1 bouclier praesidium"]}],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Maîtrise des Ka'tah", t:"Une fois par bataille, quand l'unité est choisie pour combattre, les deux Postures de Ka'tah sont actives (au lieu d'une) jusqu'à la fin de ce combat."},
++      {l:"Maîtrise stratégique", t:"Une fois par round de bataille, désignez un modèle doté de cette aptitude ; son unité peut être ciblée par un Stratagème dont le coût est réduit de 1 PC."},
++      {l:"Bouclier praesidium (équip.)", t:"Ajoutez 1 aux Points de Vie du porteur."}
++    ],
++    comp:["1 Shield-Captain"],
++    equip:"Ce modèle est équipé de : lance de gardien.",
++    pts:[["1 modèle","120"]],
++    leader:["Custodian Guard","Custodian Wardens"],
++    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, SHIELD-CAPTAIN",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Shield-captain en armure Terminator Allarus", base:"⌀40mm", role:"QG",
++    stats:['5"','7','2+','7','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Lance-grenades balistus", t:"déflagration", r:'18"', a:"D6", sk:"2+", s:"4", ap:"-1", d:"1"},
++      {n:"Hache de Castellan", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lance de gardien", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Hache de Castellan", t:"", r:"Mêlée", a:"6", sk:"2+", s:"9", ap:"-1", d:"3"},
++      {n:"Lance de gardien", t:"", r:"Mêlée", a:"7", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:["La lance de gardien peut être remplacée par 1 hache de Castellan."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Auramite et Adamantine", t:"Une fois par bataille, au début d'une phase, jusqu'à la fin de celle-ci, chaque attaque allouée à ce modèle voit ses Dégâts ramenés à 1."},
++      {l:"Maîtrise stratégique", t:"Une fois par round de bataille, désignez un modèle doté de cette aptitude ; son unité peut être ciblée par un Stratagème dont le coût est réduit de 1 PC."}
++    ],
++    comp:["1 Shield-Captain en armure Terminator Allarus"],
++    equip:"Ce modèle est équipé de : lance-grenades balistus ; lance de gardien.",
++    pts:[["1 modèle","130"]],
++    leader:["Allarus Custodians"],
++    keywords:"INFANTERIE, PERSONNAGE, TERMINATOR, IMPERIUM, SHIELD-CAPTAIN",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Shield-captain sur jetbike Dawneagle", base:"⌀75 x 42mm", role:"QG",
++    stats:['12"','7','2+','8','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Bolter Hurricane Vertus", t:"tir rapide 3, jumelé", r:'18"', a:"3", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lanceur à salves", t:"jumelé", r:'24"', a:"1", sk:"2+", s:"10", ap:"-3", d:"D6+1"}
++    ],
++    melee:[
++      {n:"Lance d'intercepteur", t:"lance", r:"Mêlée", a:"6", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:["Le lanceur à salves peut être remplacé par 1 bolter Hurricane Vertus."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Meneur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Percée et Balayage", t:"Une fois par bataille, à la fin de la phase de Combat où l'unité a combattu : elle peut effectuer un Désengagement (si engagée) ou un mouvement Normal (sinon)."},
++      {l:"Maîtrise stratégique", t:"Une fois par round de bataille, désignez un modèle doté de cette aptitude ; son unité peut être ciblée par un Stratagème dont le coût est réduit de 1 PC."}
++    ],
++    comp:["1 Shield-Captain sur jetbike Dawneagle"],
++    equip:"Ce modèle est équipé de : lanceur à salves ; lance d'intercepteur.",
++    pts:[["1 modèle","150"]],
++    leader:["Vertus Praetors"],
++    keywords:"MONTÉ, PERSONNAGE, VOL, IMPERIUM, DAWNEAGLE JETBIKE, SHIELD-CAPTAIN",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Trajann Valoris", base:"⌀40mm", role:"QG",
++    stats:['6"','6','2+','7','5+','2'], inv:'4+',
++    ranged:[
++      {n:"Cri de l'Aigle", t:"assaut", r:'24"', a:"2", sk:"2+", s:"5", ap:"-2", d:"3"}
++    ],
++    melee:[
++      {n:"Hache du Gardien", t:"", r:"Mêlée", a:"6", sk:"2+", s:"10", ap:"-2", d:"3"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur, Insensible à la Douleur 5+, Meneur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Capitaine-général", t:"Tant que ce modèle fait partie d'une unité, ses modèles peuvent ignorer tout ou partie des modificateurs à la CT/CC et au jet pour toucher de leurs attaques."},
++      {l:"Joug de l'Instant", t:"Une fois par bataille, au début de la phase de Combat, choisissez jusqu'à la fin de la phase : la Hache du Gardien a 12 Attaques ; ou ce modèle a une sauvegarde invulnérable de 2+."},
++      {l:"Commandant suprême", t:"Si ce modèle est dans votre armée, il doit être votre Seigneur de guerre."}
++    ],
++    comp:["1 Trajann Valoris, Héros emblématique"],
++    equip:"Ce modèle est équipé de : Hache du Gardien.",
++    pts:[["1 modèle","140"]],
++    leader:["Custodian Guard","Custodian Wardens"],
++    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, IMPERIUM, TRAJANN VALORIS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Valerian", base:"⌀40mm", role:"QG",
++    stats:['6"','6','2+','6','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Gnosis", t:"assaut", r:'24"', a:"3", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Gnosis", t:"", r:"Mêlée", a:"7", sk:"2+", s:"8", ap:"-3", d:"2"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur, Insensible à la Douleur 6+, Meneur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Lauriers dorés", t:"Tant que ce modèle fait partie d'une unité, chaque attaque de mêlée la ciblant voit sa Pénétration d'Armure aggravée de 1."},
++      {l:"Héros de la Porte du Lion", t:"Une fois par bataille, après un jet pour toucher, pour blesser ou de sauvegarde de ce modèle, changez-en le résultat en un 6 non modifié."}
++    ],
++    comp:["1 Valerian, Héros emblématique"],
++    equip:"Ce modèle est équipé de : Gnosis.",
++    pts:[["1 modèle","110"]],
++    leader:["Custodian Guard","Custodian Wardens"],
++    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, IMPERIUM, SHIELD-CAPTAIN, VALERIAN",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Custodian Guard", base:"⌀40mm", role:"Troupes",
++    stats:['6"','6','2+','3','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Lance de gardien", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lame de sentinelle", t:"pistolet d'assaut", r:'12"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Lance de gardien", t:"", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"},
++      {n:"Misericordia", t:"", r:"Mêlée", a:"5", sk:"2+", s:"5", ap:"-2", d:"1"},
++      {n:"Lame de sentinelle", t:"", r:"Mêlée", a:"5", sk:"2+", s:"6", ap:"-2", d:"1"}
++    ],
++    wargear:["N'importe quel nombre de modèles peuvent remplacer leur lance de gardien par 1 lame de sentinelle et 1 bouclier praesidium.",{head:"1 modèle peut remplacer sa lance de gardien par l'un des éléments suivants :", items:["1 vexilla et 1 misericordia","1 vexilla, 1 misericordia et 1 bouclier praesidium"]}],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Monter la garde", t:"Chaque attaque de cette unité permet de relancer un jet pour blesser de 1 ; à portée d'un objectif que vous contrôlez, relancez tout le jet pour blesser à la place."},
++      {l:"Orage de Sentinelle", t:"Une fois par bataille, lors de son action de Tir, après avoir tiré, cette unité peut tirer une seconde fois."},
++      {l:"Bouclier praesidium (équip.)", t:"Ajoutez 1 aux Points de Vie du porteur."},
++      {l:"Vexilla (équip.)", t:"Ajoutez 1 au Contrôle d'Objectif des modèles de l'unité du porteur."}
++    ],
++    comp:["4-5 Custodian Guard"],
++    equip:"Chaque modèle est équipé de : lance de gardien.",
++    pts:[["4 modèles","160"],["5 modèles","200"]],
++    leader:null,
++    keywords:"INFANTERIE, LIGNE DE BATAILLE, IMPERIUM, CUSTODIAN GUARD",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Prosecutors", base:"⌀32mm", role:"Troupes",
++    stats:['6"','3','3+','1','6+','2'], inv:'',
++    ranged:[
++      {n:"Bolter", t:"tir rapide 1", r:'24"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"}
++    ],
++    melee:[
++      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"3+", s:"3", ap:"0", d:"1"}
++    ],
++    abilities:[
++      {l:"Faction", t:"Filles de l'Abîme"},
++      {l:"Pureté de l'exécution", t:"Chaque attaque à distance de cette unité ciblant une unité PSYKER a les aptitudes [PRÉCISION] et [BLESSURES DÉVASTATRICES]."}
++    ],
++    comp:["1 Prosecutor Sister Superior","3-9 Prosecutors"],
++    equip:"Chaque modèle est équipé de : bolter ; arme de corps à corps.",
++    pts:[["4 modèles","40"],["5 modèles","50"],["9 modèles","75"],["10 modèles","85"]],
++    leader:null,
++    keywords:"INFANTERIE, IMPERIUM, ANATHEMA PSYKANA, PROSECUTORS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Custodian Guard with Adrasite and Pyrithite Spears", base:"⌀40mm", role:"Troupes",
++    stats:['6"','6','2+','3','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Lance adrasite", t:"", r:'18"', a:"1", sk:"2+", s:"5", ap:"-2", d:"3"},
++      {n:"Lance pyrithite", t:"fusion 2", r:'12"', a:"1", sk:"2+", s:"9", ap:"-4", d:"D6"}
++    ],
++    melee:[
++      {n:"Lance adrasite", t:"", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"},
++      {n:"Lance pyrithite", t:"", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:["N'importe quel nombre de modèles peuvent remplacer leur lance adrasite par 1 lance pyrithite."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Monter la garde", t:"Chaque attaque de cette unité permet de relancer un jet pour blesser de 1 ; à portée d'un objectif que vous contrôlez, relancez tout le jet pour blesser à la place."},
++      {l:"Nul ennemi ne tiendra", t:"Une fois par bataille, au début de son action de Tir, jusqu'à la fin de cette action, les armes à distance de cette unité ont [TOUCHES FATALES] et [IGNORE LE COUVERT]."},
++      {l:"Custodian Guard", t:"Si un modèle ADEPTUS CUSTODES de votre armée doté de Meneur peut être attaché à une unité de CUSTODIAN GUARD, il peut l'être à cette unité à la place."}
++    ],
++    comp:["5 Custodian Guard with Adrasite and Pyrithite Spears"],
++    equip:"Chaque modèle est équipé de : lance adrasite.",
++    pts:[["5 modèles","250"]],
++    leader:null,
++    keywords:"INFANTERIE, IMPERIUM, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Sagittarum Custodians", base:"⌀40mm", role:"Troupes",
++    stats:['6"','6','2+','3','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Caliver bolt Adrastus", t:"touches soutenues 1", r:'36"', a:"3", sk:"2+", s:"5", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Misericordia", t:"", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"-2", d:"1"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Salves de saturation", t:"Après le tir de cette unité, désignez une unité ennemie (hors MONSTRES/VÉHICULES) touchée par une ou plusieurs de ces attaques : elle est supprimée jusqu'à la fin de sa prochaine activation. Tant qu'une unité est supprimée, chacune de ses attaques subit -1 au jet pour toucher."},
++      {l:"Rayons de désintégration", t:"Une fois par bataille, au début de son action de Tir, jusqu'à la fin de cette action, les armes à distance de cette unité ont [BLESSURES DÉVASTATRICES]."},
++      {l:"Custodian Guard", t:"Si un modèle ADEPTUS CUSTODES de votre armée doté de Meneur peut être attaché à une unité de CUSTODIAN GUARD, il peut l'être à cette unité à la place."}
++    ],
++    comp:["5 Sagittarum Custodians"],
++    equip:"Chaque modèle est équipé de : caliver bolt Adrastus ; misericordia.",
++    pts:[["5 modèles","225"]],
++    leader:null,
++    keywords:"INFANTERIE, IMPERIUM, SAGITTARUM CUSTODIANS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Anathema Psykana Rhino", base:"⌀Utiliser la modèle", role:"Transport Attitré",
++    stats:['12"','9','3+','10','6+','2'], inv:'',
++    ranged:[
++      {n:"Missile traqueur", t:"tir unique", r:'48"', a:"1", sk:"2+", s:"14", ap:"-3", d:"D6"},
++      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
++    ],
++    melee:[
++      {n:"Chenilles blindées", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
++    ],
++    wargear:["Ce modèle peut être équipé de 1 missile traqueur."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de tir 2"},
++      {l:"Faction", t:"Filles de l'Abîme"},
++      {l:"Auto-réparation", t:"Au début de la phase de Commandement, ce modèle récupère 1 Point de Vie perdu."},
++      {l:"Tir Unique", t:"Le porteur ne peut tirer avec cette arme qu'une fois par bataille."}
++    ],
++    comp:["1 Anathema Psykana Rhino"],
++    equip:"Ce modèle est équipé de : bolter Storm ; chenilles blindées.",
++    pts:[["1 modèle","75"]],
++    leader:null,
++    transport:"Capacité de transport de 12 modèles d'INFANTERIE ANATHEMA PSYKANA.",
++    keywords:"VÉHICULE, TRANSPORT, TRANSPORT ATTITRÉ, FUMÉE, IMPERIUM, ANATHEMA PSYKANA, RHINO",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Coronus Grav-carrier", base:"⌀Utiliser la modèle", role:"Transport Attitré",
++    stats:['12"','12','2+','16','6+','5'], inv:'5+',
++    ranged:[
++      {n:"Canon à embrasement Arachnus jumelé", t:"blessures dévastatrices, jumelé", r:'24"', a:"8", sk:"2+", s:"5", ap:"-1", d:"1"},
++      {n:"Canon bolt Lastrum jumelé", t:"touches soutenues 1", r:'36"', a:"3", sk:"2+", s:"6", ap:"-1", d:"1"}
++    ],
++    melee:[
++      {n:"Coque blindée", t:"", r:"Mêlée", a:"6", sk:"4+", s:"8", ap:"0", d:"1"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D6"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Appui-feu", t:"Après le tir de ce modèle, désignez une unité ennemie touchée. Jusqu'à la fin du tour, chaque attaque d'un modèle ami ayant débarqué de ce TRANSPORT ce tour-ci et ciblant cette unité permet de relancer le jet pour blesser."},
++      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
++    ],
++    comp:["1 Coronus Grav-carrier"],
++    equip:"Ce modèle est équipé de : canon à embrasement Arachnus jumelé ; canon bolt Lastrum jumelé ; coque blindée.",
++    pts:[["1 modèle","200"]],
++    leader:null,
++    transport:"Capacité de transport de 8 modèles d'INFANTERIE ADEPTUS CUSTODES.",
++    keywords:"VÉHICULE, TRANSPORT, VOL, IMPERIUM, CORONUS GRAV-CARRIER",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Allarus Custodians", base:"⌀40mm", role:"Élites",
++    stats:['5"','7','2+','4','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Lance-grenades balistus", t:"déflagration", r:'18"', a:"D6", sk:"2+", s:"4", ap:"-1", d:"1"},
++      {n:"Hache de Castellan", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lance de gardien", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Hache de Castellan", t:"", r:"Mêlée", a:"4", sk:"2+", s:"9", ap:"-1", d:"3"},
++      {n:"Lance de gardien", t:"", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"},
++      {n:"Misericordia", t:"", r:"Mêlée", a:"5", sk:"2+", s:"5", ap:"-2", d:"1"}
++    ],
++    wargear:["N'importe quel nombre de modèles peuvent remplacer leur lance de gardien par 1 hache de Castellan.","1 modèle peut remplacer sa lance de gardien par 1 vexilla et 1 misericordia."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Tueurs de tyrans", t:"Chaque attaque de cette unité ciblant une unité PERSONNAGE, MONSTRE ou VÉHICULE permet de relancer le jet pour blesser."},
++      {l:"D'une Lueur Dorée", t:"Une fois par bataille, à la fin du tour, si elle n'est pas engagée, cette unité peut quitter le champ de bataille pour rejoindre les Réserves stratégiques."},
++      {l:"Vexilla (équip.)", t:"Ajoutez 1 au Contrôle d'Objectif des modèles de l'unité du porteur."}
++    ],
++    comp:["2-6 Allarus Custodians"],
++    equip:"Chaque modèle est équipé de : lance-grenades balistus ; lance de gardien.",
++    pts:[["2 modèles","110"],["3 modèles","165"],["5 modèles","275"],["6 modèles","330"]],
++    leader:null,
++    keywords:"INFANTERIE, TERMINATOR, IMPERIUM, ALLARUS CUSTODIANS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Custodian Wardens", base:"⌀40mm", role:"Élites",
++    stats:['6"','6','2+','3','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Hache de Castellan", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"},
++      {n:"Lance de gardien", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Hache de Castellan", t:"", r:"Mêlée", a:"4", sk:"2+", s:"9", ap:"-1", d:"3"},
++      {n:"Lance de gardien", t:"", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:["N'importe quel nombre de modèles peuvent remplacer leur lance de gardien par 1 hache de Castellan.","1 modèle peut être équipé de 1 vexilla."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Volonté résolue", t:"Tant qu'un PERSONNAGE mène cette unité, chaque attaque la ciblant dont la Force dépasse son Endurance subit -1 au jet pour blesser."},
++      {l:"Forteresse vivante", t:"Une fois par bataille, au début d'une phase, jusqu'à la fin de celle-ci, les modèles de cette unité ont Insensible à la Douleur 4+."},
++      {l:"Vexilla (équip.)", t:"Ajoutez 1 au Contrôle d'Objectif des modèles de l'unité du porteur."}
++    ],
++    comp:["4-5 Custodian Wardens"],
++    equip:"Chaque modèle est équipé de : lance de gardien.",
++    pts:[["4 modèles","210"],["5 modèles","260"]],
++    leader:null,
++    keywords:"INFANTERIE, IMPERIUM, CUSTODIAN WARDENS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Venerable Contemptor Dreadnought", base:"⌀60mm", role:"Élites",
++    stats:['6"','9','2+','10','6+','3'], inv:'5+',
++    ranged:[
++      {n:"Combi-bolter", t:"tir rapide 2", r:'24"', a:"2", sk:"2+", s:"4", ap:"0", d:"1"},
++      {n:"Canon d'assaut modèle Kheres", t:"blessures dévastatrices", r:'24"', a:"6", sk:"2+", s:"7", ap:"-1", d:"1"},
++      {n:"Multifuseur", t:"fusion 2", r:'18"', a:"2", sk:"2+", s:"9", ap:"-4", d:"D6"}
++    ],
++    melee:[
++      {n:"Arme de mêlée de Contemptor", t:"", r:"Mêlée", a:"5", sk:"2+", s:"12", ap:"-2", d:"3"}
++    ],
++    wargear:["Le multifuseur peut être remplacé par 1 canon d'assaut modèle Kheres."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Ancien inflexible", t:"La première fois que ce modèle est détruit, retirez-le sans résoudre Destruction Néfaste. À la fin de la phase, lancez 1D6 : sur 2+, remettez-le en jeu au plus près de son point de destruction, hors de portée d'engagement ennemie, avec D6 PV restants."}
++    ],
++    comp:["1 Venerable Contemptor Dreadnought"],
++    equip:"Ce modèle est équipé de : combi-bolter ; multifuseur ; arme de combat Contemptor.",
++    pts:[["1 modèle","170"]],
++    leader:null,
++    keywords:"VÉHICULE, MARCHEUR, IMPERIUM, VENERABLE CONTEMPTOR DREADNOUGHT",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Vigilators", base:"⌀32mm", role:"Élites",
++    stats:['6"','3','3+','1','6+','1'], inv:'',
++    ranged:[],
++    melee:[
++      {n:"Espadon d'exécutrice", t:"anti-psyker 5+, blessures dévastatrices", r:"Mêlée", a:"2", sk:"3+", s:"5", ap:"-2", d:"2"}
++    ],
++    abilities:[
++      {l:"Faction", t:"Filles de l'Abîme"},
++      {l:"Parade Adroite", t:"Chaque attaque de mêlée ciblant cette unité subit -1 au jet pour toucher."}
++    ],
++    comp:["1 Vigilator Sister Superior","3-9 Vigilators"],
++    equip:"Chaque modèle est équipé de : espadon d'exécutrice.",
++    pts:[["4 modèles","45"],["5 modèles","55"],["9 modèles","90"],["10 modèles","100"]],
++    leader:null,
++    keywords:"INFANTERIE, IMPERIUM, ANATHEMA PSYKANA, VIGILATORS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Aquilon Custodians", base:"⌀50mm", role:"Élites",
++    stats:['5"','7','2+','4','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Pique-de-feu Infernus", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"1"},
++      {n:"Bolter Storm Lastrum", t:"tir rapide 2", r:'24"', a:"2", sk:"2+", s:"5", ap:"-1", d:"1"},
++      {n:"Destructeur adrathique jumelé", t:"jumelé", r:'18"', a:"1", sk:"2+", s:"6", ap:"-2", d:"3"}
++    ],
++    melee:[
++      {n:"Gantelet énergétique solerite", t:"", r:"Mêlée", a:"5", sk:"2+", s:"8", ap:"-2", d:"2"},
++      {n:"Serre énergétique solerite", t:"", r:"Mêlée", a:"7", sk:"2+", s:"7", ap:"-2", d:"1"}
++    ],
++    wargear:[{head:"N'importe quel nombre de modèles peuvent remplacer leur bolter Storm Lastrum par l'un des éléments suivants :", items:["1 pique-de-feu Infernus","1 destructeur adrathique jumelé"]},"N'importe quel nombre de modèles peuvent remplacer leur gantelet énergétique solerite par 1 serre énergétique solerite."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Infanterie lourde d'assaut", t:"Chaque attaque à distance de cette unité ciblant la cible éligible la plus proche permet de relancer un jet pour blesser de 1."},
++      {l:"D'une Lueur Dorée", t:"Une fois par bataille, à la fin du tour, si elle n'est pas engagée, cette unité peut quitter le champ de bataille pour rejoindre les Réserves stratégiques."},
++      {l:"Lions de l'Empereur", t:"Si un modèle de votre armée doté de Meneur peut être attaché à une unité d'ALLARUS CUSTODIANS, il peut l'être à cette unité à la place."}
++    ],
++    comp:["3-6 Aquilon Custodians"],
++    equip:"Chaque modèle est équipé de : bolter Storm Lastrum ; gantelet énergétique solerite.",
++    pts:[["3 modèles","195"],["6 modèles","390"]],
++    leader:null,
++    keywords:"INFANTERIE, TERMINATOR, IMPERIUM, AQUILON CUSTODIANS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Contemptor-Achillus Dreadnought", base:"⌀60mm", role:"Élites",
++    stats:['6"','9','2+','10','6+','3'], inv:'5+',
++    ranged:[
++      {n:"Lance-terreur Achillus", t:"", r:'12"', a:"1", sk:"2+", s:"9", ap:"-2", d:"3"},
++      {n:"Incinérateur Infernus", t:"torrent, ignore le couvert", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"1"},
++      {n:"Bolter Storm Lastrum", t:"tir rapide 2", r:'24"', a:"2", sk:"2+", s:"5", ap:"-1", d:"1"},
++      {n:"Destructeur adrathique jumelé", t:"jumelé", r:'18"', a:"1", sk:"2+", s:"6", ap:"-2", d:"3"}
++    ],
++    melee:[
++      {n:"Lance-terreur Achillus", t:"lance", r:"Mêlée", a:"5", sk:"2+", s:"12", ap:"-2", d:"D6+1"}
++    ],
++    wargear:[{head:"Les 2 bolters Storm Lastrum peuvent être remplacés par l'un des éléments suivants :", items:["2 incinérateurs Infernus","2 destructeurs adrathiques jumelés","1 bolter Storm Lastrum et 1 incinérateur Infernus","1 bolter Storm Lastrum et 1 destructeur adrathique jumelé","1 incinérateur Infernus et 1 destructeur adrathique jumelé"]}],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Ennemi redouté", t:"Chaque fois que ce modèle est choisi pour combattre, désignez une unité ennemie à portée d'engagement et lancez 1D6 (+2 s'il a chargé ce tour-ci) : sur 4-5, elle subit D3 blessures mortelles ; sur 6+, 3 blessures mortelles."}
++    ],
++    comp:["1 Contemptor-Achillus Dreadnought"],
++    equip:"Ce modèle est équipé de : 2 bolters Storm Lastrum ; lance-terreur Achillus.",
++    pts:[["1 modèle","155"]],
++    leader:null,
++    keywords:"VÉHICULE, MARCHEUR, IMPERIUM, CONTEMPTOR-ACHILLUS DREADNOUGHT",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Contemptor-Galatus Dreadnought", base:"⌀60mm", role:"Élites",
++    stats:['6"','9','2+','10','6+','3'], inv:'4+',
++    ranged:[
++      {n:"Lame-de-guerre Galatus", t:"ignore le couvert, torrent, jumelé", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"1"}
++    ],
++    melee:[
++      {n:"Lame-de-guerre Galatus", t:"", r:"Mêlée", a:"8", sk:"2+", s:"8", ap:"-2", d:"3"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Bouclier Galatus", t:"Chaque attaque de mêlée ciblant ce modèle subit -1 au jet pour blesser."}
++    ],
++    comp:["1 Contemptor-Galatus Dreadnought"],
++    equip:"Ce modèle est équipé de : lame-de-guerre Galatus.",
++    pts:[["1 modèle","165"]],
++    leader:null,
++    keywords:"VÉHICULE, MARCHEUR, IMPERIUM, CONTEMPTOR-GALATUS DREADNOUGHT",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Vertus Praetors", base:"⌀75 x 42mm", role:"Attaque Rapide",
++    stats:['12"','7','2+','5','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Lanceur à salves", t:"jumelé", r:'24"', a:"1", sk:"2+", s:"10", ap:"-3", d:"D6+1"},
++      {n:"Bolter Hurricane Vertus", t:"tir rapide 3, jumelé", r:'18"', a:"3", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Lance d'intercepteur", t:"lance", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:["N'importe quel nombre de modèles peuvent remplacer leur lanceur à salves par 1 bolter Hurricane Vertus."],
++    abilities:[
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Turbo-boost", t:"Chaque fois que cette unité effectue une Avance, ne lancez pas de dé : ajoutez 6\" au Mouvement de ses modèles jusqu'à la fin de la phase."},
++      {l:"Exécution de Vif-argent", t:"Une fois par bataille, après un mouvement Normal ou une Avance, désignez une unité ennemie (hors MONSTRE/VÉHICULE) survolée pendant ce mouvement, puis lancez 1D6 par modèle de l'unité : pour chaque 2+, l'unité ennemie subit 2 blessures mortelles."}
++    ],
++    comp:["2-3 Vertus Praetors"],
++    equip:"Chaque modèle est équipé de : lanceur à salves ; lance d'intercepteur.",
++    pts:[["2 modèles","150"],["3 modèles","225"]],
++    leader:null,
++    keywords:"MONTÉ, VOL, IMPERIUM, VERTUS PRAETORS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Witchseekers", base:"⌀32mm", role:"Attaque Rapide",
++    stats:['6"','3','3+','1','6+','1'], inv:'',
++    ranged:[
++      {n:"Lance-flammes de répurgatrice", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
++    ],
++    melee:[
++      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"3+", s:"3", ap:"0", d:"1"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Éclaireurs 6\""},
++      {l:"Faction", t:"Filles de l'Abîme"},
++      {l:"Flammes sanctifiées", t:"Après le tir de cette unité, désignez une unité ennemie touchée par une ou plusieurs de ces attaques : elle passe un test d'Ébranlement."}
++    ],
++    comp:["1 Witchseeker Sister Superior","3-9 Witchseekers"],
++    equip:"Chaque modèle est équipé de : lance-flammes de répurgatrice ; arme de corps à corps.",
++    pts:[["4 modèles","45"],["5 modèles","55"],["9 modèles","90"],["10 modèles","100"]],
++    leader:null,
++    keywords:"INFANTERIE, IMPERIUM, ANATHEMA PSYKANA, WITCHSEEKERS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Agamatus Custodians", base:"⌀60mm (socle volant)", role:"Attaque Rapide",
++    stats:['12"','6','2+','4','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Dévastateur adrathique", t:"", r:'18"', a:"1", sk:"2+", s:"7", ap:"-2", d:"3"},
++      {n:"Canon bolt Lastrum", t:"touches soutenues 1", r:'36"', a:"3", sk:"2+", s:"6", ap:"-1", d:"1"},
++      {n:"Las-pulsar jumelé", t:"jumelé", r:'24"', a:"2", sk:"2+", s:"9", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Lance d'intercepteur", t:"lance", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:[{head:"N'importe quel nombre de modèles peuvent remplacer leur canon bolt Lastrum par l'un des éléments suivants :", items:["1 dévastateur adrathique","1 las-pulsar jumelé"]}],
++    abilities:[
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Turbo-boost", t:"Chaque fois que cette unité effectue une Avance, ne lancez pas de dé : ajoutez 6\" au Mouvement de ses modèles jusqu'à la fin de la phase."},
++      {l:"Avant-garde implacable", t:"Une fois par bataille, après son action de Tir, si l'unité n'est pas engagée, elle peut faire un mouvement Normal jusqu'à 6\" ; elle ne peut alors pas déclarer de charge ce tour-ci."},
++      {l:"Chevaucheurs de jetbike", t:"Si un modèle de votre armée doté de Meneur peut être attaché à une unité de VERTUS PRAETORS, il peut l'être à cette unité à la place."}
++    ],
++    comp:["3-6 Agamatus Custodians"],
++    equip:"Chaque modèle est équipé de : canon bolt Lastrum ; lance d'intercepteur.",
++    pts:[["3 modèles","225"],["6 modèles","450"]],
++    leader:null,
++    keywords:"MONTÉ, VOL, IMPERIUM, AGAMATUS CUSTODIANS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Pallas Grav-attack", base:"⌀105 x 70mm", role:"Attaque Rapide",
++    stats:['12"','8','2+','9','6+','2'], inv:'5+',
++    ranged:[
++      {n:"Canon à embrasement Arachnus jumelé", t:"blessures dévastatrices, jumelé", r:'24"', a:"8", sk:"2+", s:"5", ap:"-1", d:"1"}
++    ],
++    melee:[
++      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Chasseur impitoyable", t:"Lors de son action de Tir, chaque attaque de ce modèle ciblant une unité ennemie à demi-effectif ou moins gagne +1 au jet pour blesser."}
++    ],
++    comp:["1 Pallas Grav-attack"],
++    equip:"Ce modèle est équipé de : canon à embrasement Arachnus jumelé ; coque blindée.",
++    pts:[["1 modèle","105"]],
++    leader:null,
++    keywords:"VÉHICULE, VOL, IMPERIUM, PALLAS GRAV-ATTACK",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Venatari Custodians", base:"⌀40mm", role:"Attaque Rapide",
++    stats:['10"','6','2+','3','6+','2'], inv:'4+',
++    ranged:[
++      {n:"Destructeur cinétique", t:"pistolet, touches soutenues 1", r:'12"', a:"2", sk:"2+", s:"6", ap:"-1", d:"1"},
++      {n:"Lance Venatari", t:"assaut", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Bouclier Tarsis", t:"", r:"Mêlée", a:"5", sk:"2+", s:"5", ap:"-2", d:"1"},
++      {n:"Lance Venatari", t:"lance", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"-2", d:"2"}
++    ],
++    wargear:["N'importe quel nombre de modèles peuvent remplacer leur lance Venatari par 1 destructeur cinétique et 1 bouclier Tarsis."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
++      {l:"Faction", t:"Égide de l'Empereur"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Frappe venue des cieux", t:"Cette unité peut tirer et déclarer une charge lors d'un tour où elle s'est Désengagée."},
++      {l:"Piqué foudroyant", t:"Une fois par bataille, lors de la phase d'Action, cette unité peut entrer en jeu depuis les réserves. Elle est alors activée immédiatement après son arrivée. Cela ne permet pas de dépasser la limite de points de déploiement du tour."},
++      {l:"Bouclier Tarsis (équip.)", t:"Le porteur a une caractéristique de Points de Vie de 4."}
++    ],
++    comp:["3-6 Venatari Custodians"],
++    equip:"Chaque modèle est équipé de : lance Venatari.",
++    pts:[["3 modèles","165"],["6 modèles","330"]],
++    leader:null,
++    keywords:"INFANTERIE, VOL, SAC PROPULSEUR, IMPERIUM, VENATARI CUSTODIANS",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Ares Gunship", base:"⌀160mm", role:"Volant",
++    stats:['20+"','12','2+','22','6+','0'], inv:'5+',
++    ranged:[
++      {n:"Canon à embrasement lourd Arachnus", t:"", r:'36"', a:"4", sk:"2+", s:"12", ap:"-3", d:"D6+1"},
++      {n:"Canon à embrasement magna Arachnus", t:"", r:'48"', a:"3", sk:"2+", s:"18", ap:"-4", d:"D6+6"}
++    ],
++    melee:[
++      {n:"Coque blindée", t:"", r:"Mêlée", a:"9", sk:"4+", s:"9", ap:"0", d:"1"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D6, Vol stationnaire"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Bombes incendiaires Infernus", t:"Chaque fois que ce modèle termine un mouvement Normal, désignez une unité ennemie survolée : jusqu'à la fin du tour, ses modèles ne peuvent bénéficier du couvert. De plus, lancez 1D6 par modèle de cette unité : pour chaque 6, elle subit 1 blessure mortelle."},
++      {l:"Endommagé : 1-7 PV restants", t:"Tant que ce modèle a 1-7 PV restants, soustrayez 1 à ses jets pour toucher."}
++    ],
++    comp:["1 Ares Gunship"],
++    equip:"Ce modèle est équipé de : 2 canons à embrasement lourd Arachnus ; canon à embrasement magna Arachnus ; coque blindée.",
++    pts:[["1 modèle","580"]],
++    leader:null,
++    keywords:"VÉHICULE, AÉRONEF, VOL, IMPERIUM, ARES GUNSHIP",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Orion Assault Dropship", base:"⌀160mm", role:"Volant",
++    stats:['20+"','12','2+','22','6+','0'], inv:'5+',
++    ranged:[
++      {n:"Canon à embrasement lourd Arachnus", t:"", r:'36"', a:"4", sk:"2+", s:"12", ap:"-3", d:"D6+1"},
++      {n:"Lanceur de bolts lourd Spiculus", t:"déflagration", r:'36"', a:"D6+6", sk:"2+", s:"7", ap:"-1", d:"2"},
++      {n:"Canon bolt Lastrum jumelé", t:"touches soutenues 1", r:'36"', a:"3", sk:"2+", s:"6", ap:"-1", d:"1"}
++    ],
++    melee:[
++      {n:"Coque blindée", t:"", r:"Mêlée", a:"9", sk:"4+", s:"9", ap:"0", d:"1"}
++    ],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D6, Vol stationnaire"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Vaisseau d'assaut", t:"Si une unité débarque de ce TRANSPORT avant qu'il ne bouge, jusqu'à la fin du tour, elle peut déclarer une charge lors d'un tour où elle a fait une Avance."},
++      {l:"Endommagé : 1-7 PV restants", t:"Tant que ce modèle a 1-7 PV restants, soustrayez 1 à ses jets pour toucher."}
++    ],
++    comp:["1 Orion Assault Dropship"],
++    equip:"Ce modèle est équipé de : 2 canons à embrasement lourd Arachnus ; 2 canons bolt Lastrum jumelés ; 2 lanceurs de bolts lourds Spiculus ; coque blindée.",
++    pts:[["1 modèle","690"]],
++    leader:null,
++    transport:"Capacité de transport de 12 modèles d'INFANTERIE ADEPTUS CUSTODES. Peut aussi transporter 1 Venerable Contemptor, 1 Contemptor-Achillus ou 1 Contemptor-Galatus Dreadnought ; dans ce cas, la capacité tombe à 6 modèles d'INFANTERIE.",
++    keywords:"VÉHICULE, TRANSPORT, AÉRONEF, VOL, IMPERIUM, ORION ASSAULT DROPSHIP",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Venerable Land Raider", base:"⌀Utiliser la modèle", role:"Soutien Lourd",
++    stats:['10"','12','2+','16','6+','5'], inv:'',
++    ranged:[
++      {n:"Canon laser Godhammer", t:"", r:'48"', a:"2", sk:"2+", s:"12", ap:"-3", d:"D6+1"},
++      {n:"Missile traqueur", t:"tir unique", r:'48"', a:"1", sk:"2+", s:"14", ap:"-3", d:"D6"},
++      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"2+", s:"4", ap:"0", d:"1"},
++      {n:"Bolter lourd jumelé", t:"touches soutenues 1, jumelé", r:'36"', a:"3", sk:"2+", s:"5", ap:"-1", d:"2"}
++    ],
++    melee:[
++      {n:"Chenilles blindées", t:"", r:"Mêlée", a:"6", sk:"4+", s:"8", ap:"0", d:"1"}
++    ],
++    wargear:["Ce modèle peut être équipé de 1 missile traqueur.","Ce modèle peut être équipé de 1 bolter Storm."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D6"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Rampe d'assaut", t:"Chaque unité qui débarque de ce modèle après qu'il a fait un mouvement Normal reste éligible pour déclarer une charge ce tour-ci."},
++      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
++    ],
++    comp:["1 Venerable Land Raider"],
++    equip:"Ce modèle est équipé de : 2 canons laser Godhammer ; bolter lourd jumelé ; chenilles blindées.",
++    pts:[["1 modèle","220"]],
++    leader:null,
++    transport:"Capacité de transport de 6 modèles d'INFANTERIE ADEPTUS CUSTODES.",
++    keywords:"VÉHICULE, IMPERIUM, TRANSPORT, FUMÉE, VENERABLE LAND RAIDER",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Caladius Grav-tank", base:"⌀170 x 109mm", role:"Soutien Lourd",
++    stats:['10"','11','2+','14','6+','4'], inv:'5+',
++    ranged:[
++      {n:"Canon à embrasement lourd Arachnus jumelé", t:"jumelé", r:'48"', a:"4", sk:"2+", s:"12", ap:"-3", d:"D6+2"},
++      {n:"Canon accélérateur Iliastus jumelé", t:"tir rapide 4, jumelé", r:'48"', a:"4", sk:"2+", s:"10", ap:"-1", d:"3"},
++      {n:"Canon bolt Lastrum jumelé", t:"touches soutenues 1", r:'36"', a:"3", sk:"2+", s:"6", ap:"-1", d:"1"}
++    ],
++    melee:[
++      {n:"Coque blindée", t:"", r:"Mêlée", a:"4", sk:"4+", s:"6", ap:"0", d:"1"}
++    ],
++    wargear:["Le canon accélérateur Iliastus jumelé peut être remplacé par 1 canon à embrasement lourd Arachnus jumelé."],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Puissance de feu avancée", t:"Les attaques du canon accélérateur Iliastus jumelé ciblant une unité ennemie (hors MONSTRES et VÉHICULES) ont [TOUCHES FATALES]. Les attaques du canon à embrasement lourd Arachnus jumelé ciblant un MONSTRE ou VÉHICULE ennemi ont [TOUCHES FATALES]."},
++      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
++    ],
++    comp:["1 Caladius Grav-tank"],
++    equip:"Ce modèle est équipé de : canon accélérateur Iliastus jumelé ; canon bolt Lastrum jumelé ; coque blindée.",
++    pts:[["1 modèle","215"]],
++    leader:null,
++    keywords:"VÉHICULE, VOL, IMPERIUM, CALADIUS GRAV-TANK",
++    faction:"ADEPTUS CUSTODES"
++  },
++  {
++    name:"Telemon Heavy Dreadnought", base:"⌀100mm", role:"Soutien Lourd",
++    stats:['8"','10','2+','12','6+','4'], inv:'4+',
++    ranged:[
++      {n:"Canon Storm Arachnus", t:"blessures dévastatrices", r:'24"', a:"12", sk:"2+", s:"6", ap:"-1", d:"1"},
++      {n:"Couleuvrine accélératrice Iliastus", t:"", r:'48"', a:"4", sk:"2+", s:"9", ap:"-1", d:"3"},
++      {n:"Lanceur de bolts Spiculus", t:"déflagration", r:'36"', a:"D6+3", sk:"2+", s:"5", ap:"0", d:"1"},
++      {n:"Projecteur à plasma jumelé", t:"torrent, jumelé", r:'12"', a:"D3", sk:"N/A", s:"7", ap:"-2", d:"1"}
++    ],
++    melee:[
++      {n:"Pieds blindés", t:"", r:"Mêlée", a:"5", sk:"2+", s:"7", ap:"0", d:"1"},
++      {n:"Ceste Telemon", t:"", r:"Mêlée", a:"5", sk:"2+", s:"12", ap:"-2", d:"3"}
++    ],
++    wargear:[{head:"Les 2 couleuvrines accélératrices Iliastus peuvent être remplacées par l'un des éléments suivants :", items:["2 canons Storm Arachnus","2 cestes Telemon et 2 projecteurs à plasma jumelés","1 couleuvrine accélératrice Iliastus et 1 canon Storm Arachnus","1 couleuvrine accélératrice Iliastus, 1 ceste Telemon et 1 projecteur à plasma jumelé","1 canon Storm Arachnus, 1 ceste Telemon et 1 projecteur à plasma jumelé"]}],
++    abilities:[
++      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
++      {l:"Faction", t:"Ka'tah martial"},
++      {l:"Gardien éternel", t:"Chaque attaque allouée à ce modèle voit sa caractéristique de Dégâts réduite de 1."},
++      {l:"Voué à la destruction", t:"Si ce modèle est équipé de 2 cestes Telemon (en plus de ses pieds blindés), ajoutez 2 à la caractéristique d'Attaques de ces cestes."},
++      {l:"Endommagé : 1-4 PV restants", t:"Tant que ce modèle a 1-4 PV restants, soustrayez 1 à ses jets pour toucher."}
++    ],
++    comp:["1 Telemon Heavy Dreadnought"],
++    equip:"Ce modèle est équipé de : 2 couleuvrines accélératrices Iliastus ; lanceur de bolts Spiculus ; pieds blindés.",
++    pts:[["1 modèle","225"]],
++    leader:null,
++    keywords:"VÉHICULE, MARCHEUR, IMPERIUM, TELEMON HEAVY DREADNOUGHT",
++    faction:"ADEPTUS CUSTODES"
++  }
++];
++
++function weaponRows(list, skLabel){
++  if(!list.length) return '';
++  const title = skLabel==='CT' ? 'Armes à distance' : 'Armes de mêlée';
++  let rows = `<div class="wrow whead"><span></span><span>${title}</span>`+
++    `<span class="sub">PORT.</span><span class="sub">A</span><span class="sub">${skLabel}</span>`+
++    `<span class="sub">F</span><span class="sub">PA</span><span class="sub">D</span></div>`;
++  for(const w of list){
++    const tag = w.t ? ` <span class="tag">${w.t}</span>` : '';
++    rows += `<div class="wrow wdata"><span class="dot"></span>`+
++      `<span class="wn">${w.n}${tag}</span>`+
++      `<span class="num">${w.r}</span><span class="num">${w.a}</span><span class="num">${w.sk}</span>`+
++      `<span class="num">${w.s}</span><span class="num">${w.ap}</span><span class="num">${w.d}</span></div>`;
++  }
++  return `<div class="wtable">${rows}</div>`;
++}
++
++function render(){
++  const deck = document.getElementById('deck');
++  deck.innerHTML = UNITS.map(u=>{
++    const statCells = STAT_LABELS.map(l=>`<div class="lbl">${l}</div>`).join('')
++      + STAT_LABELS.map((l,i)=>`<div class="val">${u.stats[i]}</div>`).join('');
++    const invul = u.inv ? `<div class="invul"><div class="circle">${u.inv}</div>`+
++      `<div class="txt">Sauvegarde invulnérable</div></div>` : '';
++    const abLine = a=>`<div class="ability"><span class="al">${a.l} : </span>`+
++      `<span class="at">${a.t}</span></div>`;
++    const abBase = u.abilities.filter(a=>a.l==="Aptitudes de base");
++    const abFac  = u.abilities.filter(a=>a.l==="Faction");
++    const abRest = u.abilities.filter(a=>a.l!=="Aptitudes de base" && a.l!=="Faction");
++    let abilities = abBase.map(abLine).join('');
++    if(abFac.length) abilities += `<div class="ability"><span class="al">Faction : </span>`+
++      `<span class="at">${abFac.map(a=>a.t).join(', ')}</span></div>`;
++    abilities += abRest.map(abLine).join('');
++    const wargear = (u.wargear&&u.wargear.length) ? `<div class="section-h" style="margin-top:20px">Options d'équipement</div>`+
++      `<ul class="wg-list">${u.wargear.map(o=> (typeof o==='string')
++        ? `<li>${o}</li>`
++        : `<li>${o.head}<ul class="wg-sub">${o.items.map(it=>`<li>${it}</li>`).join('')}</ul></li>`
++      ).join('')}</ul>` : '';
++    const comp = `<ul class="comp-list">${u.comp.map(c=>`<li>${c}</li>`).join('')}</ul>`
++      + `<div class="note">${u.equip}</div>`;
++    const pts = `<div class="pts-table">${u.pts.map(p=>`<div class="pts-row"><span class="m">${p[0]}</span>`+
++      `<span class="p">${p[1]} pts</span></div>`).join('')}</div>`;
++    const transport = u.transport ? `<div class="section-h" style="margin-top:16px">Transport</div>`+
++      `<div class="note">${u.transport}</div>` : '';
++    const leader = u.leader ? `<div class="section-h" style="margin-top:16px">Meneur</div>`+
++      `<div class="lead-intro">Ce modèle peut être attaché aux unités suivantes :</div>`+
++      `<ul class="lead-list">${u.leader.map(t=>`<li>${t}</li>`).join('')}</ul>` : '';
++    return `<div class="card">
++      <div class="card-head">
++        <div><span class="name">${u.name}</span><span class="base">[${u.base}]</span></div>
++        <span class="role">${u.role}</span>
++      </div>
++      <div class="body-grid">
++        <div class="col-left">
++          <div class="statline">${statCells}</div>
++          ${invul}
++          ${weaponRows(u.ranged,'CT')}
++          ${weaponRows(u.melee,'CC')}
++          ${wargear}
++        </div>
++        <div class="col-right">
++          <div class="section-h">Aptitudes</div>
++          ${abilities}
++          <div class="section-h" style="margin-top:16px">Composition d'unité</div>
++          ${comp}
++          <div style="margin-top:10px">${pts}</div>
++          ${transport}
++          ${leader}
++        </div>
++      </div>
++      <div class="kw-grid">
++        <div class="kw-cell"><span class="k">MOTS-CLÉS : </span><span class="v">${u.keywords}</span></div>
++        <div class="kw-cell"><span class="k">MOTS-CLÉS DE FACTION : </span><span class="v">${u.faction}</span></div>
++      </div>
++    </div>`;
++  }).join('');
++}
++render();
++</script>
++</body>
++</html>
+-- 
+2.34.1
+
