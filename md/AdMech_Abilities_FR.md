@@ -145,7 +145,7 @@ AGRIPINAA uniquement.
 
 **Trait de SdG : Mantra de Discipline**
 
-  - Phase de Combat : sélectionnez 1 unité GRAIA INFANTERIE, MARCHEUR ou MONTÉ à 9". Cette unité peut effectuer un Mouvement Normal ; si elle le fait, chaque modèle doit finir aussi près que possible de l'unité ennemie la plus proche et peut finir à Portée d'Engagement d'unités ennemies. Cette action est considérée comme une charge, mais ne donne pas le bonus de charge.
+  - Phase d'Action : sélectionnez 1 unité GRAIA INFANTERIE, MARCHEUR ou MONTÉ à 9" ou moins de votre SdG. Cette unité peut effectuer une Intervention Héroïque.
 
 **Arcana Mechanicum – La Mitre Techno-Cérébrale**
 
@@ -445,3 +445,239 @@ Pour activer la partie Avancée :
 | **4**  | **Archives de Combat**      | Phase de Commandement : sélectionnez 1 unité amie \<MONDE-FORGE\> SKITARII INFANTERIE, MARCHEUR ou MONTÉ à 9" OU 1 unité amie \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ DATA-TETHER. Jusqu'à la prochaine phase de Commandement, si cette unité est à Portée d'Engagement au début de la phase de Combat, elle combat en premier cette phase.                                                                                                              |
 | **5**  | **Cache de Telemetrie**     | Phase de Commandement : sélectionnez 1 unité amie \<MONDE-FORGE\> SKITARII INFANTERIE, MARCHEUR ou MONTÉ à 9" OU 1 unité amie \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ DATA-TETHER. Jusqu'à la prochaine phase de Commandement, les attaques à distance allouées à un modèle de cette unité sont traitées comme si elle bénéficiait du Couvert Léger ; si le modèle est entièrement dans un élément de décor, +1 supplémentaire à la sauvegarde d'armure. |
 | **6**  | **Yeux de l'Omnimessie**    | Phase de Commandement : sélectionnez 1 unité amie \<MONDE-FORGE\> SKITARII INFANTERIE, MARCHEUR ou MONTÉ à 9" OU 1 unité amie \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ DATA-TETHER. Jusqu'à la prochaine phase de Commandement, relancez les jets de charge de cette unité.                                                                                                                                                                               |
+
+## Réquisitions
+
+Si votre armée inclut des unités ADEPTUS MECHANICUS, vous pouvez dépenser des points de Réquisition (PR) sur l'une des Réquisitions suivantes.
+
+**Assemblage d'Archéotech (1 PR)**
+
+Achetez cette Réquisition à tout moment si votre armée possède au moins une pièce d'archéotechnologie. Lancez 1D6 pour déterminer une source d'énergie et choisissez un type d'archéotech, puis sélectionnez l'un des éléments de ce type ou lancez 1D6 pour en déterminer un aléatoirement ; assemblez-les pour former un nouvel objet archéotech.
+
+**Donneur de Corps (1 PR)**
+
+Achetez cette Réquisition à tout moment lorsqu'un modèle TECH-PRÊTRE de votre armée gagne un rang. Retirez ce modèle de votre armée et remplacez-le par un autre modèle TECH-PRÊTRE issu du même Monde-Forge. Vous ne pouvez pas acheter cette Réquisition si cela devait porter votre armée au-delà de sa Limite d'Approvisionnement. Le nouveau modèle TECH-PRÊTRE commence avec le même nombre de points d'expérience que celui qu'il remplace, possède les mêmes Honneurs de Bataille, les mêmes éléments archéotech et est intégré au même Ordre Sacré, mais ne porte aucune Cicatrice de Bataille.
+
+**Acquisition non Orthodoxe (3 PR / 5 PR)**
+
+Achetez cette Réquisition à tout moment. Choisissez un type d'archéotech et une source d'énergie, puis sélectionnez l'élément de chaque type ou lancez 1D6 pour déterminer aléatoirement l'élément de chaque type ; assemblez-les pour former un nouvel objet archéotech. Si vous avez déterminé les éléments par un jet, cette Réquisition coûte 3 PR ; sinon, elle coûte 5 PR.
+
+**Ordres Sacrés (1 PR)**
+
+Achetez cette Réquisition lorsque vous ajoutez une unité TECH-PRÊTRE à votre armée, ou lorsqu'un modèle TECH-PRÊTRE de votre armée gagne un rang. Ce modèle est alors intégré à l'un des Ordres Sacrés ; augmentez son coût en points en conséquence et notez-le. Un modèle ne peut jamais être intégré à plus d'un Ordre Sacré. Vous ne pouvez pas acheter cette Réquisition si cela devait porter votre armée au-delà de sa Limite d'Approvisionnement.
+
+**Amélioration Consacrée (1 PR)**
+
+Achetez cette Réquisition lorsqu'une unité SKITARII de votre armée, hors VÉHICULE et ne contenant aucun modèle doté d'une Amélioration d'Arme, obtient l'une des Améliorations d'Arme de l'Adeptus Mechanicus. Vous pouvez retirer une pièce d'archéotechnologie de votre Ordre de Bataille pour conférer cette Amélioration d'Arme à chaque modèle de l'unité. Une fois cette Réquisition achetée, les modèles de l'unité ne peuvent plus recevoir d'autres Améliorations d'Arme.
+
+## Ordres du Jour
+
+Si votre armée comprend des unités ADEPTUS MECHANICUS, vous pouvez sélectionner un Agenda parmi les Agendas de l'Adeptus Mechanicus ci-dessous. Il s'agit d'une nouvelle catégorie d'Agendas, soumise aux mêmes règles que les autres.
+
+**Charognards Technologiques**
+
+Si vous avez sélectionné cet Agenda, une fois le déploiement des deux camps terminé, choisissez l'unité VÉHICULE ennemie possédant la plus haute caractéristique d'Endurance de l'armée adverse. Si cette unité est détruite par une unité ADEPTUS MECHANICUS de votre armée :
+
+- cette unité ADEPTUS MECHANICUS gagne 3 points d'expérience ;
+
+- les unités INFANTERIE ADEPTUS MECHANICUS de votre armée peuvent tenter l'action suivante.
+
+Récupération Technologique (Action) : à la fin de la phase d'Action, une unité INFANTERIE ADEPTUS MECHANICUS de votre armée située au contact de l'emplacement de l'unité détruite peut commencer cette action. Elle s'achève au début de votre prochaine phase de Commandement. Une fois l'action terminée, obtenez une pièce d'archéotechnologie.
+
+**Briser les Sceaux**
+
+Si vous avez sélectionné cet Agenda, une fois le déploiement des deux camps terminé, choisissez au hasard une zone d'objectif sur le champ de bataille. Les unités PERSONNAGE ADEPTUS MECHANICUS de votre armée peuvent tenter l'action suivante.
+
+Fouiller la Crypte (Action) : à la fin de la phase d'Action, une unité PERSONNAGE ADEPTUS MECHANICUS de votre armée située dans cette zone d'objectif peut commencer cette action. Elle s'achève à la fin du round. Une fois l'action terminée, cette unité gagne 1 point d'expérience et vous obtenez une pièce d'archéotechnologie. Les unités de votre armée ne peuvent plus effectuer cette action.
+
+**Volonté de l'Omnissiah**
+
+Si vous avez sélectionné cet Agenda, une fois le déploiement des deux camps terminé, choisissez un Cantique de l'Omnimessie. Si, alors que ce Cantique est actif pour votre armée, trois unités ennemies ou plus sont détruites par des unités ADEPTUS MECHANICUS non-SKITARII de votre armée :
+
+- chaque unité TECH-PRÊTRE de votre armée présente sur le champ de bataille gagne 1 point d'expérience ;
+
+- chaque unité ADEPTUS MECHANICUS non-SKITARII de votre armée ayant détruit une ou plusieurs unités ennemies alors que ce Cantique était actif gagne 1 point d'expérience.
+
+**Logique Froide**
+
+Tenez un décompte de Domination pour chaque unité SKITARII de votre armée.
+
+- Chaque fois qu'une unité ennemie est détruite par une attaque à distance d'un modèle SKITARII de votre armée, si l'Impératif Protecteur est actif pour votre armée, ajoutez 1 au décompte de Domination de l'unité de ce modèle.
+
+- Chaque fois qu'une unité ennemie est détruite par une attaque de mêlée d'un modèle SKITARII de votre armée, si l'Impératif Conquérant est actif pour votre armée, ajoutez 1 au décompte de Domination de l'unité de ce modèle.
+
+- À la fin de chaque tour, si l'Impératif Agresseur est actif pour votre armée, ajoutez 1 au décompte de Domination de chaque unité SKITARII de votre armée située à 12" ou moins du bord de déploiement adverse.
+
+- À la fin de chaque tour, si l'Impératif Bastions est actif pour votre armée, ajoutez 1 au décompte de Domination de chaque unité SKITARII de votre armée située dans une zone d'objectif.
+
+À la fin de la bataille, les trois unités de votre armée ayant le décompte de Domination le plus élevé gagnent chacune 2 points d'expérience.
+
+## Caractéristiques de Combat
+
+Quand une unité ADEPTUS MECHANICUS gagne un Trait de Combat, vous pouvez utiliser l'un des tableaux ci-dessous au lieu de ceux des règles de base pour déterminer le Trait de Combat acquis. Lancez 1D6 et consultez le tableau approprié pour le déterminer aléatoirement, ou choisissez dans ce tableau celui qui correspond le mieux à l'histoire de l'unité. Toutes les règles habituelles s'appliquent (une unité ne peut pas posséder deux fois le même Trait de Combat). Comme pour tout Honneur de Bataille, notez le Trait de Combat obtenu sur la fiche de l'unité.
+
+**Unités TECH-PRÊTRE**
+
+| **D6** | **Trait de Combat** |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Savant de la Machine : si ce modèle fait partie de votre armée et n'a pas été détruit durant la bataille, vous pouvez, à la fin de la bataille, ignorer un test de Mise hors de Combat raté effectué pour une unité VÉHICULE \<MONDE-FORGE\> ; ce test est alors considéré comme réussi.                                                                                                                                                                                                        |
+| 2      | Choc Voltagheist : à la fin de la phase de Combat, choisissez une unité ennemie à Portée d'Engagement de ce modèle et lancez 1D6 : sur 2-5, elle subit 1 blessure mortelle ; sur 6, elle subit D3 blessures mortelles.                                                                                                                                                                                                                                                                          |
+| 3      | Protocoles de Réparation : ce modèle obtient Insensible à la douleur 5+.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 4      | Cortex de Contrôle : vous pouvez déterminer un Trait de Seigneur de Guerre Skitarii pour ce modèle. Chaque Trait de Seigneur de Guerre de votre armée doit être unique (en cas de tirage aléatoire, relancez les doublons), et ce modèle ne peut pas posséder plus d'un Trait de Seigneur de Guerre.                                                                                                                                                                                            |
+| 5      | Trépanation par asservissement de système : durant votre phase de Commandement, choisissez un modèle VÉHICULE adverse à 9" ou moins de ce modèle. Lancez 1D6 en ajoutant 2 si la caractéristique de Commandement de ce modèle est inférieure à celle du modèle adverse : sur 4+, choisissez une arme dont le modèle adverse est équipé. Jusqu'au début de votre prochaine phase de Commandement, chaque fois que ce modèle effectue une attaque avec cette arme, soustrayez 1 au jet de touche. |
+| 6      | Nœud de téléportation : une fois par bataille, au début de la phase d'Action, vous pouvez retirer ce modèle du champ de bataille puis, lors de l'étape des Renforts de votre prochaine phase de Commandement, le redéployer n'importe où, entièrement à 12" ou moins de votre bord de déploiement et à plus de 9" de tout modèle adverse. Si la bataille s'achève alors que ce modèle n'est pas sur le champ de bataille, il est considéré comme détruit.                                       |
+
+**Unités SKITARII MARSHAL**
+
+| **D6** | **Trait de Combat** |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-2    | Émetteurs de réfraction intégrés : ce modèle dispose d'une sauvegarde invulnérable de 4+.                                                                                                                                                                                                                                                                                                                |
+| 3-4    | Cortex de traitement tactique : durant votre phase de Commandement, choisissez une unité \<MONDE-FORGE\> SKITARII INFANTERIE, MARCHEUR ou MONTÉ à 9" ou moins de ce modèle, ou une unité \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ DATA-TETHER sur le champ de bataille. Jusqu'au début de votre prochaine phase de Commandement, cette unité est éligible pour effectuer une Intervention Héroïque. |
+| 5-6    | Implants de lame de classe Secutor : lorsque ce modèle termine un mouvement de charge, choisissez une unité ennemie à Portée d'Engagement et lancez 1D6 : sur 3-5, elle subit 1 blessure mortelle ; sur 6, elle subit D3 blessures mortelles.                                                                                                                                                            |
+
+**Unités INFANTERIE, MARCHEUR ou MONTÉ**
+
+| **D6** | **Trait de Combat** |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-2    | Bionique améliorée : améliorez de 1 la sauvegarde invulnérable de cette unité (sans jamais la rendre meilleure que 4+).                                                                            |
+| 3-4    | Commutateurs de code d'élimination : ajoutez 1 à la caractéristique de Force des modèles de cette unité.                                                                                           |
+| 5-6    | Corps bénis : chaque fois qu'une attaque est effectuée contre cette unité, un jet de blessure non modifié de 1 ou 2 échoue toujours, quelles que soient les aptitudes de l'arme ou de l'attaquant. |
+
+**Unités VÉHICULE**
+
+| **D6** | **Trait de Combat** |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-2    | Moteur sanctifié : chaque fois que cette unité Avance, jusqu'à la fin de la phase, ajoutez 6" à la caractéristique de Mouvement de ses modèles. |
+| 3-4    | Esprit de la machine endurci : les tests de Mise hors de Combat effectués pour cette unité sont automatiquement réussis.                        |
+| 5-6    | Esprit béni : les modèles de cette unité obtiennent Insensible à la douleur 6+.                                                                 |
+
+## Reliques d'Armée
+
+Lorsqu'un modèle PERSONNAGE ADEPTUS MECHANICUS gagne une Relique, vous pouvez à la place sélectionner l'une des Reliques listées ci-dessous. Toutes les règles habituelles de sélection des Reliques, telles que décrites dans les règles de base, s'appliquent.
+
+**Reliques d'Artificier**
+
+Un modèle PERSONNAGE ADEPTUS MECHANICUS peut recevoir l'une des Reliques d'Artificier suivantes au lieu de l'une de celles présentées dans les règles de base.
+
+**Inducteur neuronal multiplexé**
+
+Inducteur neuronal multiplexé (Aura) : tant qu'une unité \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ est à 6" ou moins de ce modèle, cette unité est éligible pour effectuer une Intervention Héroïque.
+
+**Cardiocore Galvanus**
+
+Cardiocore Galvanus (Aura) : tant qu'une unité \<MONDE-FORGE\> SKITARII INFANTERIE, MARCHEUR ou MONTÉ est à 6" ou moins de ce modèle, ajoutez 1 aux jets de charge effectués pour cette unité.
+
+**Reliques de l'Antiquité**
+
+Un modèle PERSONNAGE ADEPTUS MECHANICUS de rang Héroïque ou supérieur peut recevoir la Relique de l'Antiquité suivante au lieu de l'une de celles présentées dans les règles de base.
+
+**Corps de transinduction**
+
+Chaque fois que le porteur effectue un Mouvement Normal, une Avance, un Désengagement ou un mouvement de charge, jusqu'à ce que ce mouvement soit terminé, il peut se déplacer horizontalement à travers les modèles et les éléments de terrain (il ne peut pas finir son mouvement au-dessus d'un autre modèle ou de son socle). Le porteur est autorisé à tirer et à charger lors d'un tour où il s'est Désengagé. Le porteur peut déclarer une charge lors d'un tour où il a Avancé.
+
+**Reliques Légendaires**
+
+Un modèle PERSONNAGE ADEPTUS MECHANICUS de rang Légendaire peut recevoir la Relique Légendaire suivante.
+
+**Autocaducée du pays d'Arkhan**
+
+Une fois par bataille, lorsqu'un autre modèle \<MONDE-FORGE\> à 6" ou moins du porteur est détruit, vous pouvez choisir de lancer 1D6 à la fin de la phase au lieu d'appliquer les règles qui se déclenchent à la destruction d'un modèle (par exemple Explose). Si vous le faites, sur 3+, remettez ce modèle sur le champ de bataille aussi près que possible de l'endroit où il a été détruit et hors de Portée d'Engagement des modèles ennemis, avec 6 blessures restantes (sans jamais dépasser sa caractéristique Blessures).
+
+## Améliorations d'Arme
+
+Lorsqu'une unité ADEPTUS MECHANICUS obtient une Amélioration d'Arme, si l'arme sélectionnée figure parmi les types d'armes de l'Adeptus Mechanicus listés ci-dessous, vous pouvez utiliser le tableau correspondant au lieu de ceux des règles de base. Une fois l'arme choisie, lancez 1D6 et consultez le tableau approprié pour déterminer aléatoirement l'Amélioration d'Arme obtenue, ou choisissez celle qui correspond le mieux à l'histoire de votre unité. Si l'arme sélectionnée équipe un modèle INFANTERIE ou MONTÉ, vous pouvez à la place lancer 2D6 (en relançant les résultats identiques) ou en choisir deux. Toutes les règles habituelles concernant les Améliorations d'Arme s'appliquent. Comme pour tout Honneur de Bataille, notez l'Amélioration d'Arme obtenue.
+
+**Armes à Arc**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1-3    | Fréquence de Résonance : cette arme obtient [ANTI-VÉHICULE 3+].                                                                                                                                                                                                                                                                                                                                      |
+| 4-6    | Surcharge Électrisante : une fois que l'unité du porteur a tiré, sélectionnez un modèle VÉHICULE adverse ayant perdu une ou plusieurs blessures suite à une attaque d'un modèle de l'unité du porteur doté de cette Amélioration d'Arme. Jusqu'au début de votre prochaine phase de Commandement, l'unité de ce modèle est électrisée. Tant qu'une unité est électrisée, elle ne peut pas se déplacer. |
+
+**Armes au Radium**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-3    | Munitions au Thorium : durant la phase d'Action, lorsque l'unité du porteur est sélectionnée pour tirer, vous pouvez jouer gratuitement le stratagème « Munitions Enrichies » sur cette unité. Si vous le faites, seuls les modèles dotés de cette Amélioration d'Arme en bénéficient.                                                                                                                                                                        |
+| 4-6    | Mal des Radiations : une fois que l'unité du porteur a tiré, sélectionnez une unité adverse ayant vu un ou plusieurs modèles détruits suite à une attaque d'un modèle de l'unité du porteur doté de cette Amélioration d'Arme. Jusqu'au début de votre prochaine phase de Commandement, cette unité souffre du mal des radiations. Tant qu'une unité souffre du mal des radiations, soustrayez 1 aux caractéristiques de Force et d'Endurance de ses modèles. |
+
+**Armes Cognis**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-3    | Esprit de la Machine Chasseur : chaque fois qu'une attaque est effectuée avec cette arme, vous pouvez relancer le jet de blessure.                                                                                              |
+| 4-6    | Esprit de la Machine Vindicatif : chaque fois qu'une attaque est effectuée avec cette arme contre une unité à 12" ou moins, ajoutez 1 à la caractéristique de Force de cette attaque et améliorez de 1 sa Pénétration d'Armure. |
+
+**Armes à Plasma**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-3    | Blindage d'évacuation : retirez [DANGEREUX] du profil de l'arme.                                                                                                                             |
+| 4-6    | Charge maximale : chaque fois qu'une attaque effectuée avec cette arme cible une unité à 12" ou moins, si le porteur est resté immobile, il effectue 1 attaque supplémentaire avec cette arme. |
+
+**Armes au Phosphore**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-3    | Tir traçant incandescent : chaque fois qu'une attaque est effectuée avec cette arme contre une unité à mi-portée ou moins, vous pouvez relancer le jet de touche.                                                                                                                                                                                                                                                                                                                                                                                 |
+| 4-6    | Luminagène : une fois que l'unité du porteur a tiré, choisissez une unité ennemie ayant perdu un ou plusieurs modèles suite à une attaque d'un modèle de l'unité du porteur équipé de cette arme. Jusqu'au début de votre prochaine phase de Commandement, cette unité est en feu. Tant qu'une unité est en feu, chaque fois qu'elle effectue un Mouvement Normal, une Avance ou un Désengagement, lancez 1D6 pour chaque modèle de cette unité : pour chaque 1, l'unité subit 1 blessure mortelle (jusqu'à un maximum de 6 blessures mortelles). |
+
+**Armes de type Fusil**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-3    | Rayures à Hélice de Phase : ajoutez 3" à la caractéristique de Portée de cette arme. Chaque fois qu'une attaque est effectuée avec cette arme, si le porteur est resté immobile, vous pouvez ignorer tout ou partie des modificateurs au jet de touche.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 4-6    | Munitions à Détonation : une fois que l'unité du porteur a tiré, choisissez une unité ennemie ayant perdu un ou plusieurs modèles suite à une attaque d'un modèle de l'unité du porteur équipé de cette arme. Lancez 2D6 : si le résultat est supérieur ou égal à la caractéristique de Commandement de cette unité ennemie, n'effectuez plus de jet pour cette aptitude contre elle jusqu'à la fin du tour ; sinon, elle est sous pression jusqu'au début de votre prochaine phase de Commandement. Tant qu'une unité est sous pression, chaque fois qu'un de ses modèles effectue une attaque à distance, les jets de touche et de blessure de cette attaque ne peuvent pas être relancés. |
+
+**Armes de type Carabine**
+
+| **D6** | **Amélioration d'Arme** |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-3    | Optiques de Suivi Rapide : cette arme obtient [ASSAUT].                                                                                                                                                                                                                                                 |
+| 4-6    | Crosse Pliante : le porteur peut être sélectionné pour tirer alors que son unité se trouve à Portée d'Engagement d'unités ennemies, et peut effectuer des attaques avec cette arme dans ce cas. Si c'est le cas, chaque fois qu'une attaque est effectuée avec cette arme, soustrayez 1 au jet de touche. |
+
+## Trésors Archéotechniques
+
+**Sources d'énergie**
+
+| **Source d'énergie**            | **Capacité d'arme**                                                                                                                                                                                                                                                                                                                                                                                                             | **Capacité de champ de force**                                                                                                                                                                                                                                                                                                                                                                                    | **Effet techno-arcane**                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Vortex maîtrisé**          | Une fois que le porteur a tiré avec cette arme, choisissez une unité ennemie touchée par une attaque effectuée avec cette arme. Lancez 1D6 pour chaque autre unité située à 3" ou moins de la cible, en soustrayant 1 si cette unité possède le mot-clé PERSONNAGE : sur 3-5, elle subit 1 blessure mortelle ; sur 6, elle en subit D3.                                                                                         | Champ de Vortex (Aura) : tant qu'une unité \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ se trouve à 6" ou moins de ce modèle, chaque fois qu'une unité ennemie déclare une charge contre lui, si cette unité alliée n'est pas à Portée d'Engagement d'une unité ennemie, elle peut choisir d'effectuer une Préparation à la Charge ou des Tirs en État d'Alerte, même si elle a déjà utilisé son action ce tour. | Énergies Répulsives (Aura) : tant qu'une unité \<MONDE-FORGE\> NON-SKITARII se trouve à 6" ou moins de ce modèle, si cette techno-arcane est active, chaque fois qu'une unité ennemie effectue une attaque de mêlée contre elle, le jet de touche et le jet de blessure de cette attaque ne peuvent pas être relancés.                                                                                  |
+| **2. Alternateur spatial**      | Chaque fois qu'un modèle d'une unité ennemie (hors VÉHICULE) perd une ou plusieurs blessures suite à une attaque effectuée avec cette arme, lancez 1D6 : sur 4+, jusqu'au début de votre prochaine phase de Commandement, cette unité est condensée. Tant qu'une unité est condensée, elle perd l'aptitude Objectif Sécurisé.                                                                                                   | Ajoutez 1 à la caractéristique de Blessures du porteur.                                                                                                                                                                                                                                                                                                                                                           | Ajustement Spatial (Aura) : tant qu'une unité \<MONDE-FORGE\> NON-SKITARII se trouve à 6" ou moins de ce modèle, si cette techno-arcane est active, chaque fois qu'une attaque de tir ayant une Pénétration d'Armure de -1 est allouée à un modèle de cette unité alors qu'elle bénéficie d'un Couvert léger conféré par un élément de décor, cette attaque a une Pénétration d'Armure de 0 à la place. |
+| **3. Matrice de téléportation** | Une fois par bataille, après que le porteur a tiré avec cette arme, si l'une de ses attaques a touché une unité ennemie, il peut utiliser le grappin de téléportation. Dans ce cas, retirez le porteur du champ de bataille, puis replacez-le à Portée d'Engagement de l'unité ennemie touchée, mais hors de Portée d'Engagement de toute autre unité ennemie. Le porteur compte alors comme ayant effectué une charge ce tour. | Le porteur peut effectuer une Intervention Héroïque.                                                                                                                                                                                                                                                                                                                                                              | Translocation agressive (Aura) : tant qu'une unité \<MONDE-FORGE\> NON-SKITARII se trouve à 6" ou moins de ce modèle, si cette techno-arcane est active, vous pouvez relancer les jets de charge effectués pour cette unité.                                                                                                                                                                            |
+| **4. Conducteur acide**         | Chaque fois qu'une attaque est effectuée avec cette arme, un jet de blessure non modifié de 6 inflige D3 blessures mortelles à la cible, en plus des dégâts normaux.                                                                                                                                                                                                                                                            | Chair durcie par l'acide (Aura) : tant qu'une unité \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ se trouve à 6" ou moins de ce modèle, chaque fois qu'une attaque de mêlée ayant une Pénétration d'Armure de -1 est allouée à un modèle de cette unité, cette attaque a une Pénétration d'Armure de 0 à la place.                                                                                                | Condensat dévoreur de brume (Aura) : tant qu'une unité \<MONDE-FORGE\> NON-SKITARII se trouve à 6" ou moins de ce modèle, si cette techno-arcane est active, ajoutez 3" à la portée des armes à distance des modèles de cette unité.                                                                                                                                                                    |
+| **5. Réacteur endothermique**   | Chaque fois qu'une attaque effectuée avec cette arme touche la cible, lancez 1D6 en soustrayant 1 si la cible possède le mot-clé VÉHICULE : sur 3+, la cible est gelée jusqu'au début de votre prochaine phase de Commandement. Tant qu'une unité est gelée, divisez par deux la caractéristique de Mouvement de ses modèles.                                                                                                   | Chaque fois que le porteur est désigné comme cible d'une charge, soustrayez 2 au jet de charge.                                                                                                                                                                                                                                                                                                                   | Cryo-balayage dispersé (Aura) : tant qu'une unité \<MONDE-FORGE\> NON-SKITARII se trouve à 6" ou moins de ce modèle, si cette techno-arcane est active, au début de la phase de Combat, si cette unité est à Portée d'Engagement d'une unité ennemie, elle bénéficie de l'aptitude Attaque en premier durant cette phase.                                                                               |
+| **6. Nœud d'induction**         | Chaque fois qu'un modèle d'une unité VÉHICULE ennemie perd une ou plusieurs blessures suite à une attaque effectuée avec cette arme, lancez 1D6 : sur 3+, déterminez aléatoirement une arme à distance dont ce modèle est équipé. Jusqu'au début de votre prochaine phase de Commandement, chaque fois que ce modèle tire, il effectue une attaque de moins avec cette arme.                                                    | Systèmes suralimentés (Aura) : tant qu'une unité \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ se trouve à 6" ou moins de ce modèle, chaque fois que cette unité tire ou combat, vous pouvez relancer un jet de touche ou un jet de blessure lors de la résolution de ses attaques.                                                                                                                               | Actionneurs électrifiés (Aura) : tant qu'une unité \<MONDE-FORGE\> NON-SKITARII se trouve à 6" ou moins de ce modèle, si cette techno-arcane est active, chaque fois que cette unité Avance, jusqu'à la fin de la phase, ajoutez 3" à la caractéristique de Mouvement de ses modèles.                                                                                                                   |
+
+**Éléments d'arme**
+
+| **Élément d'arme**             | **Portée** | **A** | **CT** | **F** | **PA** | **D** | **Mots-clés**                             |
+| ------------------------------ | ---------- | ----- | ------ | ----- | ------ | ----- | ----------------------------------------- |
+| **Implants de tir électrique** | 12"        | D3+3  | N/A    | 5     | -1    | 2     | [ASSAUT]                                |
+| **Brouilleur neural**          | 18"        | 4     | 3+     | 4     | -2    | 1     | [PISTOLET], [BLESSURES DÉVASTATRICES] |
+| **Projecteur de nanoskards**   | 12"        | 3     | 3+     | 5     | -2    | 2     | [PISTOLET], [TOUCHES SOUTENUES 1]     |
+| **Anneau à arc**               | 18"        | 2     | 3+     | 7     | -2    | 3     | [PISTOLET], [ANTI-VÉHICULE 4+]        |
+| **Brassards électro-fusion**   | 18"        | 8     | 3+     | 3     | -1    | 1     | [ASSAUT]                                |
+| **Canon numérique**            | 24"        | 2     | 3+     | 6     | -1    | 3     | [ASSAUT]                                |
+
+**Composants de champ de force**
+
+| **Composant**                               | **Effet**                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Coque du vide**                        | Le porteur obtient Insensible à la douleur 6+.                                                                                                                                                                                                                                                                                                                                                            |
+| **2. Implants à arc**                       | Au début de la phase de Combat, choisissez une unité ennemie à Portée d'Engagement du porteur et lancez 1D6 : sur 2-5, elle subit 1 blessure mortelle ; sur 6, elle subit D3 blessures mortelles.                                                                                                                                                                                                         |
+| **3. Puits temporel**                       | Au début de la phase de Combat, choisissez un modèle ennemi à Portée d'Engagement du porteur. Lancez 1D6 et ajoutez la caractéristique de Commandement du porteur ; votre adversaire lance 1D6 et ajoute la caractéristique de Commandement de ce modèle ennemi. Si votre total est supérieur à celui de votre adversaire, jusqu'à la fin de la phase, l'unité de ce modèle ennemi ne peut pas combattre. |
+| **4. Éradicateur à conversion**             | Lorsque le porteur est détruit, lancez 1D6 : sur 2-5, l'unité ennemie la plus proche à 6" ou moins subit D3 blessures mortelles ; sur 6, elle subit 2D3 blessures mortelles.                                                                                                                                                                                                                              |
+| **5. Alimentations énergétiques inversées** | Chaque fois que le porteur effectue une attaque de mêlée, un jet de blessure non modifié de 6 inflige 1 blessure mortelle à la cible en plus des dégâts normaux.                                                                                                                                                                                                                                          |
+| **6. Technoderme**                          | Ajoutez 1 à la caractéristique d'Endurance du porteur.                                                                                                                                                                                                                                                                                                                                                    |
+
+**Éléments de techno-arcane**
+
+| **Élément**                   | **Effet**                                                                                                                                                                                                                                       |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Obscuroptikon**          | Lorsque le Cantique « Psaume du Linceul » devient actif pour votre armée, vous pouvez choisir d'utiliser cette techno-arcane. Si vous le faites, cet élément de techno-arcane reste actif jusqu'à la fin du tour de bataille.                   |
+| **2. Exo-gant**               | Lorsque le Cantique « Chant du Poing sans remords » devient actif pour votre armée, vous pouvez choisir d'utiliser cette techno-arcane. Si vous le faites, cet élément de techno-arcane reste actif jusqu'à la fin du tour de bataille.         |
+| **3. Orrery ferrosanctique**  | Lorsque le Cantique « Incantation de l'Âme de Fer » devient actif pour votre armée, vous pouvez choisir d'utiliser cette techno-arcane. Si vous le faites, cet élément de techno-arcane reste actif jusqu'à la fin du tour de bataille.         |
+| **4. Hagioscope**             | Lorsque le Cantique « Bénédiction de l'Omnimessie » devient actif pour votre armée, vous pouvez choisir d'utiliser cette techno-arcane. Si vous le faites, cet élément de techno-arcane reste actif jusqu'à la fin du tour de bataille.         |
+| **5. Pacte tri-dimensionnel** | Lorsque le Cantique « Invocation de la Machine Vengeresse » devient actif pour votre armée, vous pouvez choisir d'utiliser cette techno-arcane. Si vous le faites, cet élément de techno-arcane reste actif jusqu'à la fin du tour de bataille. |
+| **6. Hypercircuit**           | Lorsque le Cantique « Litanie de l'Électromancien » devient actif pour votre armée, vous pouvez choisir d'utiliser cette techno-arcane. Si vous le faites, cet élément de techno-arcane reste actif jusqu'à la fin du tour de bataille.         |

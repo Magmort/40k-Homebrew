@@ -361,7 +361,7 @@ Si un modèle de cette unité possède plusieurs armes à distance, vous pouvez 
 
 **Loyauté Familiale (1 PC)** *· Ruse Stratégique*
 
-À utiliser lors de la phase d'Action, quand une unité ennemie déclare une charge contre une unité VOTANN de votre armée. Une autre unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ de votre armée située à 6" ou moins de l'unité chargée, et qui n'est pas elle-même la cible d'une charge, peut immédiatement effectuer un mouvement normal ; chaque modèle doit finir ce mouvement plus près de l'unité ennemie qui charge, et peut finir à Portée d'Engagement de cette unité. Cette action est considérée comme une charge, mais ne donne pas le bonus de charge.
+À utiliser lors de la phase d'Action, quand une unité ennemie déclare une charge contre une unité VOTANN de votre armée. Une autre unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ de votre armée peut effectuer une Intervention Héroïque.
 
 **Illuminez-les (1 PC)** *· Ruse Stratégique*
 
