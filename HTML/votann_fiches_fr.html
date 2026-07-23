@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leagues of Votann — Fiches d'unités (FR)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#141210; font-family:'Inter',sans-serif; padding:32px 16px; }
+  .page-head { max-width:807px; margin:0 auto 26px; color:#e9e3da; }
+  .page-head h1 { font-family:'Oswald',sans-serif; font-weight:700; text-transform:uppercase;
+    letter-spacing:1px; font-size:30px; color:#fff; }
+  .page-head p { font-size:13px; color:#9a9187; margin-top:6px; }
+  .deck { display:flex; flex-direction:column; align-items:center; gap:34px; }
+  .card { width:807px; max-width:100%; font-family:'Inter',sans-serif; background:#1c1a19;
+    border:1px solid #000; box-shadow:0 4px 24px rgba(0,0,0,0.4); color:#e9e3da; }
+  .card-head { position:relative; background:linear-gradient(180deg, #5d3718, #3c2411);
+    padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:3px solid #000; }
+  .card-head .name { font-family:'Oswald',sans-serif; font-weight:700; font-size:26px;
+    letter-spacing:0.5px; text-transform:uppercase; color:#fff; }
+  .card-head .base { font-size:15px; color:#d8c9c9; margin-left:10px; }
+  .card-head .role { font-family:'Oswald',sans-serif; font-size:12px; text-transform:uppercase;
+    letter-spacing:1px; text-align:right; }
+  .body-grid { display:grid; grid-template-columns:3fr 2fr; gap:0; }
+  .col-left { padding:16px 18px 20px; border-right:1px solid #000; }
+  .col-right { padding:16px 18px 20px; }
+  .statline { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; text-align:center; }
+  .statline .lbl { font-size:12px; font-weight:700; letter-spacing:1px; color:#c9beae; }
+  .statline .val { background:#3a3532; border:1px solid #55504a; border-radius:3px; padding:8px 0;
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; color:#fff; }
+  .pf { width:100%; border-collapse:collapse; }
+  .pf th, .pf td { padding:6px 6px; text-align:center; }
+  .pf thead th { font-size:11px; font-weight:700; letter-spacing:1px; color:#c9beae; border-bottom:1px solid #4a453f; }
+  .pf thead th.name { text-align:left; }
+  .pf tbody td { font-family:'Oswald',sans-serif; font-weight:600; font-size:17px; color:#fff; border-bottom:1px solid #2a2624; }
+  .pf tbody td.name { font-family:'Inter',sans-serif; text-align:left; font-size:13px; font-weight:600; color:#f0ebe3; }
+  .pf tbody td.name small { display:block; font-weight:400; font-size:11px; color:#9a9187; }
+  .pf tbody td.inv { color:#e7ccb6; }
+  .invul { display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .invul .circle { width:46px; height:46px; border-radius:50%; background:#2a2624; border:2px solid #3c2411;
+    display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif;
+    font-weight:700; font-size:18px; color:#fff; flex-shrink:0; }
+  .invul .txt { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; }
+  .wtable { margin-top:20px; }
+  .wrow { display:grid; grid-template-columns:16px 1fr 42px 26px 30px 26px 30px 30px; gap:6px;
+    align-items:center; }
+  .whead { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; border-bottom:1px solid #4a453f; padding-bottom:6px;
+    margin-bottom:8px; }
+  .whead .sub { font-size:11px; color:#9a9187; text-align:right; text-transform:none; }
+  .wdata { padding:6px 0; border-bottom:1px solid #2a2624; }
+  .wdata .dot { width:14px; height:8px; background:#8a8378; border-radius:2px; }
+  .wdata .wn { font-size:13px; color:#f0ebe3; }
+  .wdata .num { text-align:right; font-size:13px; font-weight:600; }
+  .tag { background:#4a453f; color:#d8c9c9; font-size:10px; padding:2px 5px; border-radius:2px;
+    margin-left:4px; }
+  .section-h { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px;
+    text-transform:uppercase; background:#3a3532; padding:6px 10px; margin-bottom:10px; }
+  .ability { margin-bottom:10px; font-size:13px; line-height:1.5; }
+  .ability .al { font-weight:700; color:#fff; }
+  .ability .at { color:#d8c9c9; }
+  .comp-list { margin:0 0 6px; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-list { margin:0; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-sub { margin:4px 0 2px; padding-left:18px; }
+  .wg-sub li { color:inherit; }
+  .pts-table { border:1px solid #4a453f; border-radius:3px; overflow:hidden; }
+  .pts-row { display:flex; align-items:center; justify-content:space-between; background:#2a2624;
+    padding:7px 12px; }
+  .pts-row + .pts-row { border-top:1px solid #4a453f; }
+  .pts-row .m { font-size:13px; }
+  .pts-row .p { background:#8a1f24; color:#fff; font-weight:700; font-size:13px; padding:3px 10px;
+    border-radius:3px; }
+  .note { font-size:12px; color:#c9beae; line-height:1.5; margin-top:4px; }
+  .lead-intro { font-size:13px; color:#d8c9c9; margin-bottom:6px; }
+  .lead-list { margin:0; padding-left:18px; font-size:13px; }
+  .lead-list li { color:#8fb4d8; }
+  .kw-grid { display:grid; grid-template-columns:3fr 2fr; border-top:1px solid #000; }
+  .kw-cell { padding:10px 18px; }
+  .kw-cell:first-child { border-right:1px solid #000; }
+  .kw-cell .k { font-size:12px; font-weight:700; letter-spacing:0.5px; }
+  .kw-cell .v { font-size:12px; color:#9fc6ea; }
+  @media print { body{background:#fff; padding:0;} .card{break-inside:avoid; box-shadow:none;}
+    .page-head{color:#000;} .page-head h1{color:#000;}
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+  @media (max-width:840px){ .card{width:100%;} }
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>Leagues of Votann — Fiches d'unités</h1>
+  <p>Version française. Profils de jeu (Warhammer 40 000, 10ᵉ édition). Données : Wahapedia + codex FR. Warhammer 40 000 © Games Workshop — usage personnel.</p>
+</div>
+<div class="deck" id="deck"></div>
+
+<script>
+// M=Mouvement, E=Endurance, Svg=Sauvegarde, PV=Points de Vie, Cd=Commandement, CO=Contrôle d'Objectif
+const STAT_LABELS = ['M','E','Svg','PV','Cd','CO'];
+
+const UNITS = [
+  {
+    name:"Ûthar le Destiné", base:"⌀40mm", role:"QG",
+    stats:['5"','5','3+','5','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Désintégrateur volkanite", t:"[BLESSURES DÉVASTATRICES]", r:'24"', a:"3", sk:"2+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Lame des Ancêtres", t:"[BLESSURES DÉVASTATRICES]", r:"Mêlée", a:"5", sk:"2+", s:"6", ap:"-3", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Chance Ancestrale", t:"Une fois par tour, vous pouvez changer 1 jet de Touche, 1 jet de Blessure ou 1 jet de Dégâts pour ce modèle en 6."},
+      {l:"Efficacité Austère", t:"Une fois par round de bataille, à la phase de Commandement, vous pouvez choisir 1 modèle de votre armée ayant cette aptitude, puis choisir 1 unité ennemie qui lui est visible. L'unité ennemie gagne 1 pion de Jugement."},
+      {l:"Cimier Rempart (équipement)", t:"Tant que le porteur mène une unité, les modèles de cette unité ont une sauvegarde invulnérable de 5+."}
+    ],
+    comp:["1 Ûthar le Destiné — Héros épique"],
+    equip:"Ce modèle est équipé de : désintégrateur volkanite ; Lame des Ancêtres ; cimier rempart.",
+    pts:[["1 modèle","95"]],
+    leader:["Âtregardes Einhyr","Guerriers Âtrekogs"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS ÉPIQUE, KÂHL, ÛTHAR LE DESTINÉ",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Buri Aegnirssen", base:"⌀40mm", role:"QG",
+    stats:['5"','6','3+','5','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"[PISTOLET]", r:'12"', a:"1", sk:"2+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Fléau – frappe", t:"[PRÉCISION]", r:"Mêlée", a:"5", sk:"2+", s:"12", ap:"-3", d:"3"},
+      {n:"Fléau – balayage", t:"", r:"Mêlée", a:"10", sk:"2+", s:"6", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Agent solitaire, Discrétion"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Courage Nourri par la Rancune", t:"La première fois que ce modèle est détruit, à la fin de la phase, lancez 1D6 : sur 2+, remettez-le en jeu au plus près de son point de destruction et hors de portée d'engagement de toute unité ennemie, avec la totalité de ses Points de Vie."},
+      {l:"Vengeance Obsessionnelle", t:"Chaque fois qu'une unité ennemie a résolu une action de Tir ciblant ce modèle et qu'il a perdu un ou plusieurs PV à cause de ces attaques, aussitôt après cette action il peut effectuer un mouvement de Vengeance : lancez 1D6 et ajoutez 2 ; il se déplace d'autant de pouces mais doit finir au plus près de l'unité ennemie la plus proche (hors AÉRODYNES), éventuellement à portée d'engagement de celle-ci. Impossible s'il est Ébranlé ou déjà à portée d'engagement ; un seul mouvement de Vengeance par activation ennemie."}
+    ],
+    comp:["1 Buri Aegnirssen — Héros épique"],
+    equip:"Ce modèle est équipé de : pistolet bolter modèle Autoch ; Fléau.",
+    pts:[["1 modèle","95"]],
+    leader:null,
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS ÉPIQUE, BURI AEGNIRSSEN",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Kâhl", base:"⌀40mm", role:"QG",
+    stats:['5"','5','3+','4','7+','1'], inv:'4+',
+    ranged:[
+      {n:"Combi-bolter modèle Autoch", t:"", r:'24"', a:"4", sk:"2+", s:"4", ap:"0", d:"1"},
+      {n:"Désintégrateur volkanite", t:"[BLESSURES DÉVASTATRICES]", r:'24"', a:"3", sk:"2+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Hache à plasma corroyée", t:"", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"-2", d:"2"},
+      {n:"Gantelet à effet-masse", t:"", r:"Mêlée", a:"3", sk:"3+", s:"8", ap:"-3", d:"3"}
+    ],
+    wargear:[
+      "Le combi-bolter modèle Autoch peut être remplacé par 1 désintégrateur volkanite.",
+      "La hache à plasma corroyée peut être remplacée par 1 gantelet à effet-masse.",
+      "Le cimier rempart peut être remplacé par 1 cimier téléporteur."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Héros de la Cognation", t:"Tant que ce modèle mène une unité, les armes des modèles de cette unité ont l'aptitude [TOUCHES FATALES]."},
+      {l:"Efficacité Austère", t:"Une fois par round de bataille, à la phase de Commandement, vous pouvez choisir 1 modèle de votre armée ayant cette aptitude, puis choisir 1 unité ennemie qui lui est visible. L'unité ennemie gagne 1 pion de Jugement."},
+      {l:"Cimier Rempart (équipement)", t:"Tant que ce modèle mène une unité, les modèles de cette unité ont une sauvegarde invulnérable de 5+."},
+      {l:"Cimier Téléporteur (équipement)", t:"Tant que le porteur mène une unité, les modèles de cette unité ont l'aptitude Frappe en Profondeur."}
+    ],
+    comp:["1 Kâhl"],
+    equip:"Ce modèle est équipé de : combi-bolter modèle Autoch ; hache à plasma corroyée ; cimier rempart.",
+    pts:[["1 modèle","65"]],
+    leader:["Âtregardes Einhyr","Guerriers Âtrekogs"],
+    keywords:"INFANTERIE, PERSONNAGE, KÂHL",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Champion Einhyr", base:"⌀40mm", role:"QG",
+    stats:['5"','5','2+','5','7+','1'], inv:'',
+    ranged:[
+      {n:"Combi-bolter modèle Autoch", t:"", r:'24"', a:"4", sk:"2+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Hache de sombrétoile", t:"", r:"Mêlée", a:"6", sk:"2+", s:"6", ap:"-3", d:"2"},
+      {n:"Marteau à effet-masse", t:"", r:"Mêlée", a:"3", sk:"3+", s:"12", ap:"-3", d:"D6+1"}
+    ],
+    wargear:[
+      "Le marteau à effet-masse peut être remplacé par 1 hache de sombrétoile.",
+      "Le cimier à onde de champ peut être remplacé par 1 cimier téléporteur."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Parangon des Einhyr", t:"Tant que ce modèle mène une unité, ajoutez 1 aux jets d'Avance et de Charge de cette unité."},
+      {l:"Accélérateurs à Effet-masse", t:"Chaque fois que ce modèle termine un mouvement de charge, désignez une unité ennemie à portée d'engagement et lancez 1D6 : sur 2-5, elle subit D3 blessures mortelles ; sur 6, D3+3 blessures mortelles."},
+      {l:"Cimier Téléporteur (équipement)", t:"Tant que le porteur mène une unité, les modèles de cette unité ont l'aptitude Frappe en Profondeur."},
+      {l:"Cimier à Onde de Champ (équipement)", t:"Le porteur a une sauvegarde invulnérable de 4+."}
+    ],
+    comp:["1 Champion Einhyr"],
+    equip:"Ce modèle est équipé de : combi-bolter modèle Autoch ; marteau à effet-masse ; cimier à onde de champ.",
+    pts:[["1 modèle","70"]],
+    leader:["Âtregardes Einhyr"],
+    keywords:"INFANTERIE, PERSONNAGE, EXO-SCAPHANDRE, CHAMPION EINHYR",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Arkanyst Evaluator", base:"⌀32mm", role:"QG",
+    stats:['5"','5','3+','4','7+','1'], inv:'',
+    ranged:[
+      {n:"Inverseur transmatériel – demi-charge", t:"[TIR RAPIDE 1]", r:'12"', a:"3", sk:"2+", s:"8", ap:"-1", d:"1"},
+      {n:"Inverseur transmatériel – pleine charge", t:"[À RISQUE, TIR RAPIDE 2]", r:'18"', a:"3", sk:"2+", s:"8", ap:"-2", d:"2"},
+      {n:"Inverseur transmatériel – surcharge", t:"[À RISQUE, SURCHARGE, TIR RAPIDE 3]", r:'24"', a:"3", sk:"2+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Surcharge (arme)", t:"Chaque fois que le porteur fait un test de Risque pour ce profil d'arme, soustrayez 2 au résultat."},
+      {l:"Soutien de la Guilde Scientifique", t:"Tant que ce modèle est à 3\" ou moins d'une ou plusieurs autres unités d'INFANTERIE LIGUES DE VOTANN amies (hors unités dotées d'Agent solitaire), ce modèle a l'aptitude Agent solitaire."},
+      {l:"Transmutation de Ressources", t:"Une fois par tour, durant la phase d'Action, un modèle doté de cette aptitude peut l'utiliser lorsqu'il est sélectionné pour tirer. Dans ce cas, retirez un jeton de Jugement de sa cible et, jusqu'à la fin de la phase, les armes à distance équipées par ce modèle bénéficient de [TOUCHES SOUTENUES 1]. Si au moins une unité ennemie a été détruite par ces attaques, vous pouvez placer jusqu'à 2 jetons de Jugement sur des unités ennemies visibles par ce modèle."}
+    ],
+    comp:["1 Arkanyst Evaluator"],
+    equip:"Ce modèle est équipé de : inverseur transmatériel ; arme de corps à corps.",
+    pts:[["1 modèle","65"]],
+    leader:null,
+    keywords:"INFANTERIE, PERSONNAGE, ARKANYST EVALUATOR",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Memnyr Strategist", base:"⌀32mm", role:"QG",
+    stats:['5"','5','4+','4','7+','1'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Génie Computationnel", t:"À la fin de la phase de Commandement, si un modèle doté de cette aptitude se trouve dans une zone d'objectif, vous pouvez retirer un jeton de Jugement d'une unité ennemie sur le champ de bataille ; si vous le faites, placez un jeton de Jugement sur une autre unité ennemie sur le champ de bataille."},
+      {l:"Guidage Prédictif", t:"Une fois par round de bataille, ce modèle peut effectuer une Intervention Héroïque."}
+    ],
+    comp:["1 Memnyr Strategist"],
+    equip:"Ce modèle est équipé de : pistolet bolter modèle Autoch ; arme de corps à corps.",
+    pts:[["1 modèle","45"]],
+    leader:["Chaudronniers Cognats de Fer avec désintégrateurs volkanites lourds","Chaudronniers Cognats de Fer avec armes de mêlée"],
+    keywords:"INFANTERIE, PERSONNAGE, MEMNYR STRATEGIST",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Berehk Stornbröw", base:"⌀40mm", role:"QG",
+    stats:['6"','6','5+','5','7+','1'], inv:'5+',
+    ranged:[],
+    melee:[
+      {n:"Vengeance de Kromlôk – frappes à gravitons", t:"anti-monstre 3+, anti-véhicule 3+", r:"Mêlée", a:"4", sk:"2+", s:"10", ap:"-2", d:"4"},
+      {n:"Vengeance de Kromlôk – balayages à plasma", t:"", r:"Mêlée", a:"8", sk:"2+", s:"7", ap:"-2", d:"2"},
+      {n:"Gantelets de Forge-guerre", t:"attaques bonus", r:"Mêlée", a:"2", sk:"2+", s:"6", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 4+, Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Briser l'Ennemi", t:"Les armes de mêlée des modèles de l'unité de ce modèle ont l'aptitude [TOUCHES SOUTENUES 1]."},
+      {l:"Avalanche Implacable", t:"Vous pouvez cibler l'unité de ce modèle avec le Stratagème Intervention Héroïque pour 0 PC, même si vous avez déjà ciblé une autre unité avec ce Stratagème cette phase."}
+    ],
+    comp:["1 Berehk Stornbröw — Héros épique"],
+    equip:"Ce modèle est équipé de : Vengeance de Kromlôk ; Gantelets de Forge-guerre.",
+    pts:[["1 modèle","95"]],
+    leader:["Beserks Cthoniens"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS ÉPIQUE, CTHONIEN, BEREHK STORNBRÖW",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Maître-Fer Brôkhyr", base:"⌀32mm", role:"QG",
+    profiles:[
+      {name:"Maître-Fer Brôkhyr", base:"⌀32mm", stats:['5"','5','4+','4','7+','1'], inv:''},
+      {name:"Assistant Cognat de Fer", base:"⌀28,5mm", stats:['5"','5','4+','1','7+','1'], inv:''},
+      {name:"E-COG", base:"⌀25mm", stats:['5"','5','4+','1','7+','1'], inv:''}
+    ],
+    stats:['5"','5','4+','4','7+','1'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à gravitons", t:"anti-monstre 3+, anti-véhicule 3+", r:'18"', a:"3", sk:"3+", s:"5", ap:"-1", d:"3"},
+      {n:"Découpeur à faisceau laser", t:"", r:'6"', a:"1", sk:"4+", s:"6", ap:"-3", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Marteau à gravitons", t:"anti-monstre 3+, anti-véhicule 3+", r:"Mêlée", a:"3", sk:"4+", s:"9", ap:"-1", d:"3"},
+      {n:"Bras manipulateurs", t:"", r:"Mêlée", a:"3", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Torche à plasma", t:"", r:"Mêlée", a:"1", sk:"4+", s:"6", ap:"-3", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Soutien de la Guilde Brôkhyr", t:"Tant que cette unité est à 3\" ou moins d'une ou plusieurs unités VÉHICULE LIGUES DE VOTANN ou CHAUDRONNIERS COGNATS DE FER amies, et si ce n'est pas une unité Attachée, elle a l'aptitude Agent solitaire."},
+      {l:"Viseur Multispectral", t:"Chaque fois qu'un modèle de cette unité effectue une attaque à distance, relancez un jet pour blesser de 1."},
+      {l:"Expertise Forgekogs", t:"À la fin de son mouvement, cette unité peut réparer une unité VÉHICULE, EXO-CHÂSSIS ou CHAUDRONNIERS COGNATS DE FER LIGUES DE VOTANN amie à 3\" ou moins : un modèle de cette unité récupère jusqu'à D3 PV perdus (jusqu'à 3 si cette unité contient un Assistant Cognat de Fer). Chaque unité ne peut être réparée qu'une fois par tour."},
+      {l:"E-COG", t:"Si le Maître-Fer Brôkhyr est détruit, tous les E-COG restants le sont aussi. À l'embarquement dans un TRANSPORT, chaque E-COG occupe la place de 0 modèle."}
+    ],
+    comp:["1 Maître-Fer Brôkhyr","1 Assistant Cognat de Fer","3 E-COG"],
+    equip:"Maître-Fer : fusil à gravitons, marteau à gravitons. Assistant Cognat de Fer : découpeur à faisceau laser, arme de corps à corps. Un E-COG : pistolet bolter modèle Autoch, arme de corps à corps. Un autre : torche à plasma. Un autre : bras manipulateurs.",
+    pts:[["5 modèles","75"]],
+    leader:["Tonnekogs Brôkhyr","Guerriers Âtrekogs"],
+    keywords:"INFANTERIE, PERSONNAGE, BRÔKHYR, MAÎTRE-FER",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Grimnyr", base:"⌀40mm", role:"QG",
+    profiles:[
+      {name:"Grimnyr", base:"⌀40mm", stats:['5"','5','4+','4','6+','1'], inv:'4+'},
+      {name:"CORV", base:"⌀25mm", stats:['5"','5','4+','1','6+','1'], inv:'4+'}
+    ],
+    stats:['5"','5','4+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Ire Ancestrale – feu sorcier", t:"[PSYCHIQUE]", r:'24"', a:"3", sk:"3+", s:"6", ap:"-2", d:"D3"},
+      {n:"Ire Ancestrale – feu sorcier focalisé", t:"[À RISQUE, PSYCHIQUE]", r:'24"', a:"6", sk:"3+", s:"6", ap:"-2", d:"D3"},
+      {n:"Bolter modèle Autoch", t:"", r:'24"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Sceptre de protection ancestrale", t:"[PSYCHIQUE]", r:"Mêlée", a:"2", sk:"3+", s:"7", ap:"-1", d:"D3"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Respect de Grimnyr", t:"Une fois par bataille, au début de n'importe quelle phase, vous pouvez choisir une unité LIGUES DE VOTANN amie Ébranlée à 12\" ou moins du modèle de GRIMNYR de cette unité. Cette unité n'est plus Ébranlée."},
+      {l:"CORV", t:"Si le Grimnyr est détruit, tous les CORV restants le sont aussi. À l'embarquement dans un TRANSPORT, chaque CORV occupe la place de 0 modèle."}
+    ],
+    comp:["1 Grimnyr","2 CORV"],
+    equip:"Le Grimnyr : Ire Ancestrale, sceptre de protection ancestrale. Chaque CORV : bolter modèle Autoch, arme de corps à corps.",
+    pts:[["3 modèles","65"]],
+    leader:["Guerriers Âtrekogs"],
+    keywords:"INFANTERIE, PERSONNAGE, PSYKER, GRIMNYR",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Guerriers Âtrekogs", base:"⌀28,5mm", role:"Troupes",
+    stats:['5"','5','4+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter modèle Autoch", t:"", r:'24"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Faisceau à plasma EtaCarn", t:"[TOUCHES SOUTENUES D3]", r:'18"', a:"1", sk:"4+", s:"8", ap:"-3", d:"2"},
+      {n:"Fusil automatique HYLas", t:"[ASSAUT, TIR RAPIDE 3]", r:'24"', a:"3", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon rotatif HYLaser", t:"[LOURD, TOUCHES SOUTENUES 1]", r:'24"', a:"6", sk:"5+", s:"6", ap:"-1", d:"1"},
+      {n:"Éclateur à ions", t:"", r:'18"', a:"1", sk:"4+", s:"5", ap:"-2", d:"1"},
+      {n:"Lanceur de missiles L7 – déflagration", t:"[DÉFLAGRATION]", r:'24"', a:"D6", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lanceur de missiles L7 – focalisé", t:"", r:'24"', a:"1", sk:"4+", s:"9", ap:"-2", d:"D6"},
+      {n:"Fusil à magna-rail", t:"[BLESSURES DÉVASTATRICES, LOURD]", r:'18"', a:"1", sk:"5+", s:"12", ap:"-3", d:"D3+3"},
+      {n:"Pistolet de Theyn", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"8", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Couteau à plasma", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"-2", d:"1"},
+      {n:"Arme de mêlée de Theyn", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 6+"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"La Chance Offre. Le Besoin Garde. Le Labeur Gagne.", t:"À la fin de la phase de Commandement, si cette unité est à portée d'un marqueur d'objectif que vous contrôlez, ce marqueur reste sous votre contrôle jusqu'à ce que le Niveau de Contrôle de l'adversaire y devienne supérieur au vôtre à la fin d'une phase."},
+      {l:"Scannage Panspectral", t:"Chaque fois qu'un modèle de cette unité effectue une attaque à distance, relancez un jet pour toucher de 1."},
+      {l:"Cimier à Onde de Champ (équipement)", t:"Les modèles de l'unité du porteur ont une sauvegarde invulnérable de 5+."}
+    ],
+    wargear:[
+      "N'importe quel nombre de Guerriers Âtrekogs peuvent remplacer leur bolter modèle Autoch par 1 éclateur à ions.",
+      {head:"Jusqu'à 2 Guerriers Âtrekogs peuvent remplacer leur bolter modèle Autoch ou éclateur à ions par (pas de doublon) :", items:["1 fusil automatique HYLas","1 canon rotatif HYLaser","1 lanceur de missiles L7","1 faisceau à plasma EtaCarn","1 fusil à magna-rail"]},
+      "Jusqu'à 2 Guerriers Âtrekogs peuvent remplacer leur bolter modèle Autoch ou éclateur à ions par 1 couteau à plasma.",
+      {head:"Le bolter modèle Autoch du Theyn peut être remplacé par :", items:["1 éclateur à ions","1 pistolet de Theyn"]},
+      "Le Theyn peut être équipé de 1 arme de mêlée de Theyn."
+    ],
+    comp:["1 Theyn","9 Guerriers Âtrekogs"],
+    equip:"Le Theyn : pistolet bolter modèle Autoch, bolter modèle Autoch, arme de corps à corps, cimier à onde de champ. Chaque Guerrier Âtrekog : pistolet bolter modèle Autoch, bolter modèle Autoch, arme de corps à corps.",
+    pts:[["10 modèles","100"]],
+    keywords:"INFANTERIE, LIGNE, GRENADES, GUERRIERS ÂTREKOGS",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Porteur Kapricus", base:"⌀105 x 70mm", role:"Transport Assigné",
+    stats:['12"','7','4+','7','7+','2'], inv:'',
+    ranged:[
+      {n:"Autocanon à magna-bobine", t:"", r:'24"', a:"3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Autocanon à magna-bobine jumelé", t:"[JUMELÉ]", r:'24"', a:"3", sk:"4+", s:"7", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Pont de Tir 5, Éclaireurs 9\""},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Liaisons de Scanner", t:"Après que ce modèle a résolu son action de Tir, choisissez une unité ennemie (hors MONSTRES et VÉHICULES) touchée par une ou plusieurs de ces attaques. Elle est supprimée jusqu'à la fin de sa prochaine activation : chaque fois qu'un de ses modèles effectue une attaque, soustrayez 1 de son jet pour toucher."},
+      {l:"Lance-fumigènes (équipement)", t:"Le porteur a le mot-clé FUMÉE."}
+    ],
+    wargear:[
+      "Ce modèle peut être équipé de 1 lance-fumigènes."
+    ],
+    comp:["1 Porteur Kapricus"],
+    equip:"Ce modèle est équipé de : autocanon à magna-bobine, autocanon à magna-bobine jumelé, coque blindée.",
+    pts:[["1 modèle","75"]],
+    transport:"Capacité de transport de 5 modèles HERNKYN YAEGIR. Au début de l'étape Déclarer les Formations de Bataille, vous pouvez scinder une unité HERNKYN YAEGIR non scindée en deux unités aussi égales que possible : l'une doit embarquer dans ce TRANSPORT, l'autre peut embarquer dans un autre TRANSPORT ou se déployer séparément.",
+    keywords:"VÉHICULE, VOL, TRANSPORT, TRANSPORT ASSIGNÉ, HERNKOGS, KAPRICUS, PORTEUR",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Sagitaur", base:"voir modèle", role:"Transport Assigné",
+    stats:['12"','9','3+','9','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon à faisceau HYLas", t:"", r:'24"', a:"2", sk:"4+", s:"12", ap:"-3", d:"D6+1"},
+      {n:"Lanceur de missiles L7 – déflagration", t:"[DÉFLAGRATION]", r:'36"', a:"D6", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lanceur de missiles L7 – focalisé", t:"", r:'36"', a:"1", sk:"4+", s:"9", ap:"-2", d:"D6"},
+      {n:"Autocanon MATR", t:"[ASSAUT, TOUCHES SOUTENUES 1]", r:'24"', a:"6", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Lance-missile Sagitaur", t:"", r:'36"', a:"2", sk:"4+", s:"10", ap:"-3", d:"3"},
+      {n:"Canon bolt jumelé", t:"[TOUCHES SOUTENUES 2, JUMELÉ]", r:'36"', a:"3", sk:"4+", s:"6", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Roues blindées", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Avancée Fulgurante", t:"Les unités peuvent débarquer de ce TRANSPORT après qu'il a effectué une Avance. Elles comptent alors comme ayant fait un mouvement Normal cette phase et ne peuvent pas déclarer de charge le même tour, mais agissent sinon normalement pour le reste du tour."}
+    ],
+    wargear:[
+      {head:"Le canon à faisceau HYLas de ce modèle peut être remplacé par :", items:["1 lanceur de missiles L7 et 1 lance-missile Sagitaur","1 autocanon MATR"]}
+    ],
+    comp:["1 Sagitaur"],
+    equip:"Ce modèle est équipé de : canon à faisceau HYLas, canon bolt jumelé, roues blindées.",
+    pts:[["1 modèle","90"]],
+    transport:"Capacité de transport de 6 modèles INFANTERIE LIGUES DE VOTANN. Ne peut pas transporter de modèles ARTILLERIE, EXO-SCAPHANDRE, EXO-CHÂSSIS ni CHAUDRONNIERS COGNATS DE FER. Au début de l'étape Déclarer les Formations de Bataille, vous pouvez scinder une unité GUERRIERS ÂTREKOGS non scindée en deux unités aussi égales que possible : l'une doit embarquer dans ce TRANSPORT, l'autre peut embarquer ailleurs ou se déployer séparément.",
+    keywords:"VÉHICULE, TRANSPORT, TRANSPORT ASSIGNÉ, SAGITAUR",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Beserks Cthoniens", base:"⌀28,5mm (50mm avec lance-grenades taupe)", role:"Élites",
+    stats:['6"','6','5+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Lance-grenades taupe", t:"[DÉFLAGRATION, TIR INDIRECT]", r:'18"', a:"D6", sk:"5+", s:"5", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Masse à percussion", t:"anti-monstre 3+, anti-véhicule 3+", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"-2", d:"3"},
+      {n:"Hache à plasma lourde", t:"", r:"Mêlée", a:"3", sk:"4+", s:"7", ap:"-2", d:"3"},
+      {n:"Paire de gantelets à percussion jumelée", t:"[JUMELÉ]", r:"Mêlée", a:"4", sk:"4+", s:"9", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 4+"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Cyberstimulants", t:"Chaque fois qu'un modèle de cette unité est détruite par une attaque de mêlée, si elle n'a pas combattu cette phase, jetez 1 D6 : sur 4+, ne la retirez pas du jeu. Elle peut combattre après que l'unité attaquante a fini ses attaques, puis est retirée du jeu."},
+      {l:"Explosifs Souterrains", t:"Après que cette unité a résolu son action de Tir, choisissez une unité ennemie (hors MONSTRES et VÉHICULES) touchée par une ou plusieurs attaques de lance-grenades taupe. Jusqu'au début du prochain tour, cette unité ne peut pas effectuer de Tir en État d'Alerte."}
+    ],
+    wargear:[
+      "Tous les modèles peuvent remplacer leur hache à plasma lourde par 1 masse à percussion.",
+      "Par tranche de 5 modèles, 1 modèle sans lance-grenades taupe peut remplacer sa hache à plasma lourde ou masse à percussion par 1 paire de gantelets à percussion.",
+      "Par tranche de 5 modèles, 1 modèle sans paire de gantelets à percussion ni lance-grenades taupe peut être équipée de 1 lance-grenades taupe (accompagnée d'un L-COG sur le même socle)."
+    ],
+    comp:["5-10 Beserks Cthoniens"],
+    equip:"Chaque modèle est équipé de : hache à plasma lourde.",
+    pts:[["5 modèles","100"],["10 modèles","200"]],
+    keywords:"INFANTERIE, CTHONIENS, BESERKS",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Âtregardes Einhyr", base:"⌀32mm", role:"Élites",
+    stats:['5"','5','2+','2','7+','1'], inv:'',
+    ranged:[
+      {n:"Fusil à plasma EtaCarn", t:"[TIR RAPIDE 1]", r:'24"', a:"1", sk:"3+", s:"7", ap:"-3", d:"2"},
+      {n:"Lance-grenades d'exo-scaphandre", t:"[DÉFLAGRATION]", r:'24"', a:"D3", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Désintégrateur volkanite", t:"[BLESSURES DÉVASTATRICES]", r:'24"', a:"3", sk:"3+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Gantelet à percussion", t:"", r:"Mêlée", a:"2", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Marteau à gravitons", t:"anti-monstre 3+, anti-véhicule 3+", r:"Mêlée", a:"3", sk:"4+", s:"9", ap:"-1", d:"3"},
+      {n:"Gantelet-lame à plasma", t:"", r:"Mêlée", a:"3", sk:"3+", s:"6", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Destruction Décisive", t:"Chaque fois qu'un modèle de cette unité effectue une attaque à distance ciblant la cible éligible la plus proche, relancez un jet pour toucher de 1."},
+      {l:"Cimier Téléporteur (équipement)", t:"Les modèles de l'unité du porteur ont l'aptitude Frappe en Profondeur."},
+      {l:"Cimier à Onde de Champ (équipement)", t:"Les modèles de l'unité du porteur ont une sauvegarde invulnérable de 5+."}
+    ],
+    wargear:[
+      "Tous les modèles peuvent remplacer leur fusil à plasma EtaCarn par 1 désintégrateur volkanite.",
+      "Tous les modèles peuvent remplacer leur gantelet à percussion par 1 gantelet-lame à plasma.",
+      "Le gantelet à percussion ou gantelet-lame à plasma de l'Hesyr peut être remplacé par 1 marteau à gravitons.",
+      "Le cimier à onde de champ de l'Hesyr peut être remplacé par 1 cimier téléporteur."
+    ],
+    comp:["1 Hesyr","4-9 Âtregardes"],
+    equip:"Chaque modèle est équipé de : fusil à plasma EtaCarn, lance-grenades d'exo-scaphandre, gantelet à percussion. L'Hesyr est de plus équipé de : cimier à onde de champ.",
+    pts:[["5 modèles","135"],["10 modèles","270"]],
+    keywords:"INFANTERIE, EXO-SCAPHANDRE, ÂTREGARDES EINHYR",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Yaegirs Hernkogs", base:"⌀28,5mm", role:"Élites",
+    stats:['6"','5','5+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Lanceur MCA", t:"anti-monstre 3+, anti-véhicule 3+", r:'24"', a:"1", sk:"4+", s:"6", ap:"-2", d:"D6"},
+      {n:"Revolver bolter", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Fusil à pompe bolter", t:"[ASSAUT]", r:'18"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Fusil à magna-bobine", t:"[IGNORE LE COUVERT, PRÉCISION]", r:'24"', a:"1", sk:"4+", s:"5", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Couteau à plasma", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Chasseurs Pragmatiques", t:"Une fois par tour, quand une unité ennemie termine un mouvement Normal, d'Avance ou de Retraite à 9\" ou moins de cette unité, celle-ci peut faire un mouvement Normal de jusqu'à D6\"."}
+    ],
+    wargear:[
+      "Tous les modèles peuvent remplacer leur fusil à pompe bolter par 1 revolver bolter et 1 couteau à plasma.",
+      "1 Yaegir Hernkog peut remplacer son revolver bolter et couteau à plasma, ou son fusil à pompe bolter, par 1 fusil à magna-bobine.",
+      "1 Yaegir Hernkog peut remplacer son revolver bolter et couteau à plasma, ou son fusil à pompe bolter, par 1 lanceur MCA."
+    ],
+    comp:["1 Theyn Yaegir","9 Yaegirs Hernkogs"],
+    equip:"Chaque modèle est équipé de : fusil à pompe bolter, arme de corps à corps.",
+    pts:[["10 modèles","90"]],
+    keywords:"INFANTERIE, GRENADES, HERNKOGS, YAEGIRS",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Pionniers Hernkogs", base:"⌀90 x 52mm", role:"Attaque Rapide",
+    stats:['12"','6','4+','3','7+','2'], inv:'',
+    ranged:[
+      {n:"Revolver bolter", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Fusil à pompe bolter", t:"[ASSAUT]", r:'18"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Canon rotatif HYLaser", t:"[TOUCHES SOUTENUES 1]", r:'24"', a:"6", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Faisceau à ions", t:"[DÉFLAGRATION]", r:'18"', a:"D3+1", sk:"4+", s:"8", ap:"-2", d:"1"},
+      {n:"Autocanon à magna-bobine", t:"", r:'24"', a:"3", sk:"4+", s:"7", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Couteau à plasma", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 9\""},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Mag-riders Débordants", t:"À la fin du tour, si cette unité est entièrement à 9\" ou moins d\'un ou plusieurs bords de champ de bataille et hors de portée d\'engagement de toute unité ennemie, vous pouvez la retirer du champ de bataille et la placer en Réserves."},
+      {l:"Réseau de comms multi-ondes (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Scanner Panspectral (équipement)", t:"Chaque fois qu'un modèle de l'unité du porteur effectue une attaque à distance, relancez un jet pour toucher de 1."},
+      {l:"Projecteur d'arceau (équipement)", t:"Chaque fois qu'un modèle de l'unité du porteur effectue une attaque à distance, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      {head:"Par tranche de 3 modèles, 1 modèle peut être équipée de :", items:["1 canon rotatif HYLaser","1 faisceau à ions"]},
+      "1 modèle sans canon rotatif HYLaser ni faisceau à ions peut être équipé de 1 réseau de comms multi-ondes.",
+      "1 modèle sans canon rotatif HYLaser ni faisceau à ions peut être équipé de 1 scanner panspectral.",
+      "1 modèle sans canon rotatif HYLaser ni faisceau à ions peut être équipé de 1 projecteur d'arceau."
+    ],
+    comp:["3-6 Pionniers Hernkogs"],
+    equip:"Chaque modèle est équipé de : revolver bolter, fusil à pompe bolter, autocanon à magna-bobine, couteau à plasma.",
+    pts:[["3 modèles","80"],["6 modèles","160"]],
+    keywords:"MONTÉ, GRENADES, VOL, HERNKOGS, PIONNIERS",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Défenseurs Kapricus", base:"⌀105 x 70mm", role:"Attaque Rapide",
+    stats:['12"','7','4+','7','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon rotatif HYLaser", t:"[TOUCHES SOUTENUES 1]", r:'24"', a:"6", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Canon à magna-rail", t:"[BLESSURES DÉVASTATRICES, LOURD]", r:'24"', a:"1", sk:"4+", s:"14", ap:"-4", d:"D3+3"},
+      {n:"Autocanon à magna-bobine jumelé", t:"[JUMELÉ]", r:'24"', a:"3", sk:"4+", s:"7", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Éclaireurs 9\""},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Manœuvre Opportuniste", t:"Après que cette unité a résolu son action de Tir, elle peut faire un mouvement Normal de jusqu'à D6\". Si elle le fait, jusqu'à la fin du tour, elle ne peut pas déclarer de charge."},
+      {l:"Lance-fumigènes (équipement)", t:"Le porteur a le mot-clé FUMÉE."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur canon à magna-rail par 1 canon rotatif HYLaser.",
+      "N'importe quel nombre de modèles peuvent être équipées de 1 lance-fumigènes."
+    ],
+    comp:["1-2 Défenseurs Kapricus"],
+    equip:"Chaque modèle est équipé de : canon à magna-rail, autocanon à magna-bobine jumelé, coque blindée.",
+    pts:[["1 modèle","70"],["2 modèles","140"]],
+    keywords:"VÉHICULE, VOL, HERNKOGS, KAPRICUS, DÉFENSEURS",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Tonnekogs Brôkhyr", base:"⌀40mm", role:"Soutien",
+    stats:['5"','6','3+','2','7+','1'], inv:'',
+    ranged:[
+      {n:"Canon bolt", t:"[TOUCHES SOUTENUES 2]", r:'36"', a:"3", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Canon éclateur à gravitons", t:"anti-monstre 3+, anti-véhicule 3+", r:'24"', a:"3", sk:"4+", s:"5", ap:"-2", d:"3"},
+      {n:"Faisceau de conversion SP", t:"[CONVERSION, TOUCHES FATALES]", r:'24"', a:"2", sk:"4+", s:"7", ap:"-2", d:"3"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Feu de Percée", t:"Après que cette unité a résolu son action de Tir, choisissez une unité ennemie touchée par une ou plusieurs de ces attaques. Jusqu'au début du prochain tour, cette unité ne peut pas bénéficier du Couvert."},
+      {l:"Conversion", t:"Chaque fois qu'une attaque faite avec une arme [CONVERSION] cible une unité ennemie à plus de 12\", un résultat non modifié de 4+ pour toucher inflige une touche Critique."}
+    ],
+    wargear:[
+      "Tous les modèles peuvent remplacer leur canon bolt par 1 canon éclateur à gravitons.",
+      "Tous les modèles peuvent remplacer leur canon bolt par 1 faisceau de conversion SP."
+    ],
+    comp:["3-6 Tonnekogs Brôkhyr"],
+    equip:"Chaque modèle est équipé de : canon bolt, arme de corps à corps.",
+    pts:[["3 modèles","80"],["6 modèles","160"]],
+    keywords:"INFANTERIE, EXO-CHÂSSIS, BRÔKHYR, TONNEKOGS",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Trembleterres Cthoniens", base:"⌀80mm", role:"Soutien",
+    stats:['4"','6','4+','6','7+','2'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Artillerie de brèche", t:"[DÉFLAGRATION, LOURD, TIR INDIRECT]", r:'24"', a:"D6+1", sk:"5+", s:"10", ap:"-1", d:"2"},
+      {n:"Obus Séisme", t:"[DÉFLAGRATION, LOURD, TIR INDIRECT]", r:'36"', a:"D6+4", sk:"5+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Pics à plasma", t:"", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Séismes Déstabilisants", t:"Après que cette unité a résolu son action de Tir, choisissez une unité ennemie touchée par une ou plusieurs attaques d'obus Séisme. Cette unité doit passer un test d'Ébranlement en soustrayant 1 du résultat."},
+      {l:"Chasseurs Géomantiques", t:"Jusqu'à deux fois par bataille, quand cette unité est choisie pour effectuer une action de Tir, elle peut utiliser cette aptitude : jusqu'à la fin de la phase, chaque fois qu'un modèle tire avec son artillerie de brèche, vous pouvez relancer le jet pour blesser."}
+    ],
+    wargear:[
+      "Tous les modèles peuvent remplacer leur artillerie de brèche par 1 obus Séisme."
+    ],
+    comp:["2 Trembleterres Cthoniens"],
+    equip:"Chaque modèle est équipé de : 2 pistolets bolter modèle Autoch, artillerie de brèche, pics à plasma.",
+    pts:[["2 modèles","110"]],
+    keywords:"INFANTERIE, ARTILLERIE, CTHONIENS, TREMBLETERRES",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Chaudronniers Cognats de Fer (désintégrateurs volkanites lourds)", base:"⌀40mm", role:"Soutien",
+    stats:['5"','6','2+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"", r:'24"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Désintégrateur volkanite lourd", t:"[BLESSURES DÉVASTATRICES]", r:'24"', a:"6", sk:"4+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Couteau à plasma", t:"", r:"Mêlée", a:"2", sk:"3+", s:"6", ap:"-2", d:"1"},
+      {n:"Épée à plasma", t:"[TOUCHES SOUTENUES 1]", r:"Mêlée", a:"6", sk:"3+", s:"6", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Réponse de Purge", t:"Chaque fois que cette unité effectue un Tir en État d'Alerte, les touches sont obtenues sur des jets pour toucher non modifiés de 5+ lors de la résolution de ce tir."},
+      {l:"Cimier de Marque-proie (équipement)", t:"Chaque fois qu'un modèle de l'unité du porteur effectue une attaque ciblant une unité ennemie à portée d'un ou plusieurs marqueurs d'objectif, sur une Blessure Critique, cette attaque a l'aptitude [PRÉCISION]."}
+    ],
+    wargear:[
+      "Le désintégrateur volkanite lourd et le couteau à plasma du Theyn Cognat peuvent être remplacés par 1 bolter modèle Autoch et 1 épée à plasma."
+    ],
+    comp:["1 Theyn Cognat","2-5 Chaudronniers Cognats de Fer"],
+    equip:"Le Theyn Cognat : désintégrateur volkanite lourd, couteau à plasma, cimier de marque-proie. Chaque Chaudronnier : désintégrateur volkanite lourd, couteau à plasma.",
+    pts:[["3 modèles","85"],["6 modèles","170"]],
+    keywords:"INFANTERIE, CHAUDRONNIERS COGNATS DE FER",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Chaudronniers Cognats de Fer (armes de mêlée)", base:"⌀40mm", role:"Soutien",
+    stats:['5"','6','2+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter modèle Autoch", t:"", r:'24"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Gantelet à percussion", t:"[TOUCHES FATALES]", r:"Mêlée", a:"3", sk:"4+", s:"10", ap:"-2", d:"2"},
+      {n:"Épée à plasma", t:"[TOUCHES SOUTENUES 1]", r:"Mêlée", a:"6", sk:"3+", s:"6", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Éradication Impitoyable", t:"Chaque fois qu'une unité ennemie (hors MONSTRES et VÉHICULES) à portée d'engagement de cette unité effectue un Désengagement, tous ses modèles doivent passer un test de Fuite Désespérée. Si cette unité ennemie est Ébranlée, soustrayez 1 de chacun de ces tests."},
+      {l:"Cimier de Marque-proie (équipement)", t:"Chaque fois qu'un modèle de l'unité du porteur effectue une attaque ciblant une unité ennemie à portée d'un ou plusieurs marqueurs d'objectif, sur une Blessure Critique, cette attaque a l'aptitude [PRÉCISION]."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur épée à plasma par 1 gantelet à percussion."
+    ],
+    comp:["1 Theyn Cognat","2-5 Chaudronniers Cognats de Fer"],
+    equip:"Le Theyn Cognat : bolter modèle Autoch, épée à plasma, cimier de marque-proie. Chaque Chaudronnier : bolter modèle Autoch, épée à plasma.",
+    pts:[["3 modèles","85"],["6 modèles","170"]],
+    keywords:"INFANTERIE, CHAUDRONNIERS COGNATS DE FER",
+    faction:"LIGUES DE VOTANN"
+  },
+  {
+    name:"Forteresse Terrestre Hekaton", base:"voir modèle", role:"Soutien",
+    stats:['10"','12','2+','16','7+','5'], inv:'',
+    ranged:[
+      {n:"Canon à ions cyclique", t:"[DÉFLAGRATION]", r:'24"', a:"D6+2", sk:"4+", s:"7", ap:"-2", d:"2"},
+      {n:"Canon à magna-rail lourd", t:"[BLESSURES DÉVASTATRICES, LOURD]", r:'30"', a:"2", sk:"4+", s:"18", ap:"-4", d:"D6+4"},
+      {n:"Ogive Hekaton", t:"[DÉFLAGRATION, TIR UNIQUE]", r:'36"', a:"D6+3", sk:"4+", s:"7", ap:"-2", d:"2"},
+      {n:"Autocanon MATR", t:"[ASSAUT, TOUCHES SOUTENUES 1]", r:'24"', a:"6", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Faisceau de conversion SP lourd", t:"[CONVERSION, TOUCHES FATALES]", r:'24"', a:"4", sk:"4+", s:"10", ap:"-2", d:"4"},
+      {n:"Canon bolt jumelé", t:"[TOUCHES SOUTENUES 2, JUMELÉ]", r:'36"', a:"3", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Faisceau à ions jumelé", t:"[DÉFLAGRATION, JUMELÉ]", r:'18"', a:"D3+1", sk:"4+", s:"8", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Roues blindées", t:"", r:"Mêlée", a:"6", sk:"4+", s:"8", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6"},
+      {l:"Faction", t:"Œil des Ancêtres"},
+      {l:"Ciblage MultiCOG", t:"Chaque fois que ce modèle effectue une attaque à distance, vous pouvez ignorer tout ou partie des modificateurs à : la caractéristique de Capacité de Tir de cette attaque ; le jet pour toucher."},
+      {l:"Conversion / Tir Unique", t:"Conversion : une attaque [CONVERSION] ciblant une unité à plus de 12\" inflige une touche Critique sur un jet pour toucher non modifié réussi de 4+. Tir Unique : le porteur ne peut tirer avec cette arme qu'une fois par bataille."},
+      {l:"Scanner Panspectral (équipement)", t:"Chaque fois qu'un modèle de l'unité du porteur effectue une attaque à distance, relancez un jet pour toucher de 1."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 de ses jets pour toucher."}
+    ],
+    wargear:[
+      {head:"Les 2 canons bolt jumelés de ce modèle peuvent être remplacés par :", items:["1 canon bolt jumelé et 1 faisceau à ions jumelé","2 faisceaux à ions jumelés"]},
+      {head:"Le canon à ions cyclique de ce modèle peut être remplacé par :", items:["1 faisceau de conversion SP lourd","1 canon à magna-rail lourd"]},
+      "Le scanner panspectral de ce modèle peut être remplacé par 1 ogive Hekaton."
+    ],
+    comp:["1 Forteresse Terrestre Hekaton"],
+    equip:"Ce modèle est équipé de : canon à ions cyclique, autocanon MATR, 2 canons bolt jumelés, roues blindées, scanner panspectral.",
+    pts:[["1 modèle","240"]],
+    transport:"Capacité de transport de 14 modèles INFANTERIE LIGUES DE VOTANN. Chaque modèle EXO-SCAPHANDRE, EXO-CHÂSSIS ou CHAUDRONNIERS COGNATS DE FER occupe la place de 2 modèles. Ne peut pas transporter de modèles ARTILLERIE.",
+    keywords:"VÉHICULE, TRANSPORT, FORTERESSE TERRESTRE HEKATON",
+    faction:"LIGUES DE VOTANN"
+  }
+];
+
+function weaponRows(list, skLabel){
+  if(!list.length) return '';
+  const title = skLabel==='CT' ? 'Armes à distance' : 'Armes de mêlée';
+  let rows = `<div class="wrow whead"><span></span><span>${title}</span>`+
+    `<span class="sub">PORT.</span><span class="sub">A</span><span class="sub">${skLabel}</span>`+
+    `<span class="sub">F</span><span class="sub">PA</span><span class="sub">D</span></div>`;
+  for(const w of list){
+    const tag = w.t ? ` <span class="tag">${w.t}</span>` : '';
+    rows += `<div class="wrow wdata"><span class="dot"></span>`+
+      `<span class="wn">${w.n}${tag}</span>`+
+      `<span class="num">${w.r}</span><span class="num">${w.a}</span><span class="num">${w.sk}</span>`+
+      `<span class="num">${w.s}</span><span class="num">${w.ap}</span><span class="num">${w.d}</span></div>`;
+  }
+  return `<div class="wtable">${rows}</div>`;
+}
+
+function render(){
+  const deck = document.getElementById('deck');
+  deck.innerHTML = UNITS.map(u=>{
+    let statBlock;
+    if(u.profiles){
+      const phead = `<tr><th class="name">Profil</th>${STAT_LABELS.map(l=>`<th>${l}</th>`).join('')}<th>Invu</th></tr>`;
+      const prows = u.profiles.map(p=>`<tr><td class="name">${p.name}${p.base?`<small>${p.base}</small>`:''}</td>`+
+        `${p.stats.map(s=>`<td>${s}</td>`).join('')}<td class="inv">${p.inv||'—'}</td></tr>`).join('');
+      statBlock = `<table class="pf"><thead>${phead}</thead><tbody>${prows}</tbody></table>`;
+    } else {
+      const statCells = STAT_LABELS.map(l=>`<div class="lbl">${l}</div>`).join('')
+        + STAT_LABELS.map((l,i)=>`<div class="val">${u.stats[i]}</div>`).join('');
+      const invul = u.inv ? `<div class="invul"><div class="circle">${u.inv}</div>`+
+        `<div class="txt">Sauvegarde invulnérable</div></div>` : '';
+      statBlock = `<div class="statline">${statCells}</div>${invul}`;
+    }
+    const abLine = a=>`<div class="ability"><span class="al">${a.l} : </span>`+
+      `<span class="at">${a.t}</span></div>`;
+    const abBase = u.abilities.filter(a=>a.l==="Aptitudes de base");
+    const abFac  = u.abilities.filter(a=>a.l==="Faction");
+    const abRest = u.abilities.filter(a=>a.l!=="Aptitudes de base" && a.l!=="Faction");
+    let abilities = abBase.map(abLine).join('');
+    if(abFac.length) abilities += `<div class="ability"><span class="al">Faction : </span>`+
+      `<span class="at">${abFac.map(a=>a.t).join(', ')}</span></div>`;
+    abilities += abRest.map(abLine).join('');
+    const leftSection = u.leftSection ? `<div class="section-h" style="margin-top:20px">${u.leftSection.title}</div>`+
+      `<div class="note">${u.leftSection.text}</div>` : '';
+    const wargear = (u.wargear&&u.wargear.length) ? `<div class="section-h" style="margin-top:20px">Options d'équipement</div>`+
+      `<ul class="wg-list">${u.wargear.map(o=> (typeof o==='string')
+        ? `<li>${o}</li>`
+        : `<li>${o.head}<ul class="wg-sub">${o.items.map(it=>`<li>${it}</li>`).join('')}</ul></li>`
+      ).join('')}</ul>` : '';
+    const comp = `<ul class="comp-list">${u.comp.map(c=>`<li>${c}</li>`).join('')}</ul>`
+      + `<div class="note">${u.equip}</div>`;
+    const pts = `<div class="pts-table">${u.pts.map(p=>`<div class="pts-row"><span class="m">${p[0]}</span>`+
+      `<span class="p">${p[1]} pts</span></div>`).join('')}</div>`;
+    const transport = u.transport ? `<div class="section-h" style="margin-top:16px">Transport</div>`+
+      `<div class="note">${u.transport}</div>` : '';
+    const leader = u.leader ? `<div class="section-h" style="margin-top:16px">Meneur</div>`+
+      `<div class="lead-intro">Ce modèle peut être attaché aux unités suivantes :</div>`+
+      `<ul class="lead-list">${u.leader.map(t=>`<li>${t}</li>`).join('')}</ul>`+
+      (u.leaderNote?`<div class="note" style="margin-top:6px">${u.leaderNote}</div>`:'') : '';
+    return `<div class="card">
+      <div class="card-head">
+        <div><span class="name">${u.name}</span><span class="base">[${u.base}]</span></div>
+        <span class="role">${u.role}</span>
+      </div>
+      <div class="body-grid">
+        <div class="col-left">
+          ${statBlock}
+          ${weaponRows(u.ranged,'CT')}
+          ${weaponRows(u.melee,'CC')}
+          ${wargear}
+          ${leftSection}
+        </div>
+        <div class="col-right">
+          <div class="section-h">Aptitudes</div>
+          ${abilities}
+          <div class="section-h" style="margin-top:16px">Composition d'unité</div>
+          ${comp}
+          <div style="margin-top:10px">${pts}</div>
+          ${transport}
+          ${leader}
+        </div>
+      </div>
+      <div class="kw-grid">
+        <div class="kw-cell"><span class="k">MOTS-CLÉS : </span><span class="v">${u.keywords}</span></div>
+        <div class="kw-cell"><span class="k">MOTS-CLÉS DE FACTION : </span><span class="v">${u.faction}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+render();
+</script>
+</body>
+</html>
