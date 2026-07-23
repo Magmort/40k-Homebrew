@@ -324,7 +324,7 @@ Ce Primaire n'a pas de secondaire associé.
 | Poids écrasant | 1 | Phase d'Action (Charge), quand une unité IRONSTRIDER ENGINE ou KASTELAN ROBOTS termine un mouvement de charge. Lancez 1D6 par modèle de cette unité à Portée d'Engagement de l'ennemi. Sur 2+ : 1 blessure mortelle sur l'unité ennemie. |
 | Electro-choc | 2 | Au début de la phase de Combat, sélectionnez 1 unité ennemie (hors VÉHICULE ou MONSTRE) à Portée d'Engagement d'un NON-SKITARII INFANTERIE, MARCHEUR ou MONTÉ ou PERSONNAGE. Jusqu'à la fin de la phase de Combat : cette unité ennemie ne peut pas combattre. |
 | Poussée des propulseurs | 1 | À la fin du tour de bataille, sélectionnez 1 unité PTERAXII sur le champ de bataille. Retirez l'unité en réserve. Durant la prochaine phase de Commandement, vous devez la déployer. |
-| Bombe sismique | 1 | Phase d'Action (Mouvement), quand un modèle ARCHAEOPTER FUSILAVE termine son déplacement, sélectionnez 1 unité ennemie traversée (hors TITANIQUE et VOL). Jusqu'au début de la prochaine phase d'Action : sa caractéristique de Mouvement est divisée par 2, ainsi que pour l'Avance et la charge. |
+| Bombe sismique | 1 | Phase d'Action (Mouvement), quand un modèle ARCHAEOPTER FUSILAVE termine son déplacement, sélectionnez 1 unité ennemie traversée (hors TITANESQUE et VOL). Jusqu'au début de la prochaine phase d'Action : sa caractéristique de Mouvement est divisée par 2, ainsi que pour l'Avance et la charge. |
 | Protocoles de Taser Chaîne | 1 | Phase de Combat, quand une unité ADEPTUS MECHANICUS est sélectionnée pour combattre. Jusqu'à la fin de la phase de Combat : chaque attaque avec une arme taser ou une arme alpha, sur un jet de touche non modifié de 5+, bénéficie de [TOUCHES SOUTENUES 2]. |
 | Crâne Info Esclave | 2 | Phase de Commandement. Sélectionnez 1 unité ADEPTUS MECHANICUS INFANTERIE, MARCHEUR ou MONTÉ amie non engagée. Elle peut tirer comme si c'était la phase d'Action, mais uniquement contre 1 unité ennemie déployée en renfort ce tour et à 12" ou moins. |
 | Contre-mesures à filaments électro | 2 | À la fin de la phase d'Action (Mouvement), sélectionnez 1 modèle ARCHAEOPTER et 1 unité ennemie à 6" ou moins. Jusqu'au début de la prochaine phase d'Action : cette unité ennemie n'est pas affectée par les auras ni les stratagèmes ennemis. |
@@ -332,7 +332,7 @@ Ce Primaire n'a pas de secondaire associé.
 | Échappements d'encens | 1 | Phase d'Action (Tir), quand une unité ADEPTUS MECHANICUS SMOKESCREEN est sélectionnée comme cible d'une attaque. Jusqu'à la fin de la Phase d'Action : -1 au jet de touche de chaque attaque contre cette unité. |
 | Munitions enrichies | 1 | Phase d'Action (Tir), quand une unité ADEPTUS MECHANICUS est sélectionnée pour tirer. Jusqu'à la fin de la phase d'Action : chaque attaque d'une arme radium contre une cible non-VÉHICULE, sur un jet de touche non modifié de 4+, gagne [TOUCHES FATALES]. |
 | Tir de Volée Galvanique | 2 | Phase d'Action (Tir), quand une unité SKITARII RANGERS est sélectionnée pour tirer. Jusqu'à la fin de la Phase d'Action : les fusils galvaniques deviennent [TIR RAPIDE 2]. |
-| Systèmes surchargés | 1 | N'importe quelle phase, quand un modèle VÉHICULE ennemi (hors TITANIQUE) perd des Blessures à la suite d'une attaque d'une arme arc. Lancez 1D6 : sur 2+, ce VÉHICULE doit immédiatement effectuer un jet sur la table des dégâts de véhicule. |
+| Systèmes surchargés | 1 / 2 | N'importe quelle phase, quand un modèle VÉHICULE ennemi perd des blessures suite à une attaque d'une arme à Arc. Lancez 1D6 : sur 2+, ce VÉHICULE doit immédiatement effectuer un jet sur la table des dégâts de véhicule. Si ce modèle ennemi possède le mot-clé TITANESQUE, ce stratagème coûte 2 PC ; sinon, il coûte 1 PC. |
 
 **Ordres Sacrés**
 
@@ -637,6 +637,16 @@ Lorsqu'une unité ADEPTUS MECHANICUS obtient une Amélioration d'Arme, si l'arme
 | 4-6    | Crosse Pliante : le porteur peut être sélectionné pour tirer alors que son unité se trouve à Portée d'Engagement d'unités ennemies, et peut effectuer des attaques avec cette arme dans ce cas. Si c'est le cas, chaque fois qu'une attaque est effectuée avec cette arme, soustrayez 1 au jet de touche. |
 
 ## Trésors Archéotechniques
+
+Lorsqu'un élément d'archéotech est assemblé, retirez les pièces ayant servi à son assemblage et sélectionnez une unité TECH-PRÊTRE ADEPTUS MECHANICUS de votre armée. Cette unité ajoute cet élément d'archéotech à sa collection personnelle ; notez-le.
+
+Lors du rassemblement de votre armée, chaque unité TECH-PRÊTRE ADEPTUS MECHANICUS peut être équipée de :
+
+- 1 champ de force archéotech issu de sa collection.
+
+- 1 arme archéotech issue de sa collection.
+
+- 1 techno-arcane archéotech issue de sa collection.
 
 **Sources d'énergie**
 
