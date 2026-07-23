@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agents de l'Imperium — Fiches d'unités (FR)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#141210; font-family:'Inter',sans-serif; padding:32px 16px; }
+  .page-head { max-width:807px; margin:0 auto 26px; color:#e9e3da; }
+  .page-head h1 { font-family:'Oswald',sans-serif; font-weight:700; text-transform:uppercase;
+    letter-spacing:1px; font-size:30px; color:#fff; }
+  .page-head p { font-size:13px; color:#9a9187; margin-top:6px; }
+  .deck { display:flex; flex-direction:column; align-items:center; gap:34px; }
+  .card { width:807px; max-width:100%; font-family:'Inter',sans-serif; background:#1c1a19;
+    border:1px solid #000; box-shadow:0 4px 24px rgba(0,0,0,0.4); color:#e9e3da; }
+  .card-head { position:relative; background:linear-gradient(180deg, #185D5B, #113c3a);
+    padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:3px solid #000; }
+  .card-head .name { font-family:'Oswald',sans-serif; font-weight:700; font-size:26px;
+    letter-spacing:0.5px; text-transform:uppercase; color:#fff; }
+  .card-head .base { font-size:15px; color:#d8c9c9; margin-left:10px; }
+  .card-head .role { font-family:'Oswald',sans-serif; font-size:12px; text-transform:uppercase;
+    letter-spacing:1px; text-align:right; }
+  .body-grid { display:grid; grid-template-columns:3fr 2fr; gap:0; }
+  .col-left { padding:16px 18px 20px; border-right:1px solid #000; }
+  .col-right { padding:16px 18px 20px; }
+  .statline { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; text-align:center; }
+  .statline .lbl { font-size:12px; font-weight:700; letter-spacing:1px; color:#c9beae; }
+  .statline .val { background:#3a3532; border:1px solid #55504a; border-radius:3px; padding:8px 0;
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; color:#fff; }
+  .pf { width:100%; border-collapse:collapse; }
+  .pf th, .pf td { padding:6px 6px; text-align:center; }
+  .pf thead th { font-size:11px; font-weight:700; letter-spacing:1px; color:#c9beae; border-bottom:1px solid #4a453f; }
+  .pf thead th.name { text-align:left; }
+  .pf tbody td { font-family:'Oswald',sans-serif; font-weight:600; font-size:17px; color:#fff; border-bottom:1px solid #2a2624; }
+  .pf tbody td.name { font-family:'Inter',sans-serif; text-align:left; font-size:13px; font-weight:600; color:#f0ebe3; }
+  .pf tbody td.name small { display:block; font-weight:400; font-size:11px; color:#9a9187; }
+  .pf tbody td.inv { color:#b6e7e5; }
+  .invul { display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .invul .circle { width:46px; height:46px; border-radius:50%; background:#2a2624; border:2px solid #113c3a;
+    display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif;
+    font-weight:700; font-size:18px; color:#fff; flex-shrink:0; }
+  .invul .txt { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; }
+  .wtable { margin-top:20px; }
+  .wrow { display:grid; grid-template-columns:16px 1fr 42px 26px 30px 26px 30px 30px; gap:6px;
+    align-items:center; }
+  .whead { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; border-bottom:1px solid #4a453f; padding-bottom:6px;
+    margin-bottom:8px; }
+  .whead .sub { font-size:11px; color:#9a9187; text-align:right; text-transform:none; }
+  .wdata { padding:6px 0; border-bottom:1px solid #2a2624; }
+  .wdata .dot { width:14px; height:8px; background:#8a8378; border-radius:2px; }
+  .wdata .wn { font-size:13px; color:#f0ebe3; }
+  .wdata .num { text-align:right; font-size:13px; font-weight:600; }
+  .tag { background:#4a453f; color:#d8c9c9; font-size:10px; padding:2px 5px; border-radius:2px;
+    margin-left:4px; }
+  .section-h { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px;
+    text-transform:uppercase; background:#3a3532; padding:6px 10px; margin-bottom:10px; }
+  .ability { margin-bottom:10px; font-size:13px; line-height:1.5; }
+  .ability .al { font-weight:700; color:#fff; }
+  .ability .at { color:#d8c9c9; }
+  .comp-list { margin:0 0 6px; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-list { margin:0; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-sub { margin:4px 0 2px; padding-left:18px; }
+  .wg-sub li { color:inherit; }
+  .pts-table { border:1px solid #4a453f; border-radius:3px; overflow:hidden; }
+  .pts-row { display:flex; align-items:center; justify-content:space-between; background:#2a2624;
+    padding:7px 12px; }
+  .pts-row + .pts-row { border-top:1px solid #4a453f; }
+  .pts-row .m { font-size:13px; }
+  .pts-row .p { background:#8a1f24; color:#fff; font-weight:700; font-size:13px; padding:3px 10px;
+    border-radius:3px; }
+  .note { font-size:12px; color:#c9beae; line-height:1.5; margin-top:4px; }
+  .lead-intro { font-size:13px; color:#d8c9c9; margin-bottom:6px; }
+  .lead-list { margin:0; padding-left:18px; font-size:13px; }
+  .lead-list li { color:#8fb4d8; }
+  .kw-grid { display:grid; grid-template-columns:3fr 2fr; border-top:1px solid #000; }
+  .kw-cell { padding:10px 18px; }
+  .kw-cell:first-child { border-right:1px solid #000; }
+  .kw-cell .k { font-size:12px; font-weight:700; letter-spacing:0.5px; }
+  .kw-cell .v { font-size:12px; color:#9fc6ea; }
+  @media print { body{background:#fff; padding:0;} .card{break-inside:avoid; box-shadow:none;}
+    .page-head{color:#000;} .page-head h1{color:#000;}
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+  @media (max-width:840px){ .card{width:100%;} }
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>Agents de l'Imperium — Fiches d'unités</h1>
+  <p>Version française. Profils de jeu (Warhammer 40 000, 10ᵉ édition). Données : Wahapedia. Warhammer 40 000 © Games Workshop — usage personnel.</p>
+</div>
+<div class="deck" id="deck"></div>
+
+<script>
+// M=Mouvement, E=Endurance, Svg=Sauvegarde, PV=Points de Vie, Cd=Commandement, CO=Contrôle d'Objectif
+const STAT_LABELS = ['M','E','Svg','PV','Cd','CO'];
+
+const UNITS = [
+  {
+    name:"Callidus Assassin", base:"⌀32mm", role:"QG",
+    stats:['7"','4','6+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Neuro-lacérateur", t:"anti-infanterie 2+, précision, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Épée de phase et lames empoisonnées", t:"touches fatales, précision", r:"Mêlée", a:"5", sk:"2+", s:"5", ap:"-4", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Attaque en premier, Infiltrateur, Agent solitaire"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Évasion acrobatique", t:"À la fin de la phase de Combat, si ce modèle est à portée d'engagement d'une ou plusieurs unités ennemies, il peut effectuer un Désengagement de jusqu'à D6\". De plus, à la fin du tour, s'il n'est pas à 3\" d'une ou plusieurs unités ennemies, il peut quitter le champ de bataille et retourner en Réserve. Si la bataille se termine alors que ce modèle n'est pas sur le champ de bataille, il est détruit."},
+      {l:"La Confusion Règne (Aura)", t:"Une fois par round de bataille, vous pouvez annuler les effets d'un Stratagème ciblant une unité à 12\" ou moins de ce modèle."},
+      {l:"Faction", t:"Assignation Secrète"}
+    ],
+    comp:["1 Callidus Assassin — Héros emblématique"],
+    equip:"Ce modèle est équipé de : neuro-lacérateur ; épée de phase et lames empoisonnées.",
+    pts:[["1 modèle","100"]],
+    leader:null,
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, IMPERIUM, OFFICIO ASSASSINORUM, CALLIDUS ASSASSIN",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Culexus Assassin", base:"⌀32mm", role:"QG",
+    stats:['7"','4','6+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Animus speculum", t:"anti-psyker 2+, assaut, précision", r:'24"', a:"3", sk:"2+", s:"5", ap:"-2", d:"D3"}
+    ],
+    melee:[
+      {n:"Drain de vie", t:"anti-psyker 2+, blessures dévastatrices, précision", r:"Mêlée", a:"4", sk:"2+", s:"4", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Agent solitaire, Discrétion"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Assassin psychique (arme)", t:"Chaque fois que vous sélectionnez une unité PSYKER comme cible de l'Animus speculum, jusqu'à la résolution de ces attaques, la caractéristique d'Attaques de cette arme passe à 6."},
+      {l:"Abomination", t:"Ce modèle a l'aptitude Insensible à la Douleur 2+ contre les attaques psychiques."},
+      {l:"Horreur sans âme", t:"Une fois par bataille, au début d'une phase de Commandement, ce modèle peut utiliser cette aptitude : chaque unité ennemie à 9\" ou moins de ce modèle doit passer un test d'Ébranlement, en soustrayant 1 à ce test (ou 2 si cette unité est un PSYKER)."},
+      {l:"Faction", t:"Assignation Secrète"}
+    ],
+    comp:["1 Culexus Assassin — Héros emblématique"],
+    equip:"Ce modèle est équipé de : animus speculum ; drain de vie.",
+    pts:[["1 modèle","85"]],
+    leader:null,
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, GRENADES, IMPERIUM, OFFICIO ASSASSINORUM, CULEXUS ASSASSIN",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Eversor Assassin", base:"⌀32mm", role:"QG",
+    stats:['9"','4','6+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet Executioner", t:"anti-infanterie 3+, pistolet, précision, touches soutenues 3", r:'12"', a:"4", sk:"2+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Épée énergétique et neuro-gantelet", t:"anti-infanterie 3+, précision, touches soutenues 3", r:"Mêlée", a:"6", sk:"2+", s:"5", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Agent solitaire, Éclaireurs 9\""},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Frénzon", t:"Ce modèle est éligible pour tirer et déclarer une charge lors d'un tour où il a Avancé."},
+      {l:"Hyper-létalité", t:"Une fois par bataille, avant d'effectuer un mouvement Normal, ce modèle peut utiliser cette aptitude : jusqu'à la fin du tour, ajoutez 6\" à sa caractéristique de Mouvement et 3 à la caractéristique d'Attaques de ses armes de mêlée."},
+      {l:"Faction", t:"Assignation Secrète"}
+    ],
+    comp:["1 Eversor Assassin — Héros emblématique"],
+    equip:"Ce modèle est équipé de : pistolet Executioner ; épée énergétique et neuro-gantelet.",
+    pts:[["1 modèle (détachement Agents)","110"],["1 modèle (Agent assigné)","120"]],
+    leader:null,
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, GRENADES, IMPERIUM, OFFICIO ASSASSINORUM, EVERSOR ASSASSIN",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Vindicare Assassin", base:"⌀32mm", role:"QG",
+    stats:['7"','4','6+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet Exitus", t:"blessures dévastatrices, ignore le couvert, pistolet, précision", r:'12"', a:"3", sk:"2+", s:"6", ap:"-2", d:"3"},
+      {n:"Fusil Exitus", t:"blessures dévastatrices, lourd, ignore le couvert, précision", r:'48"', a:"1", sk:"2+", s:"8", ap:"-3", d:"D3+3"}
+    ],
+    melee:[
+      {n:"Couteau de combat Vindicare", t:"", r:"Mêlée", a:"4", sk:"2+", s:"4", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateur, Agent solitaire, Discrétion"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Entre les Deux Yeux", t:"Chaque fois que ce modèle effectue une attaque à distance, lors de la sélection des cibles de cette attaque, vous pouvez ignorer l'aptitude Agent solitaire."},
+      {l:"Perce-écran", t:"Une fois par bataille, lors de la sélection des cibles du Fusil Exitus, ce modèle peut tirer une munition perce-écran : jusqu'à la fin de la phase, chaque fois que ce modèle effectue une attaque avec cette arme, ajoutez 1 au jet pour blesser et tout jet pour blesser réussi inflige une Blessure Critique."},
+      {l:"Faction", t:"Assignation Secrète"}
+    ],
+    comp:["1 Vindicare Assassin — Héros emblématique"],
+    equip:"Ce modèle est équipé de : pistolet Exitus ; fusil Exitus ; couteau de combat Vindicare.",
+    pts:[["1 modèle (détachement Agents)","110"],["1 modèle (Agent assigné)","125"]],
+    leader:null,
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, FUMÉE, IMPERIUM, OFFICIO ASSASSINORUM, VINDICARE ASSASSIN",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor", base:"⌀32mm", role:"QG",
+    stats:['6"','3','4+','4','6+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Arme combinée", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"3+", s:"4", ap:"-2", d:"1"},
+      {n:"Onde de choc psychique", t:"blessures dévastatrices, psychique, torrent", r:'18"', a:"2D6", sk:"N/A", s:"3", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de mêlée inquisitoriale", t:"", r:"Mêlée", a:"5", sk:"3+", s:"4", ap:"-2", d:"1"},
+      {n:"Arme de force", t:"psychique", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"D3"}
+    ],
+    wargear:["Le pistolet bolter peut être remplacé par 1 arme combinée.","Les protections bénites peuvent être remplacées par 1 dons psychiques et 1 onde de choc psychique.","Si équipé de dons psychiques, l'arme de mêlée inquisitoriale peut être remplacée par 1 arme de force."],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Pouvoir de la Rosette", t:"Chaque fois que vous ciblez l'unité de ce modèle avec un Stratagème, lancez 1D6 : sur 3+, vous regagnez l'activation d'un Stratagème coûtant au maximum 1 PC."},
+      {l:"Protections bénites (équip.)", t:"Tant que ce modèle fait partie d'une unité, les modèles de cette unité ont une sauvegarde invulnérable de 6+."},
+      {l:"Dons psychiques (équip.)", t:"Le porteur a le mot-clé PSYKER."}
+    ],
+    comp:["1 Inquisitor"],
+    equip:"Ce modèle est équipé de : pistolet bolter ; arme de mêlée inquisitoriale ; protections bénites.",
+    pts:[["1 modèle (détachement Agents)","55"],["1 modèle (Agent assigné)","65"]],
+    leader:["Exaction Squad","Grey Knights Terminator Squad","Imperial Navy Breachers","Inquisitorial Agents","Sanctifiers","Sisters of Battle Squad","Subductor Squad","Vigilant Squad","Deathwatch Terminator Squad","Fortis Kill Team","Proteus Kill Team","Spectrus Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, GRENADES, IMPERIUM, INQUISITOR",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Coteaz", base:"⌀40mm", role:"QG",
+    stats:['6"','3','2+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Décharge Psychique", t:"anti-démon 4+, anti-infanterie 5+, blessures dévastatrices, psychique", r:'18"', a:"D6", sk:"3+", s:"3", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Marteau tueur de Démons Némésis", t:"psychique", r:"Mêlée", a:"3", sk:"3+", s:"9", ap:"-3", d:"3"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Protections contre le Mal (Psychique)", t:"Tant que ce modèle fait partie d'une unité, les modèles de cette unité ont une sauvegarde invulnérable de 6+, et de 4+ contre les attaques psychiques et les attaques effectuées par des modèles DÉMON."},
+      {l:"Réseau d'espions", t:"Chaque fois que votre adversaire regagne l'activation d'un Stratagème grâce à une aptitude, lancez 1D6 : sur 2+, vous regagnez l'activation d'un Stratagème coûtant au maximum 1 PC."},
+      {l:"Psyber-aigle Glovodéen (équip.)", t:"À votre phase de Commandement, vous pouvez désigner une unité ennemie à 18\" ou moins du porteur : jusqu'au début de votre prochaine phase de Commandement, cette unité ne peut pas bénéficier du Couvert."}
+    ],
+    comp:["1 Inquisitor Coteaz — Héros emblématique"],
+    equip:"Ce modèle est équipé de : pistolet bolter ; décharge psychique ; marteau tueur de Démons Némésis ; psyber-aigle Glovodéen.",
+    pts:[["1 modèle (détachement Agents)","75"],["1 modèle (Agent assigné)","95"]],
+    leader:["Exaction Squad","Grey Knights Terminator Squad","Imperial Navy Breachers","Inquisitorial Agents","Subductor Squad","Vigilant Squad","Deathwatch Terminator Squad","Fortis Kill Team","Proteus Kill Team","Spectrus Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, PSYKER, IMPERIUM, ORDO MALLEUS, INQUISITOR, COTEAZ",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Draxus", base:"⌀32mm", role:"QG",
+    stats:['6"','3','3+','4','6+','1'], inv:'5+',
+    ranged:[
+      {n:"Chantedeuil", t:"anti-infanterie 4+, assaut, blessures dévastatrices", r:'18"', a:"4", sk:"3+", s:"4", ap:"0", d:"2"},
+      {n:"Tempête psychique", t:"psychique, touches soutenues 2", r:'18"', a:"6", sk:"3+", s:"6", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Gantelet énergétique", t:"", r:"Mêlée", a:"3", sk:"3+", s:"6", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Chasseuse de Xénos", t:"Tant que ce modèle fait partie d'une unité, chaque fois qu'un modèle de cette unité effectue une attaque ciblant une unité ennemie qui n'a pas le mot-clé IMPERIUM ou CHAOS, ajoutez 1 au jet pour toucher."},
+      {l:"Voile psychique (Psychique)", t:"À votre phase de Commandement, ce PSYKER peut utiliser cette aptitude ; lancez 1D6 : sur 1, l'unité de ce PSYKER subit D3 blessures mortelles ; sur 2+, jusqu'au début de votre prochaine phase de Commandement, l'unité de ce PSYKER ne peut être choisie comme cible d'une attaque à distance que si le modèle attaquant est à 18\" ou moins."}
+    ],
+    comp:["1 Inquisitor Draxus — Héros emblématique"],
+    equip:"Ce modèle est équipé de : Chantedeuil ; tempête psychique ; gantelet énergétique.",
+    pts:[["1 modèle (détachement Agents)","75"],["1 modèle (Agent assigné)","110"]],
+    leader:["Exaction Squad","Imperial Navy Breachers","Inquisitorial Agents","Subductor Squad","Vigilant Squad","Deathwatch Terminator Squad","Fortis Kill Team","Proteus Kill Team","Spectrus Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, PSYKER, GRENADES, IMPERIUM, ORDO XENOS, INQUISITOR, DRAXUS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Greyfax", base:"⌀32mm", role:"QG",
+    stats:['6"','3','3+','4','6+','1'], inv:'5+',
+    ranged:[
+      {n:"Castigation", t:"anti-personnage 4+, blessures dévastatrices, précision, psychique", r:'18"', a:"1", sk:"3+", s:"8", ap:"-2", d:"3"},
+      {n:"Pieu Condemnor", t:"anti-psyker 2+, blessures dévastatrices, précision, tir rapide 1", r:'24"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Épée énergétique de maître", t:"", r:"Mêlée", a:"4", sk:"3+", s:"4", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Psyoculum", t:"Tant que ce modèle fait partie d'une unité, les armes à distance des modèles de cette unité ont l'aptitude [ANTI-PSYKER 4+]."},
+      {l:"Aucune Pitié", t:"Tant que ce modèle fait partie d'une unité, chaque fois qu'un modèle de cette unité effectue une attaque ciblant une unité à demi-effectif ou moins, ajoutez 1 au jet pour toucher."}
+    ],
+    comp:["1 Inquisitor Greyfax — Héros emblématique"],
+    equip:"Ce modèle est équipé de : Castigation ; pieu Condemnor ; épée énergétique de maître.",
+    pts:[["1 modèle","65"]],
+    leader:["Exaction Squad","Imperial Navy Breachers","Inquisitorial Agents","Sanctifiers","Sisters of Battle Squad","Subductor Squad","Vigilant Squad","Deathwatch Terminator Squad","Fortis Kill Team","Proteus Kill Team","Spectrus Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, PSYKER, GRENADES, IMPERIUM, ORDO HERETICUS, INQUISITOR, GREYFAX",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Eisenhorn", base:"⌀32mm", role:"QG",
+    stats:['6"','3','4+','4','6+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet bolter d'artificier", t:"", r:'12"', a:"4", sk:"3+", s:"4", ap:"0", d:"2"},
+      {n:"Assaut mental", t:"blessures dévastatrices, précision, psychique, touches soutenues 1", r:'18"', a:"2", sk:"3+", s:"5", ap:"-2", d:"3"}
+    ],
+    melee:[
+      {n:"Bâton runique et Barbarisator", t:"psychique", r:"Mêlée", a:"5", sk:"3+", s:"6", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 6+, Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Malus Codicium", t:"Tant que ce modèle fait partie d'une unité, doublez la caractéristique d'Attaques des armes de mêlée des modèles DAEMONHOST de cette unité."},
+      {l:"Volonté Dominatrice (Psychique)", t:"Une fois par tour, lorsqu'une unité d'INFANTERIE ennemie à 12\" et visible de ce modèle est activée, lancez 1D6 : sur 1, ce modèle subit D3 blessures mortelles ; sur 2-5, jusqu'à la fin de la phase, chaque attaque de cette unité subit -1 au jet pour toucher ; sur 6, jusqu'à la fin de la phase, cette unité ne peut pas tirer."}
+    ],
+    comp:["1 Inquisitor Eisenhorn — Héros emblématique"],
+    equip:"Ce modèle est équipé de : pistolet bolter d'artificier ; assaut mental ; bâton runique et Barbarisator.",
+    pts:[["1 modèle","65"]],
+    leader:["Exaction Squad","Imperial Navy Breachers","Inquisitorial Agents","Subductor Squad","Vigilant Squad","Daemonhost","Deathwatch Terminator Squad","Deathwatch Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, PSYKER, GRENADES, IMPERIUM, ORDO XENOS, INQUISITOR, EISENHORN",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Karamazov", base:"⌀60mm", role:"QG",
+    stats:['8"','9','3+','10','6+','3'], inv:'4+',
+    ranged:[
+      {n:"Multifuseur de maître", t:"fusion 3", r:'18"', a:"3", sk:"3+", s:"10", ap:"-4", d:"D6"}
+    ],
+    melee:[
+      {n:"Épée énergétique de maître", t:"", r:"Mêlée", a:"6", sk:"3+", s:"6", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Trône du Jugement (Aura)", t:"Tant qu'une unité amie est à 6\" ou moins de ce modèle, améliorez de 1 le Commandement de ses modèles. Tant qu'une unité ennemie est à 6\" ou moins de ce modèle, dégradez de 1 le Commandement de ses modèles."},
+      {l:"Croisé sans finesse", t:"Lors de l'étape Déclarer les Formations de Bataille, vous pouvez désigner jusqu'à trois unités d'INFANTERIE AGENTS DE L'IMPERIUM de votre armée, ou une unité IMPERIUM LIGNE de votre armée : ces unités gagnent l'aptitude Éclaireurs 6\"."}
+    ],
+    comp:["1 Inquisitor Karamazov — Héros emblématique"],
+    equip:"Ce modèle est équipé de : multifuseur de maître ; épée énergétique de maître.",
+    pts:[["1 modèle","140"]],
+    leader:null,
+    keywords:"VÉHICULE, MARCHEUR, PERSONNAGE, HÉROS EMBLÉMATIQUE, IMPERIUM, INQUISITOR, ORDO HERETICUS, KARAMAZOV",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor in Terminator Armour", base:"⌀40mm", role:"QG",
+    stats:['5"','4','2+','5','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Arme combinée", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"3+", s:"4", ap:"-2", d:"1"},
+      {n:"Psycanon", t:"psychique", r:'24"', a:"3", sk:"3+", s:"8", ap:"-1", d:"2"},
+      {n:"Onde de choc psychique", t:"blessures dévastatrices, psychique, torrent", r:'18"', a:"2D6", sk:"N/A", s:"3", ap:"-2", d:"1"},
+      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de force", t:"psychique", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"D3"},
+      {n:"Arme de mêlée inquisitoriale", t:"", r:"Mêlée", a:"5", sk:"3+", s:"4", ap:"-2", d:"1"}
+    ],
+    wargear:["Le bolter Storm peut être remplacé par 1 arme combinée.","Les protections bénites peuvent être remplacées par 1 dons psychiques et 1 onde de choc psychique.","Si équipé de dons psychiques : l'arme de mêlée inquisitoriale peut être remplacée par 1 arme de force ; le bolter Storm peut être remplacé par 1 psycanon."],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Pouvoir de la Rosette", t:"Chaque fois que vous ciblez l'unité de ce modèle avec un Stratagème, lancez 1D6 : sur 3+, vous regagnez l'activation d'un Stratagème coûtant au maximum 1 PC."},
+      {l:"Protections bénites (équip.)", t:"Tant que le porteur fait partie d'une unité, les modèles de cette unité ont une sauvegarde invulnérable de 6+."},
+      {l:"Dons psychiques (équip.)", t:"Le porteur a le mot-clé PSYKER."}
+    ],
+    comp:["1 Inquisitor in Terminator Armour"],
+    equip:"Ce modèle est équipé de : bolter Storm ; arme de mêlée inquisitoriale ; protections bénites.",
+    pts:[["1 modèle","70"]],
+    leader:["Exaction Squad","Grey Knights Terminator Squad","Imperial Navy Breachers","Inquisitorial Agents","Sanctifiers","Sisters of Battle Squad","Subductor Squad","Vigilant Squad","Deathwatch Terminator Squad","Deathwatch Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, GRENADES, TERMINATOR, IMPERIUM, INQUISITOR",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Navigator", base:"⌀32mm", role:"QG",
+    stats:['6"','3','5+','3','7+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet laser", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Canne à orbe de force", t:"psychique", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"-1", d:"D3"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Regard dans l'Empyrée (Psychique)", t:"Les unités ennemies mises en place comme Renforts ne peuvent pas l'être à moins de 12\" de ce modèle."},
+      {l:"Troisième œil (Psychique)", t:"Lors de votre Phase d'Action (Tir), désignez une unité ennemie à 12\" et visible de ce modèle : elle passe un test d'Ébranlement, en soustrayant 2 au résultat s'il s'agit d'une unité d'INFANTERIE. Si le test est raté, cette unité ennemie subit 3 blessures mortelles."}
+    ],
+    comp:["1 Navigator"],
+    equip:"Ce modèle est équipé de : pistolet laser ; canne à orbe de force.",
+    pts:[["1 modèle (détachement Agents)","60"],["1 modèle (Agent assigné)","75"]],
+    leader:["Imperial Navy Breachers","Voidsmen-at-arms"],
+    keywords:"INFANTERIE, PERSONNAGE, PSYKER, IMPERIUM, VOIDFARERS, NAVIGATOR",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Watch Captain Artemis", base:"⌀32mm", role:"QG",
+    stats:['6"','4','3+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Hellfire Extremis", t:"anti-infanterie 4+, blessures dévastatrices, ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Arme énergétique de maître", t:"", r:"Mêlée", a:"6", sk:"2+", s:"5", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 6+, Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Instinct tactique", t:"Tant que ce modèle fait partie d'une unité, les armes des modèles de cette unité ont l'aptitude [TOUCHES FATALES]."},
+      {l:"Champion Inexorable", t:"La première fois que ce modèle est détruit, lancez 1D6 à la fin de la phase : sur 2+, remettez-le en place sur le champ de bataille, au plus près de l'endroit où il a été détruit et hors de portée d'engagement de toute unité ennemie, avec 1 Point de Vie restant."}
+    ],
+    comp:["1 Watch Captain Artemis — Héros emblématique"],
+    equip:"Ce modèle est équipé de : Hellfire Extremis ; arme énergétique de maître.",
+    pts:[["1 modèle","65"]],
+    leader:["Aquila Kill Team","Deathwatch Terminator Squad","Deathwatch Kill Team"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS EMBLÉMATIQUE, GRENADES, IMPERIUM, ORDO XENOS, DEATHWATCH, WATCH CAPTAIN ARTEMIS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Watch Master", base:"⌀32mm", role:"QG",
+    stats:['6"','4','2+','5','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Lance de Veilleur", t:"", r:'24"', a:"2", sk:"2+", s:"4", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Lance de Veilleur", t:"lance", r:"Mêlée", a:"6", sk:"2+", s:"6", ap:"-2", d:"D3"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Savoir stratégique", t:"Tant que ce modèle fait partie d'une unité, celle-ci est éligible pour tirer et déclarer une charge lors d'un tour où elle a Avancé ou effectué un Désengagement."},
+      {l:"Rites de bataille", t:"Lors de la phase d'achat des Stratagèmes, une unité de votre armée dotée de cette aptitude peut l'utiliser : réduisez de 1 PC le coût d'achat d'un Stratagème."}
+    ],
+    comp:["1 Watch Master"],
+    equip:"Ce modèle est équipé de : lance de Veilleur.",
+    pts:[["1 modèle (détachement Agents)","95"],["1 modèle (Agent assigné)","105"]],
+    leader:["Aquila Kill Team","Deathwatch Terminator Squad","Deathwatch Kill Team"],
+    keywords:"INFANTERIE, PERSONNAGE, GRENADES, IMPERIUM, ORDO XENOS, DEATHWATCH, WATCH MASTER",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Rogue Trader Entourage", base:"⌀25mm", role:"QG",
+    stats:['6"','3','4+','4','6+','1'], inv:'4+',
+    profiles:[
+      {name:"Rogue Trader", base:"⌀25mm", stats:['6"','3','4+','4','6+','1'], inv:"4+"},
+      {name:"Autres modèles", base:"⌀25mm", stats:['6"','3','4+','2','7+','1'], inv:"4+"}
+    ],
+    ranged:[
+      {n:"Masque à aiguilles", t:"anti-infanterie 2+, pistolet, précision", r:'12"', a:"1", sk:"4+", s:"2", ap:"-1", d:"D3"},
+      {n:"Pistolet familial", t:"pistolet, blessures dévastatrices", r:'12"', a:"2", sk:"3+", s:"5", ap:"-2", d:"2"},
+      {n:"Pistolet laser", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Pistolet voltaïque", t:"pistolet, touches soutenues 2", r:'12"', a:"3", sk:"3+", s:"4", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Lame énergétique du Culte de la Mort", t:"précision", r:"Mêlée", a:"5", sk:"2+", s:"4", ap:"-2", d:"1"},
+      {n:"Canne-rapière monomoléculaire", t:"", r:"Mêlée", a:"4", sk:"3+", s:"4", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Accords officieux", t:"Si votre armée comprend une ou plusieurs unités dotées de cette aptitude, lors de l'étape Déclarer les Formations de Bataille, désignez l'une de ces unités : tant qu'elle fait partie d'une unité, les modèles de cette unité ont l'aptitude Infiltrateur."},
+      {l:"Lettre de marque", t:"Si votre armée comprend une ou plusieurs unités dotées de cette aptitude, après que les deux joueurs ont déployé leurs armées, désignez jusqu'à D3 unités IMPERIUM LIGNE de votre armée et redéployez-les."},
+      {l:"Sérum de soin (équip.)", t:"Au début de votre phase de Commandement, si l'unité du porteur est sous son effectif de départ, vous pouvez lui rendre jusqu'à D3 modèles détruits (hors PERSONNAGES)."}
+    ],
+    comp:["1 Rogue Trader","1 Death Cult Assassin","1 Lectro-Maester","1 Rejuvenat Adept"],
+    equip:"Rogue Trader : pistolet familial, canne-rapière. Death Cult Assassin : masque à aiguilles, lame énergétique. Lectro-Maester : pistolet voltaïque. Rejuvenat Adept : pistolet laser, sérum de soin.",
+    pts:[["4 modèles (détachement Agents)","75"],["4 modèles (Agent assigné)","105"]],
+    leader:["Imperial Navy Breachers","Voidsmen-at-arms"],
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, VOIDFARERS, ROGUE TRADER ENTOURAGE",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Kroyle", base:"⌀60mm", role:"QG",
+    stats:['12"','4','3+','6','6+','2'], inv:'4+',
+    ranged:[
+      {n:"Toxocycleur Jindarii", t:"anti-monstre 2+, lourd, précision", r:'36"', a:"1", sk:"2+", s:"6", ap:"-2", d:"2"},
+      {n:"Mitraillette", t:"pistolet", r:'12"', a:"2", sk:"2+", s:"5", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Lame de boucher", t:"", r:"Mêlée", a:"5", sk:"3+", s:"4", ap:"-2", d:"1"},
+      {n:"Griffes et crocs du Garralisk", t:"attaques bonus", r:"Mêlée", a:"4", sk:"4+", s:"5", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Agent solitaire, Éclaireurs 6\""},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"À mon signal, feu !", t:"Après que cette unité a tiré, vous pouvez désigner une unité ennemie touchée par ces attaques : jusqu'à la fin de la phase, chaque fois qu'un modèle AGENTS DE L'IMPERIUM ou IMPERIUM INFANTERIE LIGNE de votre armée effectue une attaque ciblant cette unité ennemie, vous pouvez relancer le jet pour toucher."},
+      {l:"Toxocycleur", t:"Lors de votre Phase d'Action (Tir), après que cette unité a tiré, si ce modèle a obtenu au moins une touche avec son Toxocycleur Jindarii, jusqu'à la fin de la bataille, ajoutez 2 aux caractéristiques de Force et de Dégâts de cette arme (Dégâts maximum de 6)."}
+    ],
+    comp:["1 Inquisitor Kroyle — Héros emblématique"],
+    equip:"Ce modèle est équipé de : toxocycleur Jindarii ; mitraillette ; lame de boucher ; griffes et crocs du Garralisk.",
+    pts:[["1 modèle","100"]],
+    leader:null,
+    keywords:"MONTÉ, PERSONNAGE, HÉROS EMBLÉMATIQUE, IMPERIUM, GRENADES, ORDO XENOS, INQUISITOR, KROYLE",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitor Ostromandeus", base:"⌀32mm", role:"QG",
+    stats:['6"','3','3+','4','6+','1'], inv:'5+',
+    profiles:[
+      {name:"Inquisitor Ostromandeus", base:"⌀32mm", stats:['6"','3','3+','4','6+','1'], inv:"5+"},
+      {name:"Stentor-I-52", base:"⌀28,5mm", stats:['6"','3','4+','3','8+','1'], inv:""}
+    ],
+    ranged:[
+      {n:"Pistolet inferno", t:"fusion 2, pistolet", r:'6"', a:"1", sk:"3+", s:"8", ap:"-4", d:"D3"}
+    ],
+    melee:[
+      {n:"Bélier-vox hydraulique", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"-2", d:"2"},
+      {n:"Épée énergétique", t:"", r:"Mêlée", a:"5", sk:"3+", s:"4", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 4+, Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Faction", t:"Autorité de l'Inquisition"},
+      {l:"Protection contre les arts maléfiques", t:"Tant que ce modèle fait partie d'une unité, chaque fois qu'une attaque psychique cible cette unité, soustrayez 1 au jet pour toucher et 1 au jet pour blesser."},
+      {l:"Proclamations vox (Aura)", t:"Une fois par round de bataille, vous pouvez annuler les effets d'un Stratagème ciblant une unité à 12\" ou moins du modèle Inquisitor Ostromandeus."},
+      {l:"Vox-crâne (équip.)", t:"Une fois par bataille, au début d'une phase, vous pouvez désigner une unité ennemie (hors MONSTRES et VÉHICULES) à 12\" ou moins du porteur : elle passe un test d'Ébranlement ; si le test est raté, jusqu'à la fin de votre prochain tour, elle ne peut pas bénéficier du Couvert."}
+    ],
+    comp:["1 Inquisitor Ostromandeus — Héros emblématique","1 Stentor-I-52 — Héros emblématique"],
+    equip:"Ostromandeus : pistolet inferno, épée énergétique, vox-crâne. Stentor-I-52 : bélier-vox hydraulique.",
+    pts:[["2 modèles","65"]],
+    leader:["Exaction Squad","Imperial Navy Breachers","Inquisitorial Agents","Sisters of Battle Squad","Subductor Squad","Vigilant Squad","Deathwatch Terminator Squad","Fortis Kill Team","Proteus Kill Team","Spectrus Kill Team","toute unité IMPERIUM LIGNE INFANTERIE"],
+    keywords:"INFANTERIE, PERSONNAGE, GRENADES, HÉROS EMBLÉMATIQUE, IMPERIUM, INQUISITOR OSTROMANDEUS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Janus Draik", base:"⌀32mm", role:"QG",
+    stats:['6"','3','4+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet d'héritage", t:"anti-infanterie 4+, pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"-1", d:"3"}
+    ],
+    melee:[
+      {n:"Canne-rapière monomoléculaire", t:"touches soutenues 1", r:"Mêlée", a:"4", sk:"3+", s:"3", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateur, Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Accords officieux", t:"Si votre armée comprend une ou plusieurs unités dotées de cette aptitude, lors de l'étape Déclarer les Formations de Bataille, désignez l'une de ces unités : tant qu'elle fait partie d'une unité, les modèles de cette unité ont l'aptitude Infiltrateur."},
+      {l:"Lettre de marque", t:"Si votre armée comprend une ou plusieurs unités dotées de cette aptitude, après que les deux joueurs ont déployé leurs armées, désignez jusqu'à D3 unités IMPERIUM LIGNE de votre armée et redéployez-les."}
+    ],
+    comp:["1 Janus Draik — Héros emblématique"],
+    equip:"Ce modèle est équipé de : pistolet d'héritage ; canne-rapière monomoléculaire.",
+    pts:[["1 modèle","40"]],
+    leader:["Imperial Navy Breachers","Voidsmen-at-arms"],
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, VOIDFARERS, PERSONNAGE, HÉROS EMBLÉMATIQUE, JANUS DRAIK",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Neyam Shai Murad", base:"⌀32mm", role:"QG",
+    stats:['6"','3','4+','4','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolets Negociator", t:"précision", r:'12"', a:"4", sk:"3+", s:"4", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"4", sk:"3+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateur, Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Accords officieux", t:"Si votre armée comprend une ou plusieurs unités dotées de cette aptitude, lors de l'étape Déclarer les Formations de Bataille, désignez l'une de ces unités : tant qu'elle fait partie d'une unité, les modèles de cette unité ont l'aptitude Infiltrateur."},
+      {l:"Lettre de marque", t:"Si votre armée comprend une ou plusieurs unités dotées de cette aptitude, après que les deux joueurs ont déployé leurs armées, désignez jusqu'à D3 unités IMPERIUM LIGNE de votre armée et redéployez-les."}
+    ],
+    comp:["1 Neyam Shai Murad — Héros emblématique"],
+    equip:"Ce modèle est équipé de : pistolets Negociator ; arme de corps à corps.",
+    pts:[["1 modèle","40"]],
+    leader:["Imperial Navy Breachers","Voidsmen-at-arms"],
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, VOIDFARERS, PERSONNAGE, HÉROS EMBLÉMATIQUE, NEYAM SHAI MURAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"UR-025", base:"⌀32mm", role:"QG",
+    stats:['5"','5','3+','4','7+','1'], inv:'',
+    ranged:[
+      {n:"Canon d'assaut Mk1", t:"assaut", r:'24"', a:"4", sk:"3+", s:"5", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Pince énergétique", t:"", r:"Mêlée", a:"3", sk:"4+", s:"8", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Agent solitaire"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Auto-réparation", t:"Au début de votre phase de Commandement, ce modèle récupère 1 Point de Vie perdu."},
+      {l:"Esquive et survie", t:"Une fois par tour, quand une unité ennemie termine un mouvement Normal, une Avance ou un Désengagement à 9\" ou moins de ce modèle, si ce modèle n'est pas à portée d'engagement d'une ou plusieurs unités ennemies, il peut effectuer un mouvement Normal."}
+    ],
+    comp:["1 UR-025 — Héros emblématique"],
+    equip:"Ce modèle est équipé de : canon d'assaut Mk1 ; pince énergétique.",
+    pts:[["1 modèle","55"]],
+    leader:null,
+    keywords:"INFANTERIE, IMPERIUM, PERSONNAGE, HÉROS EMBLÉMATIQUE, UR-025",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Kill Team Cassius", base:"⌀32mm", role:"QG",
+    stats:['6"','4','3+','2','6+','2'], inv:'',
+    profiles:[
+      {name:"Kill Team Veteran", base:"⌀32mm", stats:['6"','4','3+','2','6+','2'], inv:""},
+      {name:"Kill Team Biker", base:"⌀75 x 42mm", stats:['12"','5','3+','3','6+','2'], inv:""},
+      {name:"Chaplain Cassius", base:"⌀32mm · Héros", stats:['6"','4','3+','4','5+','2'], inv:"4+"},
+      {name:"Kill Team Terminator", base:"⌀40mm", stats:['5"','5','2+','3','6+','2'], inv:"4+"}
+    ],
+    ranged:[
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter", t:"", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter jumelé Deathwatch", t:"jumelé", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Canon frag", t:"déflagration, lourd, tir rapide D3", r:'18"', a:"D3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Lance-flammes lourd", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Arme de tir de la Longue Veille", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Purge psychique", t:"psychique", r:'24"', a:"D6", sk:"3+", s:"5", ap:"-1", d:"D3"}
+    ],
+    melee:[
+      {n:"Crozius d'artificier", t:"", r:"Mêlée", a:"5", sk:"2+", s:"6", ap:"-1", d:"2"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Arme de force", t:"psychique", r:"Mêlée", a:"5", sk:"2+", s:"5", ap:"-3", d:"D3"},
+      {n:"Arme de mêlée de la Longue Veille", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Gantelet énergétique", t:"", r:"Mêlée", a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Paire de Griffes éclair", t:"jumelé", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Kill Team, Agents assignés"},
+      {l:"Catéchisme de la mort", t:"Tant que cette unité contient Chaplain Cassius, les armes de mêlée des modèles de cette unité ont l'aptitude [BLESSURES DÉVASTATRICES]."},
+      {l:"Inflexible", t:"Vous pouvez relancer les tests d'Ébranlement de cette unité."},
+      {l:"Coiffe Psychique (équip.)", t:"Les modèles de l'unité du porteur ont l'aptitude Insensible à la Douleur 4+ contre les attaques psychiques."},
+      {l:"Réacteur Dorsal (équip.)", t:"Le porteur a une caractéristique de Mouvement de 12\" et franchit les modèles et le décor comme s'ils n'étaient pas là."}
+    ],
+    comp:["1 Chaplain Cassius — Héros emblématique","8 Kill Team Veterans : Vael Donatus, Zameon Gydrael, Rodricus Grytt, Antor Delassio, Edryc Setorax, Jensus Natorian, Drenn Redblade, Ennox Sorrlock","1 Kill Team Terminator (Garran Branatar)","1 Kill Team Biker (Jetek Suberei)"],
+    equip:"Chaplain Cassius : crozius d'artificier, pistolet bolter. Vael Donatus : bolter, pistolet bolter, arme de corps à corps. Zameon Gydrael : arme de tir et de mêlée de la Longue Veille. Rodricus Grytt : canon frag, pistolet bolter, arme de corps à corps. Antor Delassio : arme de tir et de mêlée de la Longue Veille, réacteur Dorsal. Edryc Setorax : paire de griffes éclair, réacteur Dorsal. Jensus Natorian : purge psychique, pistolet bolter, arme de force, coiffe psychique. Drenn Redblade : arme de mêlée de la Longue Veille, bolter. Garran Branatar : lance-flammes lourd, arme de tir de la Longue Veille, gantelet énergétique. Ennox Sorrlock : arme de tir de la Longue Veille, arme de corps à corps. Jetek Suberei : bolter jumelé Deathwatch, arme de mêlée de la Longue Veille.",
+    pts:[["11 modèles","220"]],
+    leader:null,
+    keywords:"INFANTERIE, KILL TEAM, GRENADES, IMPERIUM, ORDO XENOS, DEATHWATCH, KILL TEAM CASSIUS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Imperial Navy Breachers", base:"⌀25mm", role:"Troupes",
+    stats:['6"','3','4+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Pistolet-mitrailleur", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Charge de démolition", t:"assaut, déflagration, dangereux, tir unique", r:'6"', a:"D6", sk:"5+", s:"9", ap:"-2", d:"2"},
+      {n:"Fuseur", t:"fusion 2", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Fusil à pompe lourd Navis", t:"assaut", r:'12"', a:"4", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Caronade laser Navis", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"0", d:"1"},
+      {n:"Fusil à pompe Navis", t:"assaut", r:'12"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à plasma – standard", t:"tir rapide 1", r:'24"', a:"1", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Fusil à plasma – surcharge", t:"dangereux, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"8", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Poing tronçonneur", t:"anti-véhicule 3+", r:"Mêlée", a:"1", sk:"5+", s:"6", ap:"-2", d:"2"},
+      {n:"Épée tronçonneuse", t:"", r:"Mêlée", a:"3", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      {head:"Le fusil à pompe Navis du Sergeant-at-Arms peut être remplacé par :", items:["1 pistolet-mitrailleur et 1 épée tronçonneuse","1 pistolet bolter et 1 arme énergétique"]},
+      {head:"1 Armsman peut remplacer sa caronade laser Navis par :", items:["1 fuseur","1 fusil à plasma"]},
+      "1 Armsman peut remplacer son fusil à pompe Navis par 1 pistolet-mitrailleur et 1 arme énergétique.",
+      "1 Armsman peut remplacer son fusil à pompe Navis par 1 pistolet-mitrailleur et 1 poing tronçonneur.",
+      "1 Armsman peut être équipé de 1 charge de démolition."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Equipe de Sape", t:"Chaque fois qu'un modèle de cette unité effectue une attaque, relancez un jet pour blesser de 1 ; si la cible est à portée d'un marqueur d'objectif, vous pouvez relancer le jet pour blesser à la place."},
+      {l:"Unité CAT", t:"Une fois par bataille, quand cette unité est choisie pour tirer, jusqu'à la fin de la phase, les armes à distance de ses modèles gagnent l'aptitude [IGNORE LE COUVERT]."},
+      {l:"Bouclier d'Hoplite (équip.)", t:"Le porteur a une sauvegarde invulnérable de 4+."},
+      {l:"Tir Unique (arme)", t:"La charge de démolition ne peut tirer qu'une fois par bataille."}
+    ],
+    comp:["1 Navis Sergeant-at-Arms","9 Navis Armsmen"],
+    equip:"Base : fusil à pompe Navis + arme de corps à corps. Variantes : 1 caronade laser Navis ; 1 fusil à pompe lourd Navis + bouclier d'Hoplite.",
+    pts:[["10 modèles","90"]],
+    leader:null,
+    keywords:"INFANTERIE, LIGNE, GRENADES, FUMÉE, IMPERIUM, VOIDFARERS, RETINUE, IMPERIAL NAVY BREACHERS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Vigilant Squad", base:"⌀28,5mm", role:"Troupes",
+    stats:['6"','3','4+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Fusil de combat Arbites", t:"assaut", r:'18"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-grenades Arbites – frag", t:"déflagration", r:'24"', a:"D3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-grenades Arbites – krak", t:"", r:'24"', a:"1", sk:"4+", s:"9", ap:"-2", d:"D3"},
+      {n:"Pistolet à pompe Arbites", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à pompe Executioner", t:"ignore le couvert, précision", r:'24"', a:"1", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Mitrailleuse", t:"tir rapide 3", r:'36"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-toile", t:"assaut, blessures dévastatrices, torrent", r:'12"', a:"D6", sk:"N/A", s:"2", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Morsure mécanique", t:"", r:"Mêlée", a:"3", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    wargear:[
+      {head:"Jusqu'à 2 Vigilants peuvent remplacer leur fusil de combat Arbites par (sans doublon) :", items:["1 fusil à pompe Executioner","1 lance-grenades Arbites","1 mitrailleuse","1 lance-toile"]},
+      "Le Proctor-Vigilant peut être équipé de 1 nuncio aquila."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Jugement impitoyable", t:"Chaque fois qu'un modèle de cette unité effectue une attaque à distance ciblant une unité à demi-effectif ou moins, ajoutez 1 au jet pour blesser."},
+      {l:"Nuncio Aquila (Aura, équip.)", t:"Une fois par bataille, au début d'une phase de Commandement, vous pouvez désigner un marqueur d'objectif à 6\" ou moins du porteur : toutes les unités ennemies (hors MONSTRES et VÉHICULES) à portée de ce marqueur passent un test d'Ébranlement. Chaque marqueur d'objectif ne peut être ciblé par cette aptitude qu'une fois par tour."}
+    ],
+    comp:["1 Proctor-Vigilant","9 Vigilants","1 Cyber-mastiff"],
+    equip:"Proctor-Vigilant et Vigilants : fusil de combat Arbites ; pistolet à pompe Arbites ; arme de corps à corps. Le Cyber-mastiff : morsure mécanique.",
+    pts:[["11 modèles","85"]],
+    leader:null,
+    keywords:"INFANTERIE, LIGNE, GRENADES, IMPERIUM, RETINUE, ADEPTUS ARBITES, VIGILANT SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Subductor Squad", base:"⌀28,5mm", role:"Troupes",
+    stats:['6"','3','3+','1','7+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet à pompe Arbites", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Morsure mécanique", t:"", r:"Mêlée", a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Electromasse", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"-1", d:"1"}
+    ],
+    wargear:["Le Proctor-Subductor peut être équipé de 1 nuncio aquila."],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Dévouement au devoir", t:"Chaque fois qu'un modèle de cette unité est détruit par une attaque de mêlée, s'il n'a pas encore combattu cette phase, lancez 1D6 : sur 4+, ne le retirez pas du jeu. Ce modèle détruit peut combattre après que l'unité attaquante a terminé ses attaques, puis il est retiré du jeu."},
+      {l:"Nuncio Aquila (équip.)", t:"Une fois par bataille, au début d'une phase de Commandement, vous pouvez désigner un marqueur d'objectif à 6\" ou moins du porteur : toutes les unités ennemies (hors MONSTRES et VÉHICULES) à portée de ce marqueur passent un test d'Ébranlement. Chaque marqueur d'objectif ne peut être ciblé par cette aptitude qu'une fois par tour."}
+    ],
+    comp:["1 Proctor-Subductor","9 Subductors","1 Cyber-mastiff"],
+    equip:"Proctor-Subductor et Subductors : pistolet à pompe Arbites ; electromasse. Le Cyber-mastiff : morsure mécanique. Svg invulnérable 4+ sauf le Cyber-mastiff.",
+    pts:[["11 modèles (détachement Agents)","85"],["11 modèles (Agent assigné)","100"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, RETINUE, ADEPTUS ARBITES, SUBDUCTOR SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Voidsmen-at-arms", base:"⌀25mm", role:"Troupes",
+    stats:['6"','3','4+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Fusil à pompe d'artificier", t:"assaut", r:'12"', a:"2", sk:"4+", s:"4", ap:"0", d:"2"},
+      {n:"Fusil laser", t:"tir rapide 1", r:'24"', a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Pistolet laser", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Canon rotatif Voidsman", t:"lourd, touches soutenues 1", r:'24"', a:"6", sk:"5+", s:"6", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Morsure féroce", t:"", r:"Mêlée", a:"3", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Maîtres des Milieux Confinés", t:"Chaque fois qu'un modèle de cette unité effectue une attaque à distance ciblant la cible éligible la plus proche, cette attaque a l'aptitude [TOUCHES FATALES]."},
+      {l:"Garde du corps de la Navy", t:"Si la Faction de votre armée n'est pas Agents de l'Imperium, pour chaque unité VOIDFARERS PERSONNAGE de votre armée, vous pouvez inclure une unité VOIDSMEN-AT-ARMS qui ne compte pas dans le nombre d'unités RETINUE autorisées."}
+    ],
+    comp:["1 Voidmaster","4 Voidsmen","1 Canid"],
+    equip:"Voidmaster : fusil à pompe d'artificier, pistolet laser, arme de corps à corps. Un Voidsman : canon rotatif Voidsman. Les autres : fusil laser + pistolet laser. Le Canid : morsure féroce.",
+    pts:[["6 modèles (détachement Agents)","50"],["6 modèles (Agent assigné)","70"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, VOIDFARERS, RETINUE, VOIDSMEN-AT-ARMS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Grey Knights Terminator Squad", base:"⌀40mm", role:"Troupes",
+    stats:['5"','5','2+','3','6+','2'], inv:'4+',
+    ranged:[
+      {n:"Incinerator", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"1"},
+      {n:"Expurgateur", t:"psychique, touches soutenues 1", r:'24"', a:"6", sk:"3+", s:"5", ap:"0", d:"1"},
+      {n:"Psycanon", t:"psychique", r:'24"', a:"3", sk:"3+", s:"8", ap:"-1", d:"2"},
+      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[{n:"Arme de force Némésis", t:"psychique", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-2", d:"2"}],
+    wargear:[
+      "Pour 5 modèles : 1 Terminator peut remplacer son bolter Storm par 1 incinérateur, 1 psilencieux ou 1 psycanon.",
+      "1 Terminator (avec bolter Storm) peut recevoir 1 bannière de Doyen, ou remplacer son bolter Storm par 1 narthécium (pas les deux)."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Poing d'Acier (Psychique)", t:"Chaque fois qu'un modèle de cette unité effectue un mouvement de charge, jusqu'à la fin du tour, les armes de mêlée des modèles de cette unité ont l'aptitude [TOUCHES FATALES]."},
+      {l:"Bannière de Doyen (équip.)", t:"Ajoutez 1 à la caractéristique de Contrôle d'Objectif des modèles de l'unité du porteur."},
+      {l:"Narthécium (équip.)", t:"À votre phase de Commandement, vous pouvez rendre 1 modèle détruit (hors PERSONNAGES) à l'unité du porteur."},
+      {l:"Rites de Téléportation", t:"Si une ou plusieurs unités INQUISITOR sont attachées à cette unité lors de l'étape Déclarer les Formations de Bataille, les modèles de ces unités ont l'aptitude Frappe en Profondeur."}
+    ],
+    comp:["1 Terminator Justicar","4 Grey Knights Terminators"],
+    equip:"Chaque modèle est équipé de : bolter Storm ; arme de force Némésis.",
+    pts:[["5 modèles (dét. Agents)","190"],["5 modèles (Agent assigné)","210"]],
+    leader:null,
+    keywords:"INFANTERIE, PSYKER, TERMINATOR, GRENADES, IMPERIUM, ORDO MALLEUS, REQUISITIONED, GREY KNIGHTS TERMINATOR SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Sisters of Battle Squad", base:"⌀32mm", role:"Troupes",
+    stats:['6"','3','3+','1','7+','2'], inv:'6+',
+    ranged:[
+      {n:"Bolter Storm d'artificier", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"2"},
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter", t:"tir rapide 1", r:'24"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Arme combinée", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter Condemnor", t:"anti-psyker 2+, blessures dévastatrices, précision, tir rapide 1", r:'24"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter lourd", t:"lourd, touches soutenues 1", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Pistolet inferno", t:"fusion 2, pistolet", r:'6"', a:"1", sk:"3+", s:"8", ap:"-4", d:"D3"},
+      {n:"Fuseur", t:"fusion 2", r:'12"', a:"1", sk:"3+", s:"9", ap:"-4", d:"D6"},
+      {n:"Lance-flammes du Ministorum", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"0", d:"1"},
+      {n:"Lance-flammes à une main du Ministorum", t:"ignore le couvert, pistolet, torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Lance-flammes lourd du Ministorum", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"1"},
+      {n:"Multifuseur", t:"lourd, fusion 2", r:'18"', a:"2", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Pistolet à plasma – standard", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Pistolet à plasma – surcharge", t:"pistolet, dangereux", r:'12"', a:"1", sk:"3+", s:"8", ap:"-3", d:"2"}
+    ],
+    melee:[
+      {n:"Épée tronçonneuse", t:"", r:"Mêlée", a:"3", sk:"4+", s:"3", ap:"-1", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"-1", d:"1"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      "Le bolter de la Sister Superior peut être remplacé par 1 pistolet bolter, arme combinée, bolter Condemnor, pistolet inferno, lance-flammes à une main ou pistolet à plasma ; et/ou recevoir 1 épée tronçonneuse ou 1 arme énergétique.",
+      "Jusqu'à 2 Battle Sisters peuvent remplacer leur bolter par une arme spéciale/lourde (bolter Storm d'artificier, fuseur, lance-flammes, bolter lourd, multifuseur…).",
+      "1 Battle Sister peut recevoir 1 simulacrum imperialis."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Défenseurs de la foi", t:"Si vous contrôlez un marqueur d'objectif à la fin de votre phase de Commandement et que cette unité est à portée de ce marqueur, celui-ci reste sous votre contrôle même si vous n'avez plus aucun modèle à portée, jusqu'à ce que votre adversaire en prenne le contrôle au début ou à la fin d'un tour."},
+      {l:"Chérubin à Encensoir", t:"Une fois par bataille, juste après avoir fait l'un des jets suivants pour cette unité : jet de charge, jet de dégâts, jet de risque, jet de touche, jet de sauvegarde, jet de blessure, ou un jet déterminant le nombre d'attaques d'une arme. Vous relancez ce jet ; si vous jetez plusieurs dés en même temps, choisissez-en un à relancer."},
+      {l:"Simulacrum Imperialis (équip.)", t:"Améliorez de 1 la caractéristique de Commandement des modèles de l'unité du porteur."}
+    ],
+    comp:["1 Sister Superior","9 Battle Sisters"],
+    equip:"Chaque modèle est équipé de : pistolet bolter ; bolter ; arme de corps à corps.",
+    pts:[["10 modèles (dét. Agents)","100"],["10 modèles (Agent assigné)","115"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, ORDO HERETICUS, REQUISITIONED, SISTERS OF BATTLE SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Aquila Kill Team", base:"⌀32mm", role:"Troupes",
+    stats:['6"','4','3+','2','6+','2'], inv:'',
+    profiles:[
+      {name:"Sergent / Vétéran Deathwatch", base:"⌀32mm", stats:['6"','4','3+','2','6+','2'], inv:""},
+      {name:"Gravis Veteran", base:"⌀40mm", stats:['5"','6','3+','3','6+','2'], inv:""}
+    ],
+    ranged:[
+      {n:"Lance-grenades Astartes – frag", t:"déflagration", r:'24"', a:"D3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-grenades Astartes – krak", t:"", r:'24"', a:"1", sk:"3+", s:"9", ap:"-2", d:"D3"},
+      {n:"Pistolet bolter", t:"pistolet, touches fatales", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Carabine Bolter d'élite Deathwatch", t:"lourd, touches fatales", r:'24"', a:"2", sk:"3+", s:"5", ap:"-1", d:"1"},
+      {n:"Canon frag", t:"déflagration, lourd, touches fatales, tir rapide D3", r:'18"', a:"D3", sk:"3+", s:"7", ap:"-2", d:"2"},
+      {n:"Fusil bolter Hellstorm", t:"assaut, lourd, touches fatales", r:'30"', a:"2", sk:"3+", s:"5", ap:"-2", d:"2"},
+      {n:"Bolter lourd Infernus – bolter lourd", t:"touches soutenues 1", r:'36"', a:"3", sk:"3+", s:"5", ap:"-1", d:"2"},
+      {n:"Bolter lourd Infernus – lance-flammes", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Incinérateur à plasma – standard", t:"assaut, lourd", r:'24"', a:"2", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Incinérateur à plasma – surcharge", t:"assaut, dangereux, lourd", r:'24"', a:"2", sk:"3+", s:"8", ap:"-3", d:"2"},
+      {n:"Pistolet à plasma – standard", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Pistolet à plasma – surcharge", t:"dangereux, pistolet", r:'12"', a:"1", sk:"3+", s:"8", ap:"-3", d:"2"},
+      {n:"Pistolet bolter spécialisé", t:"pistolet, précision, touches fatales", r:'18"', a:"1", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Fusil bolter Stalker", t:"lourd, touches fatales, précision", r:'30"', a:"2", sk:"3+", s:"5", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Couteau de combat", t:"précision", r:"Mêlée", a:"4", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Marteau tonnerre lourd", t:"blessures dévastatrices", r:"Mêlée", a:"3", sk:"4+", s:"10", ap:"-2", d:"3"},
+      {n:"Arme énergétique", t:"touches soutenues 1", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"2"},
+      {n:"Lame xénophase", t:"blessures dévastatrices", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      {head:"Par tranche de 5 modèles, le bolter lourd Infernus d'un modèle peut être remplacé par :", items:["1 canon frag","1 fusil bolter Hellstorm et 1 lance-grenades Astartes"]},
+      "Par tranche de 5 modèles, le marteau tonnerre lourd d'un modèle peut être remplacé par 1 arme énergétique et 1 bouclier Astartes.",
+      "Par tranche de 5 modèles, le fusil bolter Stalker d'un modèle peut être remplacé par 1 incinérateur à plasma.",
+      "Par tranche de 5 modèles, la Carabine Bolter d'élite Deathwatch d'un modèle peut être remplacée par 1 couteau de combat."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Mort aux Xénos", t:"Chaque fois qu'un modèle de cette unité effectue une attaque, relancez un jet pour toucher de 1. Si la cible de cette attaque n'a pas le mot-clé IMPERIUM ou CHAOS, vous pouvez relancer tout le jet pour toucher à la place."},
+      {l:"Kill Team", t:"Chaque fois qu'une attaque cible cette unité, si elle contient des modèles d'Endurances différentes, jusqu'à ce que l'unité attaquante ait terminé ses attaques, utilisez l'Endurance de la majorité de ses modèles pour déterminer le résultat requis pour blesser (la plus élevée en cas d'égalité). Pour l'embarquement, un modèle Gravis Veteran occupe la place de 2 modèles."},
+      {l:"Bouclier Astartes (équip.)", t:"Le porteur a une sauvegarde invulnérable de 4+."}
+    ],
+    comp:["1 Kill Team Sergeant, 1 Gravis Veteran, 3 Deathwatch Veterans","OU 1 Kill Team Sergeant, 2 Gravis Veterans, 7 Deathwatch Veterans"],
+    equip:"Sergent : pistolet à plasma, arme énergétique. Chaque Gravis Veteran : bolter lourd Infernus, pistolet bolter, arme de corps à corps. Par tranche de 5 modèles : 1 Vétéran avec fusil bolter Stalker, pistolet bolter, arme de corps à corps ; 1 Vétéran avec pistolet bolter, marteau tonnerre lourd ; 1 Vétéran avec Carabine Bolter d'élite Deathwatch, pistolet bolter spécialisé, arme de corps à corps. Si l'unité compte 10 modèles : 1 Vétéran avec pistolet bolter spécialisé, lame xénophase.",
+    pts:[["5 modèles","100"],["10 modèles","200"]],
+    leader:null,
+    keywords:"INFANTERIE, LIGNE, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, AQUILA KILL TEAM",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Deathwatch Kill Team", base:"⌀32mm", role:"Troupes",
+    stats:['6"','4','3+','2','6+','2'], inv:'',
+    ranged:[
+      {n:"Bolter", t:"", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Canon frag", t:"déflagration, lourd, tir rapide D3", r:'18"', a:"D3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Bolter lourd Infernus – bolter lourd", t:"lourd, touches soutenues 1", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Bolter lourd Infernus – lance-flammes", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Arme combinée", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter modèle Stalker", t:"lourd, précision", r:'24"', a:"1", sk:"3+", s:"4", ap:"-1", d:"2"},
+      {n:"Fusil à pompe Deathwatch", t:"assaut", r:'18"', a:"2", sk:"3+", s:"4", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Lames d'Ecu Noir", t:"jumelé", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Marteau tonnerre Deathwatch", t:"blessures dévastatrices", r:"Mêlée", a:"3", sk:"4+", s:"10", ap:"-2", d:"3"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Lame xénophase", t:"blessures dévastatrices", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      {head:"Par tranche de 5 modèles, jusqu'à 2 modèles peuvent remplacer leur bolter et arme énergétique par :", items:["1 bolter et 1 bouclier Astartes","1 arme énergétique et 1 bouclier Astartes"]},
+      "Par tranche de 5 modèles, jusqu'à 2 modèles peuvent remplacer leur bolter et arme énergétique par 1 marteau tonnerre Deathwatch.",
+      "Par tranche de 5 modèles, 1 modèle peut remplacer son bolter et arme énergétique par 1 bolter modèle Stalker et 1 arme de corps à corps.",
+      "Par tranche de 5 modèles, jusqu'à 2 modèles peuvent remplacer leur bolter et arme énergétique par 1 fusil à pompe Deathwatch et 1 arme de corps à corps.",
+      "Par tranche de 5 modèles, 1 modèle peut remplacer son bolter et arme énergétique par 1 canon frag et 1 arme de corps à corps.",
+      "Par tranche de 5 modèles, 1 modèle peut remplacer son bolter et arme énergétique par 1 bolter lourd Infernus et 1 arme de corps à corps.",
+      "1 modèle peut remplacer son bolter et arme énergétique par 1 lames d'Ecu Noir.",
+      "L'arme énergétique du Watch Sergeant peut être remplacée par 1 lame xénophase ; son bolter par 1 arme combinée."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Mort aux Xénos", t:"Chaque fois qu'un modèle de cette unité effectue une attaque, relancez un jet pour toucher de 1. Si la cible de cette attaque n'a pas le mot-clé IMPERIUM ou CHAOS, vous pouvez relancer tout le jet pour toucher à la place."},
+      {l:"Bouclier Astartes (équip.)", t:"Le porteur a une sauvegarde invulnérable de 4+."}
+    ],
+    comp:["1 Watch Sergeant","4-9 Deathwatch Veterans"],
+    equip:"Chaque modèle est équipé de : bolter ; arme énergétique.",
+    pts:[["5 modèles","100"],["10 modèles (dét. Agents)","190"],["10 modèles (Agent assigné)","200"]],
+    leader:null,
+    keywords:"INFANTERIE, LIGNE, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, KILL TEAM",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Fortis Kill Team", base:"⌀32mm", role:"Troupes",
+    stats:['6"','4','3+','2','6+','1'], inv:'',
+    profiles:[
+      {name:"Kill Team Intercessor", base:"⌀32mm", stats:['6"','4','3+','2','6+','1'], inv:""},
+      {name:"Kill Team Outrider", base:"⌀90 x 52mm", stats:['12"','5','3+','4','6+','2'], inv:""}
+    ],
+    ranged:[
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil bolter", t:"assaut, lourd", r:'24"', a:"2", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Lance-flammes à une main", t:"ignore le couvert, pistolet, torrent", r:'12"', a:"D6", sk:"N/A", s:"3", ap:"0", d:"1"},
+      {n:"Pistolet bolter lourd", t:"pistolet", r:'18"', a:"1", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Arme de tir de la Longue Veille", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Pistolet à plasma – standard", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Pistolet à plasma – surcharge", t:"dangereux, pistolet", r:'12"', a:"1", sk:"3+", s:"8", ap:"-3", d:"2"},
+      {n:"Incinérateur à plasma – standard", t:"assaut, lourd", r:'24"', a:"2", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Incinérateur à plasma – surcharge", t:"assaut, dangereux, lourd", r:'24"', a:"2", sk:"3+", s:"8", ap:"-3", d:"2"},
+      {n:"Fusil bolter jumelé", t:"jumelé", r:'24"', a:"2", sk:"3+", s:"4", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Épée tronçonneuse Astartes", t:"", r:"Mêlée", a:"4", sk:"4+", s:"4", ap:"-1", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Arme de mêlée de la Longue Veille", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      {head:"Le fusil bolter d'1 Intercessor peut être remplacé par :", items:["1 lance-flammes à une main","1 pistolet à plasma","1 épée tronçonneuse Astartes","1 arme de mêlée de la Longue Veille"]},
+      "1 modèle avec fusil bolter peut remplacer son arme de corps à corps par 1 épée tronçonneuse Astartes ou 1 arme de mêlée de la Longue Veille.",
+      "Par tranche de 5 modèles, le fusil bolter d'1 modèle peut être remplacé par 1 arme de tir de la Longue Veille.",
+      "Tout Intercessor avec incinérateur à plasma peut remplacer son pistolet bolter par 1 pistolet à plasma."
+    ],
+    abilities:[
+      {l:"Faction", t:"Kill Team, Agents assignés"},
+      {l:"Doctrines Fortis", t:"Chaque fois qu'un modèle de cette unité effectue une attaque ciblant une unité à demi-effectif ou moins, ajoutez 1 au jet pour toucher."}
+    ],
+    comp:["10 modèles maximum","5-10 Kill Team Intercessors","0-4 Intercessors avec incinérateur à plasma","0-4 Intercessors avec pistolet bolter lourd","0-2 Kill Team Outriders"],
+    equip:"Chaque Intercessor : pistolet bolter, fusil bolter, arme de corps à corps. Intercessor avec incinérateur à plasma : pistolet bolter, incinérateur à plasma, arme de corps à corps. Intercessor avec pistolet bolter lourd : pistolet bolter lourd, épée tronçonneuse Astartes. Outrider : pistolet bolter, fusil bolter jumelé, épée tronçonneuse Astartes.",
+    pts:[["5 modèles","100"],["10 modèles","200"]],
+    leader:null,
+    keywords:"INFANTERIE, KILL TEAM, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, FORTIS KILL TEAM",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Indomitor Kill Team", base:"⌀40mm", role:"Troupes",
+    stats:['5"','6','3+','3','6+','1'], inv:'',
+    ranged:[
+      {n:"Bolters d'assaut", t:"assaut, pistolet, touches soutenues 2, jumelé", r:'18"', a:"3", sk:"3+", s:"5", ap:"-1", d:"2"},
+      {n:"Gantelets Boltstorm automatiques", t:"jumelé", r:'18"', a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-grenades fragstorm", t:"déflagration", r:'18"', a:"D6", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil bolter lourd", t:"assaut, lourd", r:'30"', a:"2", sk:"3+", s:"5", ap:"-1", d:"1"},
+      {n:"Bolter lourd", t:"assaut, lourd, touches soutenues 1", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Gantelets flamestorm", t:"ignore le couvert, torrent, jumelé", r:'12"', a:"D6+1", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Fusil fuseur", t:"lourd, fusion 2", r:'18"', a:"1", sk:"3+", s:"9", ap:"-4", d:"D6"},
+      {n:"Multifuseur", t:"lourd, fusion 2", r:'18"', a:"2", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Exterminateurs à plasma – standard", t:"assaut, pistolet, jumelé", r:'18"', a:"2", sk:"3+", s:"7", ap:"-2", d:"2"},
+      {n:"Exterminateurs à plasma – surcharge", t:"assaut, dangereux, pistolet, jumelé", r:'18"', a:"2", sk:"3+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Gantelets énergétiques", t:"jumelé", r:"Mêlée", a:"3", sk:"4+", s:"8", ap:"-2", d:"2"}
+    ],
+    wargear:[
+      "Par tranche de 5 modèles, le fusil bolter lourd d'1 modèle peut être remplacé par 1 bolter lourd.",
+      "1 modèle avec fusil fuseur peut le remplacer par 1 multifuseur.",
+      "Tout modèle avec gantelets flamestorm peut les remplacer par 1 gantelets Boltstorm automatiques et 1 lance-grenades fragstorm.",
+      "Tout modèle avec bolters d'assaut peut les remplacer par 1 exterminateurs à plasma."
+    ],
+    abilities:[
+      {l:"Faction", t:"Kill Team, Agents assignés"},
+      {l:"Doctrines Indomitor", t:"Chaque fois qu'un modèle de cette unité effectue une attaque, ajoutez 1 au jet pour toucher si cette unité est sous son effectif de départ, et ajoutez aussi 1 au jet pour blesser si elle est à demi-effectif ou moins."},
+      {l:"Réacteur Dorsal (équip.)", t:"Le porteur a une caractéristique de Mouvement de 10\" et franchit les modèles et le décor comme s'ils n'étaient pas là."}
+    ],
+    comp:["10 modèles maximum","5-10 Kill Team Heavy Intercessors","0-2 avec gantelets énergétiques","0-2 avec fusil fuseur","0-2 avec réacteur Dorsal"],
+    equip:"Chaque Heavy Intercessor : pistolet bolter, fusil bolter lourd, arme de corps à corps. Avec gantelets énergétiques : gantelets flamestorm, gantelets énergétiques. Avec fusil fuseur : pistolet bolter, fusil fuseur, arme de corps à corps. Avec réacteur Dorsal : bolters d'assaut, arme de corps à corps, réacteur Dorsal.",
+    pts:[["5 modèles","120"],["10 modèles","240"]],
+    leader:null,
+    keywords:"INFANTERIE, KILL TEAM, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, INDOMITOR KILL TEAM",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Proteus Kill Team", base:"⌀32mm", role:"Troupes",
+    stats:['6"','4','3+','2','6+','1'], inv:'',
+    profiles:[
+      {name:"Kill Team Veterans", base:"⌀32mm", stats:['6"','4','3+','2','6+','1'], inv:""},
+      {name:"Kill Team Biker", base:"⌀75 x 42mm", stats:['12"','5','3+','3','6+','2'], inv:""},
+      {name:"Kill Team Terminator", base:"⌀40mm", stats:['5"','5','2+','3','6+','1'], inv:"4+"}
+    ],
+    ranged:[
+      {n:"Canon d'assaut", t:"blessures dévastatrices", r:'24"', a:"6", sk:"3+", s:"6", ap:"0", d:"1"},
+      {n:"Bolter", t:"", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-missiles cyclone – frag", t:"déflagration", r:'36"', a:"2D6", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-missiles cyclone – krak", t:"", r:'36"', a:"2", sk:"3+", s:"9", ap:"-2", d:"D6"},
+      {n:"Canon frag", t:"déflagration, lourd, tir rapide D3", r:'18"', a:"D3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Lance-flammes lourd", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Bolter lourd Infernus", t:"lourd, touches soutenues 1", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Arme de tir de la Longue Veille", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Canon à plasma – standard", t:"déflagration, lourd", r:'36"', a:"D3", sk:"4+", s:"7", ap:"-2", d:"1"},
+      {n:"Canon à plasma – surcharge", t:"déflagration, dangereux, lourd", r:'36"', a:"D3", sk:"4+", s:"8", ap:"-3", d:"2"},
+      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter jumelé", t:"jumelé", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Poing tronçonneur", t:"anti-véhicule 3+", r:"Mêlée", a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Marteau tonnerre Deathwatch", t:"blessures dévastatrices", r:"Mêlée", a:"3", sk:"4+", s:"10", ap:"-2", d:"3"},
+      {n:"Arme de mêlée de la Longue Veille", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Gantelet énergétique", t:"", r:"Mêlée", a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Marteau tonnerre de Terminator", t:"blessures dévastatrices", r:"Mêlée", a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Paire de Griffes éclair", t:"jumelé", r:"Mêlée", a:"5", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      {head:"Tout Kill Team Veteran peut remplacer son bolter et arme de mêlée de la Longue Veille par :", items:["1 arme de tir de la Longue Veille","1 bolter et 1 bouclier Astartes","1 arme de mêlée de la Longue Veille et 1 bouclier Astartes"]},
+      "Par tranche de 5 modèles, jusqu'à 2 modèles peuvent remplacer leur bolter et arme de mêlée par 1 marteau tonnerre Deathwatch.",
+      "Par tranche de 5 modèles, jusqu'à 2 modèles peuvent les remplacer par 1 canon frag ou 1 bolter lourd Infernus.",
+      "Tout Biker peut recevoir 1 pistolet bolter ou 1 arme de mêlée de la Longue Veille.",
+      {head:"Jusqu'à 3 modèles peuvent remplacer leur bolter Storm par :", items:["1 canon d'assaut","1 lance-flammes lourd","1 canon à plasma","1 lance-missiles cyclone et 1 bolter Storm (bolter Storm conservé)"]},
+      {head:"Tout Terminator peut remplacer son gantelet énergétique et bolter Storm par :", items:["1 bolter Storm et 1 arme énergétique","1 bolter Storm et 1 poing tronçonneur","1 paire de griffes éclair","1 marteau tonnerre de Terminator et 1 bouclier Storm"]}
+    ],
+    abilities:[
+      {l:"Faction", t:"Kill Team, Agents assignés"},
+      {l:"Doctrines Proteus", t:"Chaque fois qu'un modèle de cette unité effectue une attaque ciblant une unité qui n'est pas à demi-effectif ou moins, ajoutez 1 au jet pour toucher."},
+      {l:"Bouclier Astartes (équip.)", t:"Le porteur a une sauvegarde invulnérable de 4+."},
+      {l:"Réacteur Dorsal (équip.)", t:"Le porteur a une caractéristique de Mouvement de 12\" et franchit les modèles et le décor comme s'ils n'étaient pas là."},
+      {l:"Bouclier Storm (équip.)", t:"Le porteur a une caractéristique de Points de Vie de 4."}
+    ],
+    comp:["10 modèles maximum","5-10 Kill Team Veterans","0-4 Veterans avec réacteur Dorsal","0-2 Kill Team Bikers","0-4 Kill Team Terminators"],
+    equip:"Chaque Vétéran : bolter, arme de mêlée de la Longue Veille, arme de corps à corps. Vétéran avec réacteur Dorsal : arme de mêlée de la Longue Veille, arme de corps à corps, réacteur Dorsal. Biker : bolter jumelé, arme de corps à corps. Terminator : bolter Storm, gantelet énergétique.",
+    pts:[["5 modèles","160"],["10 modèles","320"]],
+    leader:null,
+    keywords:"INFANTERIE, KILL TEAM, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, PROTEUS KILL TEAM",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Spectrus Kill Team", base:"⌀32mm", role:"Troupes",
+    stats:['6"','4','3+','2','6+','1'], inv:'',
+    ranged:[
+      {n:"Autocanon Accélérator", t:"lourd", r:'48"', a:"3", sk:"4+", s:"8", ap:"-1", d:"2"},
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Carabine bolter", t:"précision", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil sniper bolter", t:"lourd, précision", r:'36"', a:"1", sk:"3+", s:"5", ap:"-2", d:"3"},
+      {n:"Arquebuse laser", t:"lourd", r:'36"', a:"1", sk:"3+", s:"9", ap:"-3", d:"D6"},
+      {n:"Carabine bolter d'élite", t:"lourd", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Carabine bolter occulus", t:"assaut, ignore le couvert", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Pistolet bolter spécialisé", t:"pistolet, précision", r:'12"', a:"1", sk:"3+", s:"4", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Couteau de combat", t:"précision", r:"Mêlée", a:"4", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Paire de Lames de Combat", t:"touches soutenues 1", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    wargear:[
+      "1 modèle avec carabine bolter d'élite peut recevoir 1 gantelet Hélix, ou 1 dispositif de communications Infiltrator (pas les deux sur le même modèle).",
+      "1 modèle peut remplacer son fusil sniper bolter par 1 carabine bolter.",
+      "Tout modèle peut remplacer son fusil sniper bolter par 1 arquebuse laser.",
+      "Tout modèle peut remplacer son couteau de combat par 1 carabine bolter et 1 arme de corps à corps."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateur, Éclaireurs 6\""},
+      {l:"Faction", t:"Kill Team, Agents assignés"},
+      {l:"Doctrines Spectrus", t:"À la fin d'un tour, si cette unité est à plus de 6\" de toute unité ennemie, elle peut quitter le champ de bataille pour rejoindre les Réserves."},
+      {l:"Gantelet Hélix (équip.)", t:"Les modèles de l'unité du porteur ont l'aptitude Insensible à la Douleur 6+."},
+      {l:"Dispositif de Communications Infiltrator (équip.)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, lancez 1D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant au maximum 1 PC."},
+      {l:"Réacteur Dorsal (équip.)", t:"Le porteur a une caractéristique de Mouvement de 12\" et franchit les modèles et le décor comme s'ils n'étaient pas là."}
+    ],
+    comp:["10 modèles maximum","5-10 Kill Team Infiltrators","0-2 avec fusil sniper bolter","0-2 avec réacteur Dorsal","0-4 avec carabine bolter occulus","0-4 avec couteau de combat"],
+    equip:"Chaque Infiltrator : pistolet bolter, carabine bolter d'élite, arme de corps à corps. Avec fusil sniper bolter : pistolet bolter, fusil sniper bolter, arme de corps à corps. Avec réacteur Dorsal : pistolet bolter, autocanon Accélérator, arme de corps à corps, réacteur Dorsal. Avec carabine occulus : pistolet bolter, carabine bolter occulus, paire de lames de combat. Avec couteau de combat : pistolet bolter spécialisé, couteau de combat.",
+    pts:[["5 modèles","90"],["10 modèles","180"]],
+    leader:null,
+    keywords:"INFANTERIE, KILL TEAM, FUMÉE, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, SPECTRUS KILL TEAM",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Imperial Rhino", base:"⌀Utiliser la figurine", role:"Transport Attitré",
+    stats:['12"','9','3+','10','6+','2'], inv:'',
+    ranged:[
+      {n:"Missile traqueur", t:"tir unique", r:'48"', a:"1", sk:"2+", s:"14", ap:"-3", d:"D6"},
+      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[{n:"Chenilles blindées", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}],
+    wargear:["Ce modèle peut être équipé de 1 missile traqueur."],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de tir 2"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Auto-réparation", t:"À la fin de votre phase de Commandement, ce modèle récupère 1 Point de Vie perdu."}
+    ],
+    comp:["1 Imperial Rhino"],
+    equip:"Ce modèle est équipé de : bolter Storm ; chenilles blindées.",
+    pts:[["1 modèle","75"]],
+    leader:null,
+    transport:"Capacité de transport de 12 modèles d'INFANTERIE AGENTS DE L'IMPERIUM (hors TERMINATOR et OFFICIO ASSASSINORUM).",
+    keywords:"VÉHICULE, FUMÉE, TRANSPORT, TRANSPORT ATTITRÉ, IMPERIUM, IMPERIAL RHINO",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitorial Chimera", base:"⌀Utiliser la figurine", role:"Transport Attitré",
+    stats:['10"','9','3+','11','7+','2'], inv:'',
+    ranged:[
+      {n:"Bolter lourd", t:"touches soutenues 1", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Lance-flammes lourd", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Mitrailleuse", t:"tir rapide 3", r:'36"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Missile traqueur", t:"tir unique", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6"},
+      {n:"Bordée de fusils laser", t:"tir rapide 6", r:'24"', a:"6", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Multilaser", t:"", r:'36"', a:"4", sk:"4+", s:"6", ap:"0", d:"1"},
+      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[{n:"Chenilles blindées", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}],
+    wargear:[
+      "Le bolter lourd peut être remplacé par 1 lance-flammes lourd.",
+      "Le multilaser peut être remplacé par 1 bolter lourd ou 1 lance-flammes lourd.",
+      "Peut être équipé de 1 mitrailleuse ou 1 bolter Storm, et de 1 missile traqueur."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de tir 2"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Déploiement rapide", t:"Les unités peuvent débarquer de ce TRANSPORT après qu'il a effectué une Avance. Les unités qui le font comptent comme ayant effectué un mouvement Normal cette phase et ne peuvent pas déclarer de charge ce tour-ci, mais peuvent agir normalement par ailleurs."}
+    ],
+    comp:["1 Inquisitorial Chimera"],
+    equip:"Ce modèle est équipé de : multilaser ; bolter lourd ; bordée de fusils laser ; chenilles blindées.",
+    pts:[["1 modèle","70"]],
+    leader:null,
+    transport:"Capacité de transport de 13 modèles INQUISITOR INFANTERIE et INQUISITORIAL AGENT (hors TERMINATOR).",
+    keywords:"VÉHICULE, FUMÉE, TRANSPORT, TRANSPORT ATTITRÉ, IMPERIUM, INQUISITORIAL CHIMERA",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Sisters of Battle Immolator", base:"⌀Utiliser la figurine", role:"Transport Attitré",
+    stats:['12"','10','3+','11','7+','2'], inv:'6+',
+    ranged:[
+      {n:"Bolter lourd", t:"touches soutenues 1", r:'36"', a:"3", sk:"3+", s:"5", ap:"-1", d:"2"},
+      {n:"Missile traqueur", t:"tir unique", r:'48"', a:"1", sk:"2+", s:"14", ap:"-3", d:"D6"},
+      {n:"Lance-flammes Immolation", t:"ignore le couvert, torrent", r:'18"', a:"2D6", sk:"N/A", s:"6", ap:"-1", d:"1"},
+      {n:"Bolter lourd jumelé", t:"touches soutenues 2, jumelé", r:'36"', a:"3", sk:"3+", s:"5", ap:"-1", d:"2"},
+      {n:"Multifuseur jumelé", t:"fusion 2, jumelé", r:'18"', a:"2", sk:"3+", s:"9", ap:"-4", d:"D6"}
+    ],
+    melee:[{n:"Chenilles blindées", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}],
+    wargear:["Les lance-flammes Immolation peuvent être remplacés par 1 bolter lourd jumelé ou 1 multifuseur jumelé.","Peut être équipé de 1 missile traqueur."],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Purger et Nettoyer", t:"Chaque fois que ce modèle a tiré, désignez une unité ennemie touchée par une ou plusieurs de ces attaques : jusqu'à la fin de la phase, cette unité ennemie ne peut pas bénéficier du Couvert."}
+    ],
+    comp:["1 Immolator"],
+    equip:"Ce modèle est équipé de : bolter lourd ; lance-flammes Immolation ; chenilles blindées.",
+    pts:[["1 modèle (dét. Agents)","100"],["1 modèle (Agent assigné)","115"]],
+    leader:null,
+    transport:"Capacité de transport de 6 modèles d'INFANTERIE ORDO HERETICUS. À la création de l'armée, peut scinder une SISTERS OF BATTLE SQUAD en deux unités égales.",
+    keywords:"VÉHICULE, FUMÉE, TRANSPORT, TRANSPORT ATTITRÉ, IMPERIUM, ORDO HERETICUS, IMMOLATOR",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Jokaero Weaponsmith", base:"⌀25mm", role:"Élites",
+    stats:['6"','3','5+','2','7+','0'], inv:'4+',
+    ranged:[
+      {n:"Armes Jokaero – dispersées", t:"torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Armes Jokaero – focalisées", t:"", r:'24"', a:"1", sk:"4+", s:"10", ap:"-1", d:"3"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"5+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Augmentation inconcevable", t:"Tant que ce modèle fait partie d'une unité, les armes à distance des modèles de cette unité ont l'aptitude [TOUCHES FATALES]."},
+      {l:"Un armurier, pas un Seigneur de guerre", t:"Ce modèle ne peut pas être votre Seigneur de guerre. Tant qu'un INQUISITOR mène une unité incluant un ou plusieurs JOKAERO WEAPONSMITH, la caractéristique de Contrôle d'Objectif des modèles JOKAERO WEAPONSMITH de cette unité est de 1."}
+    ],
+    comp:["1 Jokaero Weaponsmith"],
+    equip:"Ce modèle est équipé de : armes Jokaero ; arme de corps à corps.",
+    pts:[["1 modèle","30"]],
+    leader:["Inquisitorial Agents"],
+    leaderNote:"Vous pouvez attacher ce modèle à une unité INQUISITORIAL AGENTS même si une unité INQUISITOR y est déjà attachée.",
+    keywords:"INFANTERIE, IMPERIUM, PERSONNAGE, JOKAERO WEAPONSMITH",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Exaction Squad", base:"⌀28,5mm", role:"Élites",
+    stats:['6"','3','4+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Fusil de combat Arbites", t:"assaut", r:'18"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-grenades Arbites – krak", t:"", r:'24"', a:"1", sk:"4+", s:"9", ap:"-2", d:"D3"},
+      {n:"Lance-grenades Arbites – frag", t:"déflagration", r:'24"', a:"D3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Pistolet à pompe Arbites", t:"pistolet", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à pompe Executioner", t:"ignore le couvert, précision", r:'24"', a:"1", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Mitrailleuse", t:"tir rapide 3", r:'36"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-toile", t:"assaut, blessures dévastatrices, torrent", r:'12"', a:"D6", sk:"N/A", s:"2", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Masse Excruciator", t:"", r:"Mêlée", a:"2", sk:"3+", s:"4", ap:"-1", d:"2"},
+      {n:"Morsure mécanique", t:"", r:"Mêlée", a:"3", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    wargear:[
+      {head:"Jusqu'à 2 Exaction Vigilants peuvent remplacer leur fusil de combat Arbites par (sans doublon) :", items:["1 fusil à pompe Executioner","1 lance-grenades Arbites","1 mitrailleuse","1 lance-toile"]},
+      "1 Exaction Vigilant (fusil à pompe de combat) peut recevoir 1 masse Excruciator.",
+      "1 autre peut recevoir 1 medi-kit Arbites.",
+      "1 autre peut recevoir 1 scanner de culpabilité.",
+      "Le Proctor-Exactant peut être équipé de 1 nuncio aquila."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Loi impériale", t:"Au début de la bataille, désignez une unité de l'armée adverse. Chaque fois qu'un modèle de cette unité effectue une attaque ciblant cette unité désignée, cette attaque a les aptitudes [TOUCHES FATALES] et [PRÉCISION]."},
+      {l:"Medi-kit Arbites (équip.)", t:"Au début de votre phase de Commandement, si l'unité du porteur est sous son effectif de départ, vous pouvez lui rendre jusqu'à D3 Exaction Vigilants détruits."},
+      {l:"Nuncio Aquila (équip.)", t:"Une fois par bataille, au début d'une phase de Commandement, vous pouvez désigner un marqueur d'objectif à 6\" ou moins du porteur : toutes les unités ennemies (hors MONSTRES et VÉHICULES) à portée de ce marqueur passent un test d'Ébranlement. Chaque marqueur d'objectif ne peut être ciblé par cette aptitude qu'une fois par tour."},
+      {l:"Scanner à culpabilité (équip.)", t:"Les armes à distance des modèles de l'unité du porteur ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    comp:["1 Proctor-Exactant","9 Exaction Vigilants","1 Cyber-mastiff"],
+    equip:"Proctor-Exactant et Vigilants : fusil de combat Arbites ; pistolet à pompe Arbites ; arme de corps à corps. Le Cyber-mastiff : morsure mécanique.",
+    pts:[["11 modèles","90"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, RETINUE, ADEPTUS ARBITES, EXACTION SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Daemonhost", base:"⌀25mm", role:"Élites",
+    stats:['6"','3','5+','3','7+','0'], inv:'5+',
+    ranged:[
+      {n:"Regard impie", t:"psychique", r:'18"', a:"3", sk:"4+", s:"8", ap:"-2", d:"D3"}
+    ],
+    melee:[
+      {n:"Emprise warp", t:"touches fatales, psychique", r:"Mêlée", a:"4", sk:"3+", s:"4", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Protection maléfique", t:"Tant qu'un INQUISITOR fait partie d'une unité incluant un ou plusieurs DAEMONHOST, les modèles de cette unité ont une sauvegarde invulnérable de 5+."},
+      {l:"Démon lié (équip.)", t:"Tant qu'un INQUISITOR fait partie d'une unité incluant un ou plusieurs DAEMONHOST, la caractéristique de Contrôle d'Objectif des modèles DAEMONHOST de cette unité est de 1."}
+    ],
+    comp:["1-2 Daemonhosts"],
+    equip:"Chaque modèle est équipé de : regard impie ; emprise warp.",
+    pts:[["1 modèle","40"],["2 modèles","80"]],
+    leader:null,
+    leftSection:{title:"INQUISITORIAL RETINUE", text:"Si la Faction de votre armée n'est pas Agents de l'Imperium, pour chaque paire unique de 1 unité INQUISITORIAL AGENTS et 1 unité DAEMONHOST dans votre armée, augmentez de 1 le nombre maximum d'unités RETINUE autorisées. Lors de l'étape Déclarer les Formations de Bataille, cette unité peut rejoindre une unité INQUISITORIAL AGENTS de votre armée menée par un modèle INQUISITOR (une unité ne peut pas avoir plus d'une unité DAEMONHOST jointe). Dans ce cas, jusqu'à la fin de la bataille, chaque modèle de cette unité compte comme faisant partie de cette unité gardes du corps, et l'effectif de départ de cette unité gardes du corps est augmenté en conséquence."},
+    keywords:"INFANTERIE, IMPERIUM, PSYKER, RETINUE, DÉMON, DAEMONHOST",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Ministorum Priest", base:"⌀32mm", role:"Élites",
+    stats:['6"','3','6+','3','7+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet sacré", t:"pistolet", r:'12"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Vindictor", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"3", sk:"4+", s:"4", ap:"-2", d:"1"},
+      {n:"Vindictor", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"-1", d:"2"}
+    ],
+    wargear:["Le vindictor peut être remplacé par 1 pistolet sacré et 1 arme énergétique."],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Haine Sacrée", t:"Tant que ce modèle fait partie d'une unité, les armes de mêlée des modèles de cette unité ont l'aptitude [TOUCHES SOUTENUES 1]."},
+      {l:"Zélote", t:"Une fois par bataille, à la phase de Combat, ce modèle peut utiliser cette aptitude : jusqu'à la fin de la phase, améliorez de 3 les caractéristiques de Force et d'Attaques des armes de mêlée de ce modèle."}
+    ],
+    comp:["1 Ministorum Priest"],
+    equip:"Ce modèle est équipé de : vindictor.",
+    pts:[["1 modèle","40"]],
+    leader:["Exaction Squad","Imperial Navy Breachers","Inquisitorial Agents","Sanctifiers","Sisters of Battle Squad","Subductor Squad","Vigilant Squad"],
+    leaderNote:"Vous pouvez attacher ce modèle à une unité INQUISITORIAL AGENTS même si une unité INQUISITOR y est déjà attachée.",
+    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, ORDO HERETICUS, MINISTORUM PRIEST",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Inquisitorial Agents", base:"⌀25mm", role:"Élites",
+    stats:['6"','3','5+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Arme à feu d'agent", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Bolter lourd", t:"lourd, touches soutenues 1", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Multifuseur", t:"lourd, fusion 2", r:'18"', a:"2", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Canon à plasma – standard", t:"déflagration, lourd", r:'36"', a:"D3", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Canon à plasma – surcharge", t:"déflagration, dangereux, lourd", r:'36"', a:"D3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Pistolet à plasma – standard", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"7", ap:"-1", d:"1"},
+      {n:"Pistolet à plasma – surcharge", t:"dangereux, pistolet", r:'12"', a:"1", sk:"3+", s:"8", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Arme de mêlée d'agent", t:"", r:"Mêlée", a:"3", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Eviscerator", t:"blessures dévastatrices", r:"Mêlée", a:"2", sk:"3+", s:"6", ap:"-2", d:"2"},
+      {n:"Sceptre mystique", t:"anti-infanterie 4+, psychique", r:"Mêlée", a:"2", sk:"3+", s:"5", ap:"-1", d:"D3"}
+    ],
+    wargear:[
+      "Par tranche de 5 Inquisitorial Agents : 1 tome-crâne ; et 1 agent peut recevoir 1 pistolet à plasma, 1 eviscerator ou 1 sceptre mystique (un seul par modèle).",
+      "N'importe quel Gun Servitor peut remplacer son bolter lourd par 1 multifuseur ou 1 canon à plasma."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Hommes de Main Loyaux", t:"Tant qu'un INQUISITOR fait partie de cette unité, chaque fois qu'une attaque est effectuée contre cette unité, soustrayez 1 au jet pour blesser."},
+      {l:"Tome-crâne (équip.)", t:"Une fois par bataille pour chaque tome-crâne dont cette unité est équipée, au début d'une phase, vous pouvez désigner soit une unité amie AGENTS DE L'IMPERIUM ébranlée à 6\" ou moins de cette unité, soit une unité ennemie à 6\" ou moins. Si vous désignez une unité amie, elle cesse d'être ébranlée. Si vous désignez une unité ennemie, elle passe un test d'Ébranlement."}
+    ],
+    comp:["5-10 Inquisitorial Agents","1-2 Gun Servitors"],
+    equip:"Chaque Inquisitorial Agent : arme à feu d'agent ; arme de mêlée d'agent. Chaque Gun Servitor : bolter lourd ; arme de mêlée d'agent.",
+    pts:[["6 modèles (dét. Agents)","50"],["12 modèles (dét. Agents)","100"],["6 modèles (Agent assigné)","60"],["12 modèles (Agent assigné)","120"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, RETINUE, INQUISITORIAL AGENTS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Sanctifiers", base:"⌀25mm", role:"Élites",
+    stats:['6"','3','6+','1','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Feu sacré", t:"ignore le couvert, tir unique, torrent", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"2"},
+      {n:"Fuseur", t:"fusion 2", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Lance-flammes du Ministorum", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"0", d:"1"},
+      {n:"Lance-flammes à une main du Ministorum", t:"ignore le couvert, pistolet, torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à plasma – standard", t:"tir rapide 1", r:'24"', a:"1", sk:"4+", s:"7", ap:"-2", d:"1"},
+      {n:"Fusil à plasma – surcharge", t:"dangereux, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"8", ap:"-3", d:"2"}
+    ],
+    melee:[
+      {n:"Mains brûlantes", t:"blessures dévastatrices", r:"Mêlée", a:"1", sk:"2+", s:"6", ap:"-2", d:"3"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Lames du Culte de la Mort", t:"précision", r:"Mêlée", a:"4", sk:"2+", s:"4", ap:"-2", d:"1"},
+      {n:"Arme de mêlée de Sanctifier", t:"", r:"Mêlée", a:"3", sk:"3+", s:"3", ap:"0", d:"1"}
+    ],
+    wargear:[
+      "1 Missionary peut remplacer son fusil à plasma par 1 fuseur, ou recevoir 1 feu sacré (fusil à plasma non remplaçable dans ce cas).",
+      "1 Sanctifier peut remplacer son arme de mêlée par 1 lance-flammes à une main + 1 arme de corps à corps, ou par 1 arme de corps à corps + 1 simulacrum imperialis."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 6\""},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Sermon du Ministorum", t:"Tant que cette unité contient un MINISTORUM PRIEST, chaque fois qu'un modèle de cette unité effectue une attaque de mêlée, ajoutez 1 au jet pour blesser."},
+      {l:"Chérubin", t:"Une fois par bataille, juste après avoir fait l'un des jets suivants pour cette unité : jet de charge, jet de dégâts, jet de risque, jet de touche, jet de sauvegarde, jet de blessure, ou un jet déterminant le nombre d'attaques d'une arme. Vous relancez ce jet ; si vous jetez plusieurs dés en même temps, choisissez-en un à relancer."},
+      {l:"Médikit salvationniste (équip.)", t:"À votre phase de Commandement, si le porteur est sur le champ de bataille, vous pouvez rendre à cette unité jusqu'à D3 modèles détruits (hors modèles PERSONNAGE)."},
+      {l:"Simulacrum Imperialis (équip.)", t:"Améliorez de 1 la caractéristique de Commandement des modèles de l'unité du porteur."}
+    ],
+    comp:["1 Miraculist","1 Salvationist","1 Death Cult Assassin","2 Missionaries","4 Sanctifiers"],
+    equip:"Miraculist : feu sacré, mains brûlantes. Salvationist : médikit. Death Cult Assassin : lames du Culte de la Mort. Missionaries : fusil à plasma / lance-flammes du Ministorum. Sanctifiers : lance-flammes à une main.",
+    pts:[["9 modèles","100"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, RETINUE, SANCTIFIERS",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Damned Legionnaires", base:"⌀25mm", role:"Élites",
+    stats:['6"','4','3+','2','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Pistolet bolter", t:"ignore le couvert, pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter", t:"ignore le couvert", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-flammes", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Lance-flammes lourd", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Fuseur", t:"fusion 2", r:'12"', a:"1", sk:"3+", s:"9", ap:"-4", d:"D6"},
+      {n:"Multifuseur", t:"lourd, fusion 2", r:'18"', a:"2", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Fusil à plasma – standard", t:"tir rapide 1", r:'24"', a:"1", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Fusil à plasma – surcharge", t:"dangereux, tir rapide 1", r:'24"', a:"1", sk:"3+", s:"8", ap:"-3", d:"2"},
+      {n:"Pistolet à plasma – standard", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Pistolet à plasma – surcharge", t:"dangereux, pistolet", r:'12"', a:"1", sk:"3+", s:"8", ap:"-3", d:"2"}
+    ],
+    melee:[
+      {n:"Épée tronçonneuse Astartes", t:"", r:"Mêlée", a:"5", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      {head:"Le bolter du Legionnaire Sergeant peut être remplacé par :", items:["1 pistolet bolter et 1 arme énergétique","1 pistolet à plasma et 1 arme énergétique","1 pistolet bolter et 1 épée tronçonneuse Astartes","1 pistolet à plasma et 1 épée tronçonneuse Astartes"]},
+      "1 Legionnaire peut remplacer son bolter par 1 lance-flammes lourd ou 1 multifuseur.",
+      "1 Legionnaire peut remplacer son bolter par 1 lance-flammes, 1 fuseur ou 1 fusil à plasma."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Spectres sinistres", t:"Après que cette unité a tiré, désignez une unité ennemie touchée par une ou plusieurs de ces attaques : cette unité passe un test d'Ébranlement, en soustrayant 1 à ce test."}
+    ],
+    comp:["1 Legionnaire Sergeant","4-9 Legionnaires"],
+    equip:"Chaque modèle est équipé de : bolter ; arme de corps à corps.",
+    pts:[["5 modèles","90"],["10 modèles","180"]],
+    leader:null,
+    keywords:"INFANTERIE, GRENADES, IMPERIUM, RETINUE, DAMNED LEGIONNAIRES",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Deathwatch Terminator Squad", base:"⌀40mm", role:"Élites",
+    stats:['5"','5','2+','3','6+','1'], inv:'4+',
+    ranged:[
+      {n:"Canon d'assaut", t:"blessures dévastatrices", r:'24"', a:"6", sk:"3+", s:"6", ap:"0", d:"1"},
+      {n:"Lance-missiles cyclone – frag", t:"déflagration", r:'36"', a:"2D6", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-missiles cyclone – krak", t:"", r:'36"', a:"2", sk:"3+", s:"9", ap:"-2", d:"D6"},
+      {n:"Lance-flammes lourd", t:"ignore le couvert, torrent", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Canon à plasma – standard", t:"déflagration", r:'36"', a:"D3", sk:"3+", s:"7", ap:"-2", d:"1"},
+      {n:"Canon à plasma – surcharge", t:"déflagration, dangereux", r:'36"', a:"D3", sk:"3+", s:"8", ap:"-3", d:"2"},
+      {n:"Bolter Storm", t:"tir rapide 2", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Poing tronçonneur", t:"anti-véhicule 3+", r:"Mêlée", a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Gantelet énergétique", t:"", r:"Mêlée", a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Marteau tonnerre", t:"blessures dévastatrices", r:"Mêlée", a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Paire de Griffes éclair", t:"jumelé", r:"Mêlée", a:"5", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      "Jusqu'à 3 Terminators peuvent remplacer leur bolter Storm par 1 canon d'assaut, 1 lance-flammes lourd, 1 canon à plasma, ou 1 lance-missiles cyclone (bolter Storm conservé).",
+      "N'importe quel modèle peut remplacer son gantelet énergétique + bolter Storm par : bolter Storm + arme énergétique ; bolter Storm + poing tronçonneur ; griffes éclair jumelées ; ou marteau tonnerre + bouclier Storm."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Assaut Terminatus", t:"Chaque fois que cette unité termine un mouvement de charge, chaque unité ennemie à portée d'engagement de cette unité passe un test d'Ébranlement."},
+      {l:"Balise de téléportation", t:"Au début de la bataille, placez un pion Balise de téléportation n'importe où sur le champ de bataille, hors de la zone de déploiement adverse. Une fois par bataille, cette unité peut effectuer une Arrivée Précipitée : placez-la à 3\" ou moins de ce pion et à plus de 9\" de tout modèle ennemi, puis retirez le pion."},
+      {l:"Bouclier Storm (équip.)", t:"Le porteur a une caractéristique de Points de Vie de 4."}
+    ],
+    comp:["1 Deathwatch Terminator Sergeant","4-9 Deathwatch Terminators"],
+    equip:"Chaque modèle est équipé de : gantelet énergétique ; bolter Storm.",
+    pts:[["5 modèles","210"],["10 modèles","420"]],
+    leader:null,
+    keywords:"INFANTERIE, IMPERIUM, TERMINATOR, ORDO XENOS, RETINUE, DEATHWATCH, TERMINATOR SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Veteran Bike Squad", base:"⌀75 x 25mm", role:"Attaque Rapide",
+    stats:['12"','5','3+','3','6+','2'], inv:'',
+    ranged:[
+      {n:"Pistolet bolter", t:"pistolet", r:'12"', a:"1", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Arme de tir de la Longue Veille", t:"anti-infanterie 4+, blessures dévastatrices, tir rapide 1", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Bolter jumelé", t:"jumelé", r:'24"', a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Arme de mêlée de la Longue Veille", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"-2", d:"1"},
+      {n:"Lame xénophase", t:"blessures dévastatrices", r:"Mêlée", a:"4", sk:"3+", s:"5", ap:"-2", d:"1"}
+    ],
+    wargear:[
+      "Le Veteran Biker Sergeant peut recevoir 1 arme à distance/mêlée Longue Veille, 1 lame xénophase ou 1 bouclier Astartes.",
+      "N'importe quel Veteran Biker peut recevoir 1 arme de mêlée de la Longue Veille."
+    ],
+    abilities:[
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Turbo-boost", t:"Chaque fois que cette unité effectue une Avance, ne lancez pas de jet d'Avance ; à la place, jusqu'à la fin de la phase, ajoutez 6\" à la caractéristique de Mouvement de ses modèles."},
+      {l:"Bouclier Astartes (équip.)", t:"Le porteur a une sauvegarde invulnérable de 4+."}
+    ],
+    comp:["1 Veteran Biker Sergeant","2-5 Veteran Bikers"],
+    equip:"Chaque modèle est équipé de : pistolet bolter ; arme de corps à corps ; bolter jumelé.",
+    pts:[["3 modèles","70"],["6 modèles","140"]],
+    leader:null,
+    keywords:"MONTÉ, GRENADES, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, VETERAN BIKE SQUAD",
+    faction:"AGENTS DE L'IMPERIUM"
+  },
+  {
+    name:"Corvus Blackstar", base:"⌀120 x 92mm (socle volant)", role:"Volant",
+    stats:['20+"','10','3+','14','6+','0'], inv:'',
+    ranged:[
+      {n:"Lance-roquettes Blackstar", t:"déflagration", r:'30"', a:"D6+1", sk:"3+", s:"5", ap:"0", d:"1"},
+      {n:"Bolters Hurricane", t:"tir rapide 6, jumelé", r:'24"', a:"6", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-missiles Stormstrike", t:"", r:'48"', a:"1", sk:"3+", s:"10", ap:"-2", d:"3"},
+      {n:"Canon d'assaut jumelé", t:"blessures dévastatrices, jumelé", r:'24"', a:"6", sk:"3+", s:"6", ap:"0", d:"1"},
+      {n:"Canon laser jumelé", t:"jumelé", r:'48"', a:"1", sk:"3+", s:"12", ap:"-3", d:"D6+1"}
+    ],
+    melee:[{n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}],
+    wargear:[
+      "Le canon d'assaut jumelé peut être remplacé par 1 canon laser jumelé.",
+      "Les 2 lance-roquettes Blackstar peuvent être remplacés par 2 lance-missiles Stormstrike.",
+      "Peut être équipé de 1 bolters Hurricane, et de 1 panoplie d'Auspex ou 1 halo-lanceur infernum."
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6, Vol stationnaire, Discrétion"},
+      {l:"Faction", t:"Agents assignés"},
+      {l:"Lance-grappes Blackstar", t:"Chaque fois que ce modèle termine un mouvement Normal, vous pouvez désigner une unité ennemie survolée pendant ce mouvement et lancer six D6 : pour chaque 5+, cette unité subit 1 blessure mortelle."},
+      {l:"Panoplie d'Auspex (équip.)", t:"Les armes à distance du porteur ont l'aptitude [IGNORE LE COUVERT]."},
+      {l:"Halo-lanceur infernum (équip.)", t:"Le porteur a le mot-clé Fumée."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, chaque fois qu'il effectue une attaque, soustrayez 1 au jet pour toucher."}
+    ],
+    comp:["1 Corvus Blackstar"],
+    equip:"Ce modèle est équipé de : 2 lance-roquettes Blackstar ; canon d'assaut jumelé ; coque blindée.",
+    pts:[["1 modèle","180"]],
+    leader:null,
+    transport:"Capacité de transport de 12 modèles d'INFANTERIE DEATHWATCH.",
+    keywords:"VÉHICULE, AÉRONEF, VOL, TRANSPORT, IMPERIUM, ORDO XENOS, RETINUE, DEATHWATCH, CORVUS BLACKSTAR",
+    faction:"AGENTS DE L'IMPERIUM"
+  }
+];
+
+function weaponRows(list, skLabel){
+  if(!list.length) return '';
+  const title = skLabel==='CT' ? 'Armes à distance' : 'Armes de mêlée';
+  let rows = `<div class="wrow whead"><span></span><span>${title}</span>`+
+    `<span class="sub">PORT.</span><span class="sub">A</span><span class="sub">${skLabel}</span>`+
+    `<span class="sub">F</span><span class="sub">PA</span><span class="sub">D</span></div>`;
+  for(const w of list){
+    const tag = w.t ? ` <span class="tag">${w.t}</span>` : '';
+    rows += `<div class="wrow wdata"><span class="dot"></span>`+
+      `<span class="wn">${w.n}${tag}</span>`+
+      `<span class="num">${w.r}</span><span class="num">${w.a}</span><span class="num">${w.sk}</span>`+
+      `<span class="num">${w.s}</span><span class="num">${w.ap}</span><span class="num">${w.d}</span></div>`;
+  }
+  return `<div class="wtable">${rows}</div>`;
+}
+
+function render(){
+  const deck = document.getElementById('deck');
+  deck.innerHTML = UNITS.map(u=>{
+    let statBlock;
+    if(u.profiles){
+      const phead = `<tr><th class="name">Profil</th>${STAT_LABELS.map(l=>`<th>${l}</th>`).join('')}<th>Invu</th></tr>`;
+      const prows = u.profiles.map(p=>`<tr><td class="name">${p.name}${p.base?`<small>${p.base}</small>`:''}</td>`+
+        `${p.stats.map(s=>`<td>${s}</td>`).join('')}<td class="inv">${p.inv||'—'}</td></tr>`).join('');
+      statBlock = `<table class="pf"><thead>${phead}</thead><tbody>${prows}</tbody></table>`;
+    } else {
+      const statCells = STAT_LABELS.map(l=>`<div class="lbl">${l}</div>`).join('')
+        + STAT_LABELS.map((l,i)=>`<div class="val">${u.stats[i]}</div>`).join('');
+      const invul = u.inv ? `<div class="invul"><div class="circle">${u.inv}</div>`+
+        `<div class="txt">Sauvegarde invulnérable</div></div>` : '';
+      statBlock = `<div class="statline">${statCells}</div>${invul}`;
+    }
+    const abLine = a=>`<div class="ability"><span class="al">${a.l} : </span>`+
+      `<span class="at">${a.t}</span></div>`;
+    const abBase = u.abilities.filter(a=>a.l==="Aptitudes de base");
+    const abFac  = u.abilities.filter(a=>a.l==="Faction");
+    const abRest = u.abilities.filter(a=>a.l!=="Aptitudes de base" && a.l!=="Faction");
+    let abilities = abBase.map(abLine).join('');
+    if(abFac.length) abilities += `<div class="ability"><span class="al">Faction : </span>`+
+      `<span class="at">${abFac.map(a=>a.t).join(', ')}</span></div>`;
+    abilities += abRest.map(abLine).join('');
+    const leftSection = u.leftSection ? `<div class="section-h" style="margin-top:20px">${u.leftSection.title}</div>`+
+      `<div class="note">${u.leftSection.text}</div>` : '';
+    const wargear = (u.wargear&&u.wargear.length) ? `<div class="section-h" style="margin-top:20px">Options d'équipement</div>`+
+      `<ul class="wg-list">${u.wargear.map(o=> (typeof o==='string')
+        ? `<li>${o}</li>`
+        : `<li>${o.head}<ul class="wg-sub">${o.items.map(it=>`<li>${it}</li>`).join('')}</ul></li>`
+      ).join('')}</ul>` : '';
+    const comp = `<ul class="comp-list">${u.comp.map(c=>`<li>${c}</li>`).join('')}</ul>`
+      + `<div class="note">${u.equip}</div>`;
+    const pts = `<div class="pts-table">${u.pts.map(p=>`<div class="pts-row"><span class="m">${p[0]}</span>`+
+      `<span class="p">${p[1]} pts</span></div>`).join('')}</div>`;
+    const transport = u.transport ? `<div class="section-h" style="margin-top:16px">Transport</div>`+
+      `<div class="note">${u.transport}</div>` : '';
+    const leader = u.leader ? `<div class="section-h" style="margin-top:16px">Meneur</div>`+
+      `<div class="lead-intro">Ce modèle peut être attaché aux unités suivantes :</div>`+
+      `<ul class="lead-list">${u.leader.map(t=>`<li>${t}</li>`).join('')}</ul>`+
+      (u.leaderNote?`<div class="note" style="margin-top:6px">${u.leaderNote}</div>`:'') : '';
+    return `<div class="card">
+      <div class="card-head">
+        <div><span class="name">${u.name}</span><span class="base">[${u.base}]</span></div>
+        <span class="role">${u.role}</span>
+      </div>
+      <div class="body-grid">
+        <div class="col-left">
+          ${statBlock}
+          ${weaponRows(u.ranged,'CT')}
+          ${weaponRows(u.melee,'CC')}
+          ${wargear}
+          ${leftSection}
+        </div>
+        <div class="col-right">
+          <div class="section-h">Aptitudes</div>
+          ${abilities}
+          <div class="section-h" style="margin-top:16px">Composition d'unité</div>
+          ${comp}
+          <div style="margin-top:10px">${pts}</div>
+          ${transport}
+          ${leader}
+        </div>
+      </div>
+      <div class="kw-grid">
+        <div class="kw-cell"><span class="k">MOTS-CLÉS : </span><span class="v">${u.keywords}</span></div>
+        <div class="kw-cell"><span class="k">MOTS-CLÉS DE FACTION : </span><span class="v">${u.faction}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+render();
+</script>
+</body>
+</html>
