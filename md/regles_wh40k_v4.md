@@ -78,6 +78,8 @@ L'unité ne se déplace pas, puis effectue son action normalement.
 
 Chaque modèle se déplace jusqu'à sa valeur de Mouvement (M). Aucun modèle ne peut finir son mouvement à Portée d'Engagement d'un modèle ennemi.
 
+Les unités avec le mot-clé VOL peuvent traverser tous les modèles ; si elles le font, elles consomment 2" de leur mouvement.
+
 ### Avance
 
 L'unité ajoute ½ M (arrondi à l'inférieur) à sa valeur de Mouvement pour ce déplacement. Ce tour, elle ne peut tirer qu'avec des armes **[ASSAUT]** ou **[PISTOLET]**.
@@ -149,7 +151,7 @@ Chaque modèle éligible choisit une arme de mêlée et une unité cible à Port
 
 ### 2. Consolider
 
-Une unité qui a combattu et qui n'est plus à Portée d'Engagement d'aucun ennemi peut déplacer chacun de ses modèles de jusqu'à 3" vers le modèle ennemi la plus proche ou la zone d'objectif la plus proche. Une unité encore engagée ne consolide pas.
+Après avoir combattu, une unité peut effectuer une Consolidation : déplacez chaque modèle de l'unité de jusqu'à 3" vers le modèle ennemi le plus proche ou la zone d'objectif la plus proche. Une unité encore à Portée d'Engagement d'un ennemi ne peut pas consolider.
 
 # Tirs au Jugé
 
@@ -185,13 +187,14 @@ Mêlée : un modèle ne combat qu'avec une seule arme de mêlée par phase.
 | [PRÉCISION] | Si cette arme blesse une unité, le joueur attaquant peut choisir d'allouer la blessure directement à un modèle visible du porteur, en ignorant la règle normale d'allocation. |
 | [IGNORE LE COUVERT] | La cible ne peut pas bénéficier d'une sauvegarde de couvert contre les attaques de cette arme. |
 | [À RISQUE] | Après avoir tiré ou combattu, jetez 1D6. Sur 1, le modèle est détruit (ou subit 3 blessures mortelles si c'est un Personnage, Monstre ou Véhicule). |
-| [TOUCHES FATALES] | Une Touche Critique blesse automatiquement la cible, sans jet pour blesser. |
+| [TOUCHES FATALES] | Une Touche Critique blesse automatiquement la cible, sans jet de blessure. |
 | [TOUCHES SOUTENUES X] | Une Touche Critique cause X touches supplémentaires à la cible. |
-| [JUMELÉ] | À chaque attaque faite avec cette arme, vous pouvez relancer le jet pour toucher. |
+| [JUMELÉ] | À chaque attaque faite avec cette arme, vous pouvez relancer le jet de touche. |
 | [ATTAQUES BONUS] | Le porteur peut effectuer des attaques avec cette arme en plus de l'arme choisie pour combattre. Le nombre d'attaques bonus ne peut pas être modifié. |
-| [ANTI - MOT-CLÉ X+] | Un jet pour blesser non modifié égal ou supérieur à X contre une cible ayant le mot-clé correspondant cause une Blessure Critique. |
+| [ANTI - MOT-CLÉ X+] | Un jet de blessure non modifié égal ou supérieur à X contre une cible ayant le mot-clé correspondant cause une Blessure Critique. |
 | [BLESSURES DÉVASTATRICES] | Une Blessure Critique double la caractéristique de Dégâts de l'arme, à la place des dégâts normaux. |
 | [DANGEREUX] | Chaque fois qu'une unité est sélectionnée pour tirer ou combattre, après qu'elle a résolu toutes ses attaques, elle effectue un test de dangerosité pour chaque arme dangereuse dont les cibles ont été sélectionnées. Lancez 1D6 : sur un 1, le test est raté. Résolvez chaque test raté un par un, dans cet ordre : si possible, sélectionnez un modèle de cette unité ayant subi au moins une blessure et équipé d'une ou plusieurs armes dangereuses ; sinon, si possible, un modèle de cette unité hors PERSONNAGE équipé d'une ou plusieurs armes dangereuses ; sinon, un PERSONNAGE de cette unité équipé d'une ou plusieurs armes dangereuses. Le modèle sélectionné subit 3 blessures mortelles, qui doivent lui être infligées lors de la répartition. Si une unité est choisie comme cible d'un tir en état d'alerte durant une charge adverse, ces blessures mortelles sont réparties après la fin du mouvement de charge de l'unité chargée. |
+| [PSYCHIQUE] | Cette arme possède le mot-clé [IGNORE LE COUVERT]. |
 
 # Autres Mots-clés
 
@@ -240,7 +243,7 @@ Un pool de blessures regroupe l'ensemble des blessures non sauvegardées causée
 
 Pour toucher, lancez 1D6 par attaque : le tir ou l'attaque touche si le résultat est égal ou supérieur à la CT (tir) ou à la CC (corps à corps) du modèle. Un résultat non modifié de 1 est toujours un échec.
 
-Touche Critique : un résultat non modifié de 6 au jet pour toucher est une Touche Critique.
+Touche Critique : un résultat non modifié de 6 au jet de touche est une Touche Critique.
 
 # Jet pour Blesser
 
@@ -260,7 +263,7 @@ Comparez la Force (F) de l'arme à l'Endurance (E) de la cible, puis consultez l
 
   - Les modificateurs ne peuvent jamais dépasser -1 ou +1.
 
-Blessure Critique : un résultat non modifié de 6 au jet pour blesser est une Blessure Critique.
+Blessure Critique : un résultat non modifié de 6 au jet de blessure est une Blessure Critique.
 
 En cas de blessure automatique, aucun jet n'est requis et la blessure est compter comme une Blessure mortelle.
 
@@ -287,9 +290,13 @@ Effets passifs du couvert (toujours actifs, sans action) :
 
 À découvert : aucun effet.
 
-Couvert léger : les tirs ennemis subissent -1 pour toucher l'unité.
+Couvert léger : les tirs ennemis subissent -1 à la CT pour toucher l'unité.
 
-Couvert complet : les tirs ennemis subissent -1 pour toucher l'unité et l'unité gagne +1 à sa sauvegarde d'armure.
+Couvert complet : les tirs ennemis subissent -1 à la CT pour toucher l'unité et l'unité gagne +1 à sa sauvegarde d'armure.
+
+Le couvert n'est bénéfique que si tous les modèles de l'unité sont entièrement dans un élément de couvert ou masqués par celui-ci.
+
+Toutes les unités peuvent tirer à travers les éléments de terrain de Couvert léger.
 
 | **Hauteur de l'élément de terrain** | **Infanterie / Monté / Bête** | **Véhicule / Monstre** |
 | ----------------------------------- | ----------------------------- | ---------------------- |
@@ -300,7 +307,7 @@ Couvert complet : les tirs ennemis subissent -1 pour toucher l'unité et l'unit�
 
 ## Se Jeter à Terre
 
-Action réservée aux unités Infanterie et Bête. Après les jets pour toucher et pour blesser de l'ennemi, mais avant les jets de sauvegarde, vous pouvez déclarer qu'une de vos unités se jette à terre. Placez un marqueur pour le rappeler.
+Action réservée aux unités Infanterie et Bête. Après les jets de touche et de blessure de l'ennemi, mais avant les jets de sauvegarde, vous pouvez déclarer qu'une de vos unités se jette à terre. Placez un marqueur pour le rappeler.
 
 Elle gagne une sauvegarde invulnérable selon son niveau de couvert : à découvert, invulnérable 6+ ; couvert léger, invulnérable 5+ ; couvert complet, invulnérable 4+.
 
@@ -354,7 +361,7 @@ La distance parcourue par un véhicule lors de son mouvement détermine ses capa
 | ---------------------- | -------------------------------------- | --------------------------- |
 | ½ M ou moins           | Toutes les armes sans malus            | Aucune                      |
 | M complet              | 1 seule arme sans malus, reste au jugé | Toutes les armes sans malus |
-| Avance (M + ½M)        | Ne peut pas tirer                      | Ne peut pas tirer           |
+| Avance (M + ½M)        | 1 seule arme au jugé                   | Toutes les armes au jugé    |
 
 ## Charge : Tank Shock
 
@@ -371,6 +378,22 @@ Lorsqu'un véhicule charge une unité, il provoque automatiquement un Tank Shock
   - Marcheurs et Monstres : ils sont engagés et combattent normalement, comme toute autre unité. Ils combattent toujours avec leur Endurance de face avant, sauf s'ils sont immobilisés, auquel cas c'est l'Endurance de face arrière qui s'applique.
 
   - Autres véhicules : jamais considérés comme engagés. Une unité en contact avec un véhicule non-Marcheur est considérés comme engagés et ne peut pas se déplacer et tirer librement lors de son activation, il doit se désengager. Ces véhicules combattent toujours avec leur Endurance de face arrière.
+
+## Armes et Charge des Véhicules
+
+Les véhicules perdent les mots-clés [ASSAUT] et [LOURD]. Leur action de charge compte comme un mouvement : un véhicule ne peut donc pas à la fois tirer et charger, et il ne peut pas charger s'il commence son action à Portée d'Engagement d'une unité ennemie.
+
+Les Marcheurs font exception : ils conservent les mots-clés [ASSAUT] et [LOURD], et leur charge fonctionne comme celle de l'infanterie.
+
+## Transports
+
+Les unités qui débarquent d'un transport agissent normalement si ce transport a effectué la moitié de son mouvement ; s'il a effectué un mouvement complet, les unités qui débarquent ne peuvent effectuer qu'un demi-mouvement et ne peuvent pas charger.
+
+Lorsqu'un transport explose ou est détruit, l'Explosion est résolue, puis les unités embarquées effectuent une extraction précipitée du véhicule : lancez 1D6 pour chaque modèle embarqué ; sur un résultat de 1 ou 2, ce modèle est détruit.
+
+## Aérodynes
+
+Un Aérodyne est un type de véhicule volant. Il n'a pas de caractéristique de Mouvement : il arrive toujours depuis la réserve durant la Phase de Commandement, voit toutes les unités et est vu de toutes, puis retourne en réserve à la fin du tour.
 
 # Tableau de Dégâts des Véhicules
 
@@ -397,9 +420,9 @@ Lorsqu'un véhicule subit une blessure non sauvegardée d'une arme avec une PA -
 
 ## Crash et Incendie : Aérodynes
 
-**Équipage Sonné** : l’Aérodyne doit se déplacer à sa vitesse minimum en ligne droite.
+**Équipage Sonné : l'Aérodyne ne peut pas sortir de réserve durant le prochain tour.**
 
-**Immobilisé** : l’Aérodyne doit se déplacer à sa vitesse minimum en ligne droite puis Explosion \!
+**Immobilisé : l'Aérodyne doit se déplacer de 2D6" de M, puis Explosion \!**
 
 # Personnages
 

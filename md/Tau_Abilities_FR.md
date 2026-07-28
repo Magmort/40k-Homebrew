@@ -4,16 +4,16 @@ Capacités & Règles de détachement
 
 ## Philosophies de guerre
 
-*Condition : toutes les unités de votre armée (sauf T'AU AUXILIAIRE, COMMANDANT SUPRÊME et NON-ALIGNE) doivent appartenir au même Sept.*
+*Condition : toutes les unités de votre armée (sauf T'AU AUXILIAIRE et NON-ALIGNÉ) doivent appartenir au même Sept.*
 
-Au début de la bataille, après avoir déterminé qui joue en premier, sélectionnez une des deux philosophies tactiques. Toutes les unités T'AU EMPIRE (sauf T'AU AUXILIAIRE) en bénéficient.
+Au début de la bataille, après avoir déterminé qui joue en premier, sélectionnez une des deux philosophies de guerre. Toutes les unités T'AU EMPIRE (Pour le bien suprême) en bénéficient.
 
 | *NOTE : Si les deux joueurs ont une capacité similaire, le joueur qui joue en premier choisit en premier.* |
 | ---------------------------------------------------------------------------------------------------------- |
 
 **Mont'Ka – Le Coup mortel (Tours 1 à 3)**
 
-  - > Mouvement normal ou avance : jusqu'à la fin de la phase d'action, l'unité compte comme étant restée stationnaire.
+  - > Mouvement Normal ou Avance : jusqu'à la fin de la Phase d'Action, l'unité compte comme étant restée immobile.
 
   - > Tir contre la cible la plus proche dans la portée du tableau ci-dessous : relancez les jets de blessure de 1.
 
@@ -25,9 +25,9 @@ Au début de la bataille, après avoir déterminé qui joue en premier, sélecti
 
 **Kau'yon – Le Chasseur Patient (Tours 3 à 5)**
 
-  - > Tir après repli autorisé, mais avec -1 au jet de touche pour tous les tirs ce tour.
+  - > Tir après Désengagement autorisé, mais avec -1 au jet de touche pour tous les tirs ce tour.
 
-  - > Tir contre la cible la plus proche à 12", si le modèle n'est pas à portée d'engagement et n'a pas effectué de repli : Un jet de touche non modifié égal ou supérieur au seuil ci-dessous marque 1 touche supplémentaire.
+  - > Tir contre la cible la plus proche à 12", si le modèle n'est pas à Portée d'Engagement et n'a pas effectué de Désengagement : Un jet de touche non modifié égal ou supérieur au seuil ci-dessous marque 1 touche supplémentaire.
 
 | **Tour** | **Seuil de touche** |
 | -------- | ------------------- |
@@ -37,238 +37,217 @@ Au début de la bataille, après avoir déterminé qui joue en premier, sélecti
 
 ## Markerlight
 
-**Action : Tir des Markerlights**
+**Action de marquage : une unité T'AU EMPIRE (Pour le bien suprême) éligible au tir peut, au lieu de tirer, désigner une cible ennemie visible et à portée comme unité Marquée jusqu'à la fin du tour.**
 
-  - > Au lieu de tirer, une unité T'AU EMPIRE (sauf T'AU AUXILIAIRE) éligible au tir peut désigner une cible ennemie visible et à portée de ses armes comme unité Marquée jusqu'à la fin du tour.
+  - > Tant que l'unité est Marquée, les unités T'AU EMPIRE (Pour le bien suprême) gagnent +1 au jet de touche contre cette unité.
 
-  - > Tant que l'unité qui a effectué le marquage est sur le champ de bataille et n'est pas engagée : les unités T'AU EMPIRE (sauf T'AU AUXILIAIRE) gagnent +1 au jet de touche contre l'unité **Marquée**.
+  - > Une seule marque à la fois (remplacée par une nouvelle), et un Drone de marquage permet de marquer même après une Avance.
 
-  - > Une unité ne peut être **Marquée** qu'une seule fois à la fois. Un nouveau marquage remplace le précédent. Une unité qui a marqué ce tour ne peut pas charger.
+## Inspiré par la Grandeur
 
-  - > Une unité équipée d'un **Drone** de marquage peut marquer même si elle a avancé ce tour.
+Phase de Commandement : sélectionnez une unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ à 6" d'un modèle ETHERE.
 
-## Inspire par la Grandeur
-
-Phase de Commandement : sélectionnez une unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ ou T'AU AUXILIAIRE à 6" du modèle ETHERE de cette unité (sauf unités FARSIGHT ENCLAVES).
-
-Jusqu'au début de la prochaine phase de commandement : cette unité peut effectuer des attaques à distance sans interrompre une action en cours.
+Jusqu'au début de la prochaine Phase de Commandement : cette unité peut effectuer des attaques à distance même si elle a une action en cours.
 
 **Règles de détachement**
 
 **Types de détachements**
 
-| **Type**          | **Condition**                                                                 | **Capacités obtenues**                                                                                    |
-| ----------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| T'AU EMPIRE       | Uniquement des modèles T'AU EMPIRE (sauf NON-ALIGNE)                          | Commandement de cadre Unités T'AU EMPIRE (sauf AUXILIAIRE) : Tenets de Sept. Troupes : objectif sécurisé. |
-| FARSIGHT ENCLAVES | Uniquement des modèles FARSIGHT ENCLAVES (sauf T'AU AUXILIAIRE et NON-ALIGNE) | Pouvoir indépendant.                                                                                      |
+| **Type**          | **Condition**                                                                 | **Capacités obtenues**                                                                                          |
+| ----------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| T'AU EMPIRE       | Uniquement des modèles T'AU EMPIRE (sauf NON-ALIGNÉ)                          | Commandement de cadre. Unités T'AU EMPIRE (Pour le bien suprême) : Tenets de Sept. Troupes : Objectif Sécurisé. |
+| FARSIGHT ENCLAVES | Uniquement des modèles FARSIGHT ENCLAVES (sauf T'AU AUXILIAIRE et NON-ALIGNÉ) | Pouvoir indépendant.                                                                                            |
 
 ## Commandement de cadre
 
-*La hiérarchie de la Caste du Feu confie la responsabilité tactique de chaque cadre à un unique Commandant.*
-
-  - > Détachement T'AU EMPIRE : maximum 1 modèle COMMANDANT par détachement.
+  - > Détachement T'AU EMPIRE : maximum 1 modèle COMMANDANT par Détachement.
 
   - > Détachement FARSIGHT ENCLAVES : maximum 2 modèles COMMANDANT par Détachement.
 
 ## Pouvoir indépendant
 
-*Les enclaves de Farsight ont rompu avec l'Empire T'au et n'ont aucune tolérance pour la caste des Etherees.*
-
 Aucun modèle ETHERE ne peut être inclus dans ce détachement.
 
 ## Tenets de Sept
 
-*Chaque Sept a développé sa propre philosophie de combat adaptée aux compétences de ses guerriers.*
+Si toutes les unités de votre armée (sauf les unités T'AU EMPIRE non-Pour le bien suprême et NON-ALIGNÉ) appartiennent au même Sept, toutes les unités T'AU EMPIRE dotées de cette capacité, ainsi que les modèles qui les composent, gagnent un Tenet de Sept. Le Tenet de Sept obtenu dépend du Sept auquel elles appartiennent, comme indiqué ci-dessous.
 
-Condition : toutes les unités de l'armée (sauf T'AU AUXILIAIRE, COMMANDANT SUPRÊME et NON-ALIGNE) doivent appartenir au même Sept.
-
-Si la condition est remplie, toutes les unités T'AU EMPIRE avec cette capacité gagnent le Tenet de Sept de leur Sept.
-
-| *NOTE : Si votre Sept n'a pas de Tenet associé, vous devez en créer un (voir les règles de création de Sept personnalisé). Dans tous les cas, notez les Tenets de chaque Détachement sur votre liste d'armée.* |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+Si votre Sept n'a pas de Tenet de Sept associé, vous devez en créer un nouveau, comme décrit dans les règles de création de Sept personnalisé. Dans tous les cas, inscrivez les Tenets de Sept de tous vos détachements sur votre liste d'armée.
 
 **Septs**
 
-*Condition : toutes les unités \<SEPT\> de votre armée (sauf COMMANDANT SUPRÊME) appartiennent au même Sept. Si c'est le cas, le détachement est appelé détachement de Sept.*
+*Condition : toutes les unités \<SEPT\> de votre armée appartiennent au même Sept. Si c'est le cas, le détachement est appelé Détachement de Sept.*
 
-**Ce que donne un détachement de Sept**
+**Ce que donne un Détachement de Sept**
 
-| **Élément**                                                                                                                                                                    | **Règle**                                                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trait de seigneur de guerre                                                                                                                                                    | Un personnage T'AU EMPIRE \<SEPT\> peut remplacer son Trait de SdG par le Trait de Sept associé.                                                                                                                                      |
-| Stratagème de Sept                                                                                                                                                             | Si votre armée inclut un Détachement de Sept (hors Soutien Auxiliaire, Super-lourd ou Fortification), vous débloquez le Stratagème de Sept correspondant.                                                                             |
-| Système Signature                                                                                                                                                              | Si votre Seigneur de Guerre est un personnage T'AU EMPIRE \<SEPT\>, vous pouvez donner le Système Signature de Sept à un personnage T'AU EMPIRE \<SEPT\> au lieu d'une Relique Système Signature standard. Personnages nommés exclus. |
-| *NOTE : Si une Relique remplace un équipement existant, vous devez quand même payer son coût en points. Notez toutes les Reliques Systèmes Signature sur votre liste d'armée.* |                                                                                                                                                                                                                                       |
+| **Élément**                                                                    | **Règle**                                                                                                                                                                                                                             |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Trait de Seigneur de Guerre                                                    | Un PERSONNAGE T'AU EMPIRE \<SEPT\> peut remplacer son Trait de SdG par le Trait de Sept associé.                                                                                                                                      |
+| Stratagème de Sept                                                             | Si votre armée inclut un Détachement de Sept (hors Soutien Auxiliaire, Super-lourd ou Fortification), vous débloquez le Stratagème de Sept correspondant.                                                                             |
+| Système Signature                                                              | Si votre Seigneur de Guerre est un PERSONNAGE T'AU EMPIRE \<SEPT\>, vous pouvez donner le Système Signature de Sept à un PERSONNAGE T'AU EMPIRE \<SEPT\> au lieu d'une Relique Système Signature standard. Personnages nommés exclus. |
+| *NOTE : Notez toutes les Reliques Systèmes Signature sur votre liste d'armée.* |                                                                                                                                                                                                                                       |
 
 ## Sept T'au
 
-*Exemplaires de la philosophie militaire T'au, les cadres de T'au Sept manœuvrent avec une efficacité redoutable, établissant des lignes de feu qui pilonnent l'ennemi sans relâche.*
+**Tenet – Secteurs de tir coordonnés**
 
-**Tenet – Arcs de tir coordonnés**
+  - > Chaque fois qu'une unité dotée de ce Tenet est sélectionnée pour tirer ou combattre, vous pouvez relancer un jet de touche ou un jet de blessure lors de la résolution des attaques de cette unité.
 
-  - > Phase de Combat ou action de Tir: relancez 1 jet de touche ou 1 jet de blessure par unité.
+  - > Ajoutez 3" à la portée des aptitudes d'aura des modèles dotés de ce Tenet (jusqu'à un maximum de 12").
 
-  - > Portée des auras : +3" (max 12").
-
-  - > Invocations non-aura et capacités de phase de Commandement avec une portée : +3" (max 12").
+  - > Chaque fois qu'un modèle doté de ce Tenet récite une invocation qui n'est pas une aura, ou utilise une aptitude spécifiant une portée lors de votre Phase de Commandement, ajoutez 3" à la portée de cette invocation ou aptitude (jusqu'à un maximum de 12").
 
 **Trait de SdG : Force de conviction**
 
-  - > Votre SdG gagne Insensible à la douleur 5+.
+  - > Le SdG gagne Insensible à la douleur 5+.
 
 **Système Signature : Propulseurs de manœuvre vectorielle**
 
-BATTLESUIT uniquement.
+Modèle BATTLESUIT uniquement.
 
-  - > \+2" à la caractéristique de Mouvement.
+  - > Ajoutez 2" à la caractéristique de Mouvement du porteur.
 
-  - > 1x/tour : si désigné comme cible d'une charge alors qu'il n'est pas à portée d'engagement, peut effectuer un mouvement normal. Jusqu'à la fin de la phase, il ne peut pas faire de Tir en état d'alerte ni se replier. L'adversaire peut resélectionner ses cibles de charge.
+  - > Une fois par round de bataille, lorsque le porteur est pris pour cible d'une charge, s'il effectue un Repli, il peut effectuer un Mouvement Normal au lieu de son mouvement de ½ M.
 
 **Stratagème : Tir concentré (2 PC)**
 
-*Tact. Bataille | Phase de Tir*
+*Sept T'au – Stratagème de Tactique de Bataille*
 
-  - > Quand un modèle ennemi perd des blessures suite à une attaque d'un modèle T'AU SEPT : jusqu'à la fin de la phase, chaque attaque d'un modèle T'AU SEPT INFANTERIE, MARCHEUR ou MONTÉ contre cette unité ennemie gagne +1 au jet de blessure.
+  - > Utilisez ce Stratagème durant la Phase d'Action, lorsqu'un modèle ennemi perd des blessures suite à une attaque effectuée par un modèle SEPT T'AU de votre armée. Jusqu'à la fin de la phase, chaque fois qu'un modèle SEPT T'AU INFANTERIE, MARCHEUR ou MONTÉ de votre armée effectue une attaque contre l'unité de ce modèle ennemi, ajoutez 1 au jet de blessure de cette attaque.
 
 ## Vior'la
 
-*Les T'au de Vior'la sont reconnus pour leur tempérament fougueux. Ils privilégient des stratégies agressives et mobiles pour déstabiliser l'ennemi dès le début et ne jamais le laisser reprendre pied.*
+**Tenet – Frappe éclair**
 
-**Tenet : Frapper vite**
+  - > Au début du premier tour de bataille, pour chaque unité de votre armée, ajoutez 2" à la caractéristique de Mouvement des modèles de cette unité jusqu'à la fin du tour.
 
-  - > Tour 1, pour chaque unité entièrement dans votre zone de déploiement : +2" au Mouvement jusqu'à la fin du tour.
+  - > Vous pouvez relancer les jets de charge.
 
-  - > Relancez les jets de charge pour les unités avec ce Tenet.
+**Trait de SdG : Élite de l'Académie**
 
-**Trait de SdG : Lumière de l'Académie**
-
-  - > Chaque fois que vous dépensez 1 PC pour un Stratagème de Manœuvre Stratégique ou d'Équipement T'au Empire : lancez 1D6. Sur 3+, le PC est remboursé.
+  - > Au début de la bataille, au moment de choisir vos Stratagèmes, le premier Stratagème de Ruse ou d'Équipement T'au Empire que vous prenez est entièrement remboursé.
 
 **Système Signature : Défenses d'Armure Automatisées**
 
-COMMANDANT uniquement.
+Modèle COMMANDANT uniquement.
 
-  - > Début de chaque phase d'action : lancez 1D6. Sur 2-4 : l'unité ennemie la plus proche à 18" et visible subit 1 blessure mortelle. Sur 5+ : l'unité ennemie la plus proche à 12" et visible subit D3 blessures mortelles.
+  - > Au début de la Phase d'Action, lancez 1D6 : sur 2-4, l'unité ennemie la plus proche située à 18" ou moins et visible du porteur subit 1 blessure mortelle ; sur 5+, l'unité ennemie la plus proche située à 12" ou moins et visible du porteur subit D3 blessures mortelles.
 
 **Stratagème : Sang Chaud (2 PC)**
 
-*Tact. Bataille | Phase de Tir*
+*Vior'la – Stratagème de Tactique de Bataille*
 
-  - > Quand une unité VIOR'LA tire : jusqu'à la fin de la phase, chaque modèle (hors DRONE) ciblant la cible la plus proche éligible inflige 1 blessure mortelle supplémentaire sur un jet de blessure non modifié de 6 (max 6 blessures mortelles au total).
+  - > Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité VIOR'LA de votre armée est sélectionnée pour tirer. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité (sauf modèle DRONE) effectue une attaque ciblant la cible éligible la plus proche, un jet de blessure non modifié de 6 inflige 1 blessure mortelle à la cible en plus des dégâts normaux (jusqu'à un maximum de 6 blessures mortelles).
 
 ## Sa'cea
 
-*Les guerriers de Sa'cea excellent dans les combats en terrain difficile et en milieu urbain, transformant les zones dévastées en avantages tactiques.*
+**Tenet – Maîtres du combat urbain**
 
-**Tenet – Maîtres de la guerre urbaine**
+  - > Chaque fois qu'une attaque à distance cible une unité SA'CEA VÉHICULE, si l'attaquant se trouve à plus de 18", la cible est considérée comme bénéficiant d'un Couvert Complet.
 
-  - > Attaque à distance contre une unité VÉHICULE avec ce Tenet, tireur à plus de 18" : cible traitée comme bénéficiant du Couvert 2.
+  - > Chaque fois qu'une attaque à distance cible une unité SA'CEA INFANTERIE, si l'attaquant se trouve à plus de 12", la cible est considérée comme bénéficiant d'un Couvert Complet.
 
-  - > Attaque à distance contre une unité INFANTERIE avec ce Tenet, tireur à plus de 12" : cible traitée comme bénéficiant du Couvert 2.
-
-  - > VÉHICULE et BATTLESUIT avec ce Tenet ne subissent pas le malus de touche contre les unités à portée d'engagement.
+  - > Les modèles SA'CEA VÉHICULE ne subissent pas de malus à leurs jets de touche lorsqu'ils tirent sur des unités ennemies situées à Portée d'Engagement.
 
 **Trait de SdG : Conquérant stratégique**
 
-  - > Phase de commandement : sélectionnez une unité SA'CEA amie à 9" du Seigneur de Guerre. Jusqu'à la prochaine phase de commandement, cette unité gagne Objectif sécurisé. Si elle l'a déjà, ses modèles gagnent +1 OC.
+  - > Durant la phase de Commandement, choisissez une unité SA'CEA située à 9" ou moins de ce SdG. Jusqu'au début de la prochaine phase de Commandement, cette unité gagne l'aptitude Objectif Sécurisé. Si cette unité possède déjà cette aptitude, ses modèles doublent leur valeur d'OC.
 
-**Système signature : Champ grav-inhibiteur**
+**Système Signature : Champ grav-inhibiteur**
 
-  - > Début de la phase de Combat : toutes les unités ennemies à portée d'engagement du porteur ne peuvent pas combattre cette phase tant que toutes vos unités éligibles ne l'ont pas fait.
-
-  - > Chaque attaque de mêlée contre le porteur : -1 au jet de touche.
+  - > Au début de la phase de Combat, toutes les unités ennemies situées à Portée d'Engagement du porteur ne sont pas éligibles pour combattre durant cette phase.
 
 **Stratagème : Liaison orbitale (1 PC)**
 
-*Manœuvre strat. | Phase de tir*
+*Sa'cea – Stratagème de Manœuvre Stratégique*
 
-  - > Sélectionnez une unité ennemie. Jusqu'à la fin de la phase, les attaques à distance des unités SA'CEA contre cette unité ignorent les bonus de couvert.
+  - > Utilisez ce Stratagème durant la Phase d'Action. Choisissez une unité ennemie. Jusqu'à la fin de la phase, chaque fois qu'un modèle d'une unité SA'CEA de votre armée effectue une attaque à distance contre cette unité ennemie, ses armes ont l'aptitude [IGNORE LE COUVERT].
 
 ## Dal'yth
 
-*Les armées de Dal'yth sont connues pour leur forte intégration de forces auxiliaires aliens et la diversité technologique qu'elles apportent.*
+Tenet – Partenaires commerciaux
 
-**Tenet : Partenaires commerciaux**
+Chaque fois qu'une attaque à distance est effectuée contre une unité DAL'YTH INFANTERIE, si l'attaquant ne se trouve pas à Portée d'Engagement de cette unité, les modèles de cette unité bénéficient d'un Couvert Léger contre cette attaque.
 
-  - > Attaque à distance contre une unité INFANTERIE avec ce Tenet, tireur non en portée d'engagement : les modèles bénéficient du couvert 0.
+Toutes les unités T'AU bénéficient de la Philosophie de guerre choisie pour votre armée.
 
-  - > Si une philosophie tactique a été choisie, les unités T'AU AUXILIAIRE dans le même détachement en bénéficient également.
+Trait de SdG : Influence unificatrice
 
-**Trait de SdG : Influence unificatrice**
+Ce SdG gagne les aptitudes suivantes :
 
-  - > Aura 6" : Excellence diplomatique : +1 au Commandement des unités amies DAL'YTH ou T'AU AUXILIAIRE (hors personnages).
+Excellence Diplomatique (Aura) : tant qu'une unité DAL'YTH T'AU (sauf PERSONNAGE) se trouve à 6" ou moins de ce SdG, retirez 1 à la caractéristique de Commandement des modèles de cette unité.
 
-  - > Aura 6" : Structure de Commandement Intégrée : les unités T'AU AUXILIAIRE amies dans la portée sont traitées comme ne possédant pas le mot-clé T'AU AUXILIAIRE pour la règle des Markerlights.
+Structure de Commandement Intégrée (Aura) : tant qu'une unité T'AU (non Pour le bien suprême) se trouve à 6" ou moins de ce SdG, cette unité est considérée comme possédant le mot-clé « Pour le bien suprême » pour la règle des Markerlights.
 
-**Système Signature : Champ de Miroir Dynamique**
+Système Signature : Champ Miroir Dynamique
 
-  - > Le porteur ne peut pas être ciblé par des attaques à distance, sauf s'il est la cible la plus proche ou si le tireur est à 12" ou moins.
+Le porteur ne peut pas être choisi comme cible d'attaques à distance, à moins d'être la cible éligible la plus proche du modèle qui tire, ou que le modèle qui tire se trouve à 12" ou moins de lui.
 
-  - > Sauvegarde invulnérable de 5+.
+Le porteur dispose d'une sauvegarde invulnérable de 5+.
 
-**Stratagème : Débordement (1 PC)**
+Stratagème : Débordement (1 PC)
 
-*Manœuvre strat. | Fin de phase de mouvement*
+Dal'yth – Stratagème de Manœuvre Stratégique
 
-  - > Sélectionnez une unité DAL'YTH INFANTERIE, MARCHEUR ou MONTÉ ou T'AU AUXILIAIRE à 9" d'un bord de champ de bataille. Si la mission utilise les réserves stratégiques, retirez-la du champ de bataille et placez-la en réserves stratégiques.
+Utilisez ce Stratagème à la fin de la Phase d'Action. Choisissez une unité DAL'YTH INFANTERIE, MARCHEUR ou MONTÉ ou une unité T'AU (non Pour le bien suprême) de votre armée située à 9" ou moins de n'importe quel bord du champ de bataille. Vous pouvez retirer cette unité du champ de bataille et la placer en Réserve.
 
 ## Bork'an
 
-*Les cadres de Bork'an incarnent la suprématie technologique T'au, armés et équipés avec les équipements les plus avancés de l'Empire, produits par leur caste de la Terre d'élite.*
+Tenet – Artisanat supérieur
 
-**Tenet : Artisanat supérieur**
+Ajoutez 4" à la caractéristique de Portée des armes de tir des unités BORK'AN.
 
-  - > Toutes les armes à distance : +4" de portée.
+Chaque fois qu'une attaque de tir est effectuée avec une arme ayant une caractéristique de Force de 7 ou moins contre une unité BORK'AN VÉHICULE, soustrayez 1 à la caractéristique de Force de cette attaque.
 
-  - > Attaque à distance de Force 7 ou moins contre une unité VEHICULE ou BATTLESUIT avec ce Tenet : -1 à la force de cette attaque.
+Trait de SdG : En quête de perfection
 
-**Trait de SdG : Quête de la perfection**
+Chaque fois que ce SdG effectue une attaque de tir :
 
-  - > Chaque attaque à distance de ce Seigneur de Guerre : +1 PA.
+Améliorez de 1 la caractéristique de Pénétration d'Armure de cette attaque.
 
-  - > Jet de blessure non modifié de 6 : +1 blessure mortelle en plus des dégâts normaux (max 3 blessures mortelles par phase).
+Un jet de blessure non modifié de 6 inflige 1 blessure mortelle à la cible en plus des dégâts normaux (jusqu'à un maximum de 3 blessures mortelles par phase).
 
-**Système Signature – Systèmes d'alimentation en surregie**
+Système Signature : Systèmes énergétiques survoltés
 
-COMMANDANT uniquement.
+Modèle COMMANDANT uniquement.
 
-  - > Sélectionnez jusqu'à 2 armes à distance du modèle. Chaque attaque avec ces armes contre une cible à portée courte (moitié de la portée) : +1 au jet de blessure.
+Choisissez jusqu'à deux armes de tir dont ce modèle est équipé. Chaque fois que le porteur effectue une attaque de tir avec l'une de ces armes contre une unité située à mi-portée ou moins, ajoutez 1 au jet de blessure de cette attaque.
 
-**Stratagème : Armement expérimental (2 PC)**
+Stratagème : Armement expérimental (2 PC)
 
-*Acte épique | Phase de Tir*
+Bork'an – Stratagème de Haut Fait
 
-  - > Quand une unité BORK'AN tire : sélectionnez 1 modèle et 1 arme. Jusqu'à la fin de la phase, les jets de sauvegarde invulnérable ne peuvent pas être effectués contre les attaques de cette arme.
+Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité BORK'AN de votre armée est sélectionnée pour tirer. Choisissez un modèle de cette unité et une arme dont elle est équipée. Jusqu'à la fin de la phase, chaque fois que ce modèle effectue une attaque avec cette arme, aucun jet de sauvegarde invulnérable ne peut être effectué contre cette attaque.
 
 ## Farsight Enclaves
 
-*Les armées des enclaves de Farsight combattent en reflétant l'héroïsme et la détermination de leur chef vénéré, le Commandant Farsight.*
+*Tenet – Contre-attaque dévastatrice*
 
-**Tenet – Contre-attaque dévastatrice**
+**Chaque fois qu'un modèle FARSIGHT ENCLAVES effectue une attaque de tir ciblant une unité à 9" ou moins, la cible est considérée comme une unité Marquée.**
 
-  - > Attaque à distance contre une cible à 9" ou moins : la cible est traitée comme ayant Markerlight.
+  - > Chaque fois qu'une unité FARSIGHT ENCLAVES est sélectionnée pour tirer ou combattre, vous pouvez relancer un jet de blessure lors de la résolution des attaques de cette unité.
 
-  - > Action de Tir ou phase de Combat : relancez 1 jet de blessure par unité.
+  - > Trait de SdG : Maître du Coup de Grâce
 
-**Trait de SdG : Maître du Coup Fatal**
+**Chaque fois que ce SdG effectue une attaque :**
 
-  - > Jet de blessure non modifié de 6 : +3 PA pour cette attaque.
+  - > Sur un jet de blessure non modifié de 6, améliorez de 3 la caractéristique de Pénétration d'Armure de cette attaque.
 
-  - > Le modèle qui reçoit la blessure ne peut pas utiliser de règle pour ignorer les blessures perdues.
+  - > Le modèle auquel cette attaque est allouée ne peut utiliser aucune règle pour ignorer les blessures qu'il subit.
 
 **Système Signature : Talisman d'Arthas Moloch**
 
-  - > Action psychique adverse : le porteur peut tenter de contrer 1 pouvoir psychique comme s'il était un PSYKER.
+  - > Lorsque votre adversaire utilise un pouvoir psychique, le porteur peut tenter un test de Refus comme s'il était un PSYKER.
 
-  - > \+1 aux tests de refus du sorcier du porteur.
+  - > Ajoutez 1 aux tests de Refus effectués par le porteur.
 
-**Stratagème : Zone de largage nettoyée (3/2 PC)**
+**Stratagème : Zone de débarquement sécurisée (3 PC / 2 PC)**
 
-*Tact. Bataille | Phase de mouvement*
+*Farsight Enclaves – Stratagème de Tactique de Bataille*
 
-  - > Quand une unité FARSIGHT ENCLAVES BATTLESUIT est déployée via Frappe en profondeur : jusqu'à la fin du tour, chaque BATTLESUIT de l'unité peut relancer les jets de touche et de blessure. Coût : 3 PC si 4+ modèles BATTLESUIT, 2 PC sinon.
+  - > Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité FARSIGHT ENCLAVES BATTLESUIT de votre armée est déployée sur le champ de bataille via l'aptitude Frappe en Profondeur. Jusqu'à la fin du tour, chaque fois qu'un modèle BATTLESUIT de cette unité effectue une attaque de tir, vous pouvez relancer le jet de touche et le jet de blessure. Si cette unité contient 4 modèles BATTLESUIT ou plus, ce Stratagème coûte 3 PC ; sinon, il coûte 2 PC.
 
-**Empire en expansion : Tenets personnalisés**
+## **Empire en expansion : Tenets personnalisés**
 
 *Si votre Sept n'a pas de Tenet associé, vous devez en créer un en choisissant soit le Tenet Monde allié, soit deux Tenets issus de secteurs différents et adjacents.*
 
@@ -278,99 +257,108 @@ COMMANDANT uniquement.
 
   - > Pour le second Tenet : il doit venir d'un secteur différent ET adjacent au premier (voir carte des secteurs).
 
-| *NOTE : Adjacences : A \<-\> B / A \<-\> C / B \<-\> C / D \<-\> E / C \<-\> D / C \<-\> E* |
-| ------------------------------------------------------------------------------------------- |
+| **Secteur** | **Secteurs adjacents** |
+| ----------- | ---------------------- |
+| **A**       | B, C, D, E             |
+| **B**       | A, C                   |
+| **C**       | A, B                   |
+| **D**       | A, E                   |
+| **E**       | A, D                   |
 
 **Option : Monde allié**
 
 Sélectionnez un Sept existant et utilisez son Tenet. Les traits de SdG, Stratagèmes et Systèmes Signature associés sont également disponibles (les mots-clés du Sept choisi sont remplacés par ceux de votre Sept).
 
-Si vous choisissez les Farsight Enclaves : votre Détachement gagne aussi la capacité Pouvoir Indépendant et est traité comme un Détachement Farsight Enclaves pour la règle Commandement de Cadre.
+Si vous choisissez les Farsight Enclaves : votre Détachement gagne aussi la capacité Pouvoir indépendant et est traité comme un Détachement Farsight Enclaves pour la règle Commandement de cadre.
 
 ## Secteur A
 
-| **Tenet**                       | **Effet**                                                                                                                                                                                                                          |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Frappe rapide**               | Avant le 1ᵉ tour, les unités INFANTERIE entièrement dans votre zone de déploiement peuvent effectuer un mouvement normal jusqu'à 6". Elles ne peuvent pas finir à moins de 9" de la zone de déploiement ennemie ou de tout ennemi. |
-| **Jouer son rôle**              | BATTLESUIT (9 blessures ou moins) : compte comme OC 3. BATTLESUIT (10+ blessures) : compte comme OC 5.                                                                                                                             |
-| **Adhérents aux Enseignements** | Portée des auras : +3" (max 12"). Portée des invocations non-aura et capacités de phase de Commandement : +3" (max 12").                                                                                                           |
-| **Calme sous la pression**      | Attaque à distance avec une arme [Assaut] contre une cible à 12" ou moins : +1 à la Force de cette attaque.                                                                                                                      |
+| **Tenet**                       | **Effet**                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Frappe Éclair**               | Au début du premier round de bataille, avant le début du premier tour, vos unités \<SEPT\> INFANTERIE sur le champ de bataille obtiennent Éclaireurs 6".                                                                                                                                                                                         |
+| **Jouer son Rôle**              | Les modèles \<SEPT\> BATTLESUIT doublent leur valeur d'OC.                                                                                                                                                                                                                                                                                       |
+| **Adhérents aux Enseignements** | Ajoutez 3" à la portée des aptitudes d'aura des modèles \<SEPT\> (jusqu'à un maximum de 12"). Chaque fois qu'un modèle \<SEPT\> fait une Invocation qui n'est pas une aura, ou utilise une aptitude durant la phase de Commandement qui spécifie une portée, ajoutez 3" à la portée de cette invocation ou aptitude (jusqu'à un maximum de 12"). |
+| **Calme sous la Pression**      | Chaque fois qu'un modèle \<SEPT\> effectue une attaque de tir avec une arme [ASSAUT] ciblant une unité à moins de 12", ajoutez 1 à la caractéristique de Force de cette attaque.                                                                                                                                                               |
 
 ## Secteur B
 
-| **Tenet**                              | **Effet**                                                                                                                                                                                                                    |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Experts en camouflage**              | Attaque à distance contre une unité INFANTERIE entièrement dans un décor, tireur à plus de 12" : l'unité bénéficie du Couvert 2.                                                                                             |
-| **Doctrines défensives**               | Attaque de mêlée : PA -1 ou -2 contre un modèle qui a été chargé ce tour : la PA devient 0.                                                                                                                                  |
-| **Tactiques de blocage**               | Quand une unité INFANTERIE effectue un mouvement de charge : jusqu'au début de la prochaine phase de Charge, ses modèles INFANTERIE, MARCHEUR ou MONTÉ gagnent Objectif Sécurisé (ou comptent comme +1 OC s'ils l'ont déjà). |
-| **Tireurs d'élite de la caste du Feu** | Arme pulse, jet de blessure non modifié de 6 : +1 PA pour cette attaque.                                                                                                                                                     |
+| **Tenet**                              | **Effet**                                                                                                                                                                                                                                                                                             |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Experts en camouflage**              | Chaque fois qu'une attaque à distance est effectuée contre une unité \<SEPT\> INFANTERIE située entièrement sur ou dans un élément de décor, si l'attaquant se trouve à plus de 12" de distance, l'unité \<SEPT\> est considérée comme bénéficiant d'un Couvert Complet contre cette attaque.         |
+| **Doctrines défensives**               | Chaque fois qu'une attaque de mêlée ayant une caractéristique de Pénétration d'Armure de -1 ou -2 est allouée à un modèle \<SEPT\>, si ce modèle a été chargé au cours de ce tour, cette attaque a une caractéristique de Pénétration d'Armure de 0 à la place.                                       |
+| **Tactiques de blocage**               | Chaque fois qu'une unité \<SEPT\> INFANTERIE effectue un mouvement de charge, jusqu'au début de la prochaine Phase d'Action, les modèles INFANTERIE, MARCHEUR ou MONTÉ de cette unité possèdent l'aptitude Objectif Sécurisé. Si un tel modèle possède déjà cette aptitude, il double sa valeur d'OC. |
+| **Tireurs d'élite de la Caste du Feu** | Chaque fois qu'un modèle \<SEPT\> effectue une attaque à distance avec une arme à impulsions, sur un jet de blessure non modifié de 6, améliorez de 1 la caractéristique de Pénétration d'Armure de cette attaque.                                                                                    |
 
 ## Secteur C
 
-| **Tenet**                       | **Effet**                                                                                                                                                                                    |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Manœuvres d'évasion**         | Quand une unité avance : jusqu'au début de la prochaine phase de mouvement, les modèles qui peuvent VOL de cette unité ont une sauvegarde invulnérable de 5+ contre les attaques à distance. |
-| **Ciblage de précision**        | Attaque à distance contre une cible à 12" ou moins : la cible ne bénéficie pas du Couvert 0.                                                                                                 |
-| **Protocoles de désengagement** | Quand une unité INFANTERIE effectue un repli : sélectionnez une unité ennemie à portée d'engagement et lancez 1D6. Sur 2-5 : 1 blessure mortelle. Sur 6 : D3 blessures mortelles.            |
-| **Saturation de Tir**           | Arme burst contre une cible à 12" ou moins : +1 au jet de touche.                                                                                                                            |
+| **Tenet**                       | **Effet**                                                                                                                                                                                                                                                                                  |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Manœuvres d'évitement**       | Chaque fois qu'une unité \<SEPT\> effectue une Avance, jusqu'au début de la prochaine Phase d'Action, les modèles de cette unité capables de VOLER bénéficient d'une sauvegarde invulnérable de 5+ contre les attaques à distance.                                                         |
+| **Ciblage de précision**        | Chaque fois qu'un modèle \<SEPT\> effectue une attaque à distance ciblant une unité à 12" ou moins, la cible ne bénéficie pas des avantages du Couvert léger contre cette attaque.                                                                                                         |
+| **Protocoles de désengagement** | Chaque fois qu'une unité \<SEPT\> INFANTERIE est sélectionnée pour se désengager, choisissez une unité ennemie à Portée d'Engagement de cette unité \<SEPT\> INFANTERIE et lancez 1D6 : sur 2-5, cette unité ennemie subit 1 blessure mortelle ; sur 6, elle subit D3 blessures mortelles. |
+| **Saturation de feu**           | Chaque fois qu'un modèle \<SEPT\> effectue une attaque à distance avec une arme BURST ciblant une unité à 12" ou moins, ajoutez 1 au jet de touche de cette attaque.                                                                                                                       |
 
 ## Secteur D
 
-| **Tenet**                  | **Effet**                                                                                                                               |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Armement fiable**        | Action de Tir : relancez 1 jet de blessure par unité.                                                                                   |
-| **Défenseurs de la Cause** | Quand un modèle (hors DRONE) perdrait une blessure suite à une blessure mortelle : lancez 1D6. Sur 5+, cette blessure n'est pas perdue. |
-| **Blindage renforcé**      | Attaque à distance de Force 7 ou moins contre une unité VÉHICULE ou BATTLESUIT : -1 à la Force de cette attaque.                        |
-| **Ogives renforcées**      | Attaque à distance avec une arme-missile : la cible ne bénéficie d'aucun bonus de couvert.                                              |
+| **Tenet**                  | **Effet**                                                                                                                                                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Armement Fiable**        | Chaque fois qu'une unité \<SEPT\> est sélectionnée pour tirer, vous pouvez relancer un jet de blessure lors de la résolution des attaques de cette unité.                                                           |
+| **Défenseurs de la Cause** | Chaque modèle \<SEPT\> (hors DRONE) obtient Insensible à la douleur 5+.                                                                                                                                             |
+| **Blindage Renforcé**      | Chaque fois qu'une attaque à distance est effectuée avec une arme ayant une caractéristique de Force de 7 ou moins contre une unité \<SEPT\> VÉHICULE, soustrayez 1 à la caractéristique de Force de cette attaque. |
+| **Ogives Durcies**         | Chaque modèle \<SEPT\> avec une arme de type missile gagne la capacité [IGNORE LE COUVERT] sur cette arme.                                                                                                        |
 
 ## Secteur E
 
-| **Tenet**               | **Effet**                                                       |
-| ----------------------- | --------------------------------------------------------------- |
-| **Turbo-réacteurs**     | \+2" au Mouvement des modèles qui peuvent VOL.                  |
-| **Loyal jusqu'au bout** | \+1 au Commandement.                                            |
-| **Repli rapide**        | Lors d'un repli : +3" au mouvement de chaque modèle de l'unité. |
-| **Réacteurs enrichis**  | Arme plasma, jet de blessure non modifié de 6 : +1 aux dégâts.  |
+| **Tenet**               | **Effet**                                                                                                                                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Turboréacteurs**      | Ajoutez 2" à la caractéristique de Mouvement des modèles \<SEPT\> capables de Voler.                                                                                                          |
+| **Loyal jusqu'au bout** | Retirez 1 à la caractéristique de Commandement des modèles \<SEPT\>. Chaque fois qu'un test d'Ébranlement est effectué pour une unité \<SEPT\>, vous pouvez relancer ce test.                 |
+| **Retraite rapide**     | Chaque fois qu'une unité \<SEPT\> effectue un mouvement de Désengagement, ajoutez 3" à la distance de déplacement de chaque modèle de cette unité.                                            |
+| **Réacteurs enrichis**  | Chaque fois qu'un modèle \<SEPT\> effectue une attaque de tir avec une arme à plasma, un jet de blessure non modifié de 6 inflige 1 blessure mortelle à la cible, en plus des dégâts normaux. |
 
 **Stratagèmes**
 
 **Légende des types**
+
+## Stratagèmes
+
+Si votre armée inclut un ou plusieurs Détachements T'AU EMPIRE (hors Support Auxiliaire, Super-lourd Auxiliaire ou Réseau de Fortifications), vous avez accès aux Stratagèmes suivants et pouvez dépenser des PC pour les utiliser.
 
 | **Tact. Bataille** | **Acte Épique** | **Réquisition** | **Manoeuvre Strat.** | **Équipement** |
 | ------------------ | --------------- | --------------- | -------------------- | -------------- |
 
 | Nom | PC | Déclenchement & Effet |
 | --- | --- | --- |
-| Brècheuse et Nettoyage | 1 | Phase d'Action (Tir), quand une unité BREACHER TEAM est sélectionnée pour tirer. Jusqu'à la fin de la phase, pour chaque attaque à distance d'un modèle INFANTERIE, MARCHEUR ou MONTÉ de cette unité : la cible ne bénéficie d'aucun couvert, et vous pouvez relancer le jet de blessure. |
-| Fusillade incessante | 1 | Phase d'Action (Tir), quand une unité STRIKE TEAM est sélectionnée pour tirer. Jusqu'à la fin de la phase : les fusils pulse font le double d'attaques (ignorent les règles normales Tir Rapide). Chaque attaque à distance d'un modèle INFANTERIE, MARCHEUR ou MONTÉ : +1 PA. |
-| Capteurs Embarqués | 1 | Début de la phase d'Action, sélectionnez 1 modèle DEVILFISH <SEPT> et 1 unité ennemie à 24" et visible. Jusqu'à la fin de la phase, ce DEVILFISH gagne l'aura suivante (6") : les unités amies FIRE WARRIOR TEAM <SEPT> a porté relance les 1 de touche contre cette unité ennemie. |
-| Offensive Dynamique | 1 | Phase d'Action (Mouvement), quand une unité CRISIS BATTLESUIT est sélectionnée pour se déplacer. Jusqu'à la fin du tour : Avance = +6". |
-| Assaut de Pulsions | 1 | Phase d'Action (Tir), quand une unité FIRE WARRIOR TEAM est sélectionnée pour tirer. Jusqu'à la fin de la phase : attaque avec une arme pulse d'un modèle INFANTERIE, MARCHEUR ou MONTÉ, jet de touche non modifié de 6 = blessure automatique. |
-| Salve à bout portant | 1 | Début de la phase d'Action, sélectionnez 1 unité FIRE WARRIOR TEAM à portée d'engagement d'unités ennemies. Jusqu'à la fin de la phase : les blasters pulse, carabines pulse et fusils pulse de cette unité ont le type Pistolet 2. |
-| Acquisition de cible à la descente | 3/2 | Phase d'Action (Mouvement), quand une unité BATTLESUITS est déployée via Frappe en profondeur. Jusqu'à la fin du tour : chaque BATTLESUIT de l'unité peut relancer les jets de touche à distance. Coût : 3 PC si 4+ modèles BATTLESUIT, 2 PC sinon. |
-| Protocoles de sauvegarde | 1 | N'importe quelle phase, quand un jet de sauvegarde est raté pour un modèle d'une unité <SEPT>. Sélectionnez 1 modèle DRONE <SEPT> ami à 3" (ou 6" si l'unité contient un drone controller). Ce DRONE est détruit et les dégâts de l'attaque deviennent 0. |
-| Charge Nova Ramifiée | 2 | Phase de Commandement, quand un modèle RIPTIDE BATTLESUIT utilise sa capacité Réacteur Nova. Sélectionnez toutes vos armes. |
-| Débarquement de Combat | 1 | Début de votre Phase d'Action. Sélectionnez 1 à 3 modèles DEVILFISH selon la Philosophie active et le tour en cours (Mont'ka : tours 1-3 ; Kau'yon : tours 3-5 ; sinon 1 seul). Jusqu'à la fin de la phase : après chaque Mouvement de ces modèles, les unités embarquées peuvent débarquer. |
-| Sagesse du Nombre | 2 | Début de n'importe laquelle de vos phases (sauf la Phase de Commandement), sélectionnez 1 unité ETHERE qui n'a pas encore intoné d'invocation ce tour. Ce modèle peut intoner 1 invocation non encore intonée ce tour. Elle est automatiquement inspirante (pas de jet) et dure jusqu'au début de la prochaine Phase de Commandement. |
-| Détonateur d'urgence | 1 | N'importe quelle phase, quand un modèle BATTLESUIT de votre armée est détruit. Avant de le retirer, lancez 1D6 par unité à 3" (+1 si Blessures du modèle >= 12). Sur 3-5 : D3 BM. Sur 6+ : 3 BM. |
-| IA de secours | 1 | Phase de Commandement, sélectionnez 1 modèle T'AU EMPIRE de votre armée. Jusqu'au début de la prochaine Phase de Commandement : ce modèle compte comme ayant toutes ses blessures restantes pour ses caractéristiques variables. |
-| Dispense d'urgence | 1 | Lors de la constitution de l'armée, si votre SdG est T'AU EMPIRE. Sélectionnez 1 PERSONNAGE T'AU EMPIRE et donnez-lui 1 Relique éligible. |
-| Élève prometteur | 1 | Lors de la constitution de l'armée, si votre SdG est T'AU EMPIRE. Sélectionnez 1 PERSONNAGE T'AU EMPIRE et donnez-lui 1 Trait de SdG éligible (compte comme SdG uniquement pour ce Trait). |
-| Rayon Ionique Orbital | 2 | Phase de Commandement. Placez 2 marqueurs de Rayon Ionique à moins de 12" l'un de l'autre sur le champ de bataille. Une seule fois par partie. Au début de la prochaine Phase de Commandement : tracez une ligne entre les 2 marqueurs. Lancez 1D6 par unité traversée (+1 si BATIMENT). Sur 2-5 : D3 BM. Sur 6+ : 3 BM. Retirez ensuite les marqueurs. |
-| Mur de miroirs | 1 | Fin de votre Phase d'Action, sélectionnez 1 unité STEALTH BATTLESUITS ou GHOSTKEEL BATTLESUIT entièrement à 9" d'un bord de champ de bataille. Retirez l'unité en réserve, elle peut arriver depuis n'importe quel bord du terrain (sauf zone adverse). |
-| Le Festin macabre | 1 | Phase de Combat, quand une unité ennemie est détruite par une attaque d'un modèle d'une unité KROOT. Jusqu'à la fin de la bataille : chaque fois qu'un modèle de cette unité KROOT perd une blessure, lancez 1D6. Sur 5+, la blessure n'est pas perdue. |
-| Engagement Coordonné | 1 | Phase d'Action (Tir), avant de sélectionner une unité pour tirer. Sélectionnez 1 unité ennemie et 2 unités <SEPT> à 18" d'elle et visibles. Jusqu'à la fin de la phase : ces deux unités ne peuvent cibler que cette unité ennemie. Chaque attaque de ces unités gagne +1 PA. |
-| Un piège bien tendu | 1 | Étape : interventions héroïques de la Phase de Combat, sélectionnez 1 unité KROOT non engagée. Jusqu'à la fin du tour : +1 Attaques. L'unité peut effectuer des interventions héroïques comme un personnage à 6". |
-| Balayage de reconnaissance | 1 | Phase d'Action (Tir), quand une unité PATHFINDER TEAM fait une action de Markerlight. Cette unité peut effectuer un Mouvement Normal. |
-| Tempête de Feu Choquante | 1 | Phase d'Action (Tir), quand une unité <SEPT> est sélectionnée pour tirer. Sélectionnez 1 unité ennemie à 18". L'unité ennemie effectue un test de Moral. |
-| Système de défense anti-tir | 1/2 | Phase d'Action adverse (Tir), quand une attaque est allouée à un modèle BATTLESUIT. Les dégâts de cette attaque deviennent 1. Coût : 2 PC si blessures >= 14, 1 PC sinon. |
-| Frappe et Repli | 1/2 | Début de votre Phase d'Action (Tir), sélectionnez 1 unité T'AU EMPIRE JET PACK. Cette unité peut tirer puis effectuer un Mouvement Normal jusqu'à 6". Elle ne peut plus tirer ce tour. Coût : 1 PC si 5 modèles ou moins, 2 PC sinon. |
-| Verrouillage de fréquence | 1 | Phase d'Action (Tir), quand un modèle T'AU EMPIRE est sélectionné pour tirer. Jusqu'à la fin de la phase, pour chaque attaque avec un missile : peut cibler des unités Markerlight non visibles. +1 au jet de blessure. |
-| Brouilleur Neuroweb | 1 | Phase d'Action (Tir), sélectionnez 1 unité ennemie à 18" et visible d'une unité Pathfinder Team. Lancez 1D6. Sur 3+ : jusqu'à la prochaine activation de l'unité ennemie, chaque attaque de cette unité ennemie subit -1 au jet de touche. |
-| Champ d'impact répulseur | 1 | Phase d'Action adverse (charge), quand une unité BATTLESUIT est sélectionnée comme cible d'une charge. Jusqu'à la fin de la phase : -2 aux jets de charge contre cette unité BATTLESUIT. Ce modificateur n'est pas cumulable avec d'autres malus de charge. |
-| Champ de choc ionisé | 2 | Phase d'Action (Tir), quand un modèle d'une unité ennemie est détruit par une attaque avec une arme ion d'un modèle <SEPT>. Jusqu'au début de la prochaine Phase d'Action (Tir) : cette unité ennemie n'est pas affectée par les auras des autres unités ennemies. |
-| Sous-munitions | 1 | Phase d'Action (Tir), quand un modèle HAMMERHEAD équipé d'un railgun est sélectionné pour tirer. Au lieu de tirer normalement : sélectionnez 1 unité ennemie non engagée à 36" et visible. Lancez 1D6 par modèle (+1 si l'unité a 11+ modèles). Sur 4+ : 1 BM (max 8 BM au total). |
-| Grenades photoniques | 1 | Phase d'Action adverse (charge), quand une unité GRENADES est sélectionnée comme cible d'une charge ennemie (hors VÉHICULE et MONSTRE). Jusqu'à la fin du tour : -2 aux jets de charge ennemis contre cette unité. -1 au jet de touche de chaque attaque de cette unité ennemie. Le malus de charge n'est pas cumulable. |
+| Percée et nettoyage | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité BREACHER TEAM de votre armée est sélectionnée pour tirer. Jusqu'à la fin de la phase : • Chaque attaque à distance de cette unité gagne la capacité [IGNORE LE COUVERT]. • Chaque attaque à distance de cette unité peut relancer les jets de blessure. |
+| Fusillade implacable | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité STRIKE TEAM de votre armée est sélectionnée pour tirer. Jusqu'à la fin de la phase : • Au lieu de suivre les règles normales du [TIR RAPIDE], les modèles de cette unité tirant avec un fusil à impulsions doublent leur nombre d'attaques. • Améliorez de 1 la caractéristique de Pénétration d'Armure de cette attaque. |
+| Capteurs embarqués | 1 | Utilisez ce Stratagème au début de la Phase d'Action. Sélectionnez un modèle <SEPT> DEVILFISH de votre armée et une unité ennemie à 24" ou moins de ce modèle et visible par lui. Jusqu'à la fin de la phase, ce modèle DEVILFISH gagne l'aptitude suivante : • Liaison de Capteurs (Aura) : tant qu'une unité <SEPT> INFANTERIE T'AU EMPIRE (pour le bien suprême) se trouve à 6" ou moins de ce modèle, chaque fois qu'un modèle de cette unité effectue une attaque à distance contre l'unité ennemie sélectionnée, relancez les jets de touche de 1. |
+| Offensive dynamique | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité CRISIS de votre armée est sélectionnée pour se déplacer. Jusqu'à la fin du tour : • Chaque fois que cette unité Avance, ajoutez 6" à la caractéristique de Mouvement de ses modèles. • Les armes des modèles de cette unité gagnent le mot-clé [ASSAUT], le tour où l'unité a Avancé. |
+| Déferlement d'impulsions | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité INFANTERIE T'AU EMPIRE (pour le bien suprême) de votre armée est sélectionnée pour tirer. Jusqu'à la fin de la phase, chaque modèle de cette unité avec une arme à impulsions gagne le mot-clé [TOUCHES FATALES]. |
+| Salve à bout portant | 1 | Utilisez ce Stratagème au début de la Phase d'Action. Sélectionnez une unité INFANTERIE T'AU EMPIRE (pour le bien suprême) de votre armée qui se trouve à Portée d'Engagement d'unités ennemies. Jusqu'à la fin de la phase, les pulse blasters, carabines à impulsions et fusils à impulsions équipés par les modèles de cette unité gagnent le mot-clé [PISTOLET]. |
+| Acquisition de cible en descente | 3 / 2 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité BATTLESUITS de votre armée est déployée sur le champ de bataille via l'aptitude Frappe en Profondeur. Jusqu'à la fin du tour, chaque fois qu'un modèle BATTLESUIT de cette unité effectue une attaque à distance, vous pouvez relancer le jet de touche. Si cette unité contient 4 modèles BATTLESUIT ou plus, ce Stratagème coûte 3 PC ; sinon, il coûte 2 PC. |
+| Protocoles de sauvetage | 1 | Utilisez ce Stratagème lors de n'importe quelle phase, lorsqu'un jet de sauvegarde échoue pour un modèle d'une unité <SEPT> de votre armée. Choisissez un modèle DRONE <SEPT> à 6" ou moins de cette unité. Ce modèle DRONE est détruit et la caractéristique de Dégâts de l'attaque passe à 0. |
+| Charge Nova dérivée | 2 | Utilisez ce Stratagème durant la Phase de Commandement, si un modèle RIPTIDE de votre armée a utilisé sa capacité Charge Nova. La Charge Nova de ce modèle lui est restituée : il peut l'utiliser à nouveau. |
+| Débarquement de combat | 1 | Utilisez ce Stratagème au début de la Phase d'Action. • Si vous avez choisi la Philosophie Tactique Mont'ka au début de la bataille et qu'il s'agit du premier, deuxième ou troisième tour de bataille, choisissez jusqu'à trois modèles DEVILFISH de votre armée. • Si vous avez choisi la Philosophie Tactique Kauyon au début de la bataille et qu'il s'agit du troisième, quatrième ou cinquième tour de bataille, choisissez jusqu'à trois modèles DEVILFISH de votre armée. • Sinon, choisissez un modèle DEVILFISH de votre armée. Jusqu'à la fin de la phase, chaque fois que l'un de ces modèles effectue une Avance, les unités embarquées dans ce transport peuvent débarquer normalement comme s'il était resté immobile. |
+| Sagesse du plus grand nombre | 2 | Utilisez ce Stratagème au début de n'importe quelle phase, sauf la Phase de Commandement. Choisissez une unité ETHERE de votre armée n'ayant pas entonné d'invocation ce tour-ci. Ce modèle peut entonner une invocation qui n'a pas encore été entonnée par un autre modèle ce tour-ci. Cette invocation est automatiquement inspirante (ne lancez pas de dé) et prend effet jusqu'au début de votre prochaine Phase de Commandement. |
+| Détonateur de sécurité | 1 | Utilisez ce Stratagème lors de n'importe quelle phase, lorsqu'un modèle BATTLESUIT de votre armée est détruit. Avant de retirer ce modèle du jeu, et au lieu d'utiliser toute règle se déclenchant lorsque ce modèle est détruit (par ex. l'aptitude Explosion), lancez 1D6 pour chaque unité à 3" ou moins de ce modèle, en ajoutant 1 au résultat si le modèle détruit a une caractéristique de Blessures de 12 ou plus : sur 3-5, cette unité subit D3 blessures mortelles ; sur 6+, cette unité subit 3 blessures mortelles. |
+| IA de secours | 1 | Utilisez ce Stratagème durant la Phase de Commandement. Choisissez un modèle T'AU EMPIRE de votre armée. Jusqu'au début de votre prochaine Phase de Commandement, ce modèle est considéré comme ayant toutes ses blessures restantes pour déterminer quelles caractéristiques de son profil utiliser. |
+| Octroi d'urgence | 1 | Utilisez ce Stratagème avant la bataille, lors du rassemblement de votre armée, si votre SdG possède le mot-clé T'AU EMPIRE. Sélectionnez un modèle PERSONNAGE T'AU EMPIRE de votre armée et attribuez-lui une Relique (il doit s'agir d'une Relique qu'il peut recevoir). Chaque Relique de votre armée doit être unique, et vous ne pouvez pas utiliser ce Stratagème pour attribuer deux Reliques à un même modèle. Vous ne pouvez utiliser ce Stratagème qu'une seule fois. |
+| Élève prometteur | 1 | Utilisez ce Stratagème avant la bataille, lors du rassemblement de votre armée, si votre SdG possède le mot-clé T'AU EMPIRE. Sélectionnez un modèle PERSONNAGE T'AU EMPIRE de votre armée et déterminez un Trait de SdG pour ce modèle (il doit s'agir d'un Trait de Seigneur de Guerre qu'il peut recevoir). Chaque Trait de SdG de votre armée doit être unique (en cas de tirage aléatoire, relancez les résultats en double), et vous ne pouvez pas utiliser ce Stratagème pour attribuer deux Traits de SdG à un même modèle. Vous ne pouvez utiliser ce Stratagème qu'une seule fois. |
+| Rayon Ionique Orbital | 2 | Utilisez ce Stratagème durant la Phase de Commandement. Placez deux marqueurs de Rayon Ionique n'importe où sur le champ de bataille, à moins de 12" l'un de l'autre. Au début de votre prochaine Phase de Commandement, tracez une ligne droite entre les deux marqueurs de Rayon Ionique, puis lancez 1D6 pour chaque unité traversée par cette ligne, en ajoutant 1 si l'unité concernée est un BÂTIMENT : sur un résultat de 2 à 5, l'unité subit D3 blessures mortelles ; sur un 6 ou plus, elle subit 3 blessures mortelles. Les marqueurs de Rayon Ionique sont ensuite retirés. Vous ne pouvez utiliser ce Stratagème qu'une seule fois. |
+| Mur de miroirs | 1 | Utilisez ce Stratagème à la fin de la Phase d'Action. Choisissez une unité STEALTH BATTLESUIT ou GHOSTKEEL BATTLESUIT de votre armée située entièrement à moins de 9" de n'importe quel bord du champ de bataille. Retirez cette unité du champ de bataille. Lors de l'étape des Renforts de votre prochaine Phase de Commandement, vous pouvez redéployer cette unité sur le champ de bataille, n'importe où et entièrement située à moins de 9" d'un bord du champ de bataille et à plus de 9" de tout modèle ennemi. Si la bataille se termine alors que cette unité n'est pas sur le champ de bataille, elle est détruite. |
+| Le Festin macabre | 1 | Utilisez ce Stratagème durant la Phase de Combat, lorsqu'une unité ennemie est détruite par une attaque effectuée par un modèle d'une unité KROOT de votre armée. Jusqu'à la fin de la bataille, cette unité Kroot obtient Insensible à la douleur 5+. |
+| Engagement coordonné | 1 | Utilisez ce Stratagème durant la Phase d'Action, avant de choisir une unité pour tirer. Choisissez une unité ennemie et deux unités <SEPT> de votre armée situées à 18" ou moins de cette unité ennemie et visibles de celle-ci. Jusqu'à la fin de la phase, chaque fois qu'un modèle de l'une de ces unités <SEPT> effectue une attaque : • Cette attaque ne peut cibler que cette unité ennemie (et uniquement si elle constitue une cible éligible). • Améliorez de 1 la caractéristique de Pénétration d'Armure de cette attaque. |
+| Piège bien tendu | 1 | Utilisez ce Stratagème durant la Phase d'Action. Choisissez une unité KROOT de votre armée qui ne se trouve pas à Portée d'Engagement d'une unité ennemie. Jusqu'à la fin du tour : • Ajoutez 1 à la caractéristique d'Attaque des modèles de cette unité. • Cette unité peut effectuer des Interventions Héroïques. |
+| Balayage de reconnaissance | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité PATHFINDER de votre armée réalise l'action Markerlight contre une unité ennemie. Jusqu'à la fin de la phase, chaque fois qu'une attaque est effectuée contre cette unité ennemie, relancez les jets de touche de 1. |
+| Tempête de feu foudroyante | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité <SEPT> de votre armée est sélectionnée pour tirer. Sélectionnez une unité ennemie à 18" ou moins de cette unité <SEPT>. Jusqu'à la fin de la phase, si un modèle de cette unité ennemie est détruit par une attaque effectuée par un modèle de cette unité <SEPT>, l'unité ennemie doit effectuer un test d'Ébranlement. |
+| Système de défense contre-feu | 1 / 2 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une attaque est allouée à un modèle de votre armée équipé d'un Battlesuit support system. La caractéristique de Dégâts de cette attaque devient 1. Si ce modèle a une caractéristique de Blessures de 14 ou plus, ce Stratagème coûte 2 PC ; sinon, il coûte 1 PC. |
+| Frapper et disparaître | 1 / 2 | Utilisez ce Stratagème au début de la Phase d'Action. Sélectionnez une unité T'AU EMPIRE VOL de votre armée. Vous pouvez tirer avec cette unité, puis elle peut effectuer un Mouvement Normal allant jusqu'à 6". Si cette unité comprend 5 modèles ou moins (à l'exclusion des modèles DRONE), ce Stratagème coûte 1 PC ; sinon, il coûte 2 PC. |
+| Verrouillage de fréquence | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'un modèle T'AU EMPIRE de votre armée est sélectionné pour tirer. Jusqu'à la fin de la phase, chaque fois que ce modèle effectue une attaque avec un lance-missiles : • Cette attaque peut cibler des unités Marquées qui ne sont pas visibles du modèle qui tire. • Ajoutez 1 au jet de blessure de cette attaque. |
+| Brouilleur neuro-statique | 1 | Utilisez ce Stratagème durant la Phase d'Action. Sélectionnez une unité ennemie à 18" ou moins d'une unité PATHFINDER de votre armée, et visible par celle-ci. Lancez 1D6 : sur 3+, jusqu'au début de la prochaine Phase d'Action, chaque fois qu'un modèle de cette unité ennemie effectue une attaque, soustrayez 1 au jet de touche de cette attaque. |
+| Champ d'impact à répulseurs | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité BATTLESUIT de votre armée est choisie comme cible d'une charge. Jusqu'à la fin de la phase, soustrayez 2 aux jets de charge de toute unité déclarant une charge contre cette unité BATTLESUIT. Le modificateur de jet de charge conféré par ce Stratagème ne se cumule pas avec d'autres modificateurs négatifs affectant le jet de charge d'une unité. |
+| Champ de choc ionisé | 2 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'un modèle d'une unité ennemie est détruit par une attaque effectuée avec une arme à ions d'un modèle <SEPT> de votre armée. Jusqu'au début de la prochaine Phase d'Action, cette unité ennemie n'est pas affectée par les aptitudes d'aura d'autres unités ennemies. |
+| Sous-munitions | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'un modèle HAMMERHEAD de votre armée est sélectionné pour tirer. Si ce modèle est équipé d'un Railgun, au lieu d'effectuer des attaques avec cette arme durant cette phase, sélectionnez une unité ennemie qui n'est pas à Portée d'Engagement d'une unité de votre armée et qui se trouve à 36" ou moins du modèle, tout en étant visible par celui-ci. Lancez 1D6 pour chaque modèle de cette unité, en ajoutant 1 au résultat si l'unité compte 11 modèles ou plus : sur un 4+, l'unité subit 1 blessure mortelle (jusqu'à un maximum de 8 blessures mortelles). |
+| Grenades à photons | 1 | Utilisez ce Stratagème durant la Phase d'Action, lorsqu'une unité INFANTERIE T'AU EMPIRE (pour le bien suprême) de votre armée est choisie comme cible d'une charge déclarée par une unité ennemie (à l'exclusion des unités VÉHICULE et MONSTRE). Jusqu'à la fin du tour : • Soustrayez 2 aux jets de charge de cette unité. • Chaque fois qu'un modèle de cette unité effectue une attaque, soustrayez 1 au jet de touche de cette attaque. Le modificateur de jet de charge conféré par ce Stratagème ne se cumule pas avec d'autres modificateurs négatifs affectant le jet de charge d'une unité. |
 
 **Systèmes prototypes**
 
@@ -384,13 +372,63 @@ Si vous choisissez les Farsight Enclaves : votre Détachement gagne aussi la cap
 
   - > Si un système prototype remplace un équipement existant, payez quand même le coût de l'équipement remplacé.
 
+## Descriptions des systèmes prototypes
+
+**Système d'ignition stellaire**
+
+COLDSTAR COMMANDER uniquement. Une fois par partie, quand le porteur commence ou termine un mouvement : lancez 1D6 par unité à 3" ; sur 2+, cette unité subit D3 blessures mortelles.
+
+**Contre-mesures de négation sensorielle**
+
+COMMANDANT ou CRISIS uniquement. Une fois par partie, au début de la Phase de Combat : sélectionnez 1 unité ennemie à Portée d'Engagement. Jusqu'à la fin du prochain tour, soustrayez 1 au jet de touche de chaque attaque de cette unité.
+
+**Blaster à fusion alternatif**
+
+COMMANDANT ou CRISIS équipé de blasters à fusion uniquement. Remplace 1 blaster à fusion. Profil identique, gagne F -1, D +2. Effet : tracez une ligne depuis ce modèle vers la cible ; effectuez 1 jet contre la cible ET chaque unité traversée par la ligne.
+
+**Canon Burst Avancé DW-02**
+
+COMMANDANT ou CRISIS équipé de canons burst uniquement. Remplace 1 canon burst. Profil identique, gagne A +4, F +1, PA +1. Effet : les blessures infligées ne peuvent pas être ignorées par Insensible à la douleur.
+
+**Fusil plasma Novasurge**
+
+COMMANDANT ou CRISIS équipé de fusils plasma uniquement. Remplace 1 fusil plasma. Profil identique, gagne Portée +12", PA +2. Effet : les jets de sauvegarde invulnérable ne peuvent pas être effectués contre les attaques de cette arme.
+
+**Projecteur thermoneutronique**
+
+COMMANDANT ou CRISIS équipé de lance-flammes T'au uniquement. Remplace 1 lance-flammes T'au. Profil de tir identique, gagne A +2, PA +2, D +1. Profil de corps à corps identique, gagne A +D6, PA +2, D +1.
+
+**Lance-Fragmentation Dominateur**
+
+COMMANDANT ou CRISIS équipé de projecteurs à fragmentation aérienne uniquement. Remplace 1 projecteur. Profil identique, gagne F +2, PA +2. Effet : si des touches sont infligées avec cette arme, la cible subit -4 au Commandement jusqu'à la fin du tour.
+
+**Râtelier de grenades interne**
+
+Une fois par tour, après le déplacement de ce modèle en Phase d'Action : sélectionnez 1 unité traversée et lancez 1D6 ; sur 2+, D3 blessures mortelles.
+
+**Ogives résonantes**
+
+COMMANDANT ou CRISIS équipé de pods missiles uniquement. Remplace 1 pod missile. Profil identique, gagne A +1, F +1, PA +1. Effet : si des touches sont infligées à une unité INFANTERIE, BÊTE ou CAVALERIE, son Mouvement est divisé par 2 jusqu'au début de la prochaine Phase d'Action.
+
+**Suite de perturbation E-H**
+
+GHOSTKEEL BATTLESUIT uniquement. Une fois par partie, à la Phase de Commandement : jusqu'au début de votre prochaine Phase de Commandement, le porteur gagne une aura 12" — les unités ennemies à portée ne peuvent pas utiliser de Stratagème.
+
+**Injecteurs de stimulants**
+
+COMMANDANT ou CRISIS uniquement. Une fois par partie, quand un jet de sauvegarde est raté pour le porteur : jusqu'à la fin du tour, pour chaque blessure qu'il perdrait, lancez 1D6 ; sur 4+, la blessure n'est pas perdue.
+
+**Scanners à large spectre**
+
+À la fin d'une Action adverse : si le porteur n'est pas à Portée d'Engagement, il peut tirer comme si c'était votre Phase d'Action, mais uniquement contre 1 unité déployée en renfort ce tour-ci et à 12" ou moins.
+
 | **Système prototype**                      | **+Points** |
 | ------------------------------------------ | ----------- |
 | **Blaster à fusion alternatif**            | **+25 pts** |
 | **Lance-Fragmentation Dominateur**         | **+25 pts** |
-| **Canon Burst Avance DW-02**               | **+15 pts** |
+| **Canon Burst Avancé DW-02**               | **+15 pts** |
 | **Suite de perturbation E-H**              | **+30 pts** |
-| **Ratelier de Grenade interne**            | **+15 pts** |
+| **Râtelier de grenades interne**           | **+15 pts** |
 | **Fusil plasma Novasurge**                 | **+20 pts** |
 | **Ogives résonantes**                      | **+30 pts** |
 | **Contre-mesures de négation sensorielle** | **+15 pts** |
@@ -399,74 +437,20 @@ Si vous choisissez les Farsight Enclaves : votre Détachement gagne aussi la cap
 | **Projecteur thermoneutronique**           | **+20 pts** |
 | **Scanners à large spectre**               | **+20 pts** |
 
-## Descriptions des systèmes prototypes
-
-**Système d'ignition stellaire**
-
-COLDSTAR COMMANDER uniquement. Une fois par partie, quand le porteur commence ou termine un mouvement : lancez 1D6 par unité à 3". Sur 2+ : D3 blessures mortelles.
-
-**Contre-mesures de négation sensorielle**
-
-COMMANDANT ou CRISIS uniquement. Une fois par partie, début de la Phase de Combat : sélectionnez 1 unité ennemie à portée d'engagement. Jusqu'à la fin du prochain tour : -1 au jet de touche de chaque attaque de cette unité.
-
-**Blaster à fusion alternatif**
-
-COMMANDANT ou CRISIS équipé de blasters à fusion uniquement. Remplace 1 blaster à fusion. Profil identique, gagne F : -1, D : +2. Effet : tracez une ligne depuis ce modèle vers la cible. Effectuez 1 jet contre la cible ET chaque unité traversée par la ligne.
-
-**Canon Burst Avance DW-02**
-
-COMMANDANT ou CRISIS équipé de canons burst uniquement. Remplace 1 canon burst.  
-Profil identique, gagne A : +4, F : +1, PA : +1. Effet : les blessures infligées ne peuvent pas être ignorées par un insensible à la douleur.
-
-**Fusil plasma Novasurge**
-
-COMMANDANT ou CRISIS équipé de fusils plasma uniquement. Remplace 1 fusil plasma.  
-Profil identique, gagne Porté : +12”, PA : +2. Effet : les jets de sauvegarde invulnérable ne peuvent pas être effectués contre les attaques de cette arme.
-
-**Projecteur thermoneutronique**
-
-COMMANDANT ou CRISIS équipé de lance-flammes T'au uniquement. Remplace 1 lance-flammes T'au.  
-Profil de Tir identique, gagne A : +2, PA : +2, D : +1.  
-Profil identique au close combat, gagne A : +D6, PA : +2, D : +1.
-
-**Lance-Fragmentation Dominateur**
-
-COMMANDANT ou CRISIS équipé de projecteurs à fragmentation aérienne uniquement. Remplace 1 projecteur.  
-Profil identique, gagne F : +2, PA : +2. Effets : si des touches sont effectuées avec cette arme, la cible subit -4 au Commandement jusqu'à la fin du tour.
-
-**Ratelier de Grenade interne**
-
-Une fois par tour, après le déplacement de ce modèle en Phase d'Action (Mouvement) : sélectionnez 1 unité traversée et lancez 1D6. Sur 2+ : D3 blessures mortelles.
-
-**Ogives résonantes**
-
-COMMANDANT ou CRISIS équipé de pods missiles uniquement. Remplace 1 pod missile.  
-Profil identique, gagne A : +1, F : +1, PA : +1. Effet : si des touches sont effectuées contre une unité INFANTERIE, BETE ou CAVALERIE, jusqu'au début de la prochaine Phase d'Action (Tir) : Mouvement divisé par 2.
-
-**Suite de perturbation E-H**
-
-GHOSTKEEL BATTLESUIT uniquement. Une fois par partie, Phase de Commandement : jusqu'au début de la prochaine Phase de Commandement. Aura 12" : les unités adverses à portée ne peuvent utiliser de Stratagème.
-
-**Injecteurs de stimulants**
-
-COMMANDANT ou CRISIS uniquement. Une fois par partie, quand un jet de sauvegarde est raté pour le porteur : jusqu'à la fin du tour, chaque blessure perdue par le porteur : lancez 1D6. Sur 4+, la blessure n'est pas perdue.
-
-**Scanners à large spectre**
-
-Fin d'une Action adverse : si le porteur n'est pas à portée d'engagement, il peut tirer comme si c'était votre Phase d'Action (Tir), mais uniquement contre 1 unité déployée en renfort ce tour et à 12" ou moins.
-
 **Invocations des Éthérés**
 
-*Avant la bataille, générez les invocations connues par chaque modèle ETHERE de votre armée : Tirez 1D6 (en relançant les doublons).*
+Avant la bataille, générez les invocations connues par chaque modèle ETHERE de votre armée : chaque ETHERE connaît deux invocations parmi les Invocations des Éthérés — pour chacune, tirez 1D6 (en relançant les doublons).
 
-| **D6** | **Invocation**                | **Effet (si l'invocation est inspirante)**                                                                                                                                                                                                                                                      |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1**  | **Tempête de feu**            | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement : cette unité peut effectuer des attaques à distance sans interrompre une action en cours.                                                        |
-| **2**  | **Sens de la Pierre**         | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement : chaque blessure perdue par un modèle INFANTERIE, MARCHEUR ou MONTÉ de cette unité : lancez 1D6. Sur 5+, la blessure n'est pas perdue.           |
-| **3**  | **Grâce du Zéphyr**           | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement : si l'unité n'est pas restée stationnaire lors de la précédente phase d'Action, chaque attaque à distance contre elle subit -1 au jet de touche. |
-| **4**  | **Pouvoir des marées**        | Sélectionnez 1 unité amie T'AU AUXILIAIRE à 6". Jusqu'à la prochaine Phase de Commandement : chaque attaque de cette unité gagne +1 au jet de blessure.                                                                                                                                         |
-| **5**  | **Mantra unificateur (Aura)** | Tant qu'une unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) est à 6" de cet ETHERE : relancez les tests de Moral pour cette unité.                                                                                                                                |
-| **6**  | **Sagesse des Guides**        | Gagnez 1 Point de Commandement.                                                                                                                                                                                                                                                                 |
+Lors de votre Phase de Commandement, si ce modèle est sur le champ de bataille, il peut entonner une invocation qu'il connaît et qui n'a pas déjà été entonnée par un modèle ami ce tour-ci. Lancez 1D6 : sur 3+, l'invocation entonnée est inspirante et prend effet jusqu'au début de votre prochaine Phase de Commandement.
+
+| **D6** | **Invocation**                | **Effet (si l'invocation est inspirante)**                                                                                                                                                                                                                                                     |
+| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1**  | **Tempête de feu**            | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement, cette unité peut effectuer des attaques à distance sans interrompre une action en cours.                                                        |
+| **2**  | **Sens de la Pierre**         | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement, cette unité gagne Insensible à la douleur 5+.                                                                                                   |
+| **3**  | **Grâce du Zéphyr**           | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement, si l'unité n'est pas restée stationnaire lors de la précédente Phase d'Action, chaque attaque à distance contre elle subit -1 au jet de touche. |
+| **4**  | **Pouvoir des marées**        | Sélectionnez 1 unité amie T'AU EMPIRE (non pour le bien suprême) INFANTERIE, MARCHEUR ou MONTÉ à 6". Jusqu'à la prochaine Phase de Commandement, chaque attaque de cette unité gagne +1 au jet de blessure.                                                                                    |
+| **5**  | **Mantra unificateur (Aura)** | Tant qu'une unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) est à 6" de cet ETHERE, relancez ses tests d'Ébranlement.                                                                                                                                            |
+| **6**  | **Sagesse des Guides**        | Sélectionnez 1 unité amie T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ (hors FARSIGHT ENCLAVES) à 6". Jusqu'à la prochaine Phase de Commandement, ajoutez 1 à sa caractéristique d'Objectif (OC).                                                                                                 |
 
 **Traits de Seigneur de Guerre**
 
@@ -474,36 +458,185 @@ Fin d'une Action adverse : si le porteur n'est pas à portée d'engagement, il p
 
 ## Traits de SdG - T'au Empire
 
-| **D6** | **Nom**                                | **Effet**                                                                                                                                                                                                                                                     |
-| ------ | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1**  | **Précision du Chasseur**              | Chaque attaque de ce SdG : relancez le jet de touche ET le jet de blessure.                                                                                                                                                                                   |
-| **2**  | **Par l'Unite, la Dévastation (Aura)** | Tant qu'une unité amie \<SEPT\> INFANTERIE, MARCHEUR ou MONTÉ est à 6" : jet de blessure non modifié de 6 = +1 PA pour cette attaque à distance.                                                                                                              |
-| **3**  | **Un Fantôme Parmi Nous**              | Chaque attaque contre ce SdG : -1 au jet de touche. Lors d'une Avance : pas de jet, +6" au Mouvement.                                                                                                                                                         |
-| **4**  | **Par l'Audace, la Victoire**          | Phase de Commandement : sélectionnez 1 unité amie \<SEPT\> INFANTERIE, MARCHEUR ou MONTÉ à 9". Jusqu'à la prochaine Phase de Commandement : jet de touche non modifié de 6 = blessure automatique pour les attaques à distance INFANTERIE, MARCHEUR ou MONTÉ. |
-| **5**  | **Exemplaire du Kau'yon**              | Après le déploiement et la détermination du premier tour : redéployez jusqu'à 1 unité \<SEPT\> amie (ou 3 si vous avez choisi la Philosophie Kau'yon). Ces unités peuvent être placées en Reserves Strategiques sans coût en PC.                              |
-| **6**  | **Exemplaire du Mont'Ka**              | Phase de Commandement : sélectionnez 1 unité amie \<SEPT\> INFANTERIE, MARCHEUR ou MONTÉ à 9". Jusqu'à la prochaine Phase de Commandement : attaque à distance contre une cible à 9" (ou 12" si Philosophie Mont'Ka) : relancez le jet de blessure.           |
+| **D6** | **Nom**                            | **Effet**                                                                                                                                                                                                                                                       |
+| ------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1**  | Précision du Chasseur              | Chaque attaque de ce SdG : relancez les jets de touche et les jets de blessure.                                                                                                                                                                                 |
+| **2**  | Par l'Unité, la Dévastation (Aura) | Tant qu'une unité \<SEPT\> INFANTERIE, MARCHEUR ou MONTÉ est à 6", un jet de blessure non modifié de 6 confère +1 PA à cette attaque à distance.                                                                                                                |
+| **3**  | Un Fantôme Parmi Nous              | Chaque attaque contre ce SdG subit -1 au jet de touche. Lors d'une Avance : ajouter +6" au Mouvement.                                                                                                                                                           |
+| **4**  | Par l'Audace, la Victoire          | Phase de Commandement : sélectionnez 1 unité \<SEPT\> INFANTERIE, MARCHEUR ou MONTÉ à 9". Jusqu'à la prochaine Phase de Commandement, les attaques à distance obtiennent [TOUCHES FATALES].                                                                   |
+| **5**  | Exemplaire du Kauyon               | Après le déploiement et la détermination du premier tour : redéployez jusqu'à 1 unité \<SEPT\> (ou 3 si vous avez choisi la Philosophie Kauyon). Ces unités peuvent être placées en Réserves et remboursent leur coût de déploiement.                           |
+| **6**  | Exemplaire du Mont'ka              | Phase de Commandement : sélectionnez 1 unité \<SEPT\> INFANTERIE, MARCHEUR ou MONTÉ à 9". Jusqu'à la prochaine Phase de Commandement, une attaque à distance contre une cible à 9" (ou 12" si Philosophie Mont'ka) : vous pouvez relancer les jets de blessure. |
 
 ## Traits de SdG : Kroot
 
-| **D3** | **Nom**                        | **Effet**                                                                                                                                                                                      |
-| ------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1**  | **Maître de la Chasse (Aura)** | Tant qu'une unité amie KROOT est à 6" : chaque attaque à distance contre une cible à 12" ou moins ignore les bonus de couvert de la cible.                                                     |
-| **2**  | **Meneur de Meute (Aura)**     | Tant qu'une unité amie KROOT est à 6" : pour chaque jet de charge de cette unité, lancez 1D6 supplémentaire et ignorez le plus bas résultat.                                                   |
-| **3**  | **Chasseur Nomade (Aura)**     | Tant qu'une unité amie KROOT est à 6" : si l'unité n'a pas effectue de Repli ce tour, elle compte comme Restee Stationnaire lors de la précédente Phase d'Action pour ses attaques à distance. |
+| **D3** | **Nom**                    | **Effet**                                                                                                                                                                                              |
+| ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1**  | Maître de la Chasse (Aura) | Tant qu'une unité KROOT est à 6", chaque attaque à distance obtient [IGNORE LE COUVERT] contre une cible à 12" ou moins.                                                                             |
+| **2**  | Meneur de Meute (Aura)     | Tant qu'une unité KROOT est à 6", pour chaque jet de charge de cette unité, lancez 1D6 supplémentaire et ignorez le résultat le plus bas.                                                              |
+| **3**  | Chasseur Nomade (Aura)     | Tant qu'une unité KROOT est à 6", si l'unité n'a pas effectué de Désengagement ce tour, elle compte comme étant Restée Stationnaire lors de la précédente Phase d'Action pour ses attaques à distance. |
 
-**Objectifs Secondaires**
+## Réquisitions
 
-*Disponibles si toutes les unités de votre armée (sauf NON-ALIGNE) ont le mot-clé T'AU EMPIRE et que votre SdG est T'AU EMPIRE. Suivent les règles normales des objectifs secondaires (max 15 PV par objectif, 1 par catégorie, etc.).*
+Si votre armée de Croisade inclut des unités T'AU EMPIRE, vous pouvez dépenser des Points de Réquisition (PR) pour les Réquisitions suivantes, en plus de celles de base.
 
-| Relais de Ciblage Aérospatial Opérations dans l'Ombre : Objectif de Fin de Partie |
-| --- |
-| Placez 1 marqueur de Designation Aerospatiale au milieu de chaque bord du champ de bataille (4 en tout). Action : Installer un Relais de Ciblage (1+ unités INFANTERIE, fin de Phase d'Action/Mouvement, à 6" d'un marqueur sans relais). Complétée au début de la prochaine Phase de Commandement ou à la fin de la partie. PV selon le nombre de relais installés : 1 relais = 2 PV, 2 relais = 6 PV, 3 relais = 9 PV, 4 relais = 15 PV. |
+**Démonstration de Force - 1 PR**
 
-| Action Décisive Suprématie sur le Champ de Bataille : Objectif Progressif |
-| --- |
-| Mont'Ka : à la fin du tour aux tours 1, 2 et 3, gagnez 4 PV si vous contrôlez la moitié ou plus des objectifs. Kau'yon : même règle mais aux tours 3, 4 et 5. |
+Achetez cette Réquisition après une bataille que vous avez remportée. Si vous avez un Niveau de Puissance de 2 ou plus sur cette planète, retirez-en 1 et construisez une Ligne de Fortification sur cette planète.
 
-| Une Victoire Nette Sans Pitié, Sans Répit : Objectif de Fin de Partie |
-| --- |
-| Mont'Ka : à la fin des tours 1, 2 et 3, gagnez 1 PV si 1+ unités ennemies détruites ce tour ; gagnez 3 PV si 3+ unités ennemies détruites ce tour. Kau'yon : même règle mais aux tours 3, 4 et 5. |
+**Établir des Lignes d'Approvisionnement - 2 PR**
 
+Achetez cette Réquisition après une bataille que vous avez remportée. Lancez 1D6 et appliquez l'effet suivant :
+
+1. Effondrement de la foi : gagnez 1 PR.
+
+2. Butin de guerre : gagnez D3+1 PR.
+
+3. Infrastructure réaffectée : augmentez la Limite d'Approvisionnement de votre armée de 100 points.
+
+4. Mélange des cultures : sélectionnez jusqu'à trois unités de votre Ordre de Bataille ayant le rang « Prêt au combat » ou « Aguerri ». Chacune de ces unités gagne 2 points d'expérience.
+
+5. Contacts diplomatiques : sélectionnez une planète connectée et soustrayez 1 au Niveau de Puissance adverse sur cette planète.
+
+6. Repos et récupération : sélectionnez jusqu'à trois unités de votre Ordre de Bataille. Retirez une Cicatrice de Bataille à chacune de ces unités.
+
+**Système Prototype - 1 PR**
+
+Achetez cette Réquisition quand vous ajoutez un modèle T'AU EMPIRE à votre Ordre de Bataille, ou quand un modèle T'AU EMPIRE de votre armée gagne un rang. Donnez à ce modèle un système prototype (il doit s'agir d'un système qu'il peut recevoir ; si le système prototype remplace une arme, il ne peut pas remplacer une arme déjà améliorée par une Amélioration d'Arme ou une Relique). Notez-le. Vous ne pouvez pas procéder ainsi si cela dépasse votre total de Limite d'Approvisionnement.
+
+**Le Manteau du Héros - 1 PR**
+
+Achetez cette Réquisition à tout moment où un modèle COMMANDANT de votre armée gagne un rang. Retirez ce modèle de votre Ordre de Bataille et remplacez-le par un autre modèle COMMANDANT du même Sept (hors personnages nommés). Vous ne pouvez pas procéder ainsi si cela dépasse votre total de Limite d'Approvisionnement. Le nouveau COMMANDANT débute avec le même nombre de points d'expérience que celui qu'il remplace, les mêmes Honneurs de Bataille, les mêmes systèmes prototypes (s'il peut les recevoir), mais aucune Cicatrice de Bataille.
+
+**Méditations Profondes - 1 PR**
+
+Achetez cette Réquisition à tout moment où un modèle ETHERE de votre armée de Croisade gagne un rang. Ce modèle connaît une invocation supplémentaire parmi les Invocations des Éthérés.
+
+## Agendas
+
+Si votre armée inclut des unités T'AU EMPIRE, vous pouvez sélectionner un Agenda parmi les Agendas T'AU EMPIRE ci-dessous.
+
+**Réunion Secrète**
+
+Si vous avez sélectionné cet Agenda, après que les deux camps ont terminé leur déploiement, sélectionnez un modèle ETHERE de votre armée. L'unité de ce modèle peut tenter l'action suivante :
+
+**• Réunion Secrète (Action) :** durant la Phase d'Action, l'unité de l'ETHERE sélectionnée peut entamer cette action si elle se trouve à 3" ou moins du centre du champ de bataille. Elle est complétée au début de la prochaine Phase d'Action. Une fois complétée, cette unité gagne 3 points d'expérience. Si l'action est complétée durant les trois premiers tours de bataille, votre armée gagne D3 points d'expérience.
+
+**Protéger le VIP**
+
+Si vous avez sélectionné cet Agenda, après que les deux camps ont terminé leur déploiement, placez deux marqueurs d'objectif n'importe où sur le champ de bataille, qui :
+
+• ne sont pas à moins de 9" l'un de l'autre ;
+
+• ne sont pas à moins de 9" d'un modèle de votre armée ;
+
+• ne sont pas à moins de 9" de votre bord de déploiement.
+
+Ces marqueurs représentent des personnalités politiques de haut rang, mais ne comptent pas comme des marqueurs d'objectif pour d'autres règles que cet Agenda. Chacun débute avec un total de points de vie de 3.
+
+À la fin du tour de bataille, pour chaque marqueur « personnalité politique » qui n'est pas sous votre contrôle, soustrayez 1 à son total de points de vie ; si le total atteint 0, le marqueur est détruit et retiré du champ de bataille.
+
+À la fin de la bataille :
+
+• s'il ne reste qu'un seul marqueur « personnalité politique », votre armée gagne 1 point d'expérience ;
+
+• s'il reste les deux marqueurs, votre armée gagne D3 points d'expérience et vous pouvez désigner une unité supplémentaire de votre armée pour être marquée pour la Grandeur après la bataille.
+
+**Frapper les Lignes d'Approvisionnement**
+
+Si vous avez sélectionné cet Agenda, les unités INFANTERIE T'AU EMPIRE de votre armée peuvent effectuer l'action suivante :
+
+**• Saboter une Ligne d'Approvisionnement (Action) :** une ou plusieurs unités de votre armée peuvent entamer cette action durant la Phase d'Action. Chaque unité qui l'entame doit être à portée d'une zone d'objectif différente non encore endommagée. Elle est complétée à la fin du tour. Une fois complétée, l'unité gagne 1 point d'expérience et cette zone d'objectif est endommagée.
+
+À la fin de la bataille :
+
+• si vos unités ont endommagé au moins la moitié des zones d'objectif, votre armée gagne 1 point d'expérience ;
+
+• si elles ont endommagé toutes les zones, votre armée gagne 3 points d'expérience au lieu de 1.
+
+**Déborder et Encercler**
+
+Si vous avez sélectionné cet Agenda, à la fin de la bataille, s'il y a plus d'unités de votre armée entièrement dans les 12" du bord de déploiement adverse que d'unités adverses entièrement dans celle-ci, sélectionnez jusqu'à trois de ces unités de votre armée :
+
+• Chacune gagne 1 point d'expérience.
+
+**Enseignements de la Guerre**
+
+Si vous avez sélectionné cet Agenda :
+
+• si vous choisissez la Philosophie Tactique Mont'ka au début de la bataille, chaque fois qu'une unité de votre armée détruit une unité ennemie lors du premier, deuxième et troisième tour de bataille, cette unité gagne 1 point d'expérience ;
+
+• si vous choisissez la Philosophie Tactique Kauyon au début de la bataille, chaque fois qu'une unité de votre armée détruit une unité ennemie lors du troisième, quatrième et cinquième tour de bataille, cette unité gagne 1 point d'expérience.
+
+## Traits de Combat
+
+Quand une unité T'AU EMPIRE gagne un Trait de Combat, vous pouvez utiliser l'une des tables ci-dessous à la place d'une table de base. Lancez 1D6 et consultez la table appropriée, ou choisissez dans cette table le Trait qui raconte le mieux l'histoire de votre unité. Toutes les règles normales des Traits de Combat s'appliquent (par exemple, une unité ne peut pas avoir deux fois le même Trait).
+
+**BATTLESUIT (D6)**
+
+• 1 — **IA Sentinelle** : Les modèles BATTLESUIT de cette unité doublent leur valeur d'OC.
+
+• 2 — **Drones Gardiens** : Quand vous utilisez le stratagème Protocoles de sauvetage suite à un jet de sauvegarde raté pour un modèle de cette unité, vous pouvez le jouer gratuitement.
+
+• 3 — **Système de Poussée Réactive** : Cette unité peut effectuer des Interventions Héroïques.
+
+• 4 — **IA d'Optimisation Intégrée** : Chaque fois que ce modèle Avance, jusqu'à la fin de la phase, ajoutez 6" à sa caractéristique de Mouvement.
+
+• 5 — **Sauvegardes Électrochaff** : Chaque fois qu'une attaque à distance est effectuée contre cette unité, si l'attaquant est à plus de 12", soustrayez 1 au jet de touche de cette attaque.
+
+• 6 — **Flamme Bondissante** : Durant la Phase d'Action, si vous utilisez le stratagème Frapper et disparaître en sélectionnant cette unité, réduisez son coût de 1 PC, uniquement pour cette utilisation.
+
+**ETHERE (D6)**
+
+• 1-2 — **Chef Estimé** : Durant votre Phase de Commandement, si ce modèle est sur le champ de bataille, il peut entonner une invocation supplémentaire qu'il connaît et qui n'a pas déjà été entonnée par un modèle ami ce tour-ci.
+
+• 3-4 — **Les Mains du Guérisseur** : Si ce modèle ETHERE fait partie de votre armée et n'a pas été détruit pendant la bataille, à la fin de la bataille vous pouvez ignorer un test de Mise hors Combat raté pour une unité T'AU EMPIRE INFANTERIE, MARCHEUR ou MONTÉ : ce test est considéré comme réussi.
+
+• 5-6 — **Hérauts du T'au'va** : Si ce modèle ETHERE fait partie de votre armée et n'a pas été détruit pendant la bataille, à la fin de la bataille lancez 1D6 : sur 5+, votre armée gagne 1 point d'expérience.
+
+**T'AU EMPIRE INFANTERIE (Pour le bien suprême) (D6)**
+
+• 1-2 — **Tireurs Impitoyables** : Durant la Phase d'Action, quand cette unité est sélectionnée pour tirer, vous pouvez utiliser gratuitement le stratagème Déferlement d'impulsions.
+
+• 3-4 — **Tir Réflexe** : Si cette unité est sélectionnée pour effectuer des Tirs en État d'Alerte, ses modèles touchent sur des jets de touche non modifiés de 4+ au lieu de 6.
+
+• 5-6 — **Visée Exercée** : Chaque fois qu'un modèle de cette unité effectue une attaque avec une arme à impulsions, les armes à impulsions gagnent [TOUCHES SOUTENUES 1].
+
+## Reliques
+
+Quand un modèle PERSONNAGE T'AU EMPIRE reçoit une Relique, vous pouvez à la place sélectionner l'une des Reliques ci-dessous. Toutes les règles habituelles de sélection des Reliques s'appliquent.
+
+**Reliques d'Artificier**
+
+Un modèle PERSONNAGE T'AU EMPIRE peut recevoir l'une des Reliques d'Artificier suivantes à la place d'une Relique de base.
+
+**Déstabilisateur Sismique** : Au début de votre Phase d'Action, sélectionnez une unité ennemie à 12" ou moins du porteur, se trouvant sur ou dans un BÂTIMENT ou un élément de terrain. Lancez 1D6, en ajoutant 2 si l'unité se trouve à 6" ou moins : sur 3-5, cette unité subit D3 blessures mortelles ; sur 6+, elle subit 3 blessures mortelles.
+
+**Sérénité** : Modèle ETHERE uniquement.
+
+Une fois par bataille, durant votre Phase de Commandement, le porteur peut utiliser cette Relique. Jusqu'au début de votre prochaine Phase de Commandement, il gagne l'aptitude suivante :
+
+• **Bâton de Contrôle (Aura) :** tant qu'une unité T'AU EMPIRE (hors FARSIGHT ENCLAVES) est à 9" ou moins de ce modèle, cette unité réussit automatiquement ses tests d'Ébranlement.
+
+**Reliques d'Antiquité**
+
+Un modèle PERSONNAGE T'AU EMPIRE de rang Héroïque ou supérieur peut recevoir la Relique d'Antiquité.
+
+**Lanceur Supernova** : Modèle équipé d'un projecteur à fragmentation aérienne uniquement. Cette Relique remplace un projecteur à fragmentation aérienne et possède le profil suivant :
+
+| Arme              | Portée | A | CT | F | PA  | D | Mot-clé                  |
+| ----------------- | ------ | - | -- | - | --- | - | ------------------------ |
+| Lanceur Supernova | 24"    | 6 | 3+ | 5 | -2 | 2 | [ASSAUT, Tir indirect] |
+
+**Capacités :** Chaque fois que le porteur tire avec cette arme, si au moins une touche est infligée, jusqu'à la fin du tour, chaque fois qu'une unité T'AU EMPIRE effectue une attaque à distance contre la cible, ajoutez 1 au jet de touche et 1 au jet de blessure de cette attaque.
+
+**Reliques Légendaires**
+
+Un modèle PERSONNAGE T'AU EMPIRE de rang Légendaire peut recevoir la Relique Légendaire suivante.
+
+**Sceptre d'Unité** : Modèle ETHERE uniquement.
+
+Le porteur connaît les six Invocations des Éthérés.
+
+Durant votre Phase de Commandement, si ce modèle est sur le champ de bataille, il peut entonner une invocation supplémentaire qu'il connaît et qui n'a pas déjà été entonnée par un modèle ami ce tour-ci.
+
+Chaque fois que le porteur entonne une invocation, ajoutez 1 au jet.

@@ -277,163 +277,44 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements de Support Auxiliaire), vous avez accès à ces stratagèmes. Comme les autres stratagèmes, ils sont achetés avant la partie avec vos PC (le coût indiqué est le coût d'achat) et chaque stratagème acheté est activable une fois par round de bataille.
 
-## **Tactiques de Bataille**
-
-**Réponse Accélérée (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, quand une unité Montée ou Véhicule VOTANN de votre armée est sélectionnée pour effectuer une Avance. Jusqu'à la fin de la phase, ajoutez 12" à la caractéristique de Mouvement de cette unité.
-
-**Sentence Ancestrale (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, quand une unité VOTANN est sélectionnée pour tirer, ou lors de la phase de Combat quand une unité VOTANN est sélectionnée pour combattre. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque contre une cible ayant 1 jeton de Jugement ou plus, vous pouvez relancer le jet de touche.
-
-**Schéma de Tir Perce-Cœur (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, après qu'une unité ennemie a été touchée par une attaque d'une arme Rayon (Beam) tirée par un modèle VOTANN de votre armée. Jusqu'à la fin de la phase, chaque fois que cette unité ennemie est touchée par une autre attaque d'arme Rayon (Beam) tirée par un modèle VOTANN de votre armée, lancez 1D6 : sur 4+, elle subit 1 blessure mortelle en plus des dégâts normaux. Une unité ne peut subir au maximum que 6 blessures mortelles par phase à cause de ce stratagème.
-
-**Infusion Cyberstim (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase de Combat quand une unité VOTANN BESERKS de votre armée est sélectionnée pour combattre. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque de mêlée, vous pouvez relancer le jet de touche.
-
-**Marque du Chasseur (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, avant d'effectuer un jet de touche pour une attaque d'un modèle VOTANN de votre armée. Si l'unité cible a 1 jeton de Jugement ou plus, n'effectuez pas de jet de touche pour cette attaque : elle touche automatiquement la cible.
-
-**Lien Kin (2 PC)** *· Tactique de Bataille*
-
-À utiliser au début de la phase de Combat. Sélectionnez une unité ennemie à Portée d'Engagement de 2 unités Infanterie, Marcheur ou Monté VOTANN ou plus de votre armée. Jusqu'à la fin de la phase, chaque fois qu'un modèle Infanterie, Marcheur ou Monté VOTANN effectue une attaque de mêlée contre cette unité ennemie, vous pouvez relancer le jet de blessure.
-
-**La Puissance des Einhyr (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, quand une unité EINHYR est sélectionnée pour tirer, ou lors de la phase de Combat quand une unité EINHYR est sélectionnée pour combattre. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque, ajoutez 1 à son jet de touche.
-
-**Salve Optimisée (1 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, quand une unité VOTANN est sélectionnée pour tirer. Jusqu'à la fin de la phase, les modèles de cette unité qui attaque avec une arme bolter ont [TOUCHES SOUTENUES 1] ; si l'unité cible comptait 11 modèles ou plus au moment de l'utilisation, [TOUCHES SOUTENUES 2] à la place.
-
-**Fusillade à Bout Portant (2 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, sélectionnez une unité VOTANN INFANTERIE ou VOTANN Montée de votre armée. Jusqu'à la fin de la phase, les modèles de cette unité peuvent effectuer des attaques à distance même si leur unité est à Portée d'Engagement d'unités ennemies, mais uniquement contre les unités ennemies à Portée d'Engagement desquelles ils se trouvent. Dans ce cas, ces modèles peuvent cibler une unité ennemie même si d'autres unités amies sont à Portée d'Engagement de cette même unité ennemie.
-
-Si un modèle de cette unité possède plusieurs armes à distance, vous pouvez toujours choisir de cibler des unités qui ne sont pas à Portée d'Engagement de son unité, mais il ne pourra effectuer les attaques de cette arme que si toutes les unités ennemies à Portée d'Engagement de son unité ont été détruites au moment de résoudre ces attaques. De plus, quand un modèle de cette unité tire avec une arme [LOURD], il effectue un tir au Jugé tant qu'une unité ennemie est à Portée d'Engagement de son unité.
-
-**Représailles Réactives (1 PC / 2 PC)** *· Tactique de Bataille*
-
-À utiliser lors de la phase d'Action, après qu'une unité ennemie ayant 1 jeton de Jugement ou plus au moment de sa sélection pour tirer a résolu ses attaques. Sélectionnez une unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ de votre armée qui a été touchée par une ou plusieurs de ces attaques et qui n'est pas à Portée d'Engagement d'une unité ennemie. Cette unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ peut immédiatement tirer, mais ses modèles ne peuvent cibler que cette unité ennemie, et seulement si elle est une cible éligible. Après avoir résolu ses attaques, cette unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ est considérée comme activée. Si cette unité était une unité de HEARTHKYN WARRIORS, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC.
-
-## **Hauts Faits**
-
-**Barrière Grimforgée (2 PC)** *· Haut Fait*
-
-À utiliser lors de la phase de Commandement. Sélectionnez une unité VOTANN de votre armée à 9" ou moins d'un modèle GRIMNYR.
-
-- Cette unité, et les modèles qui la composent, cessent d'être affectés par toute action psychique ennemie qui les affectait.
-
-- Jusqu'au début de la prochaine phase de Commandement, cette unité et ses modèles ne sont affectés par aucune action psychique de type Malédiction.
-
-**Course de Bastion (1 PC)** *· Haut Fait*
-
-À utiliser lors de la phase de Commandement. Sélectionnez un modèle HEKATON LAND FORTRESS de votre armée. Jusqu'au début de la prochaine phase de Commandement, ce modèle est considéré comme n’ayant aucun malus provenant de la table des dégâts des véhicules.
-
-**Chirurgie de Combat (1 PC)** *· Haut Fait*
-
-À utiliser lors de la phase de Commandement. Sélectionnez une unité VOTANN Hearthkyn Warriors de votre armée qui est égal ou sous son effectif de départ et qui n'est pas à Portée d'Engagement d'une unité ennemie. Jusqu'à D3 modèles détruits sont rendus à cette unité.
-
-**Rancune Personnelle (1 PC)** *· Haut Fait*
-
-À utiliser lors de la phase de Commandement. Sélectionnez une unité PERSONNAGE VOTANN de votre armée et une unité ennemie présente sur le champ de bataille. Jusqu'à la fin de la bataille, chaque fois qu'un modèle de cette unité PERSONNAGE effectue une attaque contre l'unité ennemie sélectionnée, celle-ci est considérée comme ayant 3 jetons de Jugement pour déterminer les bonus qui s'appliquent aux attaques. Utilisable une seule fois.
-
-## **Réquisitions**
-
-**Entre de Bonnes Mains (1 PC)** *· Réquisition*
-
-À utiliser avant la bataille, lors du rassemblement de votre armée, si votre SEIGNEUR DE GUERRE a le mot-clé VOTANN. Sélectionnez un modèle PERSONNAGE VOTANN de votre armée et donnez-lui une Relique Ancestrale (qu'il pourrait normalement recevoir). Chaque Relique de votre armée doit être unique et vous ne pouvez pas donner deux Reliques à un même modèle. Utilisable une seule fois.
-
-**Legs des Votann (1 PC)** *· Réquisition*
-
-À utiliser avant la bataille. Sélectionnez un modèle Theyn ou Hesyr de votre armée. Ce modèle peut recevoir l'une des Reliques Ancestrales suivantes, même s'il n'est pas un PERSONNAGE : La Crête Grise ; La Fin de la Rancune ; Le Poing-de-l'Âtre ; Wârpestryk. Chaque Relique de votre armée doit être unique. Utilisable une seule fois.
-
-**Légende de la Ligue (1 PC)** *· Réquisition*
-
-À utiliser avant la bataille, lors du rassemblement de votre armée, si votre SEIGNEUR DE GUERRE a le mot-clé VOTANN. Sélectionnez un modèle PERSONNAGE VOTANN de votre armée et déterminez-lui un Trait de Seigneur de Guerre (qu'il peut normalement avoir) ; ce modèle n'est considéré comme votre SEIGNEUR DE GUERRE que pour ce Trait. Chaque Trait de Seigneur de Guerre de votre armée doit être unique (en cas de génération aléatoire, relancez les doublons) et vous ne pouvez pas donner deux Traits à un même modèle. Utilisable une seule fois.
-
-## **Ruses Stratégiques**
-
-**Loyauté Familiale (1 PC)** *· Ruse Stratégique*
-
-À utiliser lors de la phase d'Action, quand une unité ennemie déclare une charge contre une unité VOTANN de votre armée. Une autre unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ de votre armée peut effectuer une Intervention Héroïque.
-
-**Illuminez-les (1 PC)** *· Ruse Stratégique*
-
-À utiliser lors de la phase d'Action, après qu'une unité VOTANN Hernkyn Pioneers de votre armée a résolu ses attaques à distance. Sélectionnez une unité ennemie touchée par une ou plusieurs de ses attaques à distance ; si toutes les unités de votre armée appartiennent à la même Ligue (hors unité NON-ALIGNÉ), l'unité ennemie sélectionnée gagne 1 jeton de Jugement.
-
-**La Chance Donne. Le Besoin Garde. L'Effort Mérite. (1 PC)** *· Ruse Stratégique*
-
-À utiliser à la fin de la phase d'Action. Sélectionnez une unité VOTANN INFANTERIE de votre armée qui se trouve dans une zone d'objectif. Jusqu'au début de la prochaine phase d'Action, tant que cette unité est dans cette zone d'objectif :
-
-- Elle réussit automatiquement ses tests d'Ébranlement.
-
-- À moins qu'elle n'effectue une attaque à distance ou ne déclare une charge, elle peut ignorer toute règle qui ferait échouer les actions qu'elle effectue.
-
-- Cette unité obtient Insensible à la douleur 6+.
-
-**Chevaucheurs Magna (1 PC)** *· Ruse Stratégique*
-
-À utiliser lors de la phase d'Action, quand une unité VOTANN Monté de votre armée est choisie comme cible d'une attaque à distance. Jusqu'à la fin de la phase, chaque fois qu'une attaque est effectuée contre cette unité :
-
-- Soustrayez 1 au jet de touche de cette attaque.
-
-- Si cette unité a effectué une Avance lors de son tour précédent, ce jet de touche ne peut pas être relancé.
-
-**Nouvelle Némésis (1 PC)** *· Ruse Stratégique*
-
-À utiliser quand un modèle SEIGNEUR DE GUERRE VOTANN ou GRIMNYR de votre armée est détruit. L'unité ennemie qui l'a détruit gagne 2 jetons de Jugement. Si le modèle détruit était un GRIMNYR, cette unité ennemie gagne 3 jetons de Jugement à la place.
-
-**Pionniers Débordants (1 PC)** *· Ruse Stratégique*
-
-À utiliser au début de la phase d'Action. Sélectionnez une unité HERNKYN PIONEERS de votre armée à plus de 6" de tout modèle ennemi et à 6" ou moins d'un bord de table. Placez cette unité en Réserves.
-
-**Repli en Bon Ordre (1 PC)** *· Ruse Stratégique*
-
-À utiliser lors de la phase d'Action, quand une unité VOTANN Infanterie, Marcheur ou Monté de votre armée se Désengage. Cette unité reste éligible pour tirer ce tour.
-
-## **Équipements**
-
-**Onde de Choc (1 PC)** *· Équipement*
-
-À utiliser lors de la phase d'Action, quand une unité VOTANN Infanterie de votre armée est sélectionnée pour tirer. Sélectionnez une unité ennemie à 6" ou moins de cette unité. Jusqu'au début de la prochaine phase d'Action :
-
-- L'unité ennemie sélectionnée ne peut pas effectuer de réaction à une charge.
-
-- Chaque fois qu'un modèle de l'unité ennemie sélectionnée effectue une attaque, soustrayez 1 à son jet de touche.
-
-**Tempête Ionique (2 PC / 1 PC)** *· Équipement*
-
-À utiliser lors de la phase d'Action, quand une unité VOTANN est sélectionnée pour tirer. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque avec une arme ion, un jet de blessure non modifié de 6 inflige 1 blessure mortelle à la cible en plus des dégâts normaux (maximum 6 blessures mortelles). Si l'unité contient 11 modèles ou plus, ce stratagème coûte 2 PC ; sinon, il coûte 1 PC.
-
-**Explosifs Souterrains (2 PC)** *· Équipement*
-
-À utiliser lors de la phase d'Action, quand une unité Cthonian de votre armée est sélectionnée pour tirer. Jusqu'à la fin de la phase, chaque fois que cette unité effectue une attaque à distance, soustrayez 1 à son jet de blessure ; et si une touche est infligée à une cible qui n'est pas TITANESQUE et ne peut pas VOLER, alors jusqu'au début de la prochaine phase d'Action :
-
-- Divisez par deux la caractéristique de Mouvement des modèles de l'unité cible.
-
-- L'unité cible n'est pas éligible pour combattre.
-
-**Brouilleur Multi-Ondes (2 PC)** *· Équipement*
-
-À utiliser au début de n'importe quelle phase. Sélectionnez une unité VOTANN Hearthkyn Warriors ou Hernkyn Pioneers de votre armée, puis une unité ennemie à 12" ou moins de celle-ci. Jusqu'à la fin de la phase, cette unité ennemie ne peut être affectée par aucune capacité d'Aura ou de Stratagèmes de l'armée adverse.
-
-**Crête-Bouclier Surchargée (1 PC / 2 PC)** *· Équipement*
-
-À utiliser lors de n'importe quelle phase, quand une unité VOTANN avec Weavefield crest de votre armée est choisie comme cible d'une attaque à distance. Jusqu'à la fin de la phase, chaque fois qu'une attaque à distance est effectuée contre cette unité, un jet de blessure non modifié de 1 à 3 échoue, quelles que soient les capacités de l'arme ou du modèle attaquant. Si l'unité contient 5 modèles ou moins, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC.
-
-**Alerte Pan-Spectrale (2 PC)** *· Équipement*
-
-À utiliser à la fin de l'étape de Renforts de la phase de Commandement. Sélectionnez une unité VOTANN Hearthkyn Warriors, Hernkyn Pioneers ou Hekaton Land Fortress de votre armée qui n'est pas à Portée d'Engagement d'une unité ennemie. Cette unité peut tirer comme si c'était la phase d'Action, mais ses modèles ne peuvent cibler qu'une seule unité ennemie éligible, mise en place comme Renforts ce tour et à 12" ou moins de leur unité.
-
-**Téléportation Point-à-Point (1 PC / 2 PC)** *· Équipement*
-
-À utiliser au début de la phase d'Action. Sélectionnez une unité VOTANN avec Teleport Crest de votre armée et retirez-la du champ de bataille. Lors de cette même phase d'Action, replacez cette unité sur le champ de bataille, n'importe où à plus de 9" de tout modèle ennemi. Une même unité ne peut pas être choisie pour ce stratagème plus d'une fois par bataille. Si l'unité choisie était un PERSONNAGE, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC.
+**Légende des types**
+
+| **Tactique de Bataille** | **Haut Fait** | **Réquisition** | **Ruse Stratégique** | **Équipement** |
+| ------------------------ | ------------- | --------------- | -------------------- | -------------- |
+
+| Nom | PC | Déclenchement & Effet |
+| --- | --- | --- |
+| Réponse Accélérée | 1 | À utiliser lors de la phase d'Action, quand une unité Montée ou Véhicule VOTANN de votre armée est sélectionnée pour effectuer une Avance. Jusqu'à la fin de la phase, ajoutez 12" à la caractéristique de Mouvement de cette unité. |
+| Sentence Ancestrale | 1 | À utiliser lors de la phase d'Action, quand une unité VOTANN est sélectionnée pour tirer, ou lors de la phase de Combat quand une unité VOTANN est sélectionnée pour combattre. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque contre une cible ayant 1 jeton de Jugement ou plus, vous pouvez relancer le jet de touche. |
+| Schéma de Tir Perce-Cœur | 1 | À utiliser lors de la phase d'Action, après qu'une unité ennemie a été touchée par une attaque d'une arme Rayon (Beam) tirée par un modèle VOTANN de votre armée. Jusqu'à la fin de la phase, chaque fois que cette unité ennemie est touchée par une autre attaque d'arme Rayon (Beam) tirée par un modèle VOTANN de votre armée, lancez 1D6 : sur 4+, elle subit 1 blessure mortelle en plus des dégâts normaux. Une unité ne peut subir au maximum que 6 blessures mortelles par phase à cause de ce stratagème. |
+| Infusion Cyberstim | 1 | À utiliser lors de la phase de Combat quand une unité VOTANN BESERKS de votre armée est sélectionnée pour combattre. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque de mêlée, vous pouvez relancer le jet de touche. |
+| Marque du Chasseur | 1 | À utiliser lors de la phase d'Action, avant d'effectuer un jet de touche pour une attaque d'un modèle VOTANN de votre armée. Si l'unité cible a 1 jeton de Jugement ou plus, n'effectuez pas de jet de touche pour cette attaque : elle touche automatiquement la cible. |
+| Lien Kin | 2 | À utiliser au début de la phase de Combat. Sélectionnez une unité ennemie à Portée d'Engagement de 2 unités Infanterie, Marcheur ou Monté VOTANN ou plus de votre armée. Jusqu'à la fin de la phase, chaque fois qu'un modèle Infanterie, Marcheur ou Monté VOTANN effectue une attaque de mêlée contre cette unité ennemie, vous pouvez relancer le jet de blessure. |
+| La Puissance des Einhyr | 1 | À utiliser lors de la phase d'Action, quand une unité EINHYR est sélectionnée pour tirer, ou lors de la phase de Combat quand une unité EINHYR est sélectionnée pour combattre. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque, ajoutez 1 à son jet de touche. |
+| Salve Optimisée | 1 | À utiliser lors de la phase d'Action, quand une unité VOTANN est sélectionnée pour tirer. Jusqu'à la fin de la phase, les modèles de cette unité qui attaque avec une arme bolter ont [TOUCHES SOUTENUES 1] ; si l'unité cible comptait 11 modèles ou plus au moment de l'utilisation, [TOUCHES SOUTENUES 2] à la place. |
+| Fusillade à Bout Portant | 2 | À utiliser lors de la phase d'Action, sélectionnez une unité VOTANN INFANTERIE ou VOTANN Montée de votre armée. Jusqu'à la fin de la phase, les modèles de cette unité peuvent effectuer des attaques à distance même si leur unité est à Portée d'Engagement d'unités ennemies, mais uniquement contre les unités ennemies à Portée d'Engagement desquelles ils se trouvent. Dans ce cas, ces modèles peuvent cibler une unité ennemie même si d'autres unités amies sont à Portée d'Engagement de cette même unité ennemie. Si un modèle de cette unité possède plusieurs armes à distance, vous pouvez toujours choisir de cibler des unités qui ne sont pas à Portée d'Engagement de son unité, mais il ne pourra effectuer les attaques de cette arme que si toutes les unités ennemies à Portée d'Engagement de son unité ont été détruites au moment de résoudre ces attaques. De plus, quand un modèle de cette unité tire avec une arme [LOURD], il effectue un tir au Jugé tant qu'une unité ennemie est à Portée d'Engagement de son unité. |
+| Représailles Réactives | 1 / 2 | À utiliser lors de la phase d'Action, après qu'une unité ennemie ayant 1 jeton de Jugement ou plus au moment de sa sélection pour tirer a résolu ses attaques. Sélectionnez une unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ de votre armée qui a été touchée par une ou plusieurs de ces attaques et qui n'est pas à Portée d'Engagement d'une unité ennemie. Cette unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ peut immédiatement tirer, mais ses modèles ne peuvent cibler que cette unité ennemie, et seulement si elle est une cible éligible. Après avoir résolu ses attaques, cette unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ est considérée comme activée. Si cette unité était une unité de HEARTHKYN WARRIORS, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC. |
+| Barrière Grimforgée | 2 | À utiliser lors de la phase de Commandement. Sélectionnez une unité VOTANN de votre armée à 9" ou moins d'un modèle GRIMNYR. - Cette unité, et les modèles qui la composent, cessent d'être affectés par toute action psychique ennemie qui les affectait. - Jusqu'au début de la prochaine phase de Commandement, cette unité et ses modèles ne sont affectés par aucune action psychique de type Malédiction. |
+| Course de Bastion | 1 | À utiliser lors de la phase de Commandement. Sélectionnez un modèle HEKATON LAND FORTRESS de votre armée. Jusqu'au début de la prochaine phase de Commandement, ce modèle est considéré comme n’ayant aucun malus provenant de la table des dégâts des véhicules. |
+| Chirurgie de Combat | 1 | À utiliser lors de la phase de Commandement. Sélectionnez une unité VOTANN Hearthkyn Warriors de votre armée qui est égal ou sous son effectif de départ et qui n'est pas à Portée d'Engagement d'une unité ennemie. Jusqu'à D3 modèles détruits sont rendus à cette unité. |
+| Rancune Personnelle | 1 | À utiliser lors de la phase de Commandement. Sélectionnez une unité PERSONNAGE VOTANN de votre armée et une unité ennemie présente sur le champ de bataille. Jusqu'à la fin de la bataille, chaque fois qu'un modèle de cette unité PERSONNAGE effectue une attaque contre l'unité ennemie sélectionnée, celle-ci est considérée comme ayant 3 jetons de Jugement pour déterminer les bonus qui s'appliquent aux attaques. Utilisable une seule fois. |
+| Entre de Bonnes Mains | 1 | À utiliser avant la bataille, lors du rassemblement de votre armée, si votre SEIGNEUR DE GUERRE a le mot-clé VOTANN. Sélectionnez un modèle PERSONNAGE VOTANN de votre armée et donnez-lui une Relique Ancestrale (qu'il pourrait normalement recevoir). Chaque Relique de votre armée doit être unique et vous ne pouvez pas donner deux Reliques à un même modèle. Utilisable une seule fois. |
+| Legs des Votann | 1 | À utiliser avant la bataille. Sélectionnez un modèle Theyn ou Hesyr de votre armée. Ce modèle peut recevoir l'une des Reliques Ancestrales suivantes, même s'il n'est pas un PERSONNAGE : La Crête Grise ; La Fin de la Rancune ; Le Poing-de-l'Âtre ; Wârpestryk. Chaque Relique de votre armée doit être unique. Utilisable une seule fois. |
+| Légende de la Ligue | 1 | À utiliser avant la bataille, lors du rassemblement de votre armée, si votre SEIGNEUR DE GUERRE a le mot-clé VOTANN. Sélectionnez un modèle PERSONNAGE VOTANN de votre armée et déterminez-lui un Trait de Seigneur de Guerre (qu'il peut normalement avoir) ; ce modèle n'est considéré comme votre SEIGNEUR DE GUERRE que pour ce Trait. Chaque Trait de Seigneur de Guerre de votre armée doit être unique (en cas de génération aléatoire, relancez les doublons) et vous ne pouvez pas donner deux Traits à un même modèle. Utilisable une seule fois. |
+| Loyauté Familiale | 1 | À utiliser lors de la phase d'Action, quand une unité ennemie déclare une charge contre une unité VOTANN de votre armée. Une autre unité VOTANN INFANTERIE, MARCHEUR ou MONTÉ de votre armée peut effectuer une Intervention Héroïque. |
+| Illuminez-les | 1 | À utiliser lors de la phase d'Action, après qu'une unité VOTANN Hernkyn Pioneers de votre armée a résolu ses attaques à distance. Sélectionnez une unité ennemie touchée par une ou plusieurs de ses attaques à distance ; si toutes les unités de votre armée appartiennent à la même Ligue (hors unité NON-ALIGNÉ), l'unité ennemie sélectionnée gagne 1 jeton de Jugement. |
+| La Chance Donne. Le Besoin Garde. L'Effort Mérite. | 1 | À utiliser à la fin de la phase d'Action. Sélectionnez une unité VOTANN INFANTERIE de votre armée qui se trouve dans une zone d'objectif. Jusqu'au début de la prochaine phase d'Action, tant que cette unité est dans cette zone d'objectif : - Elle réussit automatiquement ses tests d'Ébranlement. - À moins qu'elle n'effectue une attaque à distance ou ne déclare une charge, elle peut ignorer toute règle qui ferait échouer les actions qu'elle effectue. - Cette unité obtient Insensible à la douleur 6+. |
+| Chevaucheurs Magna | 1 | À utiliser lors de la phase d'Action, quand une unité VOTANN Monté de votre armée est choisie comme cible d'une attaque à distance. Jusqu'à la fin de la phase, chaque fois qu'une attaque est effectuée contre cette unité : - Soustrayez 1 au jet de touche de cette attaque. - Si cette unité a effectué une Avance lors de son tour précédent, ce jet de touche ne peut pas être relancé. |
+| Nouvelle Némésis | 1 | À utiliser quand un modèle SEIGNEUR DE GUERRE VOTANN ou GRIMNYR de votre armée est détruit. L'unité ennemie qui l'a détruit gagne 2 jetons de Jugement. Si le modèle détruit était un GRIMNYR, cette unité ennemie gagne 3 jetons de Jugement à la place. |
+| Pionniers Débordants | 1 | À utiliser au début de la phase d'Action. Sélectionnez une unité HERNKYN PIONEERS de votre armée à plus de 6" de tout modèle ennemi et à 6" ou moins d'un bord de table. Placez cette unité en Réserves. |
+| Repli en Bon Ordre | 1 | À utiliser lors de la phase d'Action, quand une unité VOTANN Infanterie, Marcheur ou Monté de votre armée se Désengage. Cette unité reste éligible pour tirer ce tour. |
+| Onde de Choc | 1 | À utiliser lors de la phase d'Action, quand une unité VOTANN Infanterie de votre armée est sélectionnée pour tirer. Sélectionnez une unité ennemie à 6" ou moins de cette unité. Jusqu'au début de la prochaine phase d'Action : - L'unité ennemie sélectionnée ne peut pas effectuer de réaction à une charge. - Chaque fois qu'un modèle de l'unité ennemie sélectionnée effectue une attaque, soustrayez 1 à son jet de touche. |
+| Tempête Ionique | 2 / 1 | À utiliser lors de la phase d'Action, quand une unité VOTANN est sélectionnée pour tirer. Jusqu'à la fin de la phase, chaque fois qu'un modèle de cette unité effectue une attaque avec une arme ion, un jet de blessure non modifié de 6 inflige 1 blessure mortelle à la cible en plus des dégâts normaux (maximum 6 blessures mortelles). Si l'unité contient 11 modèles ou plus, ce stratagème coûte 2 PC ; sinon, il coûte 1 PC. |
+| Explosifs Souterrains | 2 | À utiliser lors de la phase d'Action, quand une unité Cthonian de votre armée est sélectionnée pour tirer. Jusqu'à la fin de la phase, chaque fois que cette unité effectue une attaque à distance, soustrayez 1 à son jet de blessure ; et si une touche est infligée à une cible qui n'est pas TITANESQUE et ne peut pas VOLER, alors jusqu'au début de la prochaine phase d'Action : - Divisez par deux la caractéristique de Mouvement des modèles de l'unité cible. - L'unité cible n'est pas éligible pour combattre. |
+| Brouilleur Multi-Ondes | 2 | À utiliser au début de n'importe quelle phase. Sélectionnez une unité VOTANN Hearthkyn Warriors ou Hernkyn Pioneers de votre armée, puis une unité ennemie à 12" ou moins de celle-ci. Jusqu'à la fin de la phase, cette unité ennemie ne peut être affectée par aucune capacité d'Aura ou de Stratagèmes de l'armée adverse. |
+| Crête-Bouclier Surchargée | 1 / 2 | À utiliser lors de n'importe quelle phase, quand une unité VOTANN avec Weavefield crest de votre armée est choisie comme cible d'une attaque à distance. Jusqu'à la fin de la phase, chaque fois qu'une attaque à distance est effectuée contre cette unité, un jet de blessure non modifié de 1 à 3 échoue, quelles que soient les capacités de l'arme ou du modèle attaquant. Si l'unité contient 5 modèles ou moins, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC. |
+| Alerte Pan-Spectrale | 2 | À utiliser à la fin de l'étape de Renforts de la phase de Commandement. Sélectionnez une unité VOTANN Hearthkyn Warriors, Hernkyn Pioneers ou Hekaton Land Fortress de votre armée qui n'est pas à Portée d'Engagement d'une unité ennemie. Cette unité peut tirer comme si c'était la phase d'Action, mais ses modèles ne peuvent cibler qu'une seule unité ennemie éligible, mise en place comme Renforts ce tour et à 12" ou moins de leur unité. |
+| Téléportation Point-à-Point | 1 / 2 | À utiliser au début de la phase d'Action. Sélectionnez une unité VOTANN avec Teleport Crest de votre armée et retirez-la du champ de bataille. Lors de cette même phase d'Action, replacez cette unité sur le champ de bataille, n'importe où à plus de 9" de tout modèle ennemi. Une même unité ne peut pas être choisie pour ce stratagème plus d'une fois par bataille. Si l'unité choisie était un PERSONNAGE, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC. |
 
 ## **Le Conseil Votannic**
 

@@ -220,7 +220,7 @@ Profil : 24", A 3, CT 3+, F 7, PA -2, D 2, [BLESSURES DÉVASTATRICES], [LOURD].
 
   - Les armes Lourdes ne subissent pas de malus au jet de touche après un déplacement de l'unité.
 
-  - Tant qu'une unité ennemie est à Portée d'Engagement d'une unité avec ce dogme, elle est considérée comme ayant moins de la moitié de son effectif de départ.
+  - Tant qu'une unité VÉHICULE ennemie est à Portée d'Engagement d'une unité avec ce dogme, elle est considérée comme n'ayant que la moitié de ses blessures actuelles.
 
 **Trait de SdG : Tribut de Vénération Emphatique**
 
@@ -301,11 +301,11 @@ Ce Primaire n'a pas de secondaire associé.
 | Nom | PC | Déclenchement & Effet |
 | --- | --- | --- |
 | Congrégation Zélote | 2 | Phase de Combat, quand une unité ÉLECTRO-PRÊTRES est sélectionnée pour combattre. Jusqu'à la fin de la phase, les attaques de cette unité gagnent [TOUCHES FATALES]. |
-| Marcheurs des Dunes | 1 | Phase d'Action (Mouvement), quand une unité IRONSTRIDER ENGINE ou SERBERYS effectue une Avance. Ajoutez 6" à cette Avance. Les armes [LOURD] deviennent [ASSAUT]. |
+| Marcheurs des Dunes | 1 | Phase d'Action, quand une unité IRONSTRIDER ENGINE ou SERBERYS effectue une Avance. Ajoutez 6" à cette Avance. Les armes [LOURD] deviennent [ASSAUT]. |
 | Construit Assassins | 1 | Phase de Combat, quand une unité SICARIAN est sélectionnée pour combattre, si elle a chargé ou a été chargée ce tour. +1 Attaque jusqu'à la fin du combat. |
-| Courroux de l'Électromancien | 1 | Phase d'Action (Tir), sélectionnez 1 unité ennemie (hors VÉHICULE) à 12" ou moins d'une unité ÉLECTRO-PRÊTRES amie. Lancez 1D6 (-1 si l'unité est un PERSONNAGE). Sur 2-5 : D3 blessures mortelles. Sur 6 : 2D3 blessures mortelles. |
+| Courroux de l'Électromancien | 1 | Phase d'Action, sélectionnez 1 unité ennemie (hors VÉHICULE) à 12" ou moins d'une unité ÉLECTRO-PRÊTRES amie. Lancez 1D6 (-1 si l'unité est un PERSONNAGE). Sur 2-5 : D3 blessures mortelles. Sur 6 : 2D3 blessures mortelles. |
 | Supériorité machine | 1 | Phase de Combat, quand une unité SKITARII est sélectionnée pour combattre. +1 en Force jusqu'à la fin de la phase. |
-| Décharge d'élimination | 1 | Phase d'Action (Tir), quand une unité KATAPHRON est sélectionnée pour tirer. Jusqu'à la fin de la phase, les attaques de cette unité contre une cible à mi-portée ou moins gagnent [TOUCHES FATALES]. |
+| Décharge d'élimination | 1 | Phase d'Action, quand une unité KATAPHRON est sélectionnée pour tirer. Jusqu'à la fin de la phase, les attaques de cette unité contre une cible à mi-portée ou moins gagnent [TOUCHES FATALES]. |
 | Pointe de données | 1 | Phase de Combat, quand un modèle TECH-PRÊTRE ADEPTUS MECHANICUS est sélectionné pour combattre. Sélectionnez 1 unité VÉHICULE ennemie à Portée d'Engagement. Lancez 1D6 : sur 2-5, D3 blessures mortelles ; sur 6, D3+3 blessures mortelles. |
 | Bienveillance de l'Omnimessie | 1 | N'importe quelle phase, un modèle VÉHICULE ADEPTUS MECHANICUS obtient Insensible à la douleur 4+ contre les blessures mortelles. |
 | Tech-Adepte | 1 | Au début de la phase de Commandement OU au début de la phase d'Action, sélectionnez 1 modèle TECH-PRÊTRE. Phase de Commandement : peut utiliser Machine Focus ou Éveiller la Machine une fois de plus. Phase d'Action : peut utiliser Maître des Machines une fois de plus. |
@@ -319,19 +319,19 @@ Ce Primaire n'a pas de secondaire associé.
 | Acquisition à tout prix | 1 | Phase de Commandement, sélectionnez 1 objectif sur le champ de bataille. Jusqu'à la fin de la Phase de Commandement : les unités ADEPTUS MECHANICUS entièrement dans la zone objectif réussissent automatiquement leurs tests d'Ébranlement. |
 | Vengeance de l'Esprit Machine | 1 | N'importe quelle phase, quand un modèle VÉHICULE ADEPTUS MECHANICUS est détruit. Ce modèle explose automatiquement (sans jet). |
 | Assassins détournés | 1 | À la fin de la phase d'Action, sélectionnez 1 unité SICARIAN entièrement à 9" d'un bord de table. Retirez l'unité en réserve ; elle ne pourra arriver qu'au prochain tour, depuis n'importe quel bord de table (sauf la zone de déploiement adverse). |
-| Serres profondément enfoncées | 1 | Phase d'Action (Mouvement), quand une unité ennemie (hors VÉHICULE) tente un Désengagement alors qu'elle est à Portée d'Engagement d'unités PTERAXII STERYLIZOR. Lancez 1D6. Sur 2+ : l'unité ennemie ne peut pas effectuer son Désengagement. |
-| Tactique oblique | 2 | Phase d'Action (Charge), quand une unité SERBERYS RAIDERS est choisie comme cible d'une charge, si elle n'est pas à Portée d'Engagement. L'unité peut effectuer un mouvement normal. |
-| Poids écrasant | 1 | Phase d'Action (Charge), quand une unité IRONSTRIDER ENGINE ou KASTELAN ROBOTS termine un mouvement de charge. Lancez 1D6 par modèle de cette unité à Portée d'Engagement de l'ennemi. Sur 2+ : 1 blessure mortelle sur l'unité ennemie. |
+| Serres profondément enfoncées | 1 | Phase d'Action, quand une unité ennemie (hors VÉHICULE) tente un Désengagement alors qu'elle est à Portée d'Engagement d'unités PTERAXII STERYLIZOR. Lancez 1D6. Sur 2+ : l'unité ennemie ne peut pas effectuer son Désengagement. |
+| Tactique oblique | 2 | Phase d'Action, quand une unité SERBERYS RAIDERS est choisie comme cible d'une charge, si elle n'est pas à Portée d'Engagement. L'unité peut effectuer un mouvement normal. |
+| Poids écrasant | 1 | Phase d'Action, quand une unité IRONSTRIDER ENGINE ou KASTELAN ROBOTS termine un mouvement de charge. Lancez 1D6 par modèle de cette unité à Portée d'Engagement de l'ennemi. Sur 2+ : 1 blessure mortelle sur l'unité ennemie. |
 | Electro-choc | 2 | Au début de la phase de Combat, sélectionnez 1 unité ennemie (hors VÉHICULE ou MONSTRE) à Portée d'Engagement d'un NON-SKITARII INFANTERIE, MARCHEUR ou MONTÉ ou PERSONNAGE. Jusqu'à la fin de la phase de Combat : cette unité ennemie ne peut pas combattre. |
 | Poussée des propulseurs | 1 | À la fin du tour de bataille, sélectionnez 1 unité PTERAXII sur le champ de bataille. Retirez l'unité en réserve. Durant la prochaine phase de Commandement, vous devez la déployer. |
-| Bombe sismique | 1 | Phase d'Action (Mouvement), quand un modèle ARCHAEOPTER FUSILAVE termine son déplacement, sélectionnez 1 unité ennemie traversée (hors TITANESQUE et VOL). Jusqu'au début de la prochaine phase d'Action : sa caractéristique de Mouvement est divisée par 2, ainsi que pour l'Avance et la charge. |
+| Bombe sismique | 1 | Phase d'Action, quand un modèle ARCHAEOPTER FUSILAVE termine son déplacement, sélectionnez 1 unité ennemie traversée (hors TITANESQUE et VOL). Jusqu'au début de la prochaine phase d'Action : sa caractéristique de Mouvement est divisée par 2, ainsi que pour l'Avance et la charge. |
 | Protocoles de Taser Chaîne | 1 | Phase de Combat, quand une unité ADEPTUS MECHANICUS est sélectionnée pour combattre. Jusqu'à la fin de la phase de Combat : chaque attaque avec une arme taser ou une arme alpha, sur un jet de touche non modifié de 5+, bénéficie de [TOUCHES SOUTENUES 2]. |
 | Crâne Info Esclave | 2 | Phase de Commandement. Sélectionnez 1 unité ADEPTUS MECHANICUS INFANTERIE, MARCHEUR ou MONTÉ amie non engagée. Elle peut tirer comme si c'était la phase d'Action, mais uniquement contre 1 unité ennemie déployée en renfort ce tour et à 12" ou moins. |
-| Contre-mesures à filaments électro | 2 | À la fin de la phase d'Action (Mouvement), sélectionnez 1 modèle ARCHAEOPTER et 1 unité ennemie à 6" ou moins. Jusqu'au début de la prochaine phase d'Action : cette unité ennemie n'est pas affectée par les auras ni les stratagèmes ennemis. |
-| Grenades à Arc | 1 | Phase d'Action (Tir), quand une unité PTERAXII SKYSTALKERS est sélectionnée pour tirer, sélectionnez 1 VÉHICULE ennemie à 6" ou moins. Lancez 1D6 : sur 2-5, D3 blessures mortelles ; sur 6, 2D3 blessures mortelles. |
-| Échappements d'encens | 1 | Phase d'Action (Tir), quand une unité ADEPTUS MECHANICUS SMOKESCREEN est sélectionnée comme cible d'une attaque. Jusqu'à la fin de la Phase d'Action : -1 au jet de touche de chaque attaque contre cette unité. |
-| Munitions enrichies | 1 | Phase d'Action (Tir), quand une unité ADEPTUS MECHANICUS est sélectionnée pour tirer. Jusqu'à la fin de la phase d'Action : chaque attaque d'une arme radium contre une cible non-VÉHICULE, sur un jet de touche non modifié de 4+, gagne [TOUCHES FATALES]. |
-| Tir de Volée Galvanique | 2 | Phase d'Action (Tir), quand une unité SKITARII RANGERS est sélectionnée pour tirer. Jusqu'à la fin de la Phase d'Action : les fusils galvaniques deviennent [TIR RAPIDE 2]. |
+| Contre-mesures à filaments électro | 2 | À la fin de la phase d'Action, sélectionnez 1 modèle ARCHAEOPTER et 1 unité ennemie à 6" ou moins. Jusqu'au début de la prochaine phase d'Action : cette unité ennemie n'est pas affectée par les auras ni les stratagèmes ennemis. |
+| Grenades à Arc | 1 | Phase d'Action, quand une unité PTERAXII SKYSTALKERS est sélectionnée pour tirer, sélectionnez 1 VÉHICULE ennemie à 6" ou moins. Lancez 1D6 : sur 2-5, D3 blessures mortelles ; sur 6, 2D3 blessures mortelles. |
+| Échappements d'encens | 1 | Phase d'Action, quand une unité ADEPTUS MECHANICUS SMOKESCREEN est sélectionnée comme cible d'une attaque. Jusqu'à la fin de la Phase d'Action : -1 au jet de touche de chaque attaque contre cette unité. |
+| Munitions enrichies | 1 | Phase d'Action, quand une unité ADEPTUS MECHANICUS est sélectionnée pour tirer. Jusqu'à la fin de la phase d'Action : chaque attaque d'une arme radium contre une cible non-VÉHICULE, sur un jet de touche non modifié de 4+, gagne [TOUCHES FATALES]. |
+| Tir de Volée Galvanique | 2 | Phase d'Action, quand une unité SKITARII RANGERS est sélectionnée pour tirer. Jusqu'à la fin de la Phase d'Action : les fusils galvaniques deviennent [TIR RAPIDE 2]. |
 | Systèmes surchargés | 1 / 2 | N'importe quelle phase, quand un modèle VÉHICULE ennemi perd des blessures suite à une attaque d'une arme à Arc. Lancez 1D6 : sur 2+, ce VÉHICULE doit immédiatement effectuer un jet sur la table des dégâts de véhicule. Si ce modèle ennemi possède le mot-clé TITANESQUE, ce stratagème coûte 2 PC ; sinon, il coûte 1 PC. |
 
 **Ordres Sacrés**
@@ -410,8 +410,8 @@ Pour activer la partie Avancée :
 | Au début de la bataille, vous pouvez ajouter un stratagème d'Équipement ADEPTUS MECHANICUS ; réduisez son coût de 1 PC. |
 
 | **Initiale : Interface Biomécanique Améliorée** |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| À la fin de la phase d'Action (Mouvement) : sélectionnez 1 unité amie \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ ou \<MONDE-FORGE\> KATAPHRON SERVITORS à 6". Jusqu'au début de la prochaine phase d'Action, cette unité peut tirer et charger lors d'un tour où elle s'est Désengagée, mais avec -1 au jet de touche pour tous ses tirs. |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| À la fin de la phase d'Action : sélectionnez 1 unité amie \<MONDE-FORGE\> INFANTERIE, MARCHEUR ou MONTÉ ou \<MONDE-FORGE\> KATAPHRON SERVITORS à 6". Jusqu'au début de la prochaine phase d'Action, cette unité peut tirer et charger lors d'un tour où elle s'est Désengagée, mais avec -1 au jet de touche pour tous ses tirs. |
 
 | **Avancée : Calibration Exquise** |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -25,7 +25,7 @@ Attaquant : Rebornes. Défenseur : Kin. Table 44×60 (voir carte). Points de dé
 
 - 5 PV par zone d'objectif qu'il contrôle.
 
-- 10 PV supplémentaires s'il contrôle l'objectif principal (zone M).
+- 5 PV supplémentaires s'il contrôle l'objectif principal (zone M).
 
 À la fin de la bataille, le joueur qui contrôle l'objectif principal marque 20 PV.
 
@@ -45,19 +45,19 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 **Attaquant (Rebornes)**
 
-- **Percée :** à la fin de la phase de Commandement, marquez 2 PV par unité de votre armée entièrement dans la moitié de table du Défenseur (maximum 8 PV).
+- Percée : à la fin de la phase de Commandement, marquez 2 PV par unité de votre armée entièrement dans la moitié de table du Défenseur (maximum 6 PV par tour de bataille).
 
-- **Saignée :** chaque fois qu'une unité ennemie est détruite, marquez 2 PV (maximum 10 PV par tour de bataille).
+- Saignée : chaque fois qu'une unité ennemie est détruite, marquez 3 PV (maximum 9 PV par tour de bataille).
 
-- **Décapitation :** lorsque le Chef de Guerre ennemi est détruit, marquez 5 PV ; pour chaque PERSONNAGE ennemi détruit, marquez 3 PV.
+- Décapitation : lorsque le Seigneur de Guerre ennemi est détruit, marquez 5 PV ; chaque fois qu'un PERSONNAGE ennemi est détruit, marquez 3 PV.
 
 **Défenseur (Kin)**
 
-- **Bastion :** à la fin de la phase de Commandement, marquez 3 PV si vous contrôlez au moins une zone d'objectif dans votre moitié de table, et 3 PV de plus si vous en contrôlez au moins deux (maximum 6 PV).
+- Bastion : à la fin de la phase de Commandement, marquez 2 PV si vous contrôlez au moins une zone d'objectif dans votre moitié de table, et 2 PV de plus si vous en contrôlez au moins deux (maximum 4 PV par tour de bataille).
 
-- **Riposte :** chaque fois qu'une unité ennemie est détruite dans votre moitié de table, marquez 3 PV (maximum 9 PV par tour de bataille).
+- Riposte : chaque fois qu'une unité ennemie est détruite dans votre moitié de table, marquez 3 PV (maximum 9 PV par tour de bataille).
 
-- **Sentinelle du Cœur :** à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez la zone M, ou 2 PV si aucun joueur ne la contrôle.
+- Sentinelle : à la fin de la phase de Commandement, marquez 3 PV si vous contrôlez la zone M, ou 2 PV si aucun joueur ne la contrôle.
 
 ## Résultats de Campagne
 
@@ -134,19 +134,19 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 **Attaquant (Scythes)**
 
-- **Sans Pitié :** chaque fois qu'une unité ennemie est détruite avant le tour 3 de bataille, marquez 2 PV (maximum 10 PV par tour de bataille).
+- Sans Pitié : chaque fois qu'une unité ennemie est détruite avant le tour 3 de bataille, marquez 3 PV (maximum 12 PV par tour de bataille).
 
-- **Endiguement :** à la fin de la phase de Commandement, marquez 5 PV si aucune unité du Défenseur ne se trouve à 6" ou moins du bord de Percée.
+- Endiguement : à la fin de la phase de Commandement, marquez 5 PV si aucune unité du Défenseur ne se trouve à 6" ou moins du bord de Percée.
 
-- **Décapitation :** lorsque le Chef de Guerre ennemi est détruit, marquez 5 PV ; pour chaque PERSONNAGE ennemi détruit, marquez 3 PV.
+- Décapitation : lorsque le Seigneur de Guerre ennemi est détruit, marquez 5 PV ; chaque fois qu'un PERSONNAGE ennemi est détruit, marquez 3 PV.
 
 **Défenseur (culte)**
 
-- **Débordement :** à la fin de la phase de Commandement, marquez 5 PV si au moins 2 de vos unités sont entièrement à 12" ou moins du bord de Percée.
+- Débordement : à la fin de la phase de Commandement, marquez 5 PV si au moins 2 de vos unités sont entièrement à 9" ou moins du bord de Percée.
 
-- **Fuite en Avant :** chaque fois qu'une de vos unités est extraite avant le tour 3 de bataille, marquez 5 PV supplémentaires.
+- Fuite en Avant : chaque fois qu'une de vos unités est extraite avant le tour 3 de bataille, marquez 5 PV.
 
-- **Pièges Mortels :** chaque fois qu'un de vos pièges inflige des blessures mortelles à une unité ennemie, marquez 3 PV.
+- Pièges Mortels : chaque fois qu'un de vos pièges inflige des blessures mortelles à une unité ennemie, marquez 5 PV.
 
 ## Résultats de Campagne
 
@@ -176,25 +176,19 @@ Attaquant : Nekrosor. Défenseur : tenant de Jawardet. Table 44×60 (voir carte)
 
 ## Déploiement
 
-**Attaquant.** Au début de la partie, sélectionnez un nombre d'unités de votre armée égal au Niveau de Puissance de votre alliance sur cette planète ; ces unités gagnent Frappe en Profondeur (les unités TITANESQUE comptent pour deux sélections ; sélectionnez en priorité des unités autres que MONSTRE ou VÉHICULE). Lors de l'étape de déploiement, déployez 60 points de déploiement de votre armée dans la zone centrale (un carré de 16×16 au centre de la table). Le reste de votre armée reste en réserve. Au début de chaque tour de bataille, vous gagnez 20 points de déploiement (les points non dépensés sont conservés) ; vous ne pouvez faire entrer depuis la réserve que des unités disposant de Frappe en Profondeur.
+Attaquant. Lors de la première étape de déploiement, déployez 60 points maximum de votre armée dans la zone d'objectif centrale. Le reste de votre armée reste en réserve. Au début de chaque tour de bataille, vous gagnez +20 points de déploiement ; vous ne pouvez faire entrer depuis la réserve que des unités disposant de Frappe en Profondeur. À la fin de la première phase de Commandement, sélectionnez un nombre d'unités de votre armée égal au Niveau de Puissance de votre alliance sur cette planète ; ces unités gagnent la capacité Frappe en Profondeur (les unités TITANESQUE comptent pour deux sélections ; sélectionnez en priorité des unités autres que MONSTRE ou VÉHICULE).
 
-**Défenseur.** Choisissez un nombre de coins de la table égal au Niveau de Puissance de votre alliance sur cette planète : chacun devient une zone de déploiement de 6×6. Vous disposez de 40 points de déploiement au premier tour de bataille, puis gagnez +30 au tour 2, +30 au tour 3, +20 au tour 4 et +20 au tour 5 ; vous faites entrer vos unités depuis vos coins de déploiement.
-
-**Frappe en Profondeur.** Une unité disposant de cette capacité est placée depuis la réserve à plus de 6" de toute figurine ennemie. Placée à plus de 9", elle agit normalement ; placée entre 6" et 9" d'une figurine ennemie, elle ne peut pas charger ce tour de bataille.
+Défenseur. Choisissez un nombre de coins de la table égal au Niveau de Puissance de votre alliance sur cette planète : chacun devient une zone de déploiement. Vous disposez de 40 points de déploiement au premier tour de bataille, puis gagnez +30 au tour 2, +30 au tour 3, +20 au tour 4 et +20 au tour 5 ; vous faites entrer vos unités depuis vos coins de déploiement.
 
 ## Objectifs principaux
 
-**Défenseur.** À la fin de chaque tour de bataille, vous marquez 5 PV pour chaque condition remplie :
+À la fin de chaque tour de bataille, vous marquez 5 PV pour chaque condition remplie :
 
-- vous contrôlez au moins une zone d'objectif ;
+- vous contrôlez au moins une zone d'objectif.
 
-- vous contrôlez au moins deux zones d'objectif ;
+- vous contrôlez au moins deux zones d'objectif.
 
-- vous contrôlez au moins trois zones d'objectif ;
-
-- vous contrôlez plus de zones d'objectif que l'Attaquant.
-
-**Attaquant.** À la fin des 3e et 5e tours de bataille, vous marquez 15 PV par zone d'objectif que vous contrôlez.
+- vous contrôlez plus de zones d'objectif que votre adversaire.
 
 ## Missions secondaires
 
@@ -202,19 +196,19 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 **Attaquant (Nekrosor)**
 
-- **Consolidation :** à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez une zone d'objectif que vous contrôliez déjà au tour de bataille précédent.
+- Consolidation : à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez une zone d'objectif que vous contrôliez déjà au tour de bataille précédent.
 
-- **Périmètre Verrouillé :** à la fin de la phase de Commandement, marquez 5 PV si aucune figurine ennemie ne se trouve à 6" ou moins d'une zone d'objectif que vous contrôlez.
+- Périmètre Verrouillé : à la fin de la phase de Commandement, marquez 5 PV si aucune unité ennemie ne se trouve à 6" ou moins d'une zone d'objectif que vous contrôlez.
 
-- **Profanation :** chaque fois qu'une unité ennemie est détruite à 6" ou moins d'une zone d'objectif, marquez 3 PV (maximum 9 PV par tour de bataille).
+- Profanation : chaque fois qu'une unité ennemie est détruite à 6" ou moins d'une zone d'objectif, marquez 3 PV (maximum 9 PV par tour de bataille).
 
 **Défenseur**
 
-- **Contre-Invasion :** à la fin de la phase de Commandement, marquez 5 PV si au moins une zone d'objectif n'est pas sous le contrôle de l'Attaquant.
+- Contre-Invasion : à la fin de la phase de Commandement, marquez 5 PV si au moins une zone d'objectif n'est pas sous le contrôle de l'Attaquant.
 
-- **Reconquête :** chaque fois qu'à la fin d'un tour de bataille vous contrôlez une zone d'objectif que l'Attaquant contrôlait au début de ce tour, marquez 5 PV.
+- Reconquête : à la fin d'un tour de bataille, si vous contrôlez une zone d'objectif que l'Attaquant contrôlait au début de ce tour, marquez 5 PV.
 
-- **Sépulcre Scellé :** à la fin de la partie, marquez 15 PV si vous contrôlez la majorité des zones d'objectif.
+- Sépulcre Scellé : à la fin de la partie, marquez 15 PV si vous contrôlez la majorité des zones d'objectif.
 
 ## Résultats de Campagne
 
@@ -248,21 +242,19 @@ Attaquant : Avenging Sons. Défenseur : hérétiques. Table 44×60 (voir carte).
 
 ## Règles de mission
 
-**Boucliers.** À la mise en place, le Défenseur répartit les valeurs de bouclier 4, 3 et 2 entre les 3 stations (une valeur par station). Le contrôle d'une station se détermine avec l'OC ; une station contestée ne change pas de valeur.
+Boucliers. À la mise en place, le Défenseur répartit les valeurs de bouclier 4, 3 et 2 entre les 3 stations (une valeur par station).
 
-**Avant-garde saboteuse (Attaquant).** Au début de la partie, désignez un nombre d'unités d'Infanterie de votre armée égal à la moitié du Niveau de Puissance de votre alliance sur cette planète (arrondi à l'inférieur) ; ces unités gagnent Infiltrateur.
+Avant-garde saboteuse (Attaquant). Au début de la partie, désignez un nombre d'unités d'Infanterie de votre armée égal à la moitié du Niveau de Puissance de votre alliance sur cette planète (arrondi à l'inférieur) ; ces unités gagnent Infiltrateur.
 
-**Infiltrateur.** Une unité disposant de cette capacité est déployée après les autres unités, n'importe où sur la table, à plus de 9" de toute figurine ennemie et de toute zone de déploiement ennemie.
+Sabotage (Attaquant). À la fin de chaque tour de bataille, pour chaque station que vous contrôlez, réduisez son bouclier de 1. Si un bouclier atteint 0, la station est détruite : son bouclier reste à 0 et elle ne peut plus être restabilisée.
 
-**Sabotage (Attaquant).** À la fin de chaque tour de bataille, pour chaque station que vous contrôlez, réduisez son bouclier de 1. Si un bouclier atteint 0, la station est détruite : son bouclier reste à 0 et elle ne peut plus être restabilisée.
-
-**Restabilisation (Défenseur).** À la fin de chaque tour de bataille, pour chaque station que vous contrôlez et qui n'est pas détruite, lancez 1D6 ; sur 4+, augmentez son bouclier de 1 (sans plafond).
+Restabilisation (Défenseur). À la fin de chaque tour de bataille, pour chaque station que vous contrôlez et qui n'est pas détruite, lancez 1D6 ; sur 4+, augmentez son bouclier de 1, cela ne peut pas dépasser sa valeur de départ.
 
 ## Objectifs principaux
 
-**Attaquant.** À la fin de la partie, marquez 30 PV par station détruite (bouclier à 0).
+Attaquant. À la fin de la partie, marquez 30 PV par station détruite (bouclier à 0).
 
-**Défenseur.** À la fin de la partie, marquez 20 PV par station encore debout (bouclier supérieur à 0), et 30 PV supplémentaires si les 3 stations tiennent toujours.
+Défenseur. À la fin de la partie, marquez 20 PV par station encore debout (bouclier supérieur à 0), et 30 PV supplémentaires si les 3 stations tiennent toujours.
 
 ## Missions secondaires
 
@@ -270,19 +262,19 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 **Attaquant (Avenging Sons)**
 
-- **Décapitation :** lorsque le Chef de Guerre ennemi est détruit, marquez 5 PV ; pour chaque PERSONNAGE ennemi détruit, marquez 3 PV.
+- Décapitation : lorsque le Seigneur de Guerre ennemi est détruit, marquez 5 PV ; chaque fois qu'un PERSONNAGE ennemi est détruit, marquez 3 PV.
 
-- **Prise des Émetteurs :** à la fin de la phase de Commandement, marquez 3 PV par station que vous contrôlez et dont le bouclier est à 2 ou moins (maximum 9 PV).
+- Prise des Émetteurs : à la fin de la phase de Commandement, marquez 3 PV par station que vous contrôlez et dont le bouclier est à 2 ou moins (maximum 9 PV par tour de bataille).
 
-- **Sabotage Éclair :** la première fois qu'une station est détruite avant le tour 3 de bataille, marquez 10 PV.
+- Sabotage Éclair : chaque fois qu'une station est détruite avant le tour 3 de bataille, marquez 10 PV.
 
 **Défenseur (hérétiques)**
 
-- **Gardien :** à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez au moins 2 stations non détruites.
+- Gardien : à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez au moins 2 stations.
 
-- **Contre-Sabotage :** chaque fois que vous restabilisez un bouclier (réussite du jet de Restabilisation), marquez 2 PV.
+- Contre-Sabotage : chaque fois que vous restabilisez un bouclier (réussite du jet de Restabilisation), marquez 2 PV.
 
-- **Repousser l'Assaut :** chaque fois qu'une unité ennemie est détruite à 6" ou moins d'une station, marquez 3 PV (maximum 9 PV par tour de bataille).
+- Repousser l'Assaut : chaque fois qu'une unité ennemie est détruite à 6" ou moins d'une station, marquez 3 PV (maximum 9 PV par tour de bataille).
 
 ## Résultats de Campagne
 
@@ -312,17 +304,17 @@ Attaquant : Orks. Défenseur : Ultramarines. Table 44×60 (voir carte). Déploie
 
 ## Règles de mission
 
-**Butin.** Au début de la partie, lancez 1D3 pour chaque zone d'objectif et notez le résultat : c'est la valeur de butin de départ de cette zone. Le contrôle d'une zone se détermine avec l'OC.
+Butin. Au début de la partie, lancez 1D3 pour chaque zone d'objectif et notez le résultat : c'est la valeur de butin de départ de cette zone.
 
-**Réorganisation (Défenseur).** Avant la bataille, vous pouvez transférer 1 point de butin d'une zone à une autre, un nombre de fois égal au Niveau de Puissance de votre alliance sur cette planète.
+Réorganisation (Défenseur). Avant la bataille, vous pouvez transférer 1 point de butin d'une zone à une autre, un nombre de fois égal au Niveau de Puissance de votre alliance sur cette planète.
 
-**Pillage (Attaquant).** Pendant la phase de Commandement, une de vos unités présente dans une zone d'objectif peut effectuer l'action Pillage : réduisez de 1 le butin de cette zone et infligez D3 blessures mortelles à une unité ennemie se trouvant dans une zone d'objectif.
+Pillage (Attaquant). Pendant la phase de Commandement, une de vos unités présente dans une zone d'objectif peut effectuer l'action Pillage : réduisez de 1 le butin de cette zone et infligez D3 blessures mortelles à une unité ennemie se trouvant dans cette même zone d'objectif.
 
 ## Objectifs principaux
 
-**Attaquant.** À la fin de chaque tour de bataille, marquez 5 PV pour chaque zone d'objectif comportant du butin que vous contrôlez. Retirez ensuite 1 point de butin de chaque zone que vous contrôlez.
+Attaquant. À la fin de chaque tour de bataille, marquez 5 PV pour chaque zone d'objectif comportant du butin que vous contrôlez. Retirez ensuite 1 point de butin de chaque zone que vous contrôlez.
 
-**Défenseur.** À la fin de la bataille, marquez 15 PV pour chaque zone d'objectif que vous contrôlez comportant au moins 1 point de butin.
+Défenseur. À la fin de la bataille, marquez 5 PV pour chaque zone d'objectif que vous contrôlez comportant au moins 1 point de butin.
 
 ## Missions secondaires
 
@@ -330,19 +322,19 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 **Attaquant (Orks)**
 
-- **Décapitation :** lorsque le Chef de Guerre ennemi est détruit, marquez 5 PV ; pour chaque PERSONNAGE ennemi détruit, marquez 3 PV.
+- Décapitation : lorsque le Seigneur de Guerre ennemi est détruit, marquez 5 PV ; chaque fois qu'un PERSONNAGE ennemi est détruit, marquez 3 PV.
 
-- **Saccage :** chaque fois qu'une unité ennemie est détruite, marquez 2 PV (maximum 8 PV par tour de bataille).
+- Saignée : chaque fois qu'une unité ennemie est détruite, marquez 3 PV (maximum 9 PV par tour de bataille).
 
-- **Razzia Totale :** à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez au moins 4 zones d'objectif.
+- Razzia Totale : à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez au moins 4 zones d'objectif.
 
 **Défenseur (Ultramarines)**
 
-- **Escorte :** à la fin de la phase de Commandement, marquez 3 PV par zone d'objectif que vous contrôlez et dont le butin est de 2 ou plus (maximum 9 PV).
+- Escorte : à la fin de la phase de Commandement, marquez 3 PV par zone d'objectif que vous contrôlez et dont le butin est de 2 ou plus (maximum 9 PV).
 
-- **Contre-Raid :** chaque fois qu'une unité ennemie est détruite dans une zone d'objectif ou à 3" d'une zone, marquez 2 PV (maximum 8 PV par tour de bataille).
+- Contre-Raid : chaque fois qu'une unité ennemie est détruite à 6" ou moins d'une zone d'objectif, marquez 2 PV (maximum 8 PV par tour de bataille).
 
-- **Ligne d'Approvisionnement :** à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez au moins 3 zones d'objectif comportant du butin.
+- Ligne d'Approvisionnement : à la fin de la phase de Commandement, marquez 5 PV si vous contrôlez au moins 3 zones d'objectif comportant du butin.
 
 ## Résultats de Campagne
 
