@@ -1,6 +1,12 @@
-**Leagues of Votann**
+Leagues of Votann
 
 Capacités
+
+**Sommaire**
+
+Ouvrez le document et appuyez sur F9 (ou clic droit \> Mettre à jour) pour générer les numéros de page.
+
+# Capacités
 
 ## **Œil des Ancêtres**
 
@@ -23,19 +29,21 @@ Condition : toutes les unités de votre armée ont le mot-clé VOTANN et apparti
   - Unité scindée en plusieurs unités : chaque nouvelle unité reçoit autant de jetons que l'unité originale.
 
   - Plusieurs unités fusionnent : la nouvelle unité obtient le nombre de jetons le plus élevé parmi les unités fusionnées.
-    
-    **Jugement des Ancêtres : Effets**
-    
-    S'applique à chaque attaque d'un modèle VOTANN (hors COG) contre une unité avec 1+ jeton :
 
-| **Jetons** | **Nom** | **Effet** |
+#### Jugement des Ancêtres : Effets
+
+S'applique à chaque attaque d'un modèle VOTANN (hors COG) contre une unité avec 1+ jeton :
+
+|              |                                   |                                                                                      |
 | ------------ | --------------------------------- | ------------------------------------------------------------------------------------ |
+| **Jetons**   | **Nom**                           | **Effet**                                                                            |
 | **1 jeton**  | **Cible Prioritaire Identifiée**  | Jet de touche non modifié de 6 : la blessure est automatique.                        |
 | **2 jetons** | **Menace Éminente**               | Jet de touche non modifié de 5+ : si la touche réussit, la blessure est automatique. |
 | **3 jetons** | **Nous Avons un Compte à Régler** | Jet de touche non modifié de 4+ : si la touche réussit, la blessure est automatique. |
 
-| *Note : une blessure automatique via cette capacité n'est jamais considérée comme un jet de blessure non modifié de 6 pour d'autres règles.* |
+|                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| *Note : une blessure automatique via cette capacité n'est jamais considérée comme un jet de blessure non modifié de 6 pour d'autres règles.* |
 
 ## **Avancée Régulière**
 
@@ -48,18 +56,18 @@ Condition : toutes les unités de votre armée ont le mot-clé VOTANN et apparti
 *L'armure du vide est composée de segments durcis et articulés, tissés de fibres magnaferrite, souvent renforcés d'adamantine et équipés de micro-générateurs de champ.*
 
   - Chaque attaque allouée à un modèle Votann de cette unité : la PA de cette attaque est réduite de 1 (minimum 0).
-    
-    Règles de Détachement
-    
-    Un Détachement VOTANN ne contient que des modèles avec le mot-clé VOTANN (sauf NON-ALIGNÉ).
-    
-    Un Détachement VOTANN obtient automatiquement :
-    
-    Capacité : Héros de l'Oathband.
-    
-    Les unités VOTANN : Coutumes de Ligue.
-    
-    Les unités HEARTHKYN WARRIORS et HERNKYN YAEGIRS : Objectif Sécurisé.
+
+# Règles de Détachement
+
+Un Détachement VOTANN ne contient que des modèles avec le mot-clé VOTANN (sauf NON-ALIGNÉ).
+
+Un Détachement VOTANN obtient automatiquement :
+
+  - Capacité : Héros de l'Oathband.
+
+  - Les unités VOTANN : Coutumes de Ligue.
+
+  - Les unités HEARTHKYN WARRIORS et HERNKYN YAEGIRS : Objectif Sécurisé.
 
 ## **Héros de l'Oathband**
 
@@ -67,7 +75,7 @@ Condition : toutes les unités de votre armée ont le mot-clé VOTANN et apparti
 
 Maximum 1 modèle KAHL par Détachement.
 
-## **Coutumes de Ligue**
+# Coutumes de Ligue
 
 *Chaque Ligue de Votann est reconnue pour des coutumes militaires et culturelles qui définissent son approche de la guerre.*
 
@@ -75,8 +83,9 @@ Condition : toutes les unités VOTANN de votre armée appartiennent à la même 
 
 Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagnent la Coutume de Ligue correspondante.
 
-| *Note : si votre Ligue n'a pas de Coutume associée, vous devez en sélectionner une parmi les Coutumes Établies (voir section Ligues). Dans tous les cas, notez les Coutumes de chaque Détachement sur votre liste d'armée.* |
+|                                                                                                                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *Note : si votre Ligue n'a pas de Coutume associée, vous devez en sélectionner une parmi les Coutumes Établies (voir section Ligues). Dans tous les cas, notez les Coutumes de chaque Détachement sur votre liste d'armée.* |
 
 ## **Les Ligues : Règles d'accès**
 
@@ -84,8 +93,9 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 **Ce que débloque un Détachement de Ligue :**
 
-| **Élément** | **Règle** |
+|                                                                                                                                                              |                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Élément**                                                                                                                                                  | **Règle**                                                                                                                                                                                                                                      |
 | **Coutume de Ligue**                                                                                                                                         | Toutes les unités \<LIGUE\> gagnent la Coutume associée (3 règles dont 1 Jugement Ancestral, active uniquement si toute l'armée est de la même Ligue).                                                                                         |
 | **Trait de SdG de Ligue**                                                                                                                                    | Un personnage VOTANN \<LIGUE\> qui gagne un Trait de SdG peut prendre le Trait de Ligue associé à la place d'un Trait Votann standard.                                                                                                         |
 | **Stratagème de Ligue**                                                                                                                                      | Débloquez le Stratagème de Ligue associé (hors Détachements de Soutien Auxiliaire). Achetez-le avant la partie comme les autres stratagèmes, en plus des Stratagèmes Votann.                                                                   |
@@ -100,25 +110,25 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 *Aussi impitoyablement mercenaires que déterminés dans l'exploration et la conquête, la GTL incarne ce que signifie être Kin.*
 
-**Coutume : Efficacité Implacable**
+#### Coutume : Efficacité Implacable
 
   - Chaque modèle double sa valeur OC.
 
   - Phase d'Action ou de Combat : relancez 1 jet de touche ou 1 jet de blessure par unité.
 
   - Jugement Ancestral : quand un modèle attaque une cible avec 1+ jeton de Jugement, cette cible est considérée comme ayant 1 jeton supplémentaire (max 3) pour déterminer les bonus.
-    
-    **Trait de SdG : Sagesse Pragmatique**
+
+#### Trait de SdG : Sagesse Pragmatique
 
   - Avant la partie, lorsque vous achetez vos Stratagèmes, le premier Stratagème acheté coûte 1 PC de moins (minimum 1 PC).
-    
-    **Stratagème : Regard Évaluateur (1 PC)**
+
+#### Stratagème : Regard Évaluateur (1 PC)
 
   - Quand un KAHL GREATER THURIAN LEAGUE utilise sa capacité Efficacité Implacable : l'unité ennemie sélectionnée gagne 1 jeton de Jugement supplémentaire.
-    
-    **Relique : Cuirasse de Korvyk**
-    
-    GREATER THURIAN LEAGUE uniquement.
+
+#### Relique : Cuirasse de Korvyk
+
+GREATER THURIAN LEAGUE uniquement.
 
   - Sauvegarde invulnérable de 4+.
 
@@ -128,28 +138,29 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 *Toujours en mouvement, les Kin de la THA observent un culte de vénération ancestrale intense et cherchent perpétuellement de nouvelles connaissances et conquêtes.*
 
-**Coutume : Honorer les Ancêtres**
+#### Coutume : Honorer les Ancêtres
 
   - Si l'unité est égal ou en dessous de son Effectif de Départ : +1 au jet de touche pour chaque attaque.
 
   - Jet de blessure non modifié de 6 : +1 PA pour cette attaque.
 
   - Jugement Ancestral : contre une cible avec 1+ jeton de Jugement, relancez les jets de blessure de 1.
-    
-    **Trait de SdG : Stratège Nomade**
+
+#### Trait de SdG : Stratège Nomade
 
   - Début du 1er tour : sélectionnez jusqu'à 3 unités amies TRANS-HYPERIAN ALLIANCE. Retirez-les et replacez-les n'importe où sur votre bord de déploiement et un mouvement normal. Elles peuvent aussi être placées en Réserves Stratégiques pour être déployer au tour suivant.
 
-| *Note : si les deux joueurs ont une capacité de redéploiement, lancez un dé pour déterminer qui choisit en premier.* |
+|                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- |
+| *Note : si les deux joueurs ont une capacité de redéploiement, lancez un dé pour déterminer qui choisit en premier.* |
 
-**Stratagème : Culte de Vénération (1 PC)**
+#### Stratagème : Culte de Vénération (1 PC)
 
   - Quand un modèle TRANS-HYPERIAN ALLIANCE subit une blessure mortelle : jusqu'à la fin de la phase, les modèles de cette unité possèdent la capacité Insensible à la douleur 5+ contre les blessures mortelles.
-    
-    **Relique : Le Corv Duas**
-    
-    GRIMNYR TRANS-HYPERIAN ALLIANCE uniquement.
+
+#### Relique : Le Corv Duas
+
+GRIMNYR TRANS-HYPERIAN ALLIANCE uniquement.
 
   - \+1 à la caractéristique de Blessures des modèles CORV de l'unité.
 
@@ -161,33 +172,33 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 *Toujours en campagne, les Kin du Kronus Hegemony sont des guerriers d’élite au tempérament agressif qui cherchent à résoudre chaque problème par la violence.*
 
-**Coutume : Prouesse au Combat**
+#### Coutume : Prouesse au Combat
 
   - Phase de Combat, si l’unité a chargé ou a été chargée ce tour : +1 aux Attaques de chaque modèle jusqu’à la fin du combat.
 
   - Attaque de mêlée, si l’unité a chargé ou a été chargée ce tour : +1 à la Force de l’attaque.
 
   - Jugement Ancestral : attaque de mêlée contre une cible avec 2+ jetons de Jugement : +1 PA.
-    
-    **Trait de SdG : Héros Exemplaire**
+
+#### Trait de SdG : Héros Exemplaire
 
   - Phase de Combat, si le SdG est à portée d’Engagement d’un PERSONNAGE ou MONSTRE ennemi : +1 aux Attaques jusqu’à la fin du combat.
 
   - Chaque attaque de mêlée : relancez le jet de touche.
 
   - Chaque attaque de mêlée contre un PERSONNAGE ou MONSTRE : +1 au jet de blessure.
-    
-    **Stratagème : Attentes Sanglantes (1 PC)**
-    
-    *Phase de Combat*
+
+#### Stratagème : Attentes Sanglantes (1 PC)
+
+*Phase de Combat*
 
   - Quand une unité KRONUS HEGEMONY combat : jusqu’à la fin de la phase, les armes de mêlée de l'unité obtiennent [TOUCHES SOUTENUES 1].
-    
-    **Relique : La Lame Juste**
-    
-    KRONUS HEGEMONY avec hache plasma forgée ou hache étoile noire uniquement. Remplace l’une de ces armes.
-    
-    Profil : Mêlée, A6, CC2+, F7, PA-4, D2.
+
+#### Relique : La Lame Juste
+
+KRONUS HEGEMONY avec hache plasma forgée ou hache étoile noire uniquement. Remplace l’une de ces armes.
+
+Profil : Mêlée, A6, CC2+, F7, PA-4, D2.
 
   - Les jets de sauvegarde invulnérable ne peuvent pas être effectués contre les attaques de cette arme.
 
@@ -195,27 +206,27 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 *Renommés pour leur richesse matérielle et leurs technologies spectaculaires, les Kin de l'Ymyr Conglomerate déploient des Oathbands parmi les plus élites et les mieux équipés.*
 
-**Coutume : Maîtres Armuriers**
+#### Coutume : Maîtres Armuriers
 
   - Toutes les armes à distance (hors Reliques) : +4" de portée.
 
   - Modèles avec une sauvegarde de 2+ : ont une sauvegarde invulnérable de 4+. Les autres modèles : ont une sauvegarde invulnérable de 5+.
 
   - Jugement Ancestral : attaque à distance contre une cible à portée courte (moitié de la portée) avec 1+ jeton de Jugement : +1 PA.
-    
-    **Trait de SdG : Connexions de Guilde**
+
+#### Trait de SdG : Connexions de Guilde
 
   - La caractéristique de Dégâts de toutes les armes du SdG (hors Reliques) est augmentée de 1.
-    
-    **Stratagème : Décharge de Rayon Pulse (1 PC)**
-    
-    *Phase d'Action*
+
+#### Stratagème : Décharge de Rayon Pulse (1 PC)
+
+*Phase d'Action*
 
   - Quand une unité YMYR CONGLOMERATE tire : sélectionnez 1 modèle et 1 arme Rayon (Beam). Jusqu'à la fin de la phase, chaque touche avec cette arme inflige 1 blessure mortelle supplémentaire.
-    
-    **Relique : La Dernière Crête de Jaluk**
-    
-    YMYR CONGLOMERATE avec une sauvegarde invulnérable uniquement.
+
+#### Relique : La Dernière Crête de Jaluk
+
+YMYR CONGLOMERATE avec une sauvegarde invulnérable uniquement.
 
   - 1 fois par bataille, avant un jet de sauvegarde : activez cette Relique. Jusqu'à la fin de la phase, sa sauvegarde invulnérable passe à 3+.
 
@@ -225,37 +236,39 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 
 *Stoïques et inflexibles, les Kin de l'URSR méprisent le gaspillage et sont connus pour combattre jusqu'au dernier souffle, quelles que soient les circonstances.*
 
-**Coutume : Survivalistes Austères**
+#### Coutume : Survivalistes Austères
 
   - \+1 à la caractéristique d'Endurance de tous les modèles de l'unité.
 
   - Relancez les tests d'Ébranlement ratés pour cette unité.
 
   - Jugement Ancestral : chaque attaque contre une cible avec 0 jeton de Jugement, cette cible est considérée comme ayant 1 jeton pour déterminer les bonus d'attaque.
-    
-    **Trait de SdG : Pragmatisme Sombre**
+
+#### Trait de SdG : Pragmatisme Sombre
 
   - Le SdG possède la capacité Insensible à la douleur 5+.
-    
-    **Stratagème : Tenir la Ligne (1 PC)**
+
+#### Stratagème : Tenir la Ligne (1 PC)
 
   - Quand une unité URANI-SURTR REGULATES est ciblée par des attaques : jusqu'à la fin de la phase, elle gagne +1 à ses jets de sauvegarde d'armure et ignore les modificateurs négatifs à ses jets de sauvegarde.
-    
-    **Relique : Le Manteau Durable**
-    
-    URANI-SURTR REGULATES uniquement.
+
+#### Relique : Le Manteau Durable
+
+URANI-SURTR REGULATES uniquement.
 
   - Les ennemis ne peuvent pas cibler le porteur avec des attaques à distance, sauf si c'est la cible la plus proche éligible.
-    
-    **Coutumes Établies**
-    
-    *Si votre Ligue n'a pas de Coutume associée, choisissez 3 Coutumes dans la liste ci-dessous. Exactement 1 doit avoir le label Jugement Ancestral.*
 
-| *Note : Exception, Ligue Affiliée : si vous choisissez cette Coutume, vous ne pouvez pas en choisir d'autres (et vice-versa).* |
+## Coutumes Établies
+
+*Si votre Ligue n'a pas de Coutume associée, choisissez 3 Coutumes dans la liste ci-dessous. Exactement 1 doit avoir le label Jugement Ancestral.*
+
+|                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------ |
+| *Note : Exception, Ligue Affiliée : si vous choisissez cette Coutume, vous ne pouvez pas en choisir d'autres (et vice-versa).* |
 
-| **Coutume** | **Type** | **Effet** |
+|                                    |                      |                                                                                                                                                                                                                                                          |
 | ---------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Coutume**                        | **Type**             | **Effet**                                                                                                                                                                                                                                                |
 | **Cloneskeins Martiaux**           | *Standard*           | Attaque de mêlée, si l'unité a chargé ou a été chargée ce tour : +1 à la Force de l'attaque.                                                                                                                                                             |
 | **Vindicatifs**                    | *Jugement Ancestral* | Quand une unité avec cette Coutume est détruite par une unité ennemie : cette unité ennemie gagne 2 jetons de Jugement au lieu de 1.                                                                                                                     |
 | **Efficacité Brutale**             | *Jugement Ancestral* | Attaque de mêlée contre une cible avec 1+ jeton de Jugement : jet de touche non modifié de 6 = 1 touche supplémentaire.                                                                                                                                  |
@@ -273,14 +286,15 @@ Si la condition est remplie, toutes les unités VOTANN avec cette capacité gagn
 | **Fierté du Guerrier**             | *Standard*           | Phase d'Action ou Combat : relancez 1 jet de touche ou 1 jet de blessure par unité.                                                                                                                                                                      |
 | **Maîtres Armuriers**              | *Standard*           | Toutes les armes à distance (hors Reliques) : +4" de portée.                                                                                                                                                                                             |
 
-## **Stratagèmes**
+# Stratagèmes
 
 Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements de Support Auxiliaire), vous avez accès à ces stratagèmes. Comme les autres stratagèmes, ils sont achetés avant la partie avec vos PC (le coût indiqué est le coût d'achat) et chaque stratagème acheté est activable une fois par round de bataille.
 
 **Légende des types**
 
-| **Tactique de Bataille** | **Haut Fait** | **Réquisition** | **Ruse Stratégique** | **Équipement** |
+|                          |               |                 |                      |                |
 | ------------------------ | ------------- | --------------- | -------------------- | -------------- |
+| **Tactique de Bataille** | **Haut Fait** | **Réquisition** | **Ruse Stratégique** | **Équipement** |
 
 | Nom | PC | Déclenchement & Effet |
 | --- | --- | --- |
@@ -316,7 +330,7 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
 | Alerte Pan-Spectrale | 2 | À utiliser à la fin de l'étape de Renforts de la phase de Commandement. Sélectionnez une unité VOTANN Hearthkyn Warriors, Hernkyn Pioneers ou Hekaton Land Fortress de votre armée qui n'est pas à Portée d'Engagement d'une unité ennemie. Cette unité peut tirer comme si c'était la phase d'Action, mais ses modèles ne peuvent cibler qu'une seule unité ennemie éligible, mise en place comme Renforts ce tour et à 12" ou moins de leur unité. |
 | Téléportation Point-à-Point | 1 / 2 | À utiliser au début de la phase d'Action. Sélectionnez une unité VOTANN avec Teleport Crest de votre armée et retirez-la du champ de bataille. Lors de cette même phase d'Action, replacez cette unité sur le champ de bataille, n'importe où à plus de 9" de tout modèle ennemi. Une même unité ne peut pas être choisie pour ce stratagème plus d'une fois par bataille. Si l'unité choisie était un PERSONNAGE, ce stratagème coûte 1 PC ; sinon, il coûte 2 PC. |
 
-## **Le Conseil Votannic**
+# Le Conseil Votannic
 
 *Si votre armée est structurée pour la bataille et inclut un ou plusieurs Détachements VOTANN (hors Détachements de Support Auxiliaire), alors lors du rassemblement de votre armée, vous pouvez améliorer n'importe laquelle des unités PERSONNAGE VOTANN suivantes (hors personnages nommés) : KÂHL, BRÔKHYR IRON-MASTER, GRIMNYR.*
 
@@ -328,53 +342,54 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
 
 *Une armée ne peut pas contenir plus d'un modèle de la même Ligue partageant le même mot-clé du Conseil Votannic (ex. pas deux GREATER THURIAN LEAGUE HIGH KÂHL, ni deux KRONUS HEGEMONY LORD GRIMNYR).*
 
-| **Personnage** | **Mot-clé** | **Points** |
+|                         |                          |            |
 | ----------------------- | ------------------------ | ---------- |
+| **Personnage**          | **Mot-clé**              | **Points** |
 | **Kâhl**                | **HIGH KÂHL**            | **+40**    |
 | **Grimnyr**             | **LORD GRIMNYR**         | **+25**    |
 | **Brôkhyr Iron-master** | **BRÔKHYR FORGE-MASTER** | **+25**    |
 
 ## **High Kâhl**
 
-**Capacité : High Kâhl**
+#### Capacité : High Kâhl
 
   - High Kâhl : lors de la phase de Commandement, sélectionnez une unité amie \<LIGUE\> INFANTERIE, MARCHEUR ou MONTÉ ou \<LIGUE\> PERSONNAGE à 6" ou moins de ce modèle. Jusqu'au début de la prochaine phase de Commandement, chaque fois qu'un modèle de cette unité effectue une attaque, vous pouvez relancer le jet de touche.
 
   - Un modèle HIGH KÂHL est exclu de la règle Héros de l'Oathband : un Détachement peut donc inclure à la fois une unité HIGH KÂHL et une autre unité KÂHL.
-    
-    **Jugement Ancestral : Modèle Exemplaire**
+
+#### Jugement Ancestral : Modèle Exemplaire
 
   - Chaque fois qu'un modèle HIGH KÂHL détruit une unité ennemie, si cette unité avait 1 jeton de Jugement ou plus, vous pouvez sélectionner une unité ennemie visible par ce modèle ; cette unité gagne 1 jeton de Jugement.
-    
-    **Trait de SdG : Œil Expérimenté**
+
+#### Trait de SdG : Œil Expérimenté
 
   - Lors de chaque phase de Commandement, ce SEIGNEUR DE GUERRE peut utiliser sa capacité Efficacité Implacable une fois de plus, mais seulement s'il sélectionne une unité ennemie qui n'a pas déjà été sélectionnée pour cette capacité durant cette phase.
 
 ## **Lord Grimnyr**
 
-**Capacité : Lord Grimnyr**
+#### Capacité : Lord Grimnyr
 
   - Ce modèle peut tenter de lancer une action psychique supplémentaire lors de chaque phase d'Action.
-    
-    **Jugement Ancestral : Colère des Ancêtres**
+
+#### Jugement Ancestral : Colère des Ancêtres
 
   - Chaque fois qu'un modèle LORD GRIMNYR tente de lancer une action psychique de la discipline Skeinwrought, s'il y a une ou plusieurs unités ennemies à 18" ou moins de lui avec 1 jeton de Jugement ou plus, ajoutez 1 au test de cette action psychique.
-    
-    **Trait de SdG : Puissance Ancestrale**
+
+#### Trait de SdG : Puissance Ancestrale
 
   - Ajoutez 6" à la portée des actions psychiques de la discipline Skeinwrought lancées par ce SEIGNEUR DE GUERRE.
 
 ## **Brôkhyr Forge-master**
 
-**Capacité : Brôkhyr Forge-master**
+#### Capacité : Brôkhyr Forge-master
 
   - Une fois par round de bataille, si ce modèle est sur le champ de bataille quand vous utilisez un stratagème d'Équipement Votann et que l'unité sélectionnée pour ce stratagème est une unité amie \<LIGUE\> à 6" ou moins de ce BRÔKHYR FORGE-MASTER, réduisez de 1 PC le coût de ce stratagème (uniquement pour cette utilisation ; les usages ultérieurs coûtent le prix normal).
-    
-    **Jugement Ancestral : Œil du Forge-master**
+
+#### Jugement Ancestral : Œil du Forge-master
 
   - Chaque fois qu'un modèle BRÔKHYR FORGE-MASTER effectue une attaque, sur un jet de blessure non modifié de 6, si la cible a 1 jeton de Jugement ou plus, cette attaque inflige un nombre de blessures mortelles égal à la caractéristique de Dégâts de l'attaque et la séquence d'attaque prend fin. Si le modèle attaque avec une arme Rayon (Beam), cette capacité s'applique aussi à toute unité intermédiaire « touchée » par ce rayon ayant 1 jeton de Jugement ou plus.
-    
-    **Trait de SdG : Maître Armurier**
+
+#### Trait de SdG : Maître Armurier
 
   - Chaque fois que ce SEIGNEUR DE GUERRE répare un modèle avec sa capacité Guilde du Brôkhyr, le modèle réparé récupère jusqu'à 3 blessures perdues au lieu de D3 (jusqu'à 4 si l'unité de ce BRÔKHYR FORGE-MASTER comprend 1 modèle E-COG ou plus, cf. capacité Soutien E-COG). De plus, une fois par round de bataille, quand une sauvegarde échoue pour un modèle ami \<LIGUE\> VÉHICULE ou \<LIGUE\> EXO-FRAME à 6" ou moins de ce SEIGNEUR DE GUERRE, celui-ci peut utiliser ce Trait : la caractéristique de Dégâts de cette attaque devient 0.
 
@@ -418,7 +433,7 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
 
   - Si le résultat est supérieurs à la caractéristique de Commandement de l'unité, jusqu'au début de la prochaine phase d'Action, chaque fois qu'un modèle de cette unité effectue une attaque, soustrayez 1 à son jet de touche.
 
-## **Traits de Seigneur de Guerre**
+# Traits de Seigneur de Guerre
 
 *Si un modèle PERSONNAGE VOTANN est votre SEIGNEUR DE GUERRE, vous pouvez utiliser la table des Traits de Seigneur de Guerre Votann ci-dessous pour déterminer son Trait. Lancez 1D6 pour en générer un aléatoirement, ou choisissez-en un.*
 
@@ -460,7 +475,7 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
     
       - Chaque fois qu'un test d'Ébranlement est effectué pour cette unité, vous pouvez ignorer tout ou une partie des modificateurs.
 
-## **Réquisitions d'Armée**
+# Réquisitions d'Armée
 
 *Si votre armée inclut des unités VOTANN, vous pouvez dépenser des points de Réquisition (PR) sur l'une des Réquisitions suivantes, en plus de celles présentées dans le livre de règles de base.*
 
@@ -488,7 +503,7 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
 
   - Achetez cette Réquisition quand une unité PERSONNAGE VOTANN de votre armée ayant au moins le rang Sang Versé gagne une Cicatrice de Bataille. Retirez cette unité de votre Ordre de Bataille. Ensuite, pour chaque Honneur de Bataille que cette unité possédait, chaque autre unité VOTANN de votre Ordre de Bataille gagne 1 point d'expérience.
 
-## **Ordres du Jour**
+# Ordres du Jour
 
 *Si votre armée comprend des unités VOTANN, vous pouvez sélectionner un Agenda parmi les Agendas des Ligues de Votann ci-dessous. Il s'agit d'une nouvelle catégorie d'Agendas, soumise aux mêmes règles que les autres (par exemple, vous ne pouvez pas en choisir plusieurs par catégorie).*
 
@@ -528,7 +543,7 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
 
   - 6 points d'expérience et une Force Psychique si son total est de 3.
 
-## **Nourrir une Rancune**
+# Nourrir une Rancune
 
 *Au début de chaque bataille, si des unités VOTANN de votre armée nourrissent une Rancune envers l'armée adverse, lancez 1D6 pour chacune de ces unités : pour chaque 6, vous pouvez placer 1 jeton de Rancune à côté d'une unité ennemie, sur le champ de bataille ou en réserve. Un jeton de Rancune fonctionne comme un jeton de Jugement, à ceci près qu'il ne sert qu'à déterminer les bonus d'attaque d'un modèle attaquant qui nourrit une Rancune envers l'armée adverse.*
 
@@ -538,7 +553,7 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
     
     *À la fin de la bataille, si une unité de votre armée qui nourrissait une Rancune envers l'armée adverse a détruit 3 unités ennemies ou plus durant cette bataille (à moins qu'elle-même n'ait été détruite), sa Rancune est réglée : retirez la note de Rancune correspondante.*
 
-## **Caractéristiques de Combat**
+# Caractéristiques de Combat
 
 *Quand une unité VOTANN gagne un Trait de Combat, vous pouvez utiliser l'un des tableaux ci-dessous au lieu de ceux du livre de règles de base pour déterminer le Trait de Combat acquis. Lancez 1D6 et consultez le tableau approprié pour le déterminer aléatoirement, ou choisissez dans ce tableau celui qui correspond le mieux à l'histoire de l'unité. Remplacez toutes les occurrences du mot-clé \<LIGUE\> par le nom de la Ligue de votre unité. Toutes les règles habituelles des Traits de Combat s'appliquent (une unité ne peut pas posséder deux fois le même). Comme pour tout Honneur de Bataille, notez le Trait de Combat sur la fiche de l'unité et augmentez ses points en conséquence.*
 
@@ -578,56 +593,56 @@ Si votre armée inclut un ou plusieurs Détachements VOTANN (hors Détachements 
 
   - **6 Acclamation des camarades** : chaque fois que cette unité est marquée pour la grandeur, elle gagne 2 points d'expérience supplémentaires.
 
-## **Reliques d'Armée**
+# Reliques d'Armée
 
-**Reliques d'Artificier**
+## Reliques d'Artificier
 
 *Un modèle PERSONNAGE VOTANN peut recevoir l'une des Reliques d'Artificier suivantes.*
 
-**Forgestar Beam**
+#### Forgestar Beam
 
   - Modèle équipé d'un désintégrateur volkanite uniquement. Cette Relique remplace le désintégrateur volkanite et a le profil suivant :  
     Portée 18", A 3, CT 2+, F 5, PA -1, D 1, [BLESSURES DÉVASTATRICES].
-    
-    **Plaque de Guerre de Kâhyrm**
+
+#### Plaque de Guerre de Kâhyrm
 
   - Ajoutez 2 à la caractéristique de Blessures du porteur.
-    
-    **Ambassadeur de Fer**
+
+#### Ambassadeur de Fer
 
   - Modèle équipé d'un Autoch-pattern combi-bolter uniquement. Cette Relique remplace le Autoch-pattern combi-bolter et a le profil suivant :  
     Portée 24", A 6, CT 2+, F 4, PA -3, D 1.
 
   - Capacités : chaque fois qu'une attaque effectuée avec cette arme est allouée à un modèle appartenant à une unité ayant 1 jeton de Jugement ou plus, aucune sauvegarde invulnérable ne peut être effectuée contre cette attaque.
-    
-    **Reliques d'Antiquité**
-    
-    *Un modèle PERSONNAGE VOTANN de rang Héroïque ou supérieur peut recevoir l'une des Reliques d'Antiquité suivantes à la place d'une Relique du livre de règles de base.*
-    
-    **Convertisseur Recyc**
+
+## Reliques d'Antiquité
+
+*Un modèle PERSONNAGE VOTANN de rang Héroïque ou supérieur peut recevoir l'une des Reliques d'Antiquité suivantes à la place d'une Relique du livre de règles de base.*
+
+#### Convertisseur Recyc
 
   - Modèle équipé d'un désintégrateur volkanite, d'un blaster ion ou d'un fusil graviton uniquement, ou d'une Relique qui remplace une telle arme. À la fin de la bataille, vous gagnez 1 PR pour chaque unité ennemie détruite par le porteur avec cette arme, jusqu'à un maximum de 3 PR par bataille.
-    
-    **Vengeance d'Ythur**
+
+#### Vengeance d'Ythur
 
   - Le porteur entretient une Rancune contre toute faction adverse, et ces Rancunes ne peuvent jamais être réglées (ignorez toute règle qui s'appliquerait au règlement d'une Rancune).
 
   - Chaque fois que le porteur effectue une attaque contre une unité ORKS, vous pouvez relancer le jet de blessure de cette attaque.
 
   - Si une attaque du porteur détruit une unité ennemie, soustrayez 1 au test « Hors de Combat » de cette unité à la fin de la bataille.
-    
-    **L'Abysse Captif**
+
+#### L'Abysse Captif
 
   - Cette Relique a le profil suivant :  
     Portée 6", A 1, CT 2+, F 0, PA 0, D 0.
 
   - Capacités : Si la cible est touchée, elle subit D3 blessures mortelles par jeton de Jugement qu'elle possède, et la séquence d'attaque prend fin. Après avoir résolu ces blessures mortelles, retirez 1 jeton de Jugement de l'unité cible.
-    
-    **Reliques Légendaires**
-    
-    *Un modèle PERSONNAGE VOTANN de rang Légendaire peut recevoir l'une des Reliques Légendaires suivantes à la place d'une Relique du livre de règles de base. De plus, pour donner une Relique Légendaire à un modèle, vous devez payer 1 point de Réquisition (PR).*
-    
-    **Éclat de Tôrek**
+
+## Reliques Légendaires
+
+*Un modèle PERSONNAGE VOTANN de rang Légendaire peut recevoir l'une des Reliques Légendaires suivantes à la place d'une Relique du livre de règles de base. De plus, pour donner une Relique Légendaire à un modèle, vous devez payer 1 point de Réquisition (PR).*
+
+#### Éclat de Tôrek
 
   - Modèle KÂHL ou GRIMNYR uniquement. Une fois par bataille, au début de n'importe quelle phase de Combat, le porteur peut révéler cette Relique. S'il le fait :
 

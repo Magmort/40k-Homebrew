@@ -1,5 +1,9 @@
 Ce document rassemble les règles de progression de la campagne : Ordre de Bataille, expérience, Honneurs de Bataille, Réquisitions et séquelles d'après-bataille. Les règles de jeu figurent dans les règles de base.
 
+**Sommaire**
+
+Ouvrez le document et appuyez sur F9 (ou clic droit \> Mettre à jour) pour générer les numéros de page.
+
 # Ordre de Bataille
 
 L'Ordre de Bataille recense toutes les unités dont vous disposez pour la campagne. Vous y notez, pour chaque unité, ses points d'expérience, son rang, ses Honneurs de Bataille et ses Cicatrices de Bataille, ainsi que votre solde de points de Réquisition et votre Limite d'Approvisionnement.

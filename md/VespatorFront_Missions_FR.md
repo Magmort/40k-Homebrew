@@ -1,11 +1,12 @@
-**Front de Vespator**
-
-Missions de Campagne (9e edition)
-
-| Code couleur : Rouge = Attaquant | Vert = Defenseur | Bleu = Egalite / Neutre |
+|                                                                               |
 | ----------------------------------------------------------------------------- |
+| Code couleur : Rouge = Attaquant | Vert = Defenseur | Bleu = Egalite / Neutre |
 
-**Mission 1 : Saisir la Base de Pouvoir**
+**Sommaire**
+
+Ouvrez le document et appuyez sur F9 (ou clic droit \> Mettre à jour) pour générer les numéros de page.
+
+# Mission 1 : Saisir la Base de Pouvoir
 
 Sur Ikaron Prime, les Rebornes frappent les sites militaires et industriels des Kin pour leur arracher le contrôle de leur base de pouvoir sur ce monde.
 
@@ -79,7 +80,7 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 - Augmentez de 1 le Niveau de Puissance de l'Alliance Attaquante sur cette planète.
 
-**Mission 2 : Purger et Brûler**
+# Mission 2 : Purger et Brûler
 
 Sur Norallus, les Scythes de l'Empereur encerclent une masse de couvée xenos au Dock de la Mine Halex. Ils doivent empêcher les cultistes de percer et de s'échapper pour contaminer d'autres mondes.
 
@@ -166,7 +167,7 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 - Augmentez de 1 le Niveau de Puissance de l'Alliance Attaquante sur cette planète.
 
-**Mission 3 : Invasion Orbitale**
+# Mission 3 : Invasion Orbitale
 
 L'invasion de Jawardet par les Nekrosor est une frappe de scalpel. Les disciples d'Ammentar ouvrent des portails cosmiques pour saisir les accès du complexe de tombe caché, pendant que leurs renforts descendent de l'orbite.
 
@@ -232,7 +233,7 @@ Ensuite, augmentez de 1 le Niveau de Puissance de l'Alliance Défenseuse sur cet
 
 - Augmentez de 1 le Niveau de Puissance de l'Alliance Attaquante sur cette planète.
 
-**Mission 4 : Bombardement Planétaire**
+# Mission 4 : Bombardement Planétaire
 
 Les Avenging Sons s'attaquent aux stations de bouclier anti-orbital des hérétiques sur Marvinius, avant que leurs vaisseaux n'ouvrent le feu dans un barrage apocalyptique.
 
@@ -294,7 +295,7 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 - Augmentez de 1 le Niveau de Puissance de l'Alliance Attaquante sur cette planète.
 
-**Mission 5 : Raid sur la Base de Ravitaillement**
+# Mission 5 : Raid sur la Base de Ravitaillement
 
 Sur Quoravis, des pirates Orks pillent les servo-docks de la Reclamation Ultramarine, sautant d'un servo-transporteur à l'autre pour trouver le meilleur butin.
 
@@ -354,7 +355,7 @@ Chaque joueur pioche 2 missions secondaires parmi les 3 de son camp au début de
 
 - Augmentez de 1 le Niveau de Puissance de l'Alliance Attaquante sur cette planète.
 
-**Mission 6 : Action d’Abordage**
+# Mission 6 : Action d’Abordage
 
 Sous le Capitaine Vortes, une force d'abordage Novamarine, opérant depuis une seule frégate, fut le sauveur des flottes alliées à maintes reprises. Leurs frappes audacieuses sur les vaisseaux traîtres au-dessus de Kryndaer leur valurent le nom de Voidblades de Vespator.
 
