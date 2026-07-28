@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adeptus Mechanicus — Fiches d'unités (FR)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#141210; font-family:'Inter',sans-serif; padding:32px 16px; }
+  .page-head { max-width:807px; margin:0 auto 26px; color:#e9e3da; }
+  .page-head h1 { font-family:'Oswald',sans-serif; font-weight:700; text-transform:uppercase;
+    letter-spacing:1px; font-size:30px; color:#fff; }
+  .page-head p { font-size:13px; color:#9a9187; margin-top:6px; }
+  .deck { display:flex; flex-direction:column; align-items:center; gap:34px; }
+  .card { width:807px; max-width:100%; font-family:'Inter',sans-serif; background:#1c1a19;
+    border:1px solid #000; box-shadow:0 4px 24px rgba(0,0,0,0.4); color:#e9e3da; }
+  .card-head { position:relative; background:linear-gradient(180deg, #7a1620, #45080d);
+    padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:3px solid #000; }
+  .card-head .name { font-family:'Oswald',sans-serif; font-weight:700; font-size:26px;
+    letter-spacing:0.5px; text-transform:uppercase; color:#fff; }
+  .card-head .base { font-size:15px; color:#d8c9c9; margin-left:10px; }
+  .card-head .role { font-family:'Oswald',sans-serif; font-size:12px; text-transform:uppercase;
+    letter-spacing:1px; text-align:right; }
+  .body-grid { display:grid; grid-template-columns:3fr 2fr; gap:0; }
+  .col-left { padding:16px 18px 20px; border-right:1px solid #000; }
+  .col-right { padding:16px 18px 20px; }
+  .statline { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; text-align:center; }
+  .statline .lbl { font-size:12px; font-weight:700; letter-spacing:1px; color:#c9beae; }
+  .statline .val { background:#3a3532; border:1px solid #55504a; border-radius:3px; padding:8px 0;
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; color:#fff; }
+  .pf { width:100%; border-collapse:collapse; }
+  .pf th, .pf td { padding:6px 6px; text-align:center; }
+  .pf thead th { font-size:11px; font-weight:700; letter-spacing:1px; color:#c9beae; border-bottom:1px solid #4a453f; }
+  .pf thead th.name { text-align:left; }
+  .pf tbody td { font-family:'Oswald',sans-serif; font-weight:600; font-size:17px; color:#fff; border-bottom:1px solid #2a2624; }
+  .pf tbody td.name { font-family:'Inter',sans-serif; text-align:left; font-size:13px; font-weight:600; color:#f0ebe3; }
+  .pf tbody td.name small { display:block; font-weight:400; font-size:11px; color:#9a9187; }
+  .pf tbody td.inv { color:#e7ccb6; }
+  .invul { display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .invul .circle { width:46px; height:46px; border-radius:50%; background:#2a2624; border:2px solid #45080d;
+    display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif;
+    font-weight:700; font-size:18px; color:#fff; flex-shrink:0; }
+  .invul .txt { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; }
+  .wtable { margin-top:20px; }
+  .wrow { display:grid; grid-template-columns:16px 1fr 42px 26px 30px 26px 30px 30px; gap:6px;
+    align-items:center; }
+  .whead { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; border-bottom:1px solid #4a453f; padding-bottom:6px;
+    margin-bottom:8px; }
+  .whead .sub { font-size:11px; color:#9a9187; text-align:right; text-transform:none; }
+  .wdata { padding:6px 0; border-bottom:1px solid #2a2624; }
+  .wdata .dot { width:14px; height:8px; background:#8a8378; border-radius:2px; }
+  .wdata .wn { font-size:13px; color:#f0ebe3; }
+  .wdata .num { text-align:right; font-size:13px; font-weight:600; }
+  .tag { background:#4a453f; color:#d8c9c9; font-size:10px; padding:2px 5px; border-radius:2px;
+    margin-left:4px; }
+  .section-h { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px;
+    text-transform:uppercase; background:#3a3532; padding:6px 10px; margin-bottom:10px; }
+  .ability { margin-bottom:10px; font-size:13px; line-height:1.5; }
+  .ability .al { font-weight:700; color:#fff; }
+  .ability .at { color:#d8c9c9; }
+  .comp-list { margin:0 0 6px; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-list { margin:0; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-sub { margin:4px 0 2px; padding-left:18px; }
+  .wg-sub li { color:inherit; }
+  .pts-table { border:1px solid #4a453f; border-radius:3px; overflow:hidden; }
+  .pts-row { display:flex; align-items:center; justify-content:space-between; background:#2a2624;
+    padding:7px 12px; }
+  .pts-row + .pts-row { border-top:1px solid #4a453f; }
+  .pts-row .m { font-size:13px; }
+  .pts-row .p { background:#a01722; color:#fff; font-weight:700; font-size:13px; padding:3px 10px;
+    border-radius:3px; }
+  .note { font-size:12px; color:#c9beae; line-height:1.5; margin-top:4px; }
+  .lead-intro { font-size:13px; color:#d8c9c9; margin-bottom:6px; }
+  .lead-list { margin:0; padding-left:18px; font-size:13px; }
+  .lead-list li { color:#8fb4d8; }
+  .kw-grid { display:grid; grid-template-columns:3fr 2fr; border-top:1px solid #000; }
+  .kw-cell { padding:10px 18px; }
+  .kw-cell:first-child { border-right:1px solid #000; }
+  .kw-cell .k { font-size:12px; font-weight:700; letter-spacing:0.5px; }
+  .kw-cell .v { font-size:12px; color:#9fc6ea; }
+  @media print { body{background:#fff; padding:0;} .card{break-inside:avoid; box-shadow:none;}
+    .page-head{color:#000;} .page-head h1{color:#000;}
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+  @media (max-width:840px){ .card{width:100%;} }
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>Adeptus Mechanicus — Fiches d'unités</h1>
+  <p>Version française. Profils de jeu (Warhammer 40 000, 10ᵉ édition). Données : Wahapedia + codex FR. Warhammer 40 000 © Games Workshop — usage personnel.</p>
+</div>
+<div class="deck" id="deck"></div>
+
+<script>
+// M=Mouvement, E=Endurance, Svg=Sauvegarde, PV=Points de Vie, Cd=Commandement, CO=Contrôle d'Objectif
+const STAT_LABELS = ['M','E','Svg','PV','Cd','CO'];
+
+const UNITS = [
+  {
+    name:"Belisarius Cawl", base:"⌀105 x 70mm", role:"HQ",
+    stats:['8"','8','2+','10','6+','3'], inv:'4+',
+    ranged:[
+      {n:"Atomisateur solaire", t:"[FUSION 3]", r:'18"', a:"3", sk:"2+", s:"14", ap:"-4", d:"D6"}
+    ],
+    melee:[
+      {n:"Électro-fléau", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES, ATTAQUES BONUS]", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"-1", d:"1"},
+      {n:"Hache de l'Omnimessie de Cawl", t:"", r:"Mêlée", a:"4", sk:"2+", s:"8", ap:"-2", d:"2"},
+      {n:"Ruche de mécadendrites", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"2D6", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Cantiques de l'Omnimessie (aptitude)", t:"Au début de la phase de Commandement, choisissez l'une des aptitudes de la section Cantiques de l'Omnimessie ci-dessous. Jusqu'à votre prochaine phase de Commandement, ce modèle a cette aptitude."},
+      {l:"Invocation de la Machine Vengeresse", t:"Au début de la phase de Commandement, choisissez une unité de l'armée adverse. Jusqu'à votre prochaine phase de Commandement, c'est votre cible de Vengeance Mécanique : chaque fois qu'un modèle d'une unité ADEPTUS MECHANICUS amie effectue une attaque la ciblant, relancez le jet de touche."},
+      {l:"Mantra de la Discipline", t:"Ce modèle a le mot-clé LIGNE et l'aptitude Courage Binharique (Aura) : tant qu'une unité ADEPTUS MECHANICUS amie est à 6\" ou moins, ajoutez 1 à la caractéristique de Contrôle d'Objectif de ses modèles et 1 à chaque test d'Ébranlement ou de Commandement effectué pour elle."},
+      {l:"Psaume-linceul (Aura)", t:"Tant qu'une unité ADEPTUS MECHANICUS amie est à 6\" ou moins de ce modèle, elle a l'aptitude Discrétion."},
+      {l:"Garde Rapprochée du Mechanicus", t:"Tant que ce modèle est à 3\" ou moins d'une ou plusieurs autres unités ADEPTUS MECHANICUS amies, il a l'aptitude Agent Solitaire."},
+      {l:"Mécanismes d'Autoréparation", t:"Au début de votre phase de Commandement, ce modèle récupère jusqu'à D3 PV perdus."}
+    ],
+    comp:["1 Belisarius Cawl — Héros épique"],
+    equip:"Ce modèle est équipé de : atomisateur solaire, électro-fléau, hache de l'Omnimessie de Cawl, ruche de mécadendrites.",
+    pts:[["1 modèle","210"]],
+    leaderNote:"Commandant Suprême : si ce modèle est dans votre armée, il doit être votre Seigneur de Guerre.",
+    keywords:"MONSTRE, PERSONNAGE, HÉROS ÉPIQUE, IMPERIUM, TECHNOPRÊTRE, CULTE MECHANICUS, BELISARIUS CAWL",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Skitarii Marshal", base:"⌀32mm", role:"HQ",
+    stats:['6"','3','4+','3','6+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"3+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Sceptre de contrôle", t:"", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Édit de Contrôle", t:"Tant que ce modèle mène une unité, chaque fois qu'un de ses modèles effectue une attaque, vous pouvez relancer le jet de touche."},
+      {l:"Liaison par Servocrâne", t:"Une fois par bataille, au début de n'importe quelle phase, vous pouvez choisir une unité SKITARII amie Ébranlée à 6\" ou moins de ce modèle. Cette unité n'est plus Ébranlée."}
+    ],
+    comp:["1 Skitarii Marshal"],
+    equip:"Ce modèle est équipé de : pistolet archéotechnologique, sceptre de contrôle.",
+    pts:[["1 modèle","35"]],
+    leader:["Hastarii Exterminators","Hastarii Fusiliers","Skitarii Rangers","Skitarii Vanguard"],
+    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, SKITARII, MARSHAL",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Tech-Priest Dominus", base:"⌀50mm", role:"HQ",
+    stats:['6"','4','2+','4','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Rayon d'éradication – diffus", t:"", r:'24"', a:"D3", sk:"3+", s:"6", ap:"-1", d:"1"},
+      {n:"Rayon d'éradication – concentré", t:"", r:'12"', a:"D3", sk:"3+", s:"6", ap:"-2", d:"2"},
+      {n:"Macropistolet", t:"", r:'12"', a:"5", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Serpentine à phosphore", t:"[IGNORE LE COUVERT, PISTOLET]", r:'18"', a:"1", sk:"3+", s:"5", ap:"-1", d:"2"},
+      {n:"Éclateur volkite", t:"[BLESSURES DÉVASTATRICES]", r:'24"', a:"3", sk:"3+", s:"5", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Hache de l'Omnimessie", t:"", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Seigneur du Culte de la Machine", t:"Tant que ce modèle mène une unité, ses modèles ont l'aptitude Insensible à la Douleur 5+ (Insensible à la Douleur 4+ à la place si l'unité a le mot-clé ÉLECTRO-PRÊTRES)."},
+      {l:"Datapic", t:"Au début de la phase de Combat, vous pouvez choisir une unité VÉHICULE ennemie à portée d'engagement de l'unité de ce modèle et jeter 1 D6 : sur 4+, cette unité subit D6 blessures mortelles et, jusqu'à la fin de la phase, la CC des armes de mêlée de cette unité ennemie est réduite de 1."}
+    ],
+    wargear:[
+      "Le macropistolet de ce modèle peut être remplacé par 1 serpenta à phosphore.",
+      "L'éclateur volkite de ce modèle peut être remplacé par 1 rayon d'éradication."
+    ],
+    comp:["1 Tech-Priest Dominus"],
+    equip:"Ce modèle est équipé de : macropistolet, éclateur volkite, hache de l'Omnimessie.",
+    pts:[["1 modèle","65"]],
+    leader:["Hastarii Exterminators","Hastarii Fusiliers","Corpuscarii Electro-Priests","Fulgurite Electro-Priests","Kataphron Breachers","Kataphron Destroyers","Servitor Battleclade","Skitarii Rangers","Skitarii Vanguard"],
+    keywords:"IMPERIUM, INFANTERIE, PERSONNAGE, CULTE MECHANICUS, TECHNOPRÊTRE, DOMINUS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Tech-Priest Enginseer", base:"⌀32mm", role:"HQ",
+    stats:['6"','4','3+','3','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"3+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Hache de l'Omnimessie", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"-2", d:"2"},
+      {n:"Servobras", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"1", sk:"4+", s:"6", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Technaugure", t:"Tant que ce modèle est à 3\" ou moins d'une ou plusieurs unités VÉHICULE ADEPTUS MECHANICUS amies, et à moins qu'il ne mène une unité, il a l'aptitude Agent Solitaire."},
+      {l:"Bénédiction de l'Omnimessie", t:"À votre phase de Commandement, choisissez 1 modèle ADEPTUS MECHANICUS ami à 3\" ou moins de ce modèle. Il récupère jusqu'à D3 PV perdus et, si c'est un modèle VÉHICULE, jusqu'à votre prochaine phase de Commandement il a l'aptitude Insensible à la Douleur 5+. Chaque modèle ne peut être choisi qu'une fois par phase de Commandement."},
+      {l:"Vengeance pour l'Omnimessie", t:"Si un modèle VÉHICULE ADEPTUS MECHANICUS ami est détruit à 12\" ou moins de ce modèle, jusqu'à la fin de la bataille la hache de l'Omnimessie de ce modèle a une caractéristique d'Attaques de 6."}
+    ],
+    comp:["1 Tech-Priest Enginseer"],
+    equip:"Ce modèle est équipé de : pistolet archéotechnologique, hache de l'Omnimessie, servobras.",
+    pts:[["1 modèle","55"]],
+    leader:["Hastarii Exterminators","Hastarii Fusiliers","Corpuscarii Electro-Priests","Fulgurite Electro-Priests","Kataphron Breachers","Kataphron Destroyers","Servitor Battleclade","Skitarii Rangers","Skitarii Vanguard"],
+    keywords:"IMPERIUM, INFANTERIE, PERSONNAGE, CULTE MECHANICUS, TECHNOPRÊTRE, TECHNAUGURE",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Tech-Priest Manipulus", base:"⌀50mm", role:"HQ",
+    stats:['6"','4','2+','4','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Lance Magnarail", t:"[LOURD]", r:'36"', a:"1", sk:"3+", s:"7", ap:"-2", d:"3"},
+      {n:"Canon transsonique", t:"[BLESSURES DÉVASTATRICES, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Bâton de l'Omnimessie", t:"", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-1", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Champ Galvanique", t:"Tant que ce modèle mène une unité, les armes des modèles de cette unité ont l'aptitude [TOUCHES FATALES]."},
+      {l:"Défendez l'Ouvrage Divin", t:"Une fois par bataille, au début de n'importe quelle phase, ce modèle peut utiliser cette aptitude : jusqu'à la fin de la phase, tous les modèles de son unité ont une sauvegarde invulnérable de 4+."}
+    ],
+    wargear:[
+      "La lance Magnarail de ce modèle peut être remplacée par 1 canon transsonique."
+    ],
+    comp:["1 Tech-Priest Manipulus"],
+    equip:"Ce modèle est équipé de : lance Magnarail, bâton de l'Omnimessie.",
+    pts:[["1 modèle","60"]],
+    leader:["Hastarii Exterminators","Hastarii Fusiliers","Corpuscarii Electro-Priests","Fulgurite Electro-Priests","Kataphron Breachers","Kataphron Destroyers","Servitor Battleclade","Skitarii Rangers","Skitarii Vanguard"],
+    keywords:"IMPERIUM, INFANTERIE, PERSONNAGE, CULTE MECHANICUS, TECHNOPRÊTRE, MANIPULUS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Technoarcheologist", base:"⌀32mm", role:"HQ",
+    stats:['6"','4','3+','3','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"3+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Servo-pince à électrode", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES]", r:"Mêlée", a:"3", sk:"4+", s:"8", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Chercheur des Arcanes Divines", t:"Tant que ce modèle mène une unité, ajoutez 1 à la caractéristique de Contrôle d'Objectif de ses modèles."},
+      {l:"Instinct Cognitif", t:"Les unités ennemies placées sur le champ de bataille en tant que Renforts ne peuvent pas l'être à moins de 12\" à l'horizontale de ce modèle."}
+    ],
+    comp:["1 Technoarcheologist"],
+    equip:"Ce modèle est équipé de : pistolet archéotechnologique, servo-pince à électrode.",
+    pts:[["1 modèle","45"]],
+    leader:["Hastarii Exterminators","Hastarii Fusiliers","Corpuscarii Electro-Priests","Fulgurite Electro-Priests","Kataphron Breachers","Kataphron Destroyers","Servitor Battleclade","Skitarii Rangers","Skitarii Vanguard"],
+    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, CULTE MECHANICUS, TECHNOPRÊTRE, TECHNOARCHÉOLOGUE",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Thulia Ghuld", base:"⌀80mm", role:"HQ",
+    stats:['8"','8','2+','10','6+','3'], inv:'4+',
+    ranged:[
+      {n:"Résonateur à conversion de classe Jéricho – impact titanesque", t:"[BLESSURES DÉVASTATRICES]", r:'24"', a:"2", sk:"2+", s:"12", ap:"-3", d:"D6+2"},
+      {n:"Résonateur à conversion de classe Jéricho – onde de choc", t:"[DÉFLAGRATION, TOUCHES SOUTENUES 1]", r:'24"', a:"D6+2", sk:"2+", s:"6", ap:"-2", d:"1"}
+    ],
+    melee:[
+      {n:"Bâton de la Forge Guerrière – frappe", t:"", r:"Mêlée", a:"6", sk:"2+", s:"10", ap:"-2", d:"3"},
+      {n:"Bâton de la Forge Guerrière – balayage", t:"", r:"Mêlée", a:"12", sk:"2+", s:"6", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Bâton de la Forge Guerrière", t:"À la phase de Commandement, choisissez l'une des aptitudes Icône de Guerre ci-dessous. Jusqu'à votre prochaine phase de Commandement, ce modèle a cette aptitude."},
+      {l:"Dévotion Fanatique (Icône de Guerre)", t:"Choisissez une unité SKITARII ou THULIA GHULD amie à 6\" ou moins de ce modèle ; jusqu'à votre prochaine phase de Commandement, elle peut tirer et déclarer une charge lors d'un tour où elle a Avancé."},
+      {l:"Tactiques Adaptatives (Icône de Guerre)", t:"Choisissez une unité SKITARII ou THULIA GHULD amie à 6\" ou moins ; jusqu'à votre prochaine phase de Commandement, elle peut tirer et déclarer une charge lors d'un tour où elle s'est Désengagée."},
+      {l:"Les Feux de Mars (Icône de Guerre)", t:"Choisissez une unité SKITARII ou THULIA GHULD amie à 6\" ou moins ; jusqu'à votre prochaine phase de Commandement, les Impératifs Conquérant et Protecteur sont tous deux actifs pour elle."},
+      {l:"Garde Rapprochée du Mechanicus", t:"Tant que ce modèle est à 3\" ou moins d'une ou plusieurs autres unités ADEPTUS MECHANICUS amies, il a l'aptitude Agent Solitaire."},
+      {l:"Augmentation Cybernétique", t:"Ce modèle peut se déplacer à travers les éléments de décor, mais ne peut pas finir un mouvement dans un mur, un sol, etc. Il peut être placé ou finir un mouvement à n'importe quel étage de RUINES, mais à un étage non-rez-de-chaussée seulement si son socle ne déborde pas de cet étage."},
+      {l:"Secutor d'Olympe", t:"Au début de son action de Tir, choisissez une unité VÉHICULE ennemie à 12\" ou moins de ce modèle et jetez 1 D6 : sur 2+, elle subit D3+1 blessures mortelles."}
+    ],
+    comp:["1 Archmagos Terminus Thulia Ghuld — Héros épique"],
+    equip:"Ce modèle est équipé de : résonateur à conversion de classe Jéricho, sceptre de la Forge de Guerre.",
+    pts:[["1 modèle","210"]],
+    leaderNote:"Commandant Suprême : si ce modèle est dans votre armée, il doit être votre Seigneur de Guerre.",
+    keywords:"MONSTRE, PERSONNAGE, HÉROS ÉPIQUE, IMPERIUM, CULTE MECHANICUS, TECHNOPRÊTRE, THULIA GHULD",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Kataphron Breachers", base:"⌀60mm", role:"Troops",
+    stats:['5"','7','3+','3','7+','1'], inv:'6+',
+    ranged:[
+      {n:"Électrofusil lourd", t:"[ANTI-VÉHICULE 4+, TIR RAPIDE 2]", r:'30"', a:"2", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Canon à torsion", t:"[ANTI-INFANTERIE 2+, DÉFLAGRATION]", r:'36"', a:"D3", sk:"4+", s:"6", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Griffe à arc", t:"[ANTI-VÉHICULE 4+]", r:"Mêlée", a:"4", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Griffe hydraulique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"8", ap:"-2", d:"3"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Commandement de Brèche", t:"Chaque fois qu'un modèle de cette unité effectue une attaque, relancez un jet pour toucher de 1. Tant que cette unité est à 6\" ou moins d'une ou plusieurs unités LIGNE ADEPTUS MECHANICUS amies, relancez plutôt le jet pour toucher."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur électrofusil lourd par 1 canon à torsion.",
+      "N'importe quel nombre de modèles peuvent remplacer leur griffe à arc par 1 griffe hydraulique."
+    ],
+    comp:["3-6 Kataphron Breachers"],
+    equip:"Chaque modèle est équipé de : électrofusil lourd, griffe à arc.",
+    pts:[["3 modèles","160"],["6 modèles","320"]],
+    keywords:"INFANTERIE, IMPERIUM, CULTE MECHANICUS, KATAPHRON, BREACHERS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Kataphron Destroyers", base:"⌀60mm", role:"Troops",
+    stats:['5"','6','3+','3','7+','1'], inv:'6+',
+    ranged:[
+      {n:"Lance-flammes Cognis", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Grav-canon lourd", t:"[ANTI-VÉHICULE 2+]", r:'30"', a:"4", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Couleuvrine à plasma Kataphron – standard", t:"", r:'36"', a:"4", sk:"4+", s:"7", ap:"-2", d:"1"},
+      {n:"Couleuvrine à plasma Kataphron – surcharge", t:"[À RISQUE]", r:'36"', a:"4", sk:"4+", s:"8", ap:"-3", d:"2"},
+      {n:"Éclateur à phosphore", t:"[IGNORE LE COUVERT, TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Directives Sentinelles", t:"Chaque fois que vous ciblez cette unité avec le Stratagème Tir en État d'Alerte, les touches sont obtenues sur des jets pour toucher non modifiés de 5+ lors de la résolution de ce Stratagème."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur grav-canon lourd par 1 couleuvrine à plasma Kataphron.",
+      "N'importe quel nombre de modèles peuvent remplacer leur éclateur à phosphore par 1 lance-flammes Cognis."
+    ],
+    comp:["3-6 Kataphron Destroyers"],
+    equip:"Chaque modèle est équipé de : grav-canon lourd, éclateur à phosphore, arme de corps à corps.",
+    pts:[["3 modèles","105"],["6 modèles","210"]],
+    keywords:"INFANTERIE, IMPERIUM, CULTE MECHANICUS, KATAPHRON, DESTROYERS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Skitarii Rangers", base:"⌀25mm (60x35mm avec arquebuse transuranique)", role:"Troops",
+    stats:['6"','3','4+','1','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Électrofusil", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES, TIR RAPIDE 1]", r:'30"', a:"1", sk:"4+", s:"8", ap:"-1", d:"D3"},
+      {n:"Fusil galvanique", t:"", r:'30"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Tromblon à plasma – standard", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-2", d:"1"},
+      {n:"Tromblon à plasma – surcharge", t:"[À RISQUE]", r:'30"', a:"2", sk:"4+", s:"8", ap:"-3", d:"2"},
+      {n:"Arquebuse transuranique", t:"[LOURD, PRÉCISION]", r:'36"', a:"1", sk:"4+", s:"7", ap:"-2", d:"D3"}
+    ],
+    melee:[
+      {n:"Armes de mêlée d'Alpha", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 6\""},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Objectif Exploré", t:"À la fin de la phase de Commandement, si cette unité est à portée d'un marqueur d'objectif que vous contrôlez, ce marqueur reste sous votre contrôle même si vous n'avez plus de modèle à portée, jusqu'à ce que l'adversaire le contrôle au début ou à la fin d'un tour."},
+      {l:"Datacâble amélioré (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Omnispex (équipement)", t:"Les armes à distance des modèles de l'unité du porteur ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    wargear:[
+      "L'Alpha peut être équipé de 1 armes de mêlée d'Alpha.",
+      "Le fusil galvanique de l'Alpha peut être remplacé par 1 pistolet archéotechnologique.",
+      "1 Skitarii Ranger peut remplacer son fusil galvanique par 1 électrofusil.",
+      "1 Skitarii Ranger peut remplacer son fusil galvanique par 1 tromblon à plasma.",
+      "1 Skitarii Ranger peut remplacer son fusil galvanique par 1 arquebuse transuranique.",
+      {head:"1 Skitarii Ranger équipé d'un fusil galvanique peut recevoir l'un des éléments suivants (son fusil galvanique ne peut alors pas être remplacé) :", items:["1 datacâble amélioré","1 omnispex"]}
+    ],
+    comp:["1 Skitarii Ranger Alpha","9 Skitarii Rangers"],
+    equip:"Chaque modèle est équipé de : fusil galvanique, arme de corps à corps.",
+    pts:[["10 modèles","85"]],
+    keywords:"INFANTERIE, LIGNE, IMPERIUM, SKITARII, RANGERS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Skitarii Vanguard", base:"⌀25mm (60x35mm avec arquebuse transuranique)", role:"Troops",
+    stats:['6"','3','4+','1','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Électrofusil", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES, TIR RAPIDE 1]", r:'30"', a:"1", sk:"4+", s:"8", ap:"-1", d:"D3"},
+      {n:"Tromblon à plasma – standard", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-2", d:"1"},
+      {n:"Tromblon à plasma – surcharge", t:"[À RISQUE]", r:'30"', a:"2", sk:"4+", s:"8", ap:"-3", d:"2"},
+      {n:"Carabine à radium", t:"[ANTI-INFANTERIE 4+]", r:'18"', a:"3", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Arquebuse transuranique", t:"[LOURD, PRÉCISION]", r:'36"', a:"1", sk:"4+", s:"7", ap:"-2", d:"D3"}
+    ],
+    melee:[
+      {n:"Armes de mêlée d'Alpha", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Irradiation (Aura)", t:"Tant qu'une unité ennemie (hors VÉHICULE) est à 3\" ou moins de cette unité, réduisez de 1 la caractéristique de Contrôle d'Objectif des modèles de cette unité ennemie."},
+      {l:"Datacâble amélioré (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Omnispex (équipement)", t:"Les armes à distance des modèles de l'unité du porteur ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    wargear:[
+      "L'Alpha peut être équipé de 1 armes de mêlée d'Alpha.",
+      "La carabine à radium de l'Alpha peut être remplacée par 1 pistolet archéotechnologique.",
+      "1 Skitarii Vanguard peut remplacer sa carabine à radium par 1 électrofusil.",
+      "1 Skitarii Vanguard peut remplacer sa carabine à radium par 1 tromblon à plasma.",
+      "1 Skitarii Vanguard peut remplacer sa carabine à radium par 1 arquebuse transuranique.",
+      {head:"1 Skitarii Vanguard équipé d'une carabine à radium peut recevoir l'un des éléments suivants (sa carabine ne peut alors pas être remplacée) :", items:["1 datacâble amélioré","1 omnispex"]}
+    ],
+    comp:["1 Skitarii Vanguard Alpha","9 Skitarii Vanguard"],
+    equip:"Chaque modèle est équipé de : carabine à radium, arme de corps à corps.",
+    pts:[["10 modèles","95"]],
+    keywords:"INFANTERIE, LIGNE, IMPERIUM, SKITARII, VANGUARD",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Skorpius Dunerider", base:"voir modèle", role:"Dedicated Transport",
+    stats:['12"','9','3+','11','7+','2'], inv:'',
+    ranged:[
+      {n:"Bordée de mitrailleuses lourdes Cognis", t:"[TIR RAPIDE 9, TOUCHES SOUTENUES 1, JUMELÉ]", r:'36"', a:"9", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de Tir 2"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Datacâble à large spectre", t:"Chaque fois que vous ciblez cette unité avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Appui-feu", t:"Après que ce modèle a résolu son action de Tir, choisissez une unité ennemie contre laquelle il a obtenu une ou plusieurs touches cette phase. Jusqu'à la fin de la phase, chaque fois qu'un modèle ami ayant débarqué de ce Transport ce tour attaque cette unité ennemie, relancez le jet pour blesser."}
+    ],
+    comp:["1 Skorpius Dunerider"],
+    equip:"Ce modèle est équipé de : bordée de mitrailleuses lourdes Cognis, coque blindée.",
+    pts:[["1 modèle","85"]],
+    transport:"Capacité de transport de 12 modèles INFANTERIE ADEPTUS MECHANICUS. Ne peut pas transporter de modèles RÉACTEUR DORSAL, KATAPHRON ni SYDONIAN SKATROS.",
+    keywords:"VÉHICULE, TRANSPORT, TRANSPORT ASSIGNÉ, IMPERIUM, SKITARII, FUMÉE, SKORPIUS DUNERIDER",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Terrax-pattern Termite", base:"voir modèle", role:"Dedicated Transport",
+    stats:['8"','10','3+','14','6+','2'], inv:'',
+    ranged:[
+      {n:"Combi-bolter", t:"[TIR RAPIDE 2]", r:'24"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-flammes lourd", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"5", ap:"-1", d:"1"},
+      {n:"Découpeur à fusion Terrax", t:"[FUSION 2]", r:'12"', a:"5", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Chargeur volkite jumelé", t:"[BLESSURES DÉVASTATRICES, JUMELÉ]", r:'18"', a:"2", sk:"4+", s:"5", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Foreuse Termite", t:"[ANTI-VÉHICULE 3+]", r:"Mêlée", a:"6", sk:"4+", s:"14", ap:"-2", d:"D3+3"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Frappe en Profondeur"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Assaut Termite", t:"Ce modèle peut utiliser l'aptitude Frappe en Profondeur lors du déploiement, dès le premier tour. S'il le fait, les unités embarquées peuvent débarquer immédiatement, sans effectuer de mouvement, et doivent rester à plus de 9\" de tout modèle ennemi."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      {head:"Les 2 combi-bolters de ce modèle peuvent être remplacés par :", items:["2 lance-flammes lourds","2 chargeurs volkite jumelés"]}
+    ],
+    comp:["1 Terrax-pattern Termite"],
+    equip:"Ce modèle est équipé de : découpeur à fusion Terrax, 2 combi-bolters, foreuse Termite.",
+    pts:[["1 modèle","200"]],
+    transport:"Capacité de transport de 12 modèles INFANTERIE ADEPTUS MECHANICUS. Ne peut pas transporter de modèles RÉACTEUR DORSAL ni KATAPHRON.",
+    keywords:"VÉHICULE, IMPERIUM, TRANSPORT, TRANSPORT ASSIGNÉ, TERRAX-PATTERN TERMITE",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Corpuscarii Electro-Priests", base:"⌀32mm", role:"Elites",
+    stats:['6"','3','7+','1','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Gantelets électrostatiques", t:"[PISTOLET, TOUCHES SOUTENUES 2]", r:'12"', a:"3", sk:"3+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Gantelets électrostatiques", t:"[TOUCHES SOUTENUES 2]", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 5+"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Électrochoc", t:"Après que cette unité a résolu son action de Tir, choisissez une unité ennemie (hors MONSTRES et VÉHICULES) touchée par une ou plusieurs de ces attaques. Jusqu'au début du prochain tour, cette unité est électrochoquée : réduisez de 2\" sa caractéristique de Mouvement et de 2 ses jets d'Avance et de Charge."}
+    ],
+    comp:["5-10 Électroprêtres Corpuscarii"],
+    equip:"Chaque modèle est équipé de : gantelets électrostatiques.",
+    pts:[["5 modèles","65"],["10 modèles","130"]],
+    keywords:"INFANTERIE, IMPERIUM, CULTE MECHANICUS, CORPUSCARII, ÉLECTRO-PRÊTRES",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Cybernetica Datasmith", base:"⌀32mm", role:"Elites",
+    stats:['6"','4','2+','3','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"3+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Gantelet énergétique", t:"", r:"Mêlée", a:"2", sk:"3+", s:"8", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Protocoles de Combat", t:"Au début de la bataille, si ce modèle mène une unité ROBOTS KASTELAN, celle-ci entre en Protocole Égide. À votre phase de Commandement, si ce modèle mène une unité ROBOTS KASTELAN, vous pouvez lui faire adopter l'un des protocoles ci-dessous. Une unité conserve son protocole jusqu'à en adopter un autre."},
+      {l:"Protocole Protecteur", t:"Ajoutez 2 à la caractéristique d'Attaques des armes de tir des modèles ROBOT KASTELAN de l'unité."},
+      {l:"Protocole Conquérant", t:"Ajoutez 2 à la caractéristique d'Attaques des armes de mêlée des modèles ROBOT KASTELAN de l'unité."},
+      {l:"Protocole Égide", t:"Ajoutez 1 à la caractéristique d'Endurance des modèles ROBOT KASTELAN de l'unité."}
+    ],
+    comp:["1 Cybernetica Datasmith"],
+    equip:"Ce modèle est équipé de : pistolet archéotechnologique, gantelet énergétique.",
+    pts:[["1 modèle","35"]],
+    leader:["Kastelan Robots"],
+    leaderNote:"Ce modèle doit être attaché à une unité ROBOTS KASTELAN.",
+    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, LEGIO CYBERNETICA, TECHNOPRÊTRE, CYBERNETICA DATASMITH",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Fulgurite Electro-Priests", base:"⌀32mm", role:"Elites",
+    stats:['6"','3','7+','1','7+','1'], inv:'5+',
+    ranged:[],
+    melee:[
+      {n:"Bâton électroclaste", t:"[BLESSURES DÉVASTATRICES]", r:"Mêlée", a:"2", sk:"3+", s:"6", ap:"-1", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Insensible à la Douleur 5+"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Électro-transmission", t:"Tant qu'un modèle PERSONNAGE mène cette unité, chaque fois qu'une attaque cible cette unité, soustrayez 1 au jet pour blesser."}
+    ],
+    comp:["5-10 Électroprêtres Fulgurites"],
+    equip:"Chaque modèle est équipé de : bâton électroclaste.",
+    pts:[["5 modèles","70"],["10 modèles","140"]],
+    keywords:"INFANTERIE, IMPERIUM, CULTE MECHANICUS, ÉLECTRO-PRÊTRES, FULGURITE",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Servitors", base:"⌀25mm", role:"Elites",
+    stats:['6"','3','4+','1','8+','0'], inv:'6+',
+    ranged:[
+      {n:"Bolter lourd", t:"[LOURD, TOUCHES SOUTENUES 1]", r:'36"', a:"3", sk:"6+", s:"5", ap:"-1", d:"2"},
+      {n:"Multi-fuseur", t:"[LOURD, FUSION 2]", r:'18"', a:"2", sk:"6+", s:"9", ap:"-4", d:"D6"},
+      {n:"Canon à plasma – standard", t:"[LOURD, DÉFLAGRATION]", r:'36"', a:"D3", sk:"6+", s:"7", ap:"-2", d:"1"},
+      {n:"Canon à plasma – surcharge", t:"[LOURD, DÉFLAGRATION, À RISQUE]", r:'36"', a:"D3", sk:"6+", s:"8", ap:"-3", d:"2"}
+    ],
+    melee:[
+      {n:"Servobras de Servitor", t:"", r:"Mêlée", a:"1", sk:"5+", s:"8", ap:"-2", d:"3"},
+      {n:"Outils de Servitor", t:"", r:"Mêlée", a:"1", sk:"5+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Verrou Mental", t:"Tant qu'un modèle TECHNOPRÊTRE mène cette unité, améliorez de 1 la CT et la CC des armes des modèles SERVITOR de cette unité."}
+    ],
+    wargear:[
+      {head:"Jusqu'à 2 modèles peuvent remplacer leur servobras de Servitor par :", items:["1 bolter lourd et 1 outils de Servitor","1 multi-fuseur et 1 outils de Servitor","1 canon à plasma et 1 outils de Servitor"]}
+    ],
+    comp:["4 Servitors"],
+    equip:"Chaque modèle est équipé de : servobras de Servitor.",
+    pts:[["4 modèles","50"]],
+    leaderNote:"Suite de Servitors : à l'étape Déclarer les Formations de Bataille, cette unité peut rejoindre une unité menée par un modèle TECH-PRIEST ENGINSEER (une unité ne peut être rejointe que par une seule unité de Servitors).",
+    keywords:"INFANTERIE, IMPERIUM, SERVITORS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Sicarian Infiltrators", base:"⌀40mm", role:"Elites",
+    stats:['8"','4','4+','2','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Éclateur à fléchettes", t:"[PISTOLET]", r:'12"', a:"5", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Mitraillette", t:"[PISTOLET]", r:'12"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"4", sk:"4+", s:"4", ap:"-2", d:"1"},
+      {n:"Matraque taser", t:"[TOUCHES SOUTENUES 2]", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Discrétion"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Voix dans le Code", t:"Au début de la phase de Combat, chaque unité ennemie à portée d'engagement d'une ou plusieurs unités dotées de cette aptitude doit passer un test d'Ébranlement."},
+      {l:"Interférence Neurostatique (Aura)", t:"Tant qu'une unité ennemie est à 6\" ou moins de cette unité, chaque fois qu'un test d'Ébranlement ou de Commandement est effectué pour elle, soustrayez 1 au test. Tant que cette unité est à 6\" ou moins d'une ou plusieurs unités LIGNE ADEPTUS MECHANICUS amies, soustrayez 2 au test à la place."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur mitraillette et arme énergétique par 1 éclateur à fléchettes et 1 matraque taser."
+    ],
+    comp:["1 Princeps Infiltrateur Sicarien","4-9 Infiltrateurs Sicariens"],
+    equip:"Chaque modèle est équipé de : mitraillette, arme énergétique.",
+    pts:[["5 modèles","75"],["10 modèles","155"]],
+    keywords:"INFANTERIE, IMPERIUM, SKITARII, SICARIEN, INFILTRATEURS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Sicarian Ruststalkers", base:"⌀40mm", role:"Elites",
+    stats:['8"','4','4+','2','7+','1'], inv:'5+',
+    ranged:[],
+    melee:[
+      {n:"Lames transsoniques", t:"[BLESSURES DÉVASTATRICES, PRÉCISION]", r:"Mêlée", a:"5", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Lames transsoniques et chordgriffe", t:"[ANTI-INFANTERIE 3+, BLESSURES DÉVASTATRICES, PRÉCISION]", r:"Mêlée", a:"5", sk:"4+", s:"5", ap:"-2", d:"1"},
+      {n:"Rasoir transsonique et chordgriffe", t:"[ANTI-INFANTERIE 3+, PRÉCISION]", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Discrétion"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Démarche Optimisée", t:"Ajoutez 1 aux jets d'Avance et de Charge de cette unité. Tant qu'elle est à 6\" ou moins d'une ou plusieurs unités LIGNE ADEPTUS MECHANICUS amies, ajoutez 2 à la place."}
+    ],
+    wargear:[
+      "N'importe quel nombre de Ruststalkers peuvent remplacer leur rasoir transsonique et chordgriffe par 1 lames transsoniques.",
+      "Le rasoir transsonique et chordgriffe du Princeps peut être remplacé par 1 lames transsoniques et chordgriffe."
+    ],
+    comp:["1 Princeps Ruststalker Sicarien","4-9 Ruststalkers Sicariens"],
+    equip:"Chaque modèle est équipé de : rasoir transsonique et chordgriffe.",
+    pts:[["5 modèles","80"],["10 modèles","165"]],
+    keywords:"INFANTERIE, IMPERIUM, SKITARII, SICARIEN, RUSTSTALKERS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"X-101", base:"⌀32mm", role:"Elites",
+    stats:['6"','3','4+','3','8+','0'], inv:'',
+    ranged:[
+      {n:"Canon à gravitons", t:"[ANTI-VÉHICULE 4+]", r:'18"', a:"2", sk:"3+", s:"5", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Griffe hydraulique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"8", ap:"-2", d:"3"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Verrou Mental", t:"Tant qu'un modèle TECHNOPRÊTRE mène l'unité de ce modèle, améliorez de 1 la CT et la CC des armes de ce modèle."},
+      {l:"Créature Asservie", t:"Tant qu'un modèle TECHNOPRÊTRE mène l'unité de ce modèle, ce modèle TECHNOPRÊTRE a l'aptitude Insensible à la Douleur 5+."}
+    ],
+    comp:["1 X-101 — Héros épique"],
+    equip:"Ce modèle est équipé de : canon à gravitons, griffe hydraulique.",
+    pts:[["1 modèle","40"]],
+    leaderNote:"Garde du Corps Servitor : à l'étape Déclarer les Formations de Bataille, ce modèle peut rejoindre une unité menée par un modèle TECHNOPRÊTRE INFANTERIE ; il compte alors comme faisant partie de cette unité de Gardes du Corps jusqu'à la fin de la bataille.",
+    keywords:"INFANTERIE, IMPERIUM, PERSONNAGE, HÉROS ÉPIQUE, CULTE MECHANICUS, X-101",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Secutarii Hoplites", base:"⌀25mm", role:"Elites",
+    stats:['6"','3','5+','1','7+','1'], inv:'4+',
+    ranged:[
+      {n:"Lance à arc", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES]", r:'12"', a:"1", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Armes de mêlée d'Alpha", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Lance à arc", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES, LANCE]", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Garde du Titan", t:"Vous pouvez cibler cette unité avec le Stratagème Intervention Héroïque pour 0 PC, même si vous avez déjà ciblé une autre unité avec ce Stratagème cette phase. Si une ou plusieurs unités ADEPTUS TITANICUS amies sont sur le champ de bataille, vous pouvez relancer le jet de charge qui suit."},
+      {l:"Datacâble amélioré (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Omnispex (équipement)", t:"Les armes à distance des modèles de l'unité du porteur ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    wargear:[
+      "La lance à arc de l'Alpha peut être remplacée par 1 pistolet archéotechnologique.",
+      "L'Alpha peut être équipé de 1 armes de mêlée d'Alpha.",
+      {head:"1 Secutarii Hoplite peut recevoir l'un des éléments suivants :", items:["1 datacâble amélioré","1 omnispex"]}
+    ],
+    comp:["1 Hoplite Alpha","4-9 Secutarii Hoplites"],
+    equip:"Chaque modèle est équipé de : lance à arc.",
+    pts:[["5 modèles","65"],["10 modèles","130"]],
+    keywords:"INFANTERIE, IMPERIUM, SKITARII, SECUTARII HOPLITES",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Secutarii Peltasts", base:"⌀25mm", role:"Elites",
+    stats:['6"','3','5+','1','7+','1'], inv:'6+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Diffuseur galvanique – fléchette", t:"[ASSAUT]", r:'18"', a:"5", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Diffuseur galvanique – tir-marteau", t:"[LOURD]", r:'24"', a:"2", sk:"4+", s:"5", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Armes de mêlée d'Alpha", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Barrage Aveuglant", t:"Après que cette unité a résolu son action de Tir, choisissez une unité INFANTERIE ennemie touchée par une ou plusieurs de ces attaques. Jusqu'au début du prochain tour et tant que cette unité est sur le champ de bataille, l'unité ennemie est aveuglée : chaque fois qu'un de ses modèles effectue une attaque, soustrayez 1 au jet pour toucher."},
+      {l:"Datacâble amélioré (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Omnispex (équipement)", t:"Les armes à distance des modèles de l'unité du porteur ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    wargear:[
+      "L'Alpha peut être équipé de 1 armes de mêlée d'Alpha.",
+      {head:"1 Secutarii Peltast peut recevoir l'un des éléments suivants :", items:["1 datacâble amélioré","1 omnispex"]}
+    ],
+    comp:["1 Peltast Alpha","4-9 Secutarii Peltasts"],
+    equip:"Chaque modèle est équipé de : diffuseur galvanique.",
+    pts:[["5 modèles","50"],["10 modèles","100"]],
+    keywords:"INFANTERIE, IMPERIUM, SKITARII, SECUTARII PELTASTS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Sydonian Skatros", base:"⌀40mm", role:"Elites",
+    stats:['8"','4','4+','4','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"3+", s:"6", ap:"-1", d:"1"},
+      {n:"Jezzail à radium", t:"[ANTI-INFANTERIE 3+, LOURD, PRÉCISION]", r:'36"', a:"1", sk:"3+", s:"5", ap:"-2", d:"3"},
+      {n:"Arquebuse transuranique de Skatros", t:"[ANTI-MONSTRE 4+, ANTI-VÉHICULE 4+, LOURD, PRÉCISION]", r:'36"', a:"1", sk:"3+", s:"7", ap:"-2", d:"D3"}
+    ],
+    melee:[
+      {n:"Pieds sydoniens", t:"", r:"Mêlée", a:"3", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Agent Solitaire, Discrétion"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Tireurs d'Effroi", t:"Après que ce modèle a résolu son action de Tir, choisissez une unité ennemie touchée par une ou plusieurs de ces attaques. Elle doit passer un test d'Ébranlement."},
+      {l:"Œil Achillien", t:"Chaque fois que ce modèle attaque avec un jezzail à radium en ciblant une unité INFANTERIE, relancez le jet pour blesser. Chaque fois qu'il attaque avec une arquebuse transuranique de Skatros en ciblant une unité MONSTRE ou VÉHICULE, relancez le jet pour blesser."}
+    ],
+    wargear:[
+      "Le jezzail à radium de ce modèle peut être remplacé par 1 arquebuse transuranique de Skatros."
+    ],
+    comp:["1 Sydonian Skatros"],
+    equip:"Ce modèle est équipé de : pistolet archéotechnologique, jezzail à radium, pieds sydoniens.",
+    pts:[["1 modèle","50"]],
+    leaderNote:"Sentinelle Sydonienne : ce modèle ne peut pas être votre Seigneur de Guerre.",
+    keywords:"INFANTERIE, PERSONNAGE, IMPERIUM, SKITARII, SYDONIEN, SKATROS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Servitor Battleclade", base:"multi", role:"Elites",
+    profiles:[
+      {name:"Servitor Underseer", base:"⌀32mm", stats:['6"','4','4+','2','7+','1'], inv:'6+'},
+      {name:"Servitors de Combat et de Tir", base:"⌀25/32mm", stats:['6"','4','4+','1','8+','1'], inv:'6+'}
+    ],
+    stats:['6"','4','4+','2','7+','1'], inv:'6+',
+    ranged:[
+      {n:"Électrofusil lourd", t:"[ANTI-VÉHICULE 4+, TIR RAPIDE 1]", r:'30"', a:"1", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Bolter lourd", t:"[LOURD, TOUCHES SOUTENUES 1]", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Igniteur incendine", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"3", ap:"0", d:"1"},
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Fuseur", t:"[FUSION 2]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Éclateur à phosphore", t:"[IGNORE LE COUVERT, TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Datapics", t:"", r:"Mêlée", a:"4", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Servo-griffe", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Dérivation du Réseau", t:"Tant que cette unité contient un ou plusieurs modèles TECHNOPRÊTRE, elle est : éligible pour effectuer une Action à un tour où elle a Avancé ; éligible pour tirer à un tour où elle a entamé une Action."}
+    ],
+    wargear:[
+      "1 Servitor de Combat peut remplacer son éclateur à phosphore par 1 fuseur.",
+      "Jusqu'à 3 Servitors de Combat peuvent remplacer leur éclateur à phosphore par 1 igniteur incendine."
+    ],
+    comp:["1 Servitor Underseer","2 Servitors de Tir","6 Servitors de Combat"],
+    equip:"Underseer : pistolet archéotechnologique, datapics. 1 Servitor de Tir : électrofusil lourd, servo-griffe. 1 Servitor de Tir : bolter lourd, servo-griffe. Chaque Servitor de Combat : éclateur à phosphore, servo-griffe.",
+    pts:[["9 modèles","60"]],
+    keywords:"INFANTERIE, IMPERIUM, CULTE MECHANICUS, SERVITOR BATTLECLADE, TECHNOPRÊTRE (Underseer)",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Ironstrider Ballistarii", base:"⌀105 x 70mm", role:"Fast Attack",
+    stats:['10"','7','3+','7','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Autocanon Cognis jumelé", t:"[TOUCHES SOUTENUES 1, JUMELÉ]", r:'48"', a:"4", sk:"4+", s:"9", ap:"-1", d:"3"},
+      {n:"Canon laser Cognis jumelé", t:"[TOUCHES SOUTENUES 1, JUMELÉ]", r:'48"', a:"2", sk:"4+", s:"12", ap:"-3", d:"D6+1"}
+    ],
+    melee:[
+      {n:"Pieds de Ferro-échassier", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Marcheur Surélevé", t:"Cette unité peut tirer lors d'un tour où elle s'est Désengagée ou a Avancé, et vous pouvez relancer les tests de Fuite Désespérée effectués pour ses modèles."},
+      {l:"Datacâble à large spectre", t:"Chaque fois que vous ciblez cette unité avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur autocanon Cognis jumelé par 1 canon laser Cognis jumelé."
+    ],
+    comp:["1-3 Ferro-échassiers Ballistarii"],
+    equip:"Chaque modèle est équipé de : autocanon Cognis jumelé, pieds de Ferro-échassier.",
+    pts:[["1 modèle","85"],["2 modèles","170"],["3 modèles","255"]],
+    keywords:"VÉHICULE, MARCHEUR, FUMÉE, IMPERIUM, SKITARII, IRONSTRIDER BALLISTARII",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Pteraxii Skystalkers", base:"⌀40mm", role:"Fast Attack",
+    stats:['12"','4','4+','2','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Éclateur à fléchettes", t:"[PISTOLET]", r:'12"', a:"5", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Carabine à fléchettes", t:"", r:'18"', a:"6", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Matraque taser", t:"[TOUCHES SOUTENUES 2]", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Chevaucher les Thermiques", t:"Après que cette unité a résolu son action de Tir, si elle n'est pas à portée d'engagement d'une unité ennemie, elle peut : soit effectuer un mouvement Normal jusqu'à 6\" ; soit un mouvement Normal jusqu'à 12\" si chaque modèle finit entièrement à 6\" ou moins d'une ou plusieurs unités LIGNE ADEPTUS MECHANICUS amies. Dans les deux cas, jusqu'à la fin du tour, cette unité ne peut pas déclarer de charge."}
+    ],
+    comp:["1 Pteraxii Skystalker Alpha","4-9 Pteraxii Skystalkers"],
+    equip:"L'Alpha : éclateur à fléchettes, matraque taser. Chaque autre : carabine à fléchettes, arme de corps à corps.",
+    pts:[["5 modèles","75"],["10 modèles","150"]],
+    keywords:"INFANTERIE, VOL, RÉACTEUR DORSAL, GRENADES, IMPERIUM, SKITARII, PTERAXII, SKYSTALKERS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Pteraxii Sterylizors", base:"⌀40mm", role:"Fast Attack",
+    stats:['12"','4','4+','2','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Éclateur à fléchettes", t:"[PISTOLET]", r:'12"', a:"5", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Torche à phosphore", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Serres Pteraxii", t:"", r:"Mêlée", a:"2", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Matraque taser", t:"[TOUCHES SOUTENUES 2]", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Conflagration Ardente", t:"Chaque fois qu'un modèle de cette unité attaque avec une torche à phosphore en ciblant une unité ennemie à portée d'un marqueur d'objectif, relancez un jet pour blesser de 1. Si cette unité est aussi à 6\" ou moins d'une ou plusieurs unités LIGNE ADEPTUS MECHANICUS amies, relancez plutôt le jet pour blesser."}
+    ],
+    comp:["1 Pteraxii Sterylizor Alpha","4-9 Pteraxii Sterylizors"],
+    equip:"L'Alpha : éclateur à fléchettes, serres Pteraxii, matraque taser. Chaque autre : torche à phosphore, serres Pteraxii.",
+    pts:[["5 modèles","80"],["10 modèles","160"]],
+    keywords:"INFANTERIE, VOL, RÉACTEUR DORSAL, IMPERIUM, SKITARII, PTERAXII, STERYLIZORS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Serberys Raiders", base:"⌀60 x 35,5mm", role:"Fast Attack",
+    stats:['12"','4','4+','2','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Carabine galvanique", t:"[BLESSURES DÉVASTATRICES]", r:'18"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Sabre de cavalerie et membres griffus", t:"", r:"Mêlée", a:"4", sk:"4+", s:"4", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 9\""},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Tactica Obliqua", t:"Une fois par tour, quand une unité ennemie termine un mouvement Normal, d'Avance ou de Retraite à 9\" ou moins de cette unité, et si celle-ci n'est pas à portée d'engagement ennemie, elle peut : soit un mouvement Normal jusqu'à D6\" ; soit un mouvement Normal jusqu'à 6\" si chaque modèle finit à 6\" ou moins d'une unité LIGNE ADEPTUS MECHANICUS amie."},
+      {l:"Datacâble amélioré (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    wargear:[
+      "1 Serberys Raider peut être équipé de 1 datacâble amélioré."
+    ],
+    comp:["1 Serberys Raider Alpha","2-5 Serberys Raiders"],
+    equip:"L'Alpha : pistolet archéotechnologique, carabine galvanique, sabre de cavalerie et membres griffus. Chaque autre : carabine galvanique, sabre de cavalerie et membres griffus.",
+    pts:[["3 modèles","60"],["6 modèles","120"]],
+    keywords:"MONTÉ, IMPERIUM, SKITARII, SERBERYS RAIDERS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Serberys Sulphurhounds", base:"⌀60 x 35,5mm", role:"Fast Attack",
+    stats:['12"','4','4+','2','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Pistolet archéotechnologique", t:"[BLESSURES DÉVASTATRICES, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Carabine à explosion de phosphore", t:"[DÉFLAGRATION, IGNORE LE COUVERT]", r:'18"', a:"D6", sk:"4+", s:"6", ap:"0", d:"1"},
+      {n:"Pistolet à phosphore", t:"[IGNORE LE COUVERT, PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Souffle de soufre", t:"[IGNORE LE COUVERT, PISTOLET, TORRENT]", r:'9"', a:"D6", sk:"N/A", s:"3", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Masse à arc de cavalerie", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES, ATTAQUES BONUS]", r:"Mêlée", a:"1", sk:"4+", s:"5", ap:"-1", d:"1"},
+      {n:"Membres griffus", t:"", r:"Mêlée", a:"4", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Briseurs de Ligne", t:"Chaque fois que cette unité termine un mouvement de Charge, choisissez une unité ennemie à portée d'engagement et jetez 1 D6 par modèle de cette unité à portée d'engagement de cette unité ennemie, en ajoutant 2 au résultat si cette unité a commencé son mouvement de Charge à 6\" ou moins d'une ou plusieurs unités LIGNE ADEPTUS MECHANICUS amies. Pour chaque 4+, l'unité ennemie subit 1 blessure mortelle."}
+    ],
+    wargear:[
+      "Par tranche de 3 modèles, 1 Serberys Sulphurhound peut remplacer ses 2 pistolets à phosphore par 1 carabine à explosion de phosphore et 1 pistolet à phosphore."
+    ],
+    comp:["1 Serberys Sulphurhound Alpha","2-5 Serberys Sulphurhounds"],
+    equip:"Chaque modèle est équipé de : 2 pistolets à phosphore, masse à arc de cavalerie, membres griffus.",
+    pts:[["3 modèles","55"],["6 modèles","110"]],
+    keywords:"MONTÉ, IMPERIUM, SKITARII, SERBERYS SULPHURHOUNDS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Sydonian Dragoons with Radium Jezzails", base:"⌀105 x 70mm", role:"Fast Attack",
+    stats:['10"','7','3+','7','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Serpentine à phosphore", t:"[IGNORE LE COUVERT, PISTOLET]", r:'18"', a:"1", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Jezzail à radium", t:"[ANTI-INFANTERIE 3+, LOURD, PRÉCISION]", r:'36"', a:"1", sk:"4+", s:"5", ap:"-2", d:"3"}
+    ],
+    melee:[
+      {n:"Pieds de ferro-échassier", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Discrétion"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Chasseurs Concentrés", t:"Au début de la bataille, choisissez une unité de l'armée adverse. Jusqu'à la fin de la bataille, chaque fois qu'un modèle de cette unité attaque cette unité ennemie, relancez le jet pour toucher."},
+      {l:"Datacâble à large spectre", t:"Chaque fois que vous ciblez cette unité avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    comp:["1-3 Sydonian Dragoons"],
+    equip:"Chaque modèle est équipé de : serpentine à phosphore, jezzail à radium, pieds de ferro-échassier.",
+    pts:[["1 modèle","55"],["2 modèles","100"],["3 modèles","150"]],
+    keywords:"VÉHICULE, MARCHEUR, FUMÉE, IMPERIUM, SKITARII, SYDONIEN, DRAGOONS WITH RADIUM JEZZAILS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Sydonian Dragoons with Taser Lances", base:"⌀105 x 70mm", role:"Fast Attack",
+    stats:['10"','7','3+','7','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Serpentine à phosphore", t:"[IGNORE LE COUVERT, PISTOLET]", r:'18"', a:"1", sk:"4+", s:"5", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Lance taser", t:"[ANTI-MARCHEUR 2+, LANCE, TOUCHES SOUTENUES 2]", r:"Mêlée", a:"4", sk:"4+", s:"7", ap:"-2", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Discrétion"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Ferro-échassier", t:"Cette unité est éligible pour déclarer une charge à un tour où elle a Avancé ou s'est Désengagée, et vous pouvez relancer les tests de Fuite Désespérée effectués pour ses modèles."},
+      {l:"Datacâble à large spectre", t:"Chaque fois que vous ciblez cette unité avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    comp:["1-3 Sydonian Dragoons"],
+    equip:"Chaque modèle est équipé de : serpentine à phosphore, lance taser.",
+    pts:[["1 modèle","65"],["2 modèles","130"],["3 modèles","195"]],
+    keywords:"VÉHICULE, MARCHEUR, FUMÉE, IMPERIUM, SKITARII, SYDONIEN, DRAGOONS WITH TASER LANCES",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Archaeopter Fusilave", base:"⌀170 x 109mm", role:"Flyers",
+    stats:['20+"','9','3+','10','7+','0'], inv:'',
+    ranged:[
+      {n:"Bordée de mitrailleuses lourdes Cognis", t:"[TIR RAPIDE 9, TOUCHES SOUTENUES 1, JUMELÉ]", r:'36"', a:"9", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Vol stationnaire"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Râtelier à bombes", t:"Chaque fois que ce modèle termine un mouvement Normal, vous pouvez choisir une unité ennemie survolée durant ce mouvement et jeter six D6 : pour chaque 4+, elle subit 1 blessure mortelle."},
+      {l:"Lance-leurres (équipement)", t:"Le porteur a le mot-clé FUMÉE."},
+      {l:"Liaison de commandement (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    wargear:[
+      "La liaison de commandement de ce modèle peut être remplacée par 1 lance-leurres."
+    ],
+    comp:["1 Archaeopter Fusilave"],
+    equip:"Ce modèle est équipé de : bordée de mitrailleuses lourdes Cognis, coque blindée, liaison de commandement.",
+    pts:[["1 modèle","160"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, IMPERIUM, SKITARII, ARCHÉOPTÈRE FUSILAVE",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Archaeopter Stratoraptor", base:"⌀170 x 109mm", role:"Flyers",
+    stats:['20+"','9','3+','10','7+','0'], inv:'',
+    ranged:[
+      {n:"Mitrailleuse lourde Cognis", t:"[TIR RAPIDE 3, TOUCHES SOUTENUES 1]", r:'36"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Éclateur à phosphore lourd", t:"[IGNORE LE COUVERT]", r:'36"', a:"3", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Canon laser Cognis jumelé", t:"[TOUCHES SOUTENUES 1, JUMELÉ]", r:'48"', a:"1", sk:"4+", s:"12", ap:"-3", d:"D6+1"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Vol stationnaire"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Mitraillage en Piqué", t:"Chaque fois que ce modèle effectue une attaque à distance ciblant une unité ennemie (hors unités pouvant VOLER), ajoutez 1 au jet pour toucher."},
+      {l:"Lance-leurres (équipement)", t:"Le porteur a le mot-clé FUMÉE."},
+      {l:"Liaison de commandement (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    wargear:[
+      "La liaison de commandement de ce modèle peut être remplacée par 1 lance-leurres."
+    ],
+    comp:["1 Archaeopter Stratoraptor"],
+    equip:"Ce modèle est équipé de : 2 mitrailleuses lourdes Cognis, 2 blasters à phosphore lourds, canon laser Cognis jumelé, coque blindée, liaison de commandement.",
+    pts:[["1 modèle","185"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, IMPERIUM, SKITARII, ARCHÉOPTÈRE STRATORAPTOR",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Archaeopter Transvector", base:"⌀170 x 109mm", role:"Flyers",
+    stats:['20+"','9','3+','10','7+','0'], inv:'',
+    ranged:[
+      {n:"Bordée de mitrailleuses lourdes Cognis", t:"[TIR RAPIDE 9, TOUCHES SOUTENUES 1, JUMELÉ]", r:'36"', a:"9", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Frappe en Profondeur, Vol stationnaire"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Déploiement Aérien", t:"Si ce modèle débute la partie en mode Vol stationnaire et en Réserves Stratégiques, il peut être placé à l'étape des Renforts de vos 1re, 2e ou 3e phases de Mouvement, quelles que soient les règles de mission."},
+      {l:"Lance-leurres (équipement)", t:"Le porteur a le mot-clé FUMÉE."},
+      {l:"Liaison de commandement (équipement)", t:"Chaque fois que vous ciblez l'unité du porteur avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    wargear:[
+      "La liaison de commandement de ce modèle peut être remplacée par 1 lance-leurres."
+    ],
+    comp:["1 Archaeopter Transvector"],
+    equip:"Ce modèle est équipé de : bordée de mitrailleuses lourdes Cognis, coque blindée, liaison de commandement.",
+    pts:[["1 modèle","150"]],
+    transport:"Capacité de transport de 11 modèles INFANTERIE SKITARII ou INFANTERIE TECHNOPRÊTRE. Ne peut pas transporter de modèles RÉACTEUR DORSAL ni KATAPHRON.",
+    keywords:"VÉHICULE, AÉRONEF, TRANSPORT, VOL, IMPERIUM, SKITARII, ARCHÉOPTÈRE TRANSVECTOR",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Kastelan Robots", base:"⌀60mm", role:"Heavy Support",
+    stats:['6"','9','2+','7','7+','2'], inv:'5+',
+    ranged:[
+      {n:"Éclateur à phosphore lourd", t:"[IGNORE LE COUVERT]", r:'36"', a:"3", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Combusteur incendine", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"6", ap:"-1", d:"1"},
+      {n:"Éclateur à phosphore Kastelan", t:"[IGNORE LE COUVERT]", r:'24"', a:"3", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Éclateur à phosphore Kastelan jumelé", t:"[IGNORE LE COUVERT, JUMELÉ]", r:'24"', a:"3", sk:"4+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"},
+      {n:"Poing Kastelan", t:"", r:"Mêlée", a:"4", sk:"4+", s:"12", ap:"-2", d:"3"},
+      {n:"Poing Kastelan jumelé", t:"[JUMELÉ]", r:"Mêlée", a:"4", sk:"4+", s:"12", ap:"-2", d:"3"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1"},
+      {l:"Faction", t:"Cantiques de l'Omnimessie"},
+      {l:"Garde du Corps Robotique", t:"Tant qu'un modèle CYBERNETICA DATASMITH mène cette unité, ce modèle a l'aptitude Insensible à la Douleur 4+."},
+      {l:"Grille Répulsive", t:"Chaque fois qu'une attaque à distance est répartie sur un modèle ROBOT KASTELAN de cette unité, sur un jet de sauvegarde non modifié de 6, l'unité attaquante subit 1 blessure mortelle après avoir terminé ses attaques."}
+    ],
+    wargear:[
+      {head:"N'importe quel nombre de modèles peuvent remplacer leur poing Kastelan jumelé par :", items:["1 éclateur à phosphore Kastelan et 1 poing Kastelan","1 éclateur à phosphore Kastelan jumelé et 1 arme de corps à corps"]},
+      "N'importe quel nombre de modèles peuvent remplacer leur combusteur incendine par 1 éclateur à phosphore lourd."
+    ],
+    comp:["2-4 Robots Kastelan"],
+    equip:"Chaque modèle est équipé de : combusteur incendine, poing Kastelan jumelé.",
+    pts:[["2 modèles","180"],["4 modèles","360"]],
+    keywords:"VÉHICULE, MARCHEUR, IMPERIUM, LEGIO CYBERNETICA, ROBOTS KASTELAN",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Onager Dunecrawler", base:"⌀130mm", role:"Heavy Support",
+    stats:['8"','10','2+','11','7+','3'], inv:'4+',
+    ranged:[
+      {n:"Mitrailleuse lourde Cognis", t:"[TIR RAPIDE 3, TOUCHES SOUTENUES 1]", r:'36"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-missiles Dédale", t:"[ANTI-VOL 2+]", r:'48"', a:"2", sk:"4+", s:"10", ap:"-2", d:"D6+1"},
+      {n:"Faisceau d'éradication – diffus", t:"[DÉFLAGRATION, TOUCHES SOUTENUES 1]", r:'36"', a:"3D3", sk:"4+", s:"9", ap:"-2", d:"2"},
+      {n:"Faisceau d'éradication – concentré", t:"[DÉFLAGRATION, TOUCHES SOUTENUES 1]", r:'18"', a:"3D3", sk:"4+", s:"10", ap:"-3", d:"3"},
+      {n:"Laser à neutrons", t:"[LOURD]", r:'48"', a:"3", sk:"4+", s:"16", ap:"-4", d:"D6+2"},
+      {n:"Batterie Icare", t:"[ANTI-VOL 4+, JUMELÉ]", r:'48"', a:"6", sk:"4+", s:"8", ap:"-1", d:"2"},
+      {n:"Éclateur à phosphore lourd Onager jumelé", t:"[IGNORE LE COUVERT, JUMELÉ]", r:'36"', a:"12", sk:"4+", s:"6", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Jambes de Dunecrawler", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Champ de Force Emanatus (Aura)", t:"Tant qu'un modèle LIGNE ADEPTUS MECHANICUS ami est entièrement à 6\" ou moins de ce modèle, il a une sauvegarde invulnérable de 4+ contre les attaques à distance."},
+      {l:"Marcheur Fouisseur", t:"Chaque fois que ce modèle effectue un mouvement Normal, d'Avance ou de Retraite, il peut traverser les modèles MONSTRE et VÉHICULE amis et les éléments de décor de 4\" ou moins de hauteur."},
+      {l:"Datacâble à large spectre (équipement)", t:"Le porteur perd le mot-clé FUMÉE, mais chaque fois que vous le ciblez avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Endommagé : 1-4 PV restants", t:"Tant que ce modèle a 1-4 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      {head:"Le faisceau d'éradication de ce modèle peut être remplacé par :", items:["1 lance-missiles Dédale et 1 batterie Icare","1 laser à neutrons et 1 mitrailleuse lourde Cognis","1 éclateur à phosphore lourd Onager jumelé"]},
+      "Ce modèle peut être équipé de 1 mitrailleuse lourde Cognis supplémentaire.",
+      "Ce modèle peut être équipé de 1 datacâble à large spectre."
+    ],
+    comp:["1 Onager Dunecrawler"],
+    equip:"Ce modèle est équipé de : faisceau d'éradication, jambes de Dunecrawler.",
+    pts:[["1 modèle","155"]],
+    keywords:"VÉHICULE, MARCHEUR, IMPERIUM, SKITARII, FUMÉE, ONAGER DUNECRAWLER",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Skorpius Disintegrator", base:"voir modèle", role:"Heavy Support",
+    stats:['10"','10','2+','12','7+','3'], inv:'',
+    ranged:[
+      {n:"Canon à énergie Belleros", t:"[DÉFLAGRATION, TIR INDIRECT]", r:'36"', a:"2D6", sk:"4+", s:"7", ap:"-2", d:"1"},
+      {n:"Mitrailleuse lourde Cognis", t:"[TIR RAPIDE 3, TOUCHES SOUTENUES 1]", r:'36"', a:"3", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Lance-missiles Disrupteur", t:"[JUMELÉ]", r:'36"', a:"3", sk:"4+", s:"9", ap:"-2", d:"D6"},
+      {n:"Canon ferrumite", t:"", r:'48"', a:"3", sk:"4+", s:"12", ap:"-3", d:"D6+1"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Datacâble à large spectre", t:"Chaque fois que vous ciblez cette unité avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Salves Fulgurantes", t:"Chaque fois que ce modèle attaque avec un canon à énergie Belleros en ciblant une unité INFANTERIE, ajoutez 1 au jet pour toucher. Chaque fois qu'il attaque avec un canon ferrumite en ciblant une unité MONSTRE ou VÉHICULE, ajoutez 1 au jet pour toucher."},
+      {l:"Endommagé : 1-4 PV restants", t:"Tant que ce modèle a 1-4 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      "Le canon à énergie Belleros de ce modèle peut être remplacé par 1 canon ferrumite."
+    ],
+    comp:["1 Skorpius Disintegrator"],
+    equip:"Ce modèle est équipé de : canon à énergie Belleros, 3 mitrailleuses lourdes Cognis, lance-missiles Disrupteur, coque blindée.",
+    pts:[["1 modèle","165"]],
+    keywords:"VÉHICULE, IMPERIUM, SKITARII, FUMÉE, SKORPIUS DISINTEGRATOR",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Hastarii Exterminators", base:"⌀32mm", role:"Heavy Support",
+    stats:['5"','4','3+','2','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Électro-éclateur d'Hastarii", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES]", r:'18"', a:"1", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Projecteur d'Éradication – dissipé", t:"[ANTI-INFANTERIE 4+]", r:'30"', a:"2", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Projecteur d'Éradication – focalisé", t:"[ANTI-INFANTERIE 4+]", r:'15"', a:"2", sk:"4+", s:"5", ap:"-2", d:"2"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Augures de Ciblage à Large Spectre", t:"Chaque fois qu'un modèle de cette unité attaque avec un projecteur d'Éradication en ciblant une unité (hors MONSTRE et VÉHICULE), cette attaque a l'aptitude [TOUCHES SOUTENUES 1]."}
+    ],
+    comp:["1 Hastarii Exterminator Alpha","4 Hastarii Exterminators"],
+    equip:"L'Alpha : électro-éclateur d'Hastarii, projecteur d'Éradication, arme énergétique. Chaque autre : électro-éclateur d'Hastarii, projecteur d'Éradication, arme de corps à corps.",
+    pts:[["5 modèles","135"]],
+    keywords:"INFANTERIE, IMPERIUM, SKITARII, HASTARII, EXTERMINATORS",
+    faction:"ADEPTUS MECHANICUS"
+  },
+  {
+    name:"Hastarii Fusiliers", base:"⌀32mm", role:"Heavy Support",
+    stats:['5"','4','3+','2','7+','1'], inv:'5+',
+    ranged:[
+      {n:"Arquebuse à neutrons", t:"", r:'24"', a:"1", sk:"4+", s:"12", ap:"-3", d:"D6+1"},
+      {n:"Éclateur à phosphore d'Hastarii", t:"[IGNORE LE COUVERT]", r:'18"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Arme énergétique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"-2", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Impératifs Doctrina"},
+      {l:"Heaume à Viseur Monoculaire", t:"Chaque fois qu'un modèle de cette unité attaque avec un arquebuse à neutrons en ciblant une unité MONSTRE ou VÉHICULE, cette attaque a l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    comp:["1 Hastarii Fusilier Alpha","4 Hastarii Fusiliers"],
+    equip:"L'Alpha : arquebuse à neutrons, éclateur à phosphore d'Hastarii, arme énergétique. Chaque autre : arquebuse à neutrons, éclateur à phosphore d'Hastarii, arme de corps à corps.",
+    pts:[["5 modèles","145"]],
+    keywords:"INFANTERIE, IMPERIUM, SKITARII, HASTARII, FUSILIERS",
+    faction:"ADEPTUS MECHANICUS"
+  }
+];;
+
+function weaponRows(list, skLabel){
+  if(!list.length) return '';
+  const title = skLabel==='CT' ? 'Armes à distance' : 'Armes de mêlée';
+  let rows = `<div class="wrow whead"><span></span><span>${title}</span>`+
+    `<span class="sub">PORT.</span><span class="sub">A</span><span class="sub">${skLabel}</span>`+
+    `<span class="sub">F</span><span class="sub">PA</span><span class="sub">D</span></div>`;
+  for(const w of list){
+    const tag = w.t ? ` <span class="tag">${w.t}</span>` : '';
+    rows += `<div class="wrow wdata"><span class="dot"></span>`+
+      `<span class="wn">${w.n}${tag}</span>`+
+      `<span class="num">${w.r}</span><span class="num">${w.a}</span><span class="num">${w.sk}</span>`+
+      `<span class="num">${w.s}</span><span class="num">${w.ap}</span><span class="num">${w.d}</span></div>`;
+  }
+  return `<div class="wtable">${rows}</div>`;
+}
+
+function render(){
+  const deck = document.getElementById('deck');
+  deck.innerHTML = UNITS.map(u=>{
+    let statBlock;
+    if(u.profiles){
+      const phead = `<tr><th class="name">Profil</th>${STAT_LABELS.map(l=>`<th>${l}</th>`).join('')}<th>Invu</th></tr>`;
+      const prows = u.profiles.map(p=>`<tr><td class="name">${p.name}${p.base?`<small>${p.base}</small>`:''}</td>`+
+        `${p.stats.map(s=>`<td>${s}</td>`).join('')}<td class="inv">${p.inv||'—'}</td></tr>`).join('');
+      statBlock = `<table class="pf"><thead>${phead}</thead><tbody>${prows}</tbody></table>`;
+    } else {
+      const statCells = STAT_LABELS.map(l=>`<div class="lbl">${l}</div>`).join('')
+        + STAT_LABELS.map((l,i)=>`<div class="val">${u.stats[i]}</div>`).join('');
+      const invul = u.inv ? `<div class="invul"><div class="circle">${u.inv}</div>`+
+        `<div class="txt">Sauvegarde invulnérable</div></div>` : '';
+      statBlock = `<div class="statline">${statCells}</div>${invul}`;
+    }
+    const abLine = a=>`<div class="ability"><span class="al">${a.l} : </span>`+
+      `<span class="at">${a.t}</span></div>`;
+    const abBase = u.abilities.filter(a=>a.l==="Aptitudes de base");
+    const abFac  = u.abilities.filter(a=>a.l==="Faction");
+    const abRest = u.abilities.filter(a=>a.l!=="Aptitudes de base" && a.l!=="Faction");
+    let abilities = abBase.map(abLine).join('');
+    if(abFac.length) abilities += `<div class="ability"><span class="al">Faction : </span>`+
+      `<span class="at">${abFac.map(a=>a.t).join(', ')}</span></div>`;
+    abilities += abRest.map(abLine).join('');
+    const leftSection = u.leftSection ? `<div class="section-h" style="margin-top:20px">${u.leftSection.title}</div>`+
+      `<div class="note">${u.leftSection.text}</div>` : '';
+    const wargear = (u.wargear&&u.wargear.length) ? `<div class="section-h" style="margin-top:20px">Options d'équipement</div>`+
+      `<ul class="wg-list">${u.wargear.map(o=> (typeof o==='string')
+        ? `<li>${o}</li>`
+        : `<li>${o.head}<ul class="wg-sub">${o.items.map(it=>`<li>${it}</li>`).join('')}</ul></li>`
+      ).join('')}</ul>` : '';
+    const comp = `<ul class="comp-list">${u.comp.map(c=>`<li>${c}</li>`).join('')}</ul>`
+      + `<div class="note">${u.equip}</div>`;
+    const pts = `<div class="pts-table">${u.pts.map(p=>`<div class="pts-row"><span class="m">${p[0]}</span>`+
+      `<span class="p">${p[1]} pts</span></div>`).join('')}</div>`;
+    const transport = u.transport ? `<div class="section-h" style="margin-top:16px">Transport</div>`+
+      `<div class="note">${u.transport}</div>` : '';
+    const leader = u.leader ? `<div class="section-h" style="margin-top:16px">Meneur</div>`+
+      `<div class="lead-intro">Ce modèle peut être attaché aux unités suivantes :</div>`+
+      `<ul class="lead-list">${u.leader.map(t=>`<li>${t}</li>`).join('')}</ul>`+
+      (u.leaderNote?`<div class="note" style="margin-top:6px">${u.leaderNote}</div>`:'') : '';
+    return `<div class="card">
+      <div class="card-head">
+        <div><span class="name">${u.name}</span><span class="base">[${u.base}]</span></div>
+        <span class="role">${u.role}</span>
+      </div>
+      <div class="body-grid">
+        <div class="col-left">
+          ${statBlock}
+          ${weaponRows(u.ranged,'CT')}
+          ${weaponRows(u.melee,'CC')}
+          ${wargear}
+          ${leftSection}
+        </div>
+        <div class="col-right">
+          <div class="section-h">Aptitudes</div>
+          ${abilities}
+          <div class="section-h" style="margin-top:16px">Composition d'unité</div>
+          ${comp}
+          <div style="margin-top:10px">${pts}</div>
+          ${transport}
+          ${leader}
+        </div>
+      </div>
+      <div class="kw-grid">
+        <div class="kw-cell"><span class="k">MOTS-CLÉS : </span><span class="v">${u.keywords}</span></div>
+        <div class="kw-cell"><span class="k">MOTS-CLÉS DE FACTION : </span><span class="v">${u.faction}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+render();
+</script>
+</body>
+</html>
