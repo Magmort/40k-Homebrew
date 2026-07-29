@@ -1,8 +1,10 @@
-**Théâtre des Cinq Cents Mondes**
-
 Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant sélectionne un Théâtre disponible sur la Planète concernée, puis lance 1D6 pour déterminer quel effet de ce Théâtre s'applique.
 
-**Récapitulatif des 9 Théâtres**
+**Sommaire**
+
+Ouvrez le document et appuyez sur F9 (ou clic droit \> Mettre à jour) pour générer les numéros de page.
+
+# Récapitulatif des 9 Théâtres
 
 | **Théâtre**                | **Avantage tactique principal**                                                                                                                     | **Terrain recommandé**                                                                                                                                       |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -16,7 +18,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **Terres Mortes**          | Booste les MONSTRES et VÉHICULES : vitesse, durabilité et létalité augmentées.                                                                      | Decors ZONE TERRAIN sont disposés en grappes avec de grands espaces entre elles pour permettre la manœuvre des VEHICULES et des MONSTRES.                    |
 | **Complexe de Tombe**      | Imprévisible : ne favorise pas une armée en particulier mais génère des batailles variées et surprenantes.                                          | Laissez libre cours à votre imagination.                                                                                                                     |
 
-**Théâtre : Port Spatial**
+# Théâtre : Port Spatial
 
 *Bourrés de technologies de communication, les ports spatiaux facilitent le déploiement rapide et constituent des pivots stratégiques majeurs.*
 
@@ -28,7 +30,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Réseau de surveillance**      | Chaque fois qu'une de vos unités effectue un Désengagement, choisissez l'un de ces effets jusqu'à la fin du tour de bataille : (a) l'unité peut tirer ce tour ; ou (b) l'unité peut déclarer une charge ce tour. |
 | **5-6** | **Sanctuaires d'embarquement**  | À la fin de chaque tour de bataille, chaque joueur peut sélectionner 1 de ses unités à portée d'une zone d'objectif et non engagée : il la retire du champ et la place en réserve (Réserves Stratégiques).       |
 
-**Théâtre : Terres Désolées**
+# Théâtre : Terres Désolées
 
 *Vastes étendues ouvertes, friches polluées, plaines de ferraille ou prairies désolées, facilement traversables.*
 
@@ -40,7 +42,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Œil du Jugement**     | Avant le début de la partie, en commençant par l'Attaquant, chaque joueur sélectionne jusqu'à 2 unités (hors MONSTRE et VÉHICULE) : elles gagnent Éclaireurs 6" (juste après le déploiement et avant le premier tour, l'unité peut effectuer un mouvement de 6" ; elle ne peut pas finir à Portée d'Engagement d'un ennemi). |
 | **5-6** | **Combattants exposés** | Les armes à distance des modèles (hors MONSTRE et VÉHICULE) gagnent **[ASSAUT]**.                                                                                                                                                                                                                                          |
 
-**Théâtre : Jungle Xenoflore**
+# Théâtre : Jungle Xenoflore
 
 *Des forêts tempérées aux jungles grouillantes, ces régions envahies par une végétation alien constituent un environnement étroit et dangereux.*
 
@@ -52,7 +54,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Enfer vert**        | L'action de tir en état d'alerte ne peut pas être utilisée.                                                                                                                                                 |
 | **5-6** | **Flore prédatrice**  | Chaque fois qu'une unité (hors MONSTRE et VÉHICULE) effectue un Désengagement, tous ses modèles doivent effectuer un test de Fuite désespérée. Si l'unité est Ébranlée, soustrayez 1 à chacun de ces tests. |
 
-**Théâtre : Zone de Radiation**
+# Théâtre : Zone de Radiation
 
 *Rendue extrêmement dangereuse par l'impact d'une ogive radioactive lors des guerres de réclamation en cours, des cendres irradiées couvrent la région.*
 
@@ -64,7 +66,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Malaise radioactif**          | Chaque attaque de mêlée contre une unité qui a chargé lors de ce tour de bataille bénéficie de +1 au jet de touche.             |
 | **5-6** | **Interférence ésotérique**     | Les joueurs ne peuvent pas utiliser plus d'un stratagème par tour de bataille, quelle que soit la source.                       |
 
-**Théâtre : Complexe de Forges**
+# Théâtre : Complexe de Forges
 
 *Les complexes de forges de l'Adeptus Mechanicus peuvent s'étendre sur des continents entiers et ne cessent jamais leur labeur même en pleine bataille.*
 
@@ -76,7 +78,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Purge Plasmique**       | Au début de chaque tour de bataille, si la purge n'a pas encore eu lieu, l'Attaquant lance 1D6 ; sur un résultat inférieur ou égal au numéro du tour de bataille en cours, la purge se déclenche. Lancez alors 1D6 pour chaque unité qui ne se trouve pas dans une zone d'objectif : si le résultat est supérieur ou égal à l'Endurance de l'unité, elle est bloquée jusqu'à la fin du tour de bataille (-2" de Mouvement et -2 aux jets de charge). |
 | **5-6** | **Combustibles volatils** | Chaque fois que vous déterminez le nombre d'attaques d'une arme **[TORRENT]**, ajoutez 1 au résultat.                                                                                                                                                                                                                                                                                                                                              |
 
-**Théâtre : Quartiers Résidentiels**
+# Théâtre : Quartiers Résidentiels
 
 *De nombreux mondes de la Grande Ultramar sont densément peuplés, avec des ruches et des kilomètres de blocs d'habitation. Le combat y devient rapidement un grinding urbain.*
 
@@ -88,7 +90,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Positions de tir**     | Tant qu'une unité est entièrement dans une ZONE TERRAIN, elle gagne +1 à la Touche sur ses attaques à distance.           |
 | **5-6** | **Dans les profondeurs** | Une unité entièrement dans une ZONE TERRAIN ne peut pas être ciblée par des attaques à distance provenant de plus de 12". |
 
-**Théâtre : Installation Minière**
+# Théâtre : Installation Minière
 
 *Que le combat ait lieu dans les profondeurs d'un site minier ou en surface entre les foreuses et les machines, c'est un théâtre dangereux pour toutes les forces.*
 
@@ -100,7 +102,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Effondrement du socle** | Chaque attaque à distance contre une unité à 12" ou moins : le joueur peut ignorer tout ou partie des modificateurs à la Capacité de Tir (CT), au jet de touche et au jet de blessure. |
 | **5-6** | **Choc tectonique**       | Chaque attaque contre une unité se trouvant dans une zone d'objectif du No Man's Land bénéficie de **[TOUCHES FATALES]**.                                                            |
 
-**Théâtre : Terres Mortes**
+# Théâtre : Terres Mortes
 
 *Déserts rendus sans vie par des étoiles hostiles, zones empoisonnées par l'industrie lourde ou résultats de bombardements orbitaux anciens, ces théâtres accueillent souvent des affrontements de blindés lourds.*
 
@@ -112,7 +114,7 @@ Lors de chaque bataille de campagne (hors Actions d'Abordage), l'Attaquant séle
 | **3-4** | **Affleurements rocheux** | Quand une unité MONSTRE ou VÉHICULE est restée stationnaire, jusqu'à la fin du tour de bataille ses attaques à distance peuvent relancer les jets de touche de 1. |
 | **5-6** | **Voile de poussière**    | Quand une unité MONSTRE ou VÉHICULE de votre armée effectue une Avance, jusqu'à la fin du tour de bataille ses modèles obtiennent la capacité Discrétion.         |
 
-**Théâtre : Complexe de Tombe**
+# Théâtre : Complexe de Tombe
 
 *Des tombes Nécron lurquent sous la surface de nombreux mondes que Guilliman souhaite revendiquer. En s'éveillant, leurs structures eldritch émergent du sol en semant la destruction.*
 

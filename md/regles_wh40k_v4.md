@@ -1,4 +1,4 @@
-**Règles de Base**
+Règles de Base
 
 *Warhammer 40,000*
 
@@ -7,6 +7,10 @@ Version Maison
 *"Nous sommes assaillis de tous côtés par de vils xénos prédateurs et la sédition nous ronge de l'intérieur ; en cette heure sombre, le mieux que nous puissions faire est de nous en remettre à notre matériel et de prier nos dieux."*
 
 *Skolak a'Trellar IV, Commandant Impérial*
+
+**Sommaire**
+
+Ouvrez le document et appuyez sur F9 (ou clic droit \> Mettre à jour) pour générer les numéros de page.
 
 # Définitions
 
@@ -24,8 +28,9 @@ Une partie se joue en une série de rounds. Chaque round comporte trois phases, 
 
 3. **Phase de Combat**
 
-| **Phase** | **Description** |
+|                           |                                                                                                                                                |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Phase**                 | **Description**                                                                                                                                |
 | 1. Phase de Commandement | Les joueurs gagnent leurs points de victoire, résolvent leurs capacités et effectuent leurs tests d'Ébranlement. Est jouée l'un après l'autre. |
 | 2. Phase d'Action        | Les joueurs activent leurs unités en alternance. Chaque activation permet un mouvement puis une action.                                        |
 | 3. Phase de Combat       | Toutes les unités engagées en corps à corps combattent simultanément.                                                                          |
@@ -90,8 +95,9 @@ L'unité effectue un mouvement de sa valeur de Mouvement (M) pour quitter la Por
 
 Si une unité traverse des modèles ennemis pendant son mouvement, elle subit une Fuite Désespérée : 1D6 par modèle ennemi traversé ; sur 1 ou 2, un modèle de l'unité est détruit.
 
-| **Étape** | **Options disponibles** |
+|               |                                                                   |
 | ------------- | ----------------------------------------------------------------- |
+| **Étape**     | **Options disponibles**                                           |
 | 1. Mouvement | Se déplacer (Normal, Avance ou Désengagement), ou Rester Immobile |
 | 2. Action    | Tir, Charge, ou toute autre action spéciale                       |
 
@@ -157,9 +163,9 @@ Après avoir combattu, une unité peut effectuer une Consolidation : déplacez c
 
 Dans certaines circonstances, un modèle ne peut effectuer qu'un tir au jugé :
 
-- une arme **[LOURD]** dont l'unité a effectué un mouvement pendant la phase d'Action ;
+  - > une arme **[LOURD]** dont l'unité a effectué un mouvement pendant la phase d'Action ;
 
-- un tir en état d'alerte (réaction à une charge).
+  - > un tir en état d'alerte (réaction à une charge).
 
 La CT du modèle est considérée comme 6+ pour ce tir, quels que soient ses modificateurs habituels. Un modèle dont la CT est déjà 6+ (hors modificateur) ne peut pas tirer au jugé. Seules les règles spéciales mentionnant explicitement les tirs au jugé peuvent modifier cette CT de 6+.
 
@@ -198,8 +204,9 @@ Mêlée : un modèle ne combat qu'avec une seule arme de mêlée par phase.
 
 # Autres Mots-clés
 
-| **Mot-clé** | **Effet** |
+|                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mot-clé**                | **Effet**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Insensible à la douleur X+ | Chaque fois qu'un modèle doté de cette aptitude subit des dégâts et devrait donc perdre une blessure, y compris une blessure mortelle, lancez 1D6 : si le résultat est supérieur ou égal à X, cette blessure est ignorée et n'est pas perdue. Si un modèle possède plusieurs aptitudes « Insensible à la douleur », vous ne pouvez en utiliser qu'une seule à chaque fois qu'il subit des dégâts.                                                                                                                                              |
 | Objectif Sécurisé          | À la fin de la phase de Commandement, si cette unité se trouve dans une zone d'objectif que vous contrôlez, cette zone reste sous votre contrôle même si vous n'y avez plus aucun modèle, jusqu'à ce que votre adversaire en prenne le contrôle au début ou à la fin d'un tour.                                                                                                                                                                                                                                                                |
 | Intervention Héroïque      | Cette unité peut effectuer un Mouvement Normal en réaction à une charge ciblant une unité alliée à 6" ou moins de cette unité ; chaque modèle doit finir ce mouvement le plus près possible de l'unité ennemie qui charge, et peut finir à Portée d'Engagement de cette unité. Si cette unité entre à Portée d'Engagement, la charge est annulée ; sinon, l'unité qui charge peut changer de cible de charge après le mouvement de cette unité. Cette action est considérée comme une charge, mais ne donne pas le bonus de charge (+1 Force). |
@@ -227,17 +234,17 @@ Un pool de blessures regroupe l'ensemble des blessures non sauvegardées causée
 
 ## Priorité d'Allocation
 
-  - Modèle le plus proche : allouez chaque blessure au modèle de l'unité cible le plus proche de l'unité attaquante, quel que soit le modèle qui a causé la blessure.
+  - > Modèle le plus proche : allouez chaque blessure au modèle de l'unité cible le plus proche de l'unité attaquante, quel que soit le modèle qui a causé la blessure.
 
-  - Égalité de distance : si deux modèles ou plus sont à égale distance, le défenseur choisit laquelle est affectée. Ce choix est figé jusqu'à la fin de l'attaque ou le retrait du modèle.
+  - > Égalité de distance : si deux modèles ou plus sont à égale distance, le défenseur choisit laquelle est affectée. Ce choix est figé jusqu'à la fin de l'attaque ou le retrait du modèle.
 
-  - Allocation aléatoire : si la direction de l'attaque ne peut pas être déterminée (danger environnemental, règle spéciale), désignez aléatoirement un modèle. Elle est traitée comme la plus proche jusqu'à la fin de l'attaque ou son retrait. Si elle est retirée, effectuez un nouveau tirage.
+  - > Allocation aléatoire : si la direction de l'attaque ne peut pas être déterminée (danger environnemental, règle spéciale), désignez aléatoirement un modèle. Elle est traitée comme la plus proche jusqu'à la fin de l'attaque ou son retrait. Si elle est retirée, effectuez un nouveau tirage.
 
 ## Restrictions d'Allocation
 
-  - Hors de portée : aucune blessure ne peut être allouée à un modèle hors de portée maximale de l'arme. Si toutes les modèles restantes sont hors de portée, les blessures du pool sont perdues.
+  - > Hors de portée : aucune blessure ne peut être allouée à un modèle hors de portée maximale de l'arme. Si toutes les modèles restantes sont hors de portée, les blessures du pool sont perdues.
 
-  - Hors de vue : allouez au modèle visible le plus proche à la place. Si aucun modèle n'est visible, les blessures restantes sont perdues.
+  - > Hors de vue : allouez au modèle visible le plus proche à la place. Si aucun modèle n'est visible, les blessures restantes sont perdues.
 
 # Jet pour Toucher
 
@@ -249,8 +256,9 @@ Touche Critique : un résultat non modifié de 6 au jet de touche est une Touche
 
 Comparez la Force (F) de l'arme à l'Endurance (E) de la cible, puis consultez le tableau ci-dessous.
 
-| **Comparaison Force / Endurance** | **Résultat requis** |
+|                                                      |                      |
 | ---------------------------------------------------- | -------------------- |
+| **Comparaison Force / Endurance**                    | **Résultat requis**  |
 | F supérieure à 2 × E                                 | Blessure automatique |
 | F égale à 2 × E                                      | 2+                   |
 | F supérieure à E (sans atteindre le double)          | 3+                   |
@@ -259,9 +267,9 @@ Comparez la Force (F) de l'arme à l'Endurance (E) de la cible, puis consultez l
 | F égale à la moitié de E (2 × F = E)                 | 6+                   |
 | F inférieure à la moitié de E (2 × F inférieure à E) | Blessure impossible  |
 
-  - Un résultat non modifié de 1 est toujours un échec (sauf blessure automatique).
+  - > Un résultat non modifié de 1 est toujours un échec (sauf blessure automatique).
 
-  - Les modificateurs ne peuvent jamais dépasser -1 ou +1.
+  - > Les modificateurs ne peuvent jamais dépasser -1 ou +1.
 
 Blessure Critique : un résultat non modifié de 6 au jet de blessure est une Blessure Critique.
 
@@ -273,12 +281,13 @@ Blessure mortelle : Ignore toute les sauvegardes d'armures (invulnérable compri
 
 Lorsqu'une blessure est allouée à un modèle, son joueur peut tenter un jet de sauvegarde pour l'annuler. Jetez 1D6 et appliquez les modificateurs éventuels (Pénétration d'Armure) : si le résultat est égal ou supérieur à la valeur de sauvegarde, la blessure est ignorée.
 
-  - Un résultat non modifié de 1 est toujours un échec.
+  - > Un résultat non modifié de 1 est toujours un échec.
 
-  - Un modèle peut disposer de plusieurs types de sauvegarde : il n'en utilise qu'une seule par blessure, au choix du défenseur.
+  - > Un modèle peut disposer de plusieurs types de sauvegarde : il n'en utilise qu'une seule par blessure, au choix du défenseur.
 
-| **Type** | **Modifiée par la PA ?** | **Ignorable par règle spéciale ?** |
+|                         |                          |                                    |
 | ----------------------- | ------------------------ | ---------------------------------- |
+| **Type**                | **Modifiée par la PA ?** | **Ignorable par règle spéciale ?** |
 | Sauvegarde d'armure     | Oui                      | Oui                                |
 | Sauvegarde invulnérable | Non                      | Non                                |
 
@@ -298,8 +307,9 @@ Le couvert n'est bénéfique que si tous les modèles de l'unité sont entièrem
 
 Toutes les unités peuvent tirer à travers les éléments de terrain de Couvert léger.
 
-| **Hauteur de l'élément de terrain** | **Infanterie / Monté / Bête** | **Véhicule / Monstre** |
+|                                     |                               |                        |
 | ----------------------------------- | ----------------------------- | ---------------------- |
+| **Hauteur de l'élément de terrain** | **Infanterie / Monté / Bête** | **Véhicule / Monstre** |
 | Aucun élément                       | À découvert                   | À découvert            |
 | 0" à 1"                             | Couvert léger                 | À découvert            |
 | Plus de 1" à 4"                     | Couvert complet               | Couvert léger          |
@@ -323,15 +333,15 @@ Une unité bat en retraite après avoir échoué à un test d'Ébranlement.
 
 ## Mouvement de Retraite
 
-  - L'unité se déplace d'une distance égale à son Mouvement (M) vers sa zone de déploiement, par le chemin le plus court possible.
+  - > L'unité se déplace d'une distance égale à son Mouvement (M) vers sa zone de déploiement, par le chemin le plus court possible.
 
-  - Si un modèle de l'unité quitte le bord de table, l'unité entière est retirée comme perte.
+  - > Si un modèle de l'unité quitte le bord de table, l'unité entière est retirée comme perte.
 
-  - Une unité en retraite effectue uniquement son mouvement de retraite et rien d'autre : elle ne peut ni tirer, ni charger, ni se jeter à terre.
+  - > Une unité en retraite effectue uniquement son mouvement de retraite et rien d'autre : elle ne peut ni tirer, ni charger, ni se jeter à terre.
 
-  - Une unité en retraite peut traverser les modèles ennemis, mais effectue un jet de Fuite Désespérée par modèle ennemi traversé (1D6 : sur 1 ou 2, un modèle de l'unité est détruit).
+  - > Une unité en retraite peut traverser les modèles ennemis, mais effectue un jet de Fuite Désespérée par modèle ennemi traversé (1D6 : sur 1 ou 2, un modèle de l'unité est détruit).
 
-  - Si une unité en retraite est chargée, elle combat, mais l'unité qui a chargé porte ses attaques en premier : la retraite ne frappe qu'ensuite, et non simultanément.
+  - > Si une unité en retraite est chargée, elle combat, mais l'unité qui a chargé porte ses attaques en premier : la retraite ne frappe qu'ensuite, et non simultanément.
 
 # Monstres
 
@@ -345,20 +355,22 @@ Les véhicules sont des unités imposantes qui suivent des règles spéciales co
 
 Chaque véhicule possède une caractéristique d'Endurance sur sa fiche technique. La direction de l'attaque, déterminée par rapport à l'avant et l'arrière physique du véhicule, modifie cette Endurance :
 
-| **Direction de l'attaque** | **Modificateur d'Endurance** |
+|                            |                              |
 | -------------------------- | ---------------------------- |
+| **Direction de l'attaque** | **Modificateur d'Endurance** |
 | Avant                      | \+2                          |
 | Flancs                     | 0                            |
 | Arrière                    | -2                          |
 
-  - Si une blessure est sauvegardée, le véhicule subit tout de même la moitié des dégâts de l'arme (arrondi au supérieur).
+  - > Si une blessure est sauvegardée, le véhicule subit tout de même la moitié des dégâts de l'arme (arrondi au supérieur).
 
 ## Vitesse et Tir
 
 La distance parcourue par un véhicule lors de son mouvement détermine ses capacités de tir :
 
-| **Distance parcourue** | **Capacité de tir** | **Exception Marcheur** |
+|                        |                                        |                             |
 | ---------------------- | -------------------------------------- | --------------------------- |
+| **Distance parcourue** | **Capacité de tir**                    | **Exception Marcheur**      |
 | ½ M ou moins           | Toutes les armes sans malus            | Aucune                      |
 | M complet              | 1 seule arme sans malus, reste au jugé | Toutes les armes sans malus |
 | Avance (M + ½M)        | 1 seule arme au jugé                   | Toutes les armes au jugé    |
@@ -367,17 +379,17 @@ La distance parcourue par un véhicule lors de son mouvement détermine ses capa
 
 Lorsqu'un véhicule charge une unité, il provoque automatiquement un Tank Shock en plus du mouvement de charge.
 
-  - Le véhicule lance un nombre de D6 égal à son Endurance (Endurance du profil).
+  - > Le véhicule lance un nombre de D6 égal à son Endurance (Endurance du profil).
 
-  - Chaque résultat de 5+ inflige 1 blessure mortelle à l'unité chargée.
+  - > Chaque résultat de 5+ inflige 1 blessure mortelle à l'unité chargée.
 
-  - Si la cible est un véhicule, soustrayez l'Endurance de la cible au nombre de D6 lancés (minimum 0).
+  - > Si la cible est un véhicule, soustrayez l'Endurance de la cible au nombre de D6 lancés (minimum 0).
 
 ## Engagement au Corps à Corps
 
-  - Marcheurs et Monstres : ils sont engagés et combattent normalement, comme toute autre unité. Ils combattent toujours avec leur Endurance de face avant, sauf s'ils sont immobilisés, auquel cas c'est l'Endurance de face arrière qui s'applique.
+  - > Marcheurs et Monstres : ils sont engagés et combattent normalement, comme toute autre unité. Ils combattent toujours avec leur Endurance de face avant, sauf s'ils sont immobilisés, auquel cas c'est l'Endurance de face arrière qui s'applique.
 
-  - Autres véhicules : jamais considérés comme engagés. Une unité en contact avec un véhicule non-Marcheur est considérés comme engagés et ne peut pas se déplacer et tirer librement lors de son activation, il doit se désengager. Ces véhicules combattent toujours avec leur Endurance de face arrière.
+  - > Autres véhicules : jamais considérés comme engagés. Une unité en contact avec un véhicule non-Marcheur est considérés comme engagés et ne peut pas se déplacer et tirer librement lors de son activation, il doit se désengager. Ces véhicules combattent toujours avec leur Endurance de face arrière.
 
 ## Armes et Charge des Véhicules
 
@@ -401,17 +413,18 @@ Lorsqu'un véhicule subit une blessure non sauvegardée d'une arme avec une PA -
 
 ## Modificateurs au Jet
 
-  - Chaque point de PA supplémentaire au-delà de PA -2 ajoute +1 au résultat.  
-    Tous les modificateurs sont cumulatifs.
+  - > Chaque point de PA supplémentaire au-delà de PA -2 ajoute +1 au résultat.  
+    > Tous les modificateurs sont cumulatifs.
 
-  - PA -3 : +1 au jet.
+  - > PA -3 : +1 au jet.
 
-  - PA -4 : +2 au jet.
+  - > PA -4 : +2 au jet.
 
-  - PA -5 : +3 au jet.
+  - > PA -5 : +3 au jet.
 
-| **Résultat modifié** | **Effet** |
+|                      |                                                                                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Résultat modifié** | **Effet**                                                                                                                                |
 | 1-3                  | Équipage Secoué : le véhicule ne peut effectuer que des tirs au jugé jusqu'à la fin de son prochain tour.                                |
 | 4                    | Équipage Sonné : tirs au jugé uniquement. Le véhicule ne peut ni se déplacer ni pivoter jusqu'à la fin de son prochain tour.             |
 | 5                    | Arme Détruite : une arme du véhicule (déterminée aléatoirement) est détruite. Si le véhicule n'a plus d'armes, traitez comme Immobilisé. |
@@ -434,23 +447,23 @@ Un Personnage Indépendant peut rejoindre ou quitter une unité alliée durant s
 
 Un personnage non-HQ peut rejoindre une unité qui contient déjà un personnage HQ.
 
-  - Un Personnage Indépendant ne peut pas rejoindre ni quitter une unité engagée en combat, en retraite, ou s'étant jetée à terre.
+  - > Un Personnage Indépendant ne peut pas rejoindre ni quitter une unité engagée en combat, en retraite, ou s'étant jetée à terre.
 
-  - Tant qu'il fait partie d'une unité, il est traité comme un membre de celle-ci pour toutes les règles, tout en conservant ses propres règles de personnage.
+  - > Tant qu'il fait partie d'une unité, il est traité comme un membre de celle-ci pour toutes les règles, tout en conservant ses propres règles de personnage.
 
-  - Si tous les autres modèles de l'unité sont détruites, le Personnage Indépendant redevient une unité à part entière.
+  - > Si tous les autres modèles de l'unité sont détruites, le Personnage Indépendant redevient une unité à part entière.
 
 # Points de Commandement et Stratagèmes
 
 Avant la partie, chaque joueur dispose d'un pool de 6 Points de Commandement (PC). Ces PC servent à acheter des détachements et des stratagèmes pour la bataille.
 
-  - Les stratagèmes sont achetés avant la partie avec des PC.
+  - > Les stratagèmes sont achetés avant la partie avec des PC.
 
 Chaque stratagème possède sa propre condition d'activation, précisée sur le stratagème. En partie, un stratagème ne peut être activé qu'une fois par round de jeu. Certains stratagèmes ont des conditions d'activation hors partie, également précisées sur le stratagème.
 
-  - Certains personnages peuvent réduire le coût d'un stratagème, jusqu'à 0 PC si la réduction est suffisante.
+  - > Certains personnages peuvent réduire le coût d'un stratagème, jusqu'à 0 PC si la réduction est suffisante.
 
-  - Les PC restants après l'achat des détachements et des stratagèmes sont perdus : ils ne sont pas utilisés en jeu.
+  - > Les PC restants après l'achat des détachements et des stratagèmes sont perdus : ils ne sont pas utilisés en jeu.
 
 # Détachements
 
@@ -458,8 +471,9 @@ Toutes les armées doivent être Battle-forged : chaque unité doit appartenir �
 
 ## Nombre de Détachements
 
-| **Format de bataille** | **Nombre max de détachements** |
+|                             |                                |
 | --------------------------- | ------------------------------ |
+| **Format de bataille**      | **Nombre max de détachements** |
 | Incursion (1 000 pts)       | 2                              |
 | Force de Frappe (2 000 pts) | 3                              |
 | Offensive (3 000 pts)       | 4                              |
@@ -468,26 +482,27 @@ Toutes les armées doivent être Battle-forged : chaque unité doit appartenir �
 
 Pour inclure un détachement, vous devez dépenser un nombre de PC égal à son coût. Si votre Seigneur de Guerre fait partie du détachement, vous gagnez un bonus de PC ajouté à votre pool avant la partie.
 
-| **Détachement** | **Coût** | **Bonus si Seigneur de Guerre inclus** |
-| ------------------------------- | -------- | -------------------------------------------------------- |
-| **Patrouille**                  | **2 PC** | **+2 PC**                                                |
-| ![](media/regles_wh40k_v4/image1.png) |          |                                                          |
-| **Bataillon**                   | **3 PC** | **+3 PC**                                                |
-| ![](media/regles_wh40k_v4/image2.png) |          |                                                          |
-| **Brigade**                     | **4 PC** | **+4 PC**                                                |
-| ![](media/regles_wh40k_v4/image3.png) |          |                                                          |
-| **Avant-garde**                 | **3 PC** | **Aucun**                                                |
-| ![](media/regles_wh40k_v4/image4.png) |          |                                                          |
-| **Fer de Lance**                | **3 PC** | **Aucun**                                                |
-| ![](media/regles_wh40k_v4/image5.png) |          |                                                          |
-| **Éclaireur**                   | **3 PC** | **Aucun**                                                |
-| ![](media/regles_wh40k_v4/image6.png) |          |                                                          |
-| **Super-lourd Auxiliaire**      | **3 PC** | **Aucun**                                                |
-| ![](media/regles_wh40k_v4/image7.png) |          |                                                          |
-| **Réseau de Fortifications**    | **1 PC** | **+1 PC si faction homogène avec le Seigneur de Guerre** |
-| ![](media/regles_wh40k_v4/image8.png) |          |                                                          |
-| **Support Auxiliaire**          | **2 PC** | **Aucun**                                                |
-| ![](media/regles_wh40k_v4/image9.png) |          |                                                          |
+|                              |          |                                                          |
+| ---------------------------- | -------- | -------------------------------------------------------- |
+| **Détachement**              | **Coût** | **Bonus si Seigneur de Guerre inclus**                   |
+| **Patrouille**               | **2 PC** | **+2 PC**                                                |
+| ![](media/image1.png)        |          |                                                          |
+| **Bataillon**                | **3 PC** | **+3 PC**                                                |
+| ![](media/image2.png)        |          |                                                          |
+| **Brigade**                  | **4 PC** | **+4 PC**                                                |
+| ![](media/image3.png)        |          |                                                          |
+| **Avant-garde**              | **3 PC** | **Aucun**                                                |
+| ![](media/image4.png)        |          |                                                          |
+| **Fer de Lance**             | **3 PC** | **Aucun**                                                |
+| ![](media/image5.png)        |          |                                                          |
+| **Éclaireur**                | **3 PC** | **Aucun**                                                |
+| ![](media/image6.png)        |          |                                                          |
+| **Super-lourd Auxiliaire**   | **3 PC** | **Aucun**                                                |
+| ![](media/image7.png)        |          |                                                          |
+| **Réseau de Fortifications** | **1 PC** | **+1 PC si faction homogène avec le Seigneur de Guerre** |
+| ![](media/image8.png)        |          |                                                          |
+| **Support Auxiliaire**       | **2 PC** | **Aucun**                                                |
+| ![](media/image9.png)        |          |                                                          |
 
 ## Aptitudes de Détachement
 
@@ -513,8 +528,9 @@ Ce détachement ne peut contenir qu'une seule unité. Il ne confère aucune apti
 
 Le budget de points de déploiement dépend de la mission jouée et peut être symétrique ou asymétrique entre les joueurs. Les points non dépensés sont conservés d'un tour à l'autre. Pour une partie normale, chaque joueur gagne les points suivants :
 
-| **Tour** | **Points de déploiement gagnés ce tour** |
+|          |                                          |
 | -------- | ---------------------------------------- |
+| **Tour** | **Points de déploiement gagnés ce tour** |
 | Tour 1   | 40 points                                |
 | Tour 2   | \+30 points                              |
 | Tour 3   | \+30 points                              |
@@ -527,18 +543,18 @@ Le budget de points de déploiement dépend de la mission jouée et peut être s
 
 Au tour 1, les deux joueurs déploient leurs unités avant la première phase de Commandement, dans la limite de 40 points chacun. Les unités non déployées restent en réserve pour les tours suivants.
 
-  - Placez chaque unité sur le bord de table appartenant à votre zone de déploiement.
+  - > Placez chaque unité sur le bord de table appartenant à votre zone de déploiement.
 
-  - L'unité effectue immédiatement un mouvement égal à sa caractéristique M depuis le bord de table.
+  - > L'unité effectue immédiatement un mouvement égal à sa caractéristique M depuis le bord de table.
 
-  - L'unité peut ensuite agir normalement lors de sa phase d'Action.
+  - > L'unité peut ensuite agir normalement lors de sa phase d'Action.
 
 ### Tours 2 à 5 - Durant la Phase de Commandement
 
 À partir du tour 2, les unités en réserve entrent en jeu durant la phase de Commandement, dans la limite des points de déploiement disponibles.
 
-  - Placez l'unité sur le bord de table appartenant à votre zone de déploiement.
+  - > Placez l'unité sur le bord de table appartenant à votre zone de déploiement.
 
-  - L'unité effectue immédiatement un mouvement normal gratuit égal à sa caractéristique de Mouvement (M) depuis le bord de table. Elle n'est pas considérée comme activée.
+  - > L'unité effectue immédiatement un mouvement normal gratuit égal à sa caractéristique de Mouvement (M) depuis le bord de table. Elle n'est pas considérée comme activée.
 
-  - Elle peut ensuite être activée normalement lors de la phase d'Action du même tour.
+  - > Elle peut ensuite être activée normalement lors de la phase d'Action du même tour.
