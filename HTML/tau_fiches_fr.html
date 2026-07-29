@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T'au Empire — Fiches d'unités (FR)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#141210; font-family:'Inter',sans-serif; padding:32px 16px; }
+  .page-head { max-width:807px; margin:0 auto 26px; color:#e9e3da; }
+  .page-head h1 { font-family:'Oswald',sans-serif; font-weight:700; text-transform:uppercase;
+    letter-spacing:1px; font-size:30px; color:#fff; }
+  .page-head p { font-size:13px; color:#9a9187; margin-top:6px; }
+  .deck { display:flex; flex-direction:column; align-items:center; gap:34px; }
+  .card { width:807px; max-width:100%; font-family:'Inter',sans-serif; background:#1c1a19;
+    border:1px solid #000; box-shadow:0 4px 24px rgba(0,0,0,0.4); color:#e9e3da; }
+  .card-head { position:relative; background:linear-gradient(180deg, #a8671a, #5a3809);
+    padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:3px solid #000; }
+  .card-head .name { font-family:'Oswald',sans-serif; font-weight:700; font-size:26px;
+    letter-spacing:0.5px; text-transform:uppercase; color:#fff; }
+  .card-head .base { font-size:15px; color:#d8c9c9; margin-left:10px; }
+  .card-head .role { font-family:'Oswald',sans-serif; font-size:12px; text-transform:uppercase;
+    letter-spacing:1px; text-align:right; }
+  .body-grid { display:grid; grid-template-columns:3fr 2fr; gap:0; }
+  .col-left { padding:16px 18px 20px; border-right:1px solid #000; }
+  .col-right { padding:16px 18px 20px; }
+  .statline { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; text-align:center; }
+  .statline .lbl { font-size:12px; font-weight:700; letter-spacing:1px; color:#c9beae; }
+  .statline .val { background:#3a3532; border:1px solid #55504a; border-radius:3px; padding:8px 0;
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:18px; color:#fff; }
+  .pf { width:100%; border-collapse:collapse; }
+  .pf th, .pf td { padding:6px 6px; text-align:center; }
+  .pf thead th { font-size:11px; font-weight:700; letter-spacing:1px; color:#c9beae; border-bottom:1px solid #4a453f; }
+  .pf thead th.name { text-align:left; }
+  .pf tbody td { font-family:'Oswald',sans-serif; font-weight:600; font-size:17px; color:#fff; border-bottom:1px solid #2a2624; }
+  .pf tbody td.name { font-family:'Inter',sans-serif; text-align:left; font-size:13px; font-weight:600; color:#f0ebe3; }
+  .pf tbody td.name small { display:block; font-weight:400; font-size:11px; color:#9a9187; }
+  .pf tbody td.inv { color:#e7ccb6; }
+  .invul { display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .invul .circle { width:46px; height:46px; border-radius:50%; background:#2a2624; border:2px solid #5a3809;
+    display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif;
+    font-weight:700; font-size:18px; color:#fff; flex-shrink:0; }
+  .invul .txt { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; }
+  .wtable { margin-top:20px; }
+  .wrow { display:grid; grid-template-columns:16px 1fr 42px 26px 30px 26px 30px 30px; gap:6px;
+    align-items:center; }
+  .whead { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.5px;
+    text-transform:uppercase; color:#d8c9c9; border-bottom:1px solid #4a453f; padding-bottom:6px;
+    margin-bottom:8px; }
+  .whead .sub { font-size:11px; color:#9a9187; text-align:right; text-transform:none; }
+  .wdata { padding:6px 0; border-bottom:1px solid #2a2624; }
+  .wdata .dot { width:14px; height:8px; background:#8a8378; border-radius:2px; }
+  .wdata .wn { font-size:13px; color:#f0ebe3; }
+  .wdata .num { text-align:right; font-size:13px; font-weight:600; }
+  .tag { background:#4a453f; color:#d8c9c9; font-size:10px; padding:2px 5px; border-radius:2px;
+    margin-left:4px; }
+  .section-h { font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px;
+    text-transform:uppercase; background:#3a3532; padding:6px 10px; margin-bottom:10px; }
+  .ability { margin-bottom:10px; font-size:13px; line-height:1.5; }
+  .ability .al { font-weight:700; color:#fff; }
+  .ability .at { color:#d8c9c9; }
+  .comp-list { margin:0 0 6px; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-list { margin:0; padding-left:18px; font-size:13px; color:#d8c9c9; line-height:1.5; }
+  .wg-sub { margin:4px 0 2px; padding-left:18px; }
+  .wg-sub li { color:inherit; }
+  .pts-table { border:1px solid #4a453f; border-radius:3px; overflow:hidden; }
+  .pts-row { display:flex; align-items:center; justify-content:space-between; background:#2a2624;
+    padding:7px 12px; }
+  .pts-row + .pts-row { border-top:1px solid #4a453f; }
+  .pts-row .m { font-size:13px; }
+  .pts-row .p { background:#b5701e; color:#fff; font-weight:700; font-size:13px; padding:3px 10px;
+    border-radius:3px; }
+  .note { font-size:12px; color:#c9beae; line-height:1.5; margin-top:4px; }
+  .lead-intro { font-size:13px; color:#d8c9c9; margin-bottom:6px; }
+  .lead-list { margin:0; padding-left:18px; font-size:13px; }
+  .lead-list li { color:#8fb4d8; }
+  .kw-grid { display:grid; grid-template-columns:3fr 2fr; border-top:1px solid #000; }
+  .kw-cell { padding:10px 18px; }
+  .kw-cell:first-child { border-right:1px solid #000; }
+  .kw-cell .k { font-size:12px; font-weight:700; letter-spacing:0.5px; }
+  .kw-cell .v { font-size:12px; color:#9fc6ea; }
+  @media print { body{background:#fff; padding:0;} .card{break-inside:avoid; box-shadow:none;}
+    .page-head{color:#000;} .page-head h1{color:#000;}
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+  @media (max-width:840px){ .card{width:100%;} }
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>T'au Empire — Fiches d'unités</h1>
+  <p>Version française. Profils de jeu (Warhammer 40 000, 10ᵉ édition). Données : Wahapedia + codex FR. Warhammer 40 000 © Games Workshop — usage personnel.</p>
+</div>
+<div class="deck" id="deck"></div>
+
+<script>
+// M=Mouvement, E=Endurance, Svg=Sauvegarde, PV=Points de Vie, Cd=Commandement, CO=Contrôle d'Objectif
+const STAT_LABELS = ['M','E','Svg','PV','Cd','CO'];
+
+const UNITS = [
+  {
+    name:"Aun'shi", base:"⌀25mm", role:"HQ",
+    stats:['6"','3','6+','3','7+','1'], inv:'5+',
+    ranged:[],
+    melee:[
+      {n:"Fidélité", t:"[TOUCHES SOUTENUES 1]", r:"Mêlée", a:"6", sk:"3+", s:"5", ap:"-1", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Obstination Galvanisante", t:"Tant que ce modèle mène une unité, ajoutez 1 à la caractéristique de Contrôle d'Objectif de ses modèles."},
+      {l:"Guerrier Martial", t:"Chaque fois que ce modèle est choisi pour combattre, choisissez l'une des aptitudes suivantes, active pour ces attaques : Grâce Directe — Fidélité a [PRÉCISION] ; Frappe Puissante — Fidélité a [BLESSURES DÉVASTATRICES] ; Posture Tourbillonnante — Fidélité a [TOUCHES SOUTENUES 2] au lieu de [TOUCHES SOUTENUES 1]."}
+    ],
+    comp:["1 Aun'shi — Héros épique"],
+    equip:"Ce modèle est équipé de : Fidélité.",
+    pts:[["1 modèle","50"]],
+    leader:["Breacher Team","Kroot Carnivores","Strike Team"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS ÉPIQUE, ÉTHÉRÉ, AUN'SHI",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Aun'va", base:"multi", role:"HQ",
+    profiles:[
+      {name:"Aun'va", base:"⌀40mm", stats:['6"','3','5+','5','7+','1'], inv:'4+'},
+      {name:"Garde Éthéré", base:"⌀25mm", stats:['6"','3','5+','2','7+','1'], inv:'4+'}
+    ],
+    stats:['6"','3','5+','5','7+','1'], inv:'4+',
+    ranged:[],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"6+", s:"2", ap:"0", d:"1"},
+      {n:"Lame de duel suprême", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Agent Solitaire"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Bouclier de Dualité", t:"Une fois par bataille, chaque fois qu'une attaque cible cette unité, elle peut utiliser cette aptitude : jusqu'à la fin de la phase, ses modèles ont une sauvegarde invulnérable de 2+."},
+      {l:"Paradoxe de Dualité", t:"Chaque fois qu'une attaque cible cette unité, soustrayez 1 au jet pour toucher et 1 au jet pour blesser."},
+      {l:"Loyauté Suprême (Aura)", t:"Tant qu'une unité T'AU EMPIRE amie est à 6\" ou moins de cette unité, chaque fois qu'elle effectue un test d'Ébranlement ou de Commandement, ajoutez 1 à ce test."}
+    ],
+    comp:["1 Aun'va — Héros épique","2 Gardes Éthérés"],
+    equip:"Aun'va : arme de corps à corps. Chaque Garde Éthéré : lame de duel suprême.",
+    pts:[["3 modèles","65"]],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS ÉPIQUE, ÉTHÉRÉ, AUN'VA",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Cadre Fireblade", base:"⌀25mm", role:"HQ",
+    stats:['6"','3','4+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Fusil à impulsions de Cadre de Feu", t:"[TIR RAPIDE 1]", r:'30"', a:"1", sk:"3+", s:"5", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Feu Redoublé", t:"Tant que ce modèle mène une unité, ajoutez 1 à la caractéristique d'Attaques des armes de tir des modèles de cette unité."},
+      {l:"Fin Tireur", t:"Chaque fois que ce modèle effectue une attaque de tir, sur une Blessure Critique, cette attaque a une caractéristique de Pénétration d'Armure de -3."}
+    ],
+    wargear:[ {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]} ],
+    comp:["1 Cadre Fireblade"],
+    equip:"Ce modèle est équipé de : fusil à impulsions de Cadre de Feu, arme de corps à corps.",
+    pts:[["1 modèle","50"]],
+    leader:["Breacher Team","Strike Team"],
+    keywords:"INFANTERIE, PERSONNAGE, GRENADES, CADRE FIREBLADE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Commander Farsight", base:"⌀60mm", role:"HQ",
+    stats:['10"','5','2+','8','6+','2'], inv:'4+',
+    ranged:[
+      {n:"Fusil à plasma à haute intensité", t:"", r:'24"', a:"2", sk:"2+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Lame de l'Aube – frappe", t:"", r:"Mêlée", a:"4", sk:"2+", s:"10", ap:"-2", d:"3"},
+      {n:"Lame de l'Aube – balayage", t:"", r:"Mêlée", a:"8", sk:"2+", s:"6", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Voie de la Courte Lame", t:"Tant que ce modèle mène une unité, chaque fois qu'un de ses modèles effectue une attaque ciblant une unité ennemie à 9\" ou moins, ajoutez 1 au jet pour blesser."},
+      {l:"Enseignements de Puretide", t:"Lors de la phase d'achat des Stratagèmes, une unité de votre armée dotée de cette aptitude peut l'utiliser : réduisez de 1 PC le coût d'achat d'un Stratagème."}
+    ],
+    comp:["1 Commander Farsight — Héros épique"],
+    equip:"Ce modèle est équipé de : fusil à plasma à haute intensité, Lame de l'Aube.",
+    pts:[["1 modèle","85"]],
+    leader:["Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits"],
+    leaderNote:"Puissance Indépendante : une armée avec Commander Farsight ne peut pas inclure d'unité ÉTHÉRÉ, et inversement.",
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, HÉROS ÉPIQUE, EXO-ARMURE, COMMANDER FARSIGHT",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Commander In Coldstar Battlesuit", base:"⌀60mm", role:"HQ",
+    stats:['12"','5','3+','6','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon à induction surcadencé", t:"", r:'18"', a:"8", sk:"3+", s:"5", ap:"0", d:"1"},
+      {n:"Lanceur de charges à dispersion", t:"[DÉFLAGRATION, TIR INDIRECT]", r:'24"', a:"D6", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"3+", s:"5", ap:"0", d:"1"},
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"3+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"3+", s:"9", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"3+", s:"7", ap:"-1", d:"2"},
+      {n:"Lance-flammes t'au", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à plasma froid", t:"", r:'18"', a:"1", sk:"3+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Commandant Coldstar", t:"Tant que ce modèle mène une unité, ses modèles ont une caractéristique de Mouvement de 12\" et leurs armes de tir ont l'aptitude [ASSAUT]."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"L'unité du porteur peut tirer lors d'un tour où elle s'est Désengagée, mais seuls les modèles dotés de cet équipement peuvent alors effectuer des attaques de tir."},
+      {l:"Générateur de bouclier (équipement)", t:"Le porteur a une sauvegarde invulnérable de 4+."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      {head:"Le canon à induction surcadencé peut être remplacé par l'un des choix suivants :", items:["1 canon à induction","1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 3 des choix suivants (doublons autorisés, hors systèmes/générateur) :", items:["1 canon à induction","1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]}
+    ],
+    comp:["1 Commander in Coldstar Battlesuit"],
+    equip:"Ce modèle est équipé de : canon à induction surcadencé, poings d'exo-armure.",
+    pts:[["1 modèle","95"]],
+    leader:["Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits"],
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, EXO-ARMURE, COMMANDER IN COLDSTAR BATTLESUIT",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Commander In Crisis Battlesuit", base:"⌀50mm", role:"HQ",
+    stats:['10"','5','3+','5','7+','2'], inv:'',
+    ranged:[
+      {n:"Lanceur de charges à dispersion", t:"[DÉFLAGRATION, TIR INDIRECT]", r:'24"', a:"D6", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"3+", s:"5", ap:"0", d:"1"},
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"3+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"3+", s:"9", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"3+", s:"7", ap:"-1", d:"2"},
+      {n:"Lance-flammes t'au", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à plasma froid", t:"", r:'24"', a:"1", sk:"3+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Commandant Crisis", t:"Tant que ce modèle mène une unité, chaque fois qu'un de ses modèles effectue une attaque de tir, relancez un jet pour toucher de 1."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"L'unité du porteur peut tirer lors d'un tour où elle s'est Désengagée, mais seuls les modèles dotés de cet équipement peuvent alors effectuer des attaques de tir."},
+      {l:"Générateur de bouclier (équipement)", t:"Le porteur a une sauvegarde invulnérable de 4+."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      {head:"Le canon à induction peut être remplacé par l'un des choix suivants :", items:["1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 3 des choix suivants (doublons autorisés, hors systèmes/générateur) :", items:["1 canon à induction","1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]}
+    ],
+    comp:["1 Commander in Crisis Battlesuit"],
+    equip:"Ce modèle est équipé de : canon à induction, poings d'exo-armure.",
+    pts:[["1 modèle","80"]],
+    leader:["Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits","Crisis Battlesuits"],
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, EXO-ARMURE, COMMANDER IN CRISIS BATTLESUIT",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Commander In Enforcer Battlesuit", base:"⌀60mm", role:"HQ",
+    stats:['8"','5','2+','6','7+','2'], inv:'',
+    ranged:[
+      {n:"Lanceur de charges à dispersion", t:"[DÉFLAGRATION, TIR INDIRECT]", r:'24"', a:"D6", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"3+", s:"5", ap:"0", d:"1"},
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"3+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"3+", s:"8", ap:"-2", d:"2"},
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"3+", s:"9", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"3+", s:"7", ap:"-1", d:"2"},
+      {n:"Lance-flammes t'au", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"},
+      {n:"Fusil à plasma froid", t:"", r:'18"', a:"1", sk:"3+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Commandant Enforcer", t:"Tant que ce modèle mène une unité, chaque fois qu'une attaque de tir cible cette unité, réduisez de 1 la caractéristique de Pénétration d'Armure de cette attaque."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"L'unité du porteur peut tirer lors d'un tour où elle s'est Désengagée, mais seuls les modèles dotés de cet équipement peuvent alors effectuer des attaques de tir."},
+      {l:"Générateur de bouclier (équipement)", t:"Le porteur a une sauvegarde invulnérable de 4+."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      {head:"Le canon à induction peut être remplacé par l'un des choix suivants :", items:["1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 3 des choix suivants (doublons autorisés, hors systèmes/générateur) :", items:["1 canon à induction","1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]}
+    ],
+    comp:["1 Commander in Enforcer Battlesuit"],
+    equip:"Ce modèle est équipé de : canon à induction, poings d'exo-armure.",
+    pts:[["1 modèle","80"]],
+    leader:["Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits"],
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, EXO-ARMURE, COMMANDER IN ENFORCER BATTLESUIT",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Commander Shadowsun", base:"⌀50mm", role:"HQ",
+    stats:['10"','4','3+','6','6+','1'], inv:'5+',
+    ranged:[
+      {n:"Lance-fléchettes", t:"", r:'18"', a:"5", sk:"2+", s:"3", ap:"0", d:"1"},
+      {n:"Éclateur à fusion haute énergie", t:"[FUSION 2]", r:'18"', a:"1", sk:"2+", s:"10", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles légère", t:"", r:'24"', a:"2", sk:"2+", s:"7", ap:"0", d:"2"},
+      {n:"Pistolet à impulsions", t:"[PISTOLET]", r:'12"', a:"1", sk:"3+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Agent Solitaire, Discrétion"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Combattante Agile", t:"Ce modèle peut tirer lors d'un tour où il s'est Désengagé."},
+      {l:"Héroïne de l'Empire (Aura)", t:"Tant qu'une unité T'AU EMPIRE amie est à 6\" ou moins de ce modèle, chaque fois qu'un de ses modèles effectue une attaque de tir, relancez un jet pour toucher de 1."},
+      {l:"Drone Gardien Avancé (équipement)", t:"Chaque fois qu'une attaque de tir cible le porteur, soustrayez 1 au jet pour blesser."},
+      {l:"Drone de Commandement (Aura, équipement)", t:"Tant qu'une unité T'AU EMPIRE amie est à 6\" ou moins du porteur, chaque fois que vous la ciblez avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."}
+    ],
+    comp:["1 Commander Shadowsun — Héros épique"],
+    equip:"Ce modèle est équipé de : lance-fléchettes, 2 éclateurs à fusion haute énergie, nacelle de missiles légère, pistolet à impulsions, poings d'exo-armure, drone Gardien Avancé, drone de Commandement.",
+    pts:[["1 modèle","100"]],
+    leaderNote:"Commandant Suprême : si ce modèle est dans votre armée, il doit être votre Seigneur de Guerre.",
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, HÉROS ÉPIQUE, EXO-ARMURE, COMMANDER SHADOWSUN",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Darkstrider", base:"⌀32mm", role:"HQ",
+    stats:['7"','3','4+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Ombre", t:"[ASSAUT]", r:'18"', a:"2", sk:"2+", s:"5", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"4+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Meneur, Éclaireurs 7\""},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Analyseur Structurel", t:"Tant que ce modèle mène une unité, chaque fois qu'un de ses modèles effectue une attaque de tir, ajoutez 1 au jet pour blesser."},
+      {l:"Panoplie de Brouillage", t:"Les unités ennemies placées sur le champ de bataille depuis les Réserves ne peuvent pas l'être à moins de 12\" de ce modèle."}
+    ],
+    comp:["1 Darkstrider — Héros épique"],
+    equip:"Ce modèle est équipé de : Ombre, arme de corps à corps.",
+    pts:[["1 modèle","60"]],
+    leader:["Pathfinder Team"],
+    keywords:"INFANTERIE, PERSONNAGE, HÉROS ÉPIQUE, DÉSIGNATEUR LASER, DARKSTRIDER",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Ethereal", base:"⌀40mm", role:"HQ",
+    stats:['6"','3','5+','3','6+','1'], inv:'5+',
+    ranged:[],
+    melee:[
+      {n:"Sceptre honorifique", t:"", r:"Mêlée", a:"2", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"L'Échec n'est Pas Envisageable", t:"Tant que ce modèle mène une unité, ses modèles ont l'aptitude Insensible à la Douleur 5+."},
+      {l:"Commandement Coordonné", t:"À la fin de votre phase de Commandement, jetez 1 D6 : sur 4+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Drone Glisseur (équipement)", t:"Le porteur a le mot-clé VOL et une caractéristique de Mouvement de 10\"."}
+    ],
+    wargear:[
+      "Ce modèle peut être équipé de 1 drone glisseur.",
+      {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]}
+    ],
+    comp:["1 Ethereal"],
+    equip:"Ce modèle est équipé de : bâton d'honneur.",
+    pts:[["1 modèle","50"]],
+    leader:["Breacher Team","Strike Team"],
+    keywords:"INFANTERIE, PERSONNAGE, ÉTHÉRÉ",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot Flesh Shaper", base:"⌀32mm", role:"HQ",
+    stats:['7"','3','6+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Fusil à dispersion kroot", t:"[ASSAUT]", r:'12"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Lames rituelles jumelées", t:"[JUMELÉ]", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Meneur, Éclaireurs 7\", Discrétion"},
+      {l:"Boucherie Rituelle", t:"Tant que ce modèle mène une unité, les armes de mêlée de ses modèles ont l'aptitude [TOUCHES SOUTENUES 1]."},
+      {l:"Rites de Festin", t:"Tant que ce modèle mène une unité, ses modèles ont l'aptitude Insensible à la Douleur 6+. Si cette unité détruit une ou plusieurs unités ennemies à la phase de Combat, jusqu'à la fin de la bataille ses modèles ont Insensible à la Douleur 5+ à la place."}
+    ],
+    comp:["1 Kroot Flesh Shaper"],
+    equip:"Ce modèle est équipé de : fusil à dispersion kroot, lames rituelles jumelées.",
+    pts:[["1 modèle","45"]],
+    leader:["Kroot Carnivores","Kroot Farstalkers"],
+    keywords:"INFANTERIE, PERSONNAGE, KROOT, MENTOR, FLESH SHAPER",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot Lone-Spear", base:"⌀90 x 52mm", role:"HQ",
+    stats:['12"','5','5+','6','7+','2'], inv:'',
+    ranged:[
+      {n:"Javelot à charge", t:"[ASSAUT, DÉFLAGRATION]", r:'18"', a:"D6", sk:"4+", s:"10", ap:"-2", d:"2"},
+      {n:"Fusil long kroot", t:"[LOURD, PRÉCISION]", r:'36"', a:"1", sk:"3+", s:"6", ap:"-2", d:"3"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Javelot de chasse", t:"[LANCE]", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Morsure de Kalamandra", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"4", sk:"4+", s:"5", ap:"-1", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Agent Solitaire, Éclaireurs 7\", Discrétion"},
+      {l:"Éclairage Avancé", t:"Chaque fois que ce modèle effectue une attaque de tir touchant une unité ennemie, jusqu'à la fin du tour, chaque fois qu'un autre modèle KROOT de votre armée effectue une attaque ciblant cette unité, relancez le jet pour toucher."},
+      {l:"Tir et Repli", t:"Après que ce modèle a résolu son action de Tir, s'il n'est pas à portée d'engagement d'une unité ennemie, il peut faire un mouvement Normal de jusqu'à 6\". Si c'est le cas, jusqu'à la fin du tour, il ne peut pas déclarer de charge."}
+    ],
+    wargear:[
+      "Le fusil long kroot de ce modèle peut être remplacé par 1 javelot à charge et 1 javelot de chasse."
+    ],
+    comp:["1 Kroot Lone-Spear"],
+    equip:"Ce modèle est équipé de : fusil long kroot, arme de corps à corps, morsure de Kalamandra.",
+    pts:[["1 modèle","80"]],
+    keywords:"MONTÉ, PERSONNAGE, KROOT, LONE-SPEAR",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot Trail Shaper", base:"⌀32mm", role:"HQ",
+    stats:['7"','3','6+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Fusil kroot", t:"[TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Lame de Mentor", t:"", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Meneur, Éclaireurs 7\", Discrétion"},
+      {l:"Pistage", t:"Une fois par tour, quand une unité ennemie termine un mouvement Normal, d'Avance ou de Retraite à 9\" ou moins de l'unité de ce modèle, et si celle-ci n'est pas à portée d'engagement ennemie, elle peut faire un mouvement Normal de jusqu'à D6\"."},
+      {l:"Embuscade Kroot", t:"Après que les deux joueurs ont déployé leurs armées, vous pouvez redéployer l'unité de ce modèle et une autre unité KROOT amie ; l'une ou l'autre peut être placée en Réserves Stratégiques, quel que soit le nombre d'unités déjà en Réserves Stratégiques."}
+    ],
+    comp:["1 Kroot Trail Shaper"],
+    equip:"Ce modèle est équipé de : fusil kroot, lame de Mentor.",
+    pts:[["1 modèle","55"]],
+    leader:["Kroot Carnivores","Kroot Farstalkers"],
+    keywords:"INFANTERIE, PERSONNAGE, KROOT, MENTOR, TRAIL SHAPER",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot War Shaper", base:"⌀32mm", role:"HQ",
+    stats:['7"','3','6+','3','7+','1'], inv:'',
+    ranged:[
+      {n:"Arc-fléchette et tri-lame", t:"[ANTI-INFANTERIE 3+, ASSAUT, LOURD]", r:'24"', a:"D3+1", sk:"4+", s:"4", ap:"0", d:"2"},
+      {n:"Pistolet kroot", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Bâton-lame et croc-à-proie", t:"[TOUCHES FATALES]", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"-1", d:"2"},
+      {n:"Lame de Mentor", t:"", r:"Mêlée", a:"4", sk:"2+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Meneur, Éclaireurs 7\", Discrétion"},
+      {l:"Chef de Guerre", t:"Lors de la phase d'achat des Stratagèmes, une unité de votre armée dotée de cette aptitude peut l'utiliser : réduisez de 1 PC le coût d'achat d'un Stratagème."},
+      {l:"Racine de l'Honneur", t:"Une fois par bataille, au début de n'importe quelle phase, vous pouvez choisir une unité KROOT amie Ébranlée à 12\" ou moins de ce modèle. Cette unité n'est plus Ébranlée."}
+    ],
+    wargear:[
+      "L'arc-fléchette et tri-lame de ce modèle peut être remplacé par 1 bâton-lame et croc-à-proie."
+    ],
+    comp:["1 Kroot War Shaper"],
+    equip:"Ce modèle est équipé de : arc-fléchette et tri-lame, pistolet kroot, lame de Mentor.",
+    pts:[["1 modèle","50"]],
+    leader:["Kroot Carnivores","Kroot Farstalkers"],
+    keywords:"INFANTERIE, PERSONNAGE, KROOT, MENTOR, WAR SHAPER",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Longstrike", base:"⌀60mm (socle volant)", role:"HQ",
+    stats:['10"','10','3+','14','7+','3'], inv:'',
+    ranged:[
+      {n:"Canon à induction accéléré", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon à ions – standard", t:"[DÉFLAGRATION]", r:'60"', a:"D6+3", sk:"3+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à ions – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'60"', a:"D6+3", sk:"3+", s:"8", ap:"-2", d:"3"},
+      {n:"Canon-rail", t:"[BLESSURES DÉVASTATRICES, LOURD]", r:'72"', a:"1", sk:"3+", s:"20", ap:"-5", d:"D6+6"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Carabine à impulsions jumelée", t:"[ASSAUT, JUMELÉ]", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles intelligents", t:"[TIR INDIRECT]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Chasseur de Blindés", t:"Chaque fois que ce modèle effectue une attaque ciblant une unité MONSTRE ou VÉHICULE, ajoutez 1 au jet pour toucher."},
+      {l:"Panoplie de Ciblage", t:"Chaque fois que ce modèle est choisi pour tirer, vous pouvez relancer un jet pour toucher ou un jet pour blesser lors de la résolution de ses attaques."},
+      {l:"Tir Unique", t:"Le porteur ne peut tirer avec un missile Seeker qu'une fois par bataille."}
+    ],
+    wargear:[
+      "Le canon-rail de ce modèle peut être remplacé par 1 canon à ions.",
+      {head:"Les 2 carabines à impulsions jumelées de ce modèle peuvent être remplacées par :", items:["2 canons à induction accélérés","2 systèmes de missiles intelligents"]},
+      "Ce modèle peut être équipé de jusqu'à 2 missiles Seeker."
+    ],
+    comp:["1 Longstrike — Héros épique"],
+    equip:"Ce modèle est équipé de : canon-rail, 2 carabines à impulsions jumelées, système de missiles intelligents, coque blindée.",
+    pts:[["1 modèle","140"]],
+    keywords:"VÉHICULE, VOL, PERSONNAGE, HÉROS ÉPIQUE, LONGSTRIKE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Shas'o R'alai", base:"⌀65mm", role:"HQ",
+    stats:['8"','6','3+','6','7+','2'], inv:'4+',
+    ranged:[
+      {n:"Fusil expérimental à sous-munitions à impulsions – IEM", t:"[ANTI-VÉHICULE 3+, BLESSURES DÉVASTATRICES]", r:'24"', a:"1", sk:"3+", s:"1", ap:"0", d:"3"},
+      {n:"Fusil expérimental à sous-munitions à impulsions – explosion ionique", t:"", r:'24"', a:"D6", sk:"3+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Meneur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Générateur de Champ Éclipse", t:"Tant que ce modèle mène une unité, ses modèles ont une sauvegarde invulnérable de 5+."},
+      {l:"Assassin", t:"Chaque fois que ce modèle effectue une attaque ciblant une unité PERSONNAGE, relancez le jet pour toucher."},
+      {l:"Drones de marquage à lumière noire (équipement)", t:"Deux fois par bataille, quand cette unité effectue une action de marquage, jusqu'à la fin du tour, chaque fois qu'une unité T'AU EMPIRE amie effectue une attaque ciblant l'unité ainsi Marquée, relancez un jet pour blesser de 1."}
+    ],
+    comp:["1 Shas'o R'alai — Héros épique"],
+    equip:"Ce modèle est équipé de : fusil expérimental à sous-munitions à impulsions, poings d'exo-armure.",
+    pts:[["1 modèle","80"]],
+    leader:["Xv9 Hazard Battlesuits"],
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, DÉSIGNATEUR LASER, HÉROS ÉPIQUE, EXO-ARMURE, SHAS'O R'ALAI",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"The Twin Lance", base:"⌀60mm", role:"HQ",
+    stats:['10"','6','2+','8','6+','2'], inv:'4+',
+    ranged:[
+      {n:"Éliminateur à fusion", t:"[FUSION 2]", r:'18"', a:"2", sk:"2+", s:"10", ap:"-4", d:"D6"},
+      {n:"Éparpilleur à ions – standard", t:"[TIR RAPIDE 2]", r:'18"', a:"4", sk:"2+", s:"7", ap:"-2", d:"2"},
+      {n:"Éparpilleur à ions – surcharge", t:"[À RISQUE, TIR RAPIDE 2]", r:'18"', a:"4", sk:"2+", s:"8", ap:"-3", d:"3"},
+      {n:"Système à rafale Shardstorm", t:"[PISTOLET]", r:'18"', a:"D6", sk:"2+", s:"5", ap:"0", d:"1"},
+      {n:"Éclateur à impulsions jumelé", t:"[ASSAUT, JUMELÉ]", r:'10"', a:"2", sk:"5+", s:"6", ap:"-1", d:"1"},
+      {n:"Pistolet à impulsions XV", t:"[TIR RAPIDE 2]", r:'12"', a:"2", sk:"2+", s:"6", ap:"-1", d:"2"}
+    ],
+    melee:[
+      {n:"Éliminateur à fusion", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"1", sk:"4+", s:"10", ap:"-4", d:"D6+2"},
+      {n:"Éparpilleur à ions", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"3", sk:"4+", s:"7", ap:"-2", d:"2"},
+      {n:"Pistolet à impulsions XV", t:"", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-1", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur, Éclaireurs 8\""},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Exemplaires du Mont'Ka", t:"Chaque fois qu'un modèle de cette unité effectue une attaque de tir ciblant la cible éligible la plus proche, cette attaque a les aptitudes [TOUCHES SOUTENUES 1] et [IGNORE LE COUVERT]."},
+      {l:"Boucliers Néocapaciteurs", t:"Au début de la phase de Charge adverse, vous pouvez choisir une unité ennemie (hors MONSTRES et VÉHICULES) à 12\" ou moins de cette unité ; elle doit passer un test d'Ébranlement et, jusqu'à la fin du tour, soustrayez 1 à ses jets de Charge."}
+    ],
+    comp:["1 Ash'Vale","1 Ri'Locai — Héros épique"],
+    equip:"Ash'Vale : éliminateur à fusion, XV pulse pistol. Ri'Locai : éparpilleur à ions, pistolet à impulsions XV, système à rafale Shardstorm.",
+    pts:[["2 modèles","185"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, PERSONNAGE, HÉROS ÉPIQUE, EXO-ARMURE, THE TWIN LANCE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Breacher Team", base:"⌀25mm", role:"Troops",
+    stats:['6"','3','4+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Éclateur à impulsions", t:"[ASSAUT]", r:'10"', a:"2", sk:"3+", s:"6", ap:"-1", d:"1"},
+      {n:"Pistolet à impulsions", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles de tourelle d'appui", t:"[TIR INDIRECT, JUMELÉ]", r:'30"', a:"2", sk:"5+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"5+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Percez et Nettoyez", t:"Chaque fois qu'un modèle de cette unité effectue une attaque de tir ciblant une unité ennemie à portée d'un marqueur d'objectif, vous pouvez relancer le jet pour blesser."},
+      {l:"Tourelle d'Appui DS8", t:"Lors de son activation, si cette unité Reste Immobile, jusqu'à sa prochaine activation, son modèle de Shas'ui Guerrier de Feu Brécheur est équipé de l'arme système de missiles de tourelle d'appui."}
+    ],
+    wargear:[
+      {head:"Le Shas'ui Guerrier de Feu Brécheur peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés, sauf le drone gardien) :", items:["1 drone gardien","1 drone armé","1 drone de marquage","1 drone bouclier"]}
+    ],
+    comp:["1 Shas'ui Guerrier de Feu Brécheur","9 Guerriers de Feu Brécheurs"],
+    equip:"Chaque modèle est équipé de : éclateur à impulsions, pistolet à impulsions, arme de corps à corps.",
+    pts:[["10 modèles","90"]],
+    keywords:"INFANTERIE, LIGNE, GRENADES, DÉSIGNATEUR LASER, GUERRIER DE FEU, ÉQUIPE DE BRÉCHEURS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot Carnivores", base:"⌀28,5mm", role:"Troops",
+    stats:['7"','3','6+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Lance-bombes entraves", t:"[DÉFLAGRATION]", r:'24"', a:"D3", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Pistolet kroot", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil kroot", t:"[TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Carabine kroot", t:"", r:'18"', a:"1", sk:"4+", s:"4", ap:"0", d:"2"}
+    ],
+    melee:[ {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"3+", s:"4", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\", Discrétion"},
+      {l:"Travail de Terrain", t:"À la fin de la phase de Commandement, si cette unité est à portée d'un marqueur d'objectif que vous contrôlez, ce marqueur reste sous votre contrôle même sans modèle à portée, jusqu'à ce que l'adversaire le contrôle au début ou à la fin d'un tour."}
+    ],
+    wargear:[
+      "Le fusil kroot du Long-quill peut être remplacé par 1 carabine kroot.",
+      "Par tranche de 10 modèles, 1 Kroot Carnivore peut remplacer son fusil kroot par 1 lance-bombes entraves."
+    ],
+    comp:["1 Long-quill","9-19 Kroot Carnivores"],
+    equip:"Le Long-quill : pistolet kroot, fusil kroot, arme de corps à corps. Chaque Kroot Carnivore : fusil kroot, arme de corps à corps.",
+    pts:[["10 modèles","65"],["20 modèles","140"]],
+    keywords:"INFANTERIE, GRENADES, KROOT, CARNIVORES",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Strike Team", base:"⌀25mm", role:"Troops",
+    stats:['6"','3','4+','1','7+','2'], inv:'',
+    ranged:[
+      {n:"Carabine à impulsions", t:"", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Pistolet à impulsions", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Fusil à impulsions", t:"[TIR RAPIDE 1]", r:'30"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles de tourelle d'appui", t:"[TIR INDIRECT, JUMELÉ]", r:'30"', a:"2", sk:"5+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"5+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Salve de Suppression", t:"Après que cette unité a résolu son action de Tir, choisissez une unité INFANTERIE ennemie touchée par une ou plusieurs de ces attaques. Jusqu'au début du prochain tour et tant que cette unité est sur le champ de bataille, l'unité ennemie est réprimée : chaque fois qu'un de ses modèles effectue une attaque, soustrayez 1 au jet pour toucher."},
+      {l:"Tourelle d'Appui DS8", t:"Lors de son activation, si cette unité Reste Immobile, jusqu'à sa prochaine activation, son modèle de Shas'ui Guerrier de Feu est équipé de l'arme système de missiles de tourelle d'appui."}
+    ],
+    wargear:[
+      {head:"Le Shas'ui Guerrier de Feu peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés, sauf le drone gardien) :", items:["1 drone gardien","1 drone armé","1 drone de marquage","1 drone bouclier"]},
+      "N'importe quel nombre de Guerriers de Feu peuvent remplacer leur fusil à impulsions par 1 carabine à impulsions."
+    ],
+    comp:["1 Shas'ui Guerrier de Feu","9 Guerriers de Feu"],
+    equip:"Chaque modèle est équipé de : pistolet à impulsions, fusil à impulsions, arme de corps à corps.",
+    pts:[["10 modèles","70"]],
+    keywords:"INFANTERIE, LIGNE, GRENADES, DÉSIGNATEUR LASER, GUERRIER DE FEU, ÉQUIPE D'ATTAQUE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Devilfish", base:"⌀60mm (socle volant)", role:"Dedicated Transport",
+    stats:['12"','9','3+','13','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon à induction accéléré", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Carabine à impulsions jumelée", t:"[ASSAUT, JUMELÉ]", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles intelligents", t:"[TIR INDIRECT]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Déploiement Rapide", t:"Les unités peuvent débarquer de ce TRANSPORT après qu'il a Avancé ; elles comptent alors comme ayant fait un mouvement Normal cette phase et ne peuvent pas déclarer de charge le même tour, mais agissent sinon normalement pour le reste du tour."}
+    ],
+    wargear:[
+      "Les 2 carabines à impulsions jumelées de ce modèle peuvent être remplacées par 2 systèmes de missiles intelligents.",
+      "Ce modèle peut être équipé de jusqu'à 2 missiles Seeker."
+    ],
+    comp:["1 Devilfish"],
+    equip:"Ce modèle est équipé de : canon à induction accéléré, 2 carabines à impulsions jumelées, coque blindée.",
+    pts:[["1 modèle","85"]],
+    transport:"Capacité de transport de 12 modèles INFANTERIE T'AU EMPIRE.",
+    keywords:"VÉHICULE, VOL, TRANSPORT, TRANSPORT ASSIGNÉ, DEVILFISH",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Crisis Battlesuits", base:"⌀50mm", role:"Elites",
+    stats:['10"','5','3+','4','7+','2'], inv:'',
+    ranged:[
+      {n:"Lanceur de charges à dispersion", t:"[DÉFLAGRATION, TIR INDIRECT]", r:'24"', a:"D6", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Fusil à plasma froid", t:"", r:'24"', a:"1", sk:"4+", s:"8", ap:"-3", d:"3"},
+      {n:"Lance-flammes t'au", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"5+", s:"5", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Turboréacteurs", t:"Chaque fois que cette unité Avance, ne faites pas de jet d'Avance : ajoutez plutôt 6\" à la caractéristique de Mouvement de ses modèles jusqu'à la fin de la phase."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"L'unité du porteur peut tirer lors d'un tour où elle s'est Désengagée, mais seuls les modèles dotés de cet équipement peuvent alors effectuer des attaques de tir."},
+      {l:"Générateur de bouclier (équipement)", t:"Le porteur a une sauvegarde invulnérable de 4+."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      {head:"N'importe quel nombre de modèles peuvent remplacer leur canon à induction par l'un des choix suivants :", items:["1 lanceur de charges à dispersion","1 système d'appui d'exo-armure","1 cyclo-éclateur à ions","1 éclateur à fusion","1 nacelle de missiles","1 fusil à plasma froid","1 générateur de bouclier","1 lance-flammes t'au","1 système d'appui d'arme"]},
+      {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (sans doublon) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]}
+    ],
+    comp:["1 Crisis Shas'vre","2-5 Crisis Shas'ui"],
+    equip:"Chaque modèle est équipé de : canon à induction, poings d'exo-armure.",
+    pts:[["3 modèles","200"],["6 modèles","400"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, CRISIS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Crisis Fireknife Battlesuits", base:"⌀50mm", role:"Elites",
+    stats:['10"','5','3+','4','7+','2'], inv:'',
+    ranged:[
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Fusil à plasma froid", t:"", r:'18"', a:"1", sk:"4+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"5+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Fireknife", t:"Chaque fois qu'un modèle de cette unité effectue une attaque de tir, relancez un jet pour toucher de 1. Si cette attaque cible une unité à ses Effectifs Initiaux, relancez plutôt le jet pour toucher."},
+      {l:"Système d’Appui d’Arme", t:"Chaque fois qu'un modèle de cette unité effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur fusil à plasma froid par 1 nacelle de missiles.",
+      "N'importe quel nombre de modèles peuvent remplacer leur nacelle de missiles par 1 fusil à plasma froid.",
+      {head:"N'importe quel nombre de modèles peuvent être équipés de jusqu'à 2 des choix suivants (sans doublon) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]}
+    ],
+    comp:["1 Crisis Fireknife Shas'vre","2 Crisis Fireknife Shas'ui"],
+    equip:"Chaque modèle est équipé de : fusil à plasma froid, nacelle de missiles, poings d'exo-armure.",
+    pts:[["3 modèles","120"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, CRISIS, FIREKNIFE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Crisis Starscythe Battlesuits", base:"⌀50mm", role:"Elites",
+    stats:['10"','5','3+','4','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Lance-flammes t'au", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"5+", s:"5", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Starscythe", t:"Chaque fois qu'un modèle de cette unité effectue une attaque de tir (hors attaques ciblant MONSTRES et VÉHICULES), améliorez de 1 la caractéristique de Pénétration d'Armure de cette attaque."},
+      {l:"Système d'Appui d'Exo-armure", t:"Cette unité peut tirer lors d'un tour où elle s'est Désengagée."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur canon à induction par 1 lance-flammes t'au, et inversement.",
+      {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (sans doublon) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]}
+    ],
+    comp:["1 Crisis Starscythe Shas'vre","2 Crisis Starscythe Shas'ui"],
+    equip:"Chaque modèle est équipé de : canon à induction, lance-flammes t'au, poings d'exo-armure.",
+    pts:[["3 modèles","110"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, CRISIS, STARSCYTHE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Crisis Sunforge Battlesuits", base:"⌀50mm", role:"Elites",
+    stats:['10"','5','3+','4','7+','2'], inv:'4+',
+    ranged:[
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"}
+    ],
+    melee:[ {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"5+", s:"5", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Sunforge", t:"Chaque fois qu'un modèle de cette unité effectue une attaque de tir ciblant une unité MONSTRE ou VÉHICULE, relancez le jet pour blesser et le jet de dégâts."}
+    ],
+    wargear:[ {head:"Ce modèle peut être équipé de jusqu'à 2 des choix suivants (sans doublon) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]} ],
+    comp:["1 Crisis Sunforge Shas'vre","2 Crisis Sunforge Shas'ui"],
+    equip:"Chaque modèle est équipé de : 2 éclateurs à fusion, poings d'exo-armure.",
+    pts:[["3 modèles","140"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, CRISIS, SUNFORGE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Firesight Team", base:"⌀40mm", role:"Elites",
+    stats:['6"','3','4+','4','7+','3'], inv:'',
+    ranged:[
+      {n:"Fusils de sniper à impulsions", t:"[LOURD, PRÉCISION]", r:'36"', a:"3", sk:"4+", s:"5", ap:"-1", d:"2"},
+      {n:"Pistolet à impulsions", t:"[PISTOLET]", r:'12"', a:"1", sk:"3+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Armes de corps à corps", t:"", r:"Mêlée", a:"4", sk:"5+", s:"3", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Agent Solitaire, Discrétion"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Ciblage Précis", t:"Chaque fois qu'un modèle de cette unité effectue une attaque ciblant une unité Marquée, relancez le jet pour toucher."},
+      {l:"Drones de visée", t:"Le Firesight Marksman et ses drones de visée sont traités comme un seul modèle pour toutes les règles ; toutes les distances sont mesurées depuis le Marksman. Les drones de visée ne comptent pas comme des modèles."}
+    ],
+    comp:["1 Firesight Marksman"],
+    equip:"Ce modèle est équipé de : fusils de sniper à impulsions, pistolet à impulsions, armes de corps à corps.",
+    pts:[["1 modèle","60"]],
+    keywords:"INFANTERIE, PERSONNAGE, DÉSIGNATEUR LASER, FIRESIGHT TEAM",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Ghostkeel Battlesuit", base:"⌀105 x 70mm", role:"Elites",
+    stats:['10"','8','2+','12','7+','3'], inv:'',
+    ranged:[
+      {n:"Râteau à ions cyclique – standard", t:"", r:'36"', a:"6", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Râteau à ions cyclique – surcharge", t:"[À RISQUE]", r:'36"', a:"6", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Collisionneur à fusion", t:"[FUSION 2]", r:'18"', a:"2", sk:"4+", s:"12", ap:"-4", d:"D6"},
+      {n:"Canon à induction jumelé", t:"[JUMELÉ]", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Éclateur à fusion jumelé", t:"[FUSION 2, JUMELÉ]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Lance-flammes t'au jumelé", t:"[IGNORE LE COUVERT, TORRENT, JUMELÉ]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Poings de Ghostkeel", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"2"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Infiltrateurs, Agent Solitaire, Discrétion"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Drones Furtifs", t:"Deux fois par bataille, après qu'une attaque a été répartie sur ce modèle, vous pouvez changer la caractéristique de Dégâts de cette attaque à 0."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"Le porteur peut tirer lors d'un tour où il s'est Désengagé, mais il perd le mot-clé FUMÉE."}
+    ],
+    wargear:[
+      "Le collisionneur à fusion de ce modèle peut être remplacé par 1 râteau à ions cyclique.",
+      {head:"Le lance-flammes t'au jumelé peut être remplacé par :", items:["1 éclateur à fusion jumelé","1 canon à induction jumelé"]},
+      "Ce modèle peut être équipé de 1 système d'appui d'exo-armure."
+    ],
+    comp:["1 Ghostkeel Battlesuit"],
+    equip:"Ce modèle est équipé de : collisionneur à fusion, lance-flammes t'au jumelé, poings de Ghostkeel.",
+    pts:[["1 modèle","160"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, FUMÉE, EXO-ARMURE, GHOSTKEEL",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Krootox Riders", base:"⌀50mm", role:"Elites",
+    stats:['7"','6','5+','5','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon à répétition", t:"[TIR RAPIDE 2]", r:'36"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à entraves", t:"[DÉFLAGRATION, LOURD]", r:'36"', a:"D6+1", sk:"4+", s:"6", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Poings de Krootox", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-1", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\""},
+      {l:"Compagnons de Meute Kroot", t:"Une fois par tour, quand une unité KROOT INFANTERIE amie à 6\" ou moins de cette unité est ciblée par une attaque, une unité dotée de cette aptitude peut l'utiliser : après que l'unité ennemie a fini ses attaques, l'unité dotée de cette aptitude peut immédiatement effectuer une action de Tir hors de son activation, mais ne peut cibler que cette unité ennemie."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur canon à répétition par 1 canon à entraves."
+    ],
+    comp:["1-3 Krootox Riders"],
+    equip:"Chaque modèle est équipé de : canon à répétition, arme de corps à corps, poings de Krootox.",
+    pts:[["1 modèle","40"],["2 modèles","60"],["3 modèles","90"]],
+    keywords:"MONTÉ, GRENADES, KROOT, KROOTOX RIDERS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Stealth Battlesuits", base:"⌀32mm", role:"Elites",
+    stats:['8"','4','3+','2','7+','1'], inv:'',
+    ranged:[
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Pistolet à impulsions", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"2", sk:"5+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Discrétion"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Observateurs Avancés", t:"Quand cette unité effectue une action de marquage, jusqu'à la fin du tour, chaque fois qu'une unité T'AU EMPIRE amie effectue une attaque ciblant l'unité ainsi Marquée, relancez un jet pour toucher de 1 et un jet pour blesser de 1."},
+      {l:"Balise de Ralliement (équipement)", t:"Une fois par bataille, une unité amie dotée de Frappe en Profondeur peut effectuer une Arrivée Précipitée : placez-la à 3\" ou moins de l'unité du porteur et à plus de 9\" de tout modèle ennemi."}
+    ],
+    wargear:[
+      "Le Stealth Shas'vre peut être équipé de 1 drone armé, de 1 drone de marquage et/ou de 1 pistolet à impulsions.",
+      "1 Stealth Shas'ui peut être équipé de 1 balise de ralliement.",
+      "2 modèles peuvent remplacer leur canon à induction par 1 éclateur à fusion."
+    ],
+    comp:["1 Stealth Shas'vre","4 Stealth Shas'ui"],
+    equip:"Chaque modèle est équipé de : canon à induction, poings d'exo-armure.",
+    pts:[["5 modèles","100"]],
+    keywords:"EXO-ARMURE, VOL, STEALTH BATTLESUITS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot Farstalkers", base:"multi", role:"Elites",
+    profiles:[
+      {name:"Kroot Farstalkers & Kill-broker", base:"⌀28,5mm", stats:['7"','3','6+','1','7+','1'], inv:''},
+      {name:"Kroot Hounds", base:"⌀28,5mm", stats:['12"','3','6+','1','7+','0'], inv:''}
+    ],
+    stats:['7"','3','6+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Écorcheur dvorgite", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"-1", d:"1"},
+      {n:"Arme à feu de Farstalker", t:"[TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Pistolet kroot", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Tribaleste londaxi", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES, LOURD]", r:'18"', a:"3", sk:"5+", s:"7", ap:"-1", d:"1"},
+      {n:"Fusil techno-t'au", t:"[TIR RAPIDE 1]", r:'30"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"2", sk:"3+", s:"4", ap:"0", d:"1"},
+      {n:"Crocs déchireurs", t:"", r:"Mêlée", a:"3", sk:"3+", s:"3", ap:"0", d:"1"},
+      {n:"Lame rituelle", t:"", r:"Mêlée", a:"3", sk:"3+", s:"5", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Discrétion"},
+      {l:"Chasseurs de Primes", t:"Au début de la bataille, choisissez une unité de l'armée adverse. Chaque fois qu'un modèle de cette unité effectue une attaque ciblant cette unité, cette attaque a les aptitudes [TOUCHES FATALES] et [PRÉCISION]."},
+      {l:"Pech'ra (équipement)", t:"Les armes de tir de l'unité du porteur ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    wargear:[
+      "L'arme à feu de Farstalker du Kill-broker peut être remplacée par 1 fusil techno-t'au.",
+      {head:"1 Kroot Farstalker peut remplacer son arme à feu de Farstalker par :", items:["1 écorcheur dvorgite","1 tribaleste londaxi"]},
+      "1 Kroot Farstalker équipé d'une arme à feu de Farstalker peut recevoir 1 Pech'ra."
+    ],
+    comp:["1 Kroot Kill-broker","9 Kroot Farstalkers","2 Kroot Hounds"],
+    equip:"Chaque Farstalker : arme à feu de Farstalker, arme de corps à corps. Chaque Kroot Hound : crocs déchireurs.",
+    pts:[["12 modèles","85"]],
+    keywords:"INFANTERIE, KROOT, GRENADES, FARSTALKERS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Krootox Rampagers", base:"⌀50mm", role:"Elites",
+    stats:['7"','6','5+','5','7+','2'], inv:'',
+    ranged:[
+      {n:"Pistolet kroot et javelots de chasse", t:"[ASSAUT, PISTOLET]", r:'12"', a:"2", sk:"4+", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Lames de chasse", t:"[LANCE]", r:"Mêlée", a:"3", sk:"3+", s:"4", ap:"-1", d:"1"},
+      {n:"Poings de Rampager", t:"[ATTAQUES BONUS, TOUCHES SOUTENUES 1]", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-1", d:"2"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\""},
+      {l:"Briseurs de Ligne Kroot", t:"Chaque fois que cette unité termine un mouvement de Charge, choisissez une unité ennemie à portée d'engagement et jetez 1 D6 par modèle de cette unité à portée d'engagement de cette unité ennemie : pour chaque 4+, elle subit D3 blessures mortelles. Si un ou plusieurs modèles ennemis sont détruits ainsi, cette unité ennemie doit passer un test d'Ébranlement."}
+    ],
+    comp:["3-6 Krootox Rampagers"],
+    equip:"Chaque modèle est équipé de : pistolet kroot et javelots de chasse, lames de chasse, poings de Rampager.",
+    pts:[["3 modèles","85"],["6 modèles","170"]],
+    keywords:"MONTÉ, GRENADES, KROOT, KROOTOX RAMPAGERS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Xv9 Hazard Battlesuits", base:"⌀60mm", role:"Elites",
+    stats:['8"','6','3+','4','7+','2'], inv:'',
+    ranged:[
+      {n:"Cascade à fusion", t:"[FUSION 4]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Canon à ions phasé", t:"", r:'30"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon à induction Hazard jumelé", t:"[JUMELÉ]", r:'24"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"3", sk:"5+", s:"5", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Projecteurs Photoniques", t:"Après que cette unité a résolu son action de Tir, si une unité INFANTERIE ennemie a été touchée par une ou plusieurs de ces attaques, jusqu'au début du prochain tour elle est étourdie : réduisez de 2\" son Mouvement et de 2 ses jets d'Avance et de Charge."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"L'unité du porteur peut tirer lors d'un tour où elle s'est Désengagée, mais seuls les modèles dotés de cet équipement peuvent alors effectuer des attaques de tir."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      {head:"N'importe quel nombre de modèles peuvent remplacer leur cascade à fusion par :", items:["1 canon à ions phasé","1 canon à induction Hazard jumelé"]},
+      {head:"N'importe quel nombre de modèles peuvent être équipés de l'un des choix suivants :", items:["1 système d'appui d'exo-armure","1 générateur de bouclier","1 système d'appui d'arme"]},
+      {head:"Jusqu'à 2 drones par modèle (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]}
+    ],
+    comp:["1-2 XV9 Hazard Battlesuits"],
+    equip:"Chaque modèle est équipé de : cascade à fusion, poings d'exo-armure.",
+    pts:[["1 modèle","55"],["2 modèles","110"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, XV9 HAZARD",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Kroot Hounds", base:"⌀28,5mm", role:"Fast Attack",
+    stats:['12"','3','6+','1','8+','0'], inv:'',
+    ranged:[],
+    melee:[ {n:"Crocs déchireurs", t:"", r:"Mêlée", a:"3", sk:"3+", s:"3", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\", Discrétion"},
+      {l:"Bond Bondissant", t:"Au début de votre phase de Commandement, si cette unité est à 6\" ou moins d'une ou plusieurs unités KROOT INFANTERIE amies, jusqu'à la fin du tour elle peut déclarer une charge lors d'un tour où elle a Avancé."},
+      {l:"Chiens de Chasse", t:"Tant que cette unité est à 12\" ou moins d'un ou plusieurs modèles PERSONNAGE KROOT amis, la caractéristique de Contrôle d'Objectif de ses modèles est de 1."}
+    ],
+    comp:["5-10 Kroot Hounds"],
+    equip:"Chaque modèle est équipé de : crocs déchireurs.",
+    pts:[["5 modèles","40"],["10 modèles","80"]],
+    keywords:"BÊTES, KROOT, HOUNDS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Pathfinder Team", base:"⌀25mm", role:"Fast Attack",
+    stats:['7"','3','4+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Canon à induction de drone", t:"", r:'18"', a:"4", sk:"5+", s:"5", ap:"0", d:"1"},
+      {n:"Fusil à ions – standard", t:"[LOURD]", r:'30"', a:"3", sk:"5+", s:"7", ap:"-1", d:"1"},
+      {n:"Fusil à ions – surcharge", t:"[À RISQUE, LOURD]", r:'30"', a:"3", sk:"5+", s:"8", ap:"-2", d:"2"},
+      {n:"Carabine à impulsions", t:"", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Pistolet à impulsions", t:"[PISTOLET]", r:'12"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Fusil à rail", t:"[BLESSURES DÉVASTATRICES, LOURD]", r:'30"', a:"1", sk:"5+", s:"10", ap:"-4", d:"3"},
+      {n:"Lance-grenades semi-automatique – IEM", t:"[ANTI-VÉHICULE 4+, BLESSURES DÉVASTATRICES]", r:'18"', a:"1", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Lance-grenades semi-automatique – fusion", t:"", r:'18"', a:"1", sk:"4+", s:"6", ap:"-1", d:"3"}
+    ],
+    melee:[ {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"5+", s:"3", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\""},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Cible Téléchargée", t:"Chaque fois qu'un modèle de cette unité effectue une attaque ciblant une unité Marquée, améliorez de 1 la Capacité de Tir de cette attaque, qui a aussi l'aptitude [IGNORE LE COUVERT]."},
+      {l:"Drone inhibiteur gravitique (équipement)", t:"Soustrayez 2 aux jets de Charge de toute unité ennemie déclarant une charge contre l'unité du porteur (non cumulable avec d'autres réductions)."},
+      {l:"Drone accélérateur d'impulsions (équipement)", t:"Ajoutez 6\" à la Portée des carabines à impulsions des modèles de l'unité du porteur."}
+    ],
+    wargear:[
+      {head:"Le Pathfinder Shas'ui peut être équipé de l'un des choix suivants :", items:["1 drone inhibiteur gravitique","1 drone accélérateur d'impulsions","1 drone de reconnaissance"]},
+      {head:"Le Pathfinder Shas'ui peut être équipé de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone bouclier"]},
+      "Jusqu'à 3 Pathfinders peuvent remplacer leur carabine à impulsions par 1 fusil à ions, 1 fusil à rail ou 1 lance-grenades semi-automatique."
+    ],
+    comp:["1 Pathfinder Shas'ui","9 Pathfinders"],
+    equip:"Chaque modèle est équipé de : carabine à impulsions, arme de corps à corps.",
+    pts:[["10 modèles","90"]],
+    keywords:"INFANTERIE, GRENADES, DÉSIGNATEUR LASER, PATHFINDER TEAM",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Piranhas", base:"⌀60mm (socle volant)", role:"Fast Attack",
+    stats:['14"','7','4+','7','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon à induction de Piranha", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Éclateur à fusion de Piranha", t:"[FUSION 4]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Carabine à impulsions jumelée", t:"[ASSAUT, JUMELÉ]", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"2", sk:"5+", s:"4", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Éclaireurs 9\""},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Tactiques de Harcèlement par Drones", t:"À la fin de son mouvement, choisissez une unité ennemie à 12\" ou moins de cette unité ; elle doit passer un test d'Ébranlement."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur canon à induction de Piranha par 1 éclateur à fusion de Piranha.",
+      "N'importe quel nombre de modèles peuvent être équipés de jusqu'à 2 missiles Seeker."
+    ],
+    comp:["1-3 Piranhas"],
+    equip:"Chaque modèle est équipé de : canon à induction de Piranha, 2 carabines à impulsions jumelées, coque blindée.",
+    pts:[["1 modèle","60"],["2 modèles","120"],["3 modèles","180"]],
+    keywords:"VÉHICULE, VOL, PIRANHAS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tactical Drones", base:"⌀32mm (socle volant)", role:"Fast Attack",
+    stats:['8"','3','4+','1','7+','0'], inv:'',
+    ranged:[ {n:"Carabine à impulsions jumelée", t:"[ASSAUT, JUMELÉ]", r:'20"', a:"2", sk:"5+", s:"5", ap:"0", d:"1"} ],
+    melee:[ {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"6+", s:"3", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"}
+    ],
+    comp:["4-12 Tactical Drones"],
+    equip:"Chaque modèle est équipé de : carabine à impulsions jumelée, arme de corps à corps.",
+    pts:[["4 modèles","70"],["8 modèles","140"],["12 modèles","210"]],
+    keywords:"DRONE, VOL, TACTICAL DRONES",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Vespid Stingwings", base:"⌀28,5mm", role:"Fast Attack",
+    stats:['12"','4','4+','1','7+','1'], inv:'',
+    ranged:[
+      {n:"Éclateur à neutrons", t:"[ASSAUT]", r:'18"', a:"2", sk:"4+", s:"5", ap:"-2", d:"2"},
+      {n:"Lance-grenades à neutrons", t:"[ANTI-INFANTERIE 3+, DÉFLAGRATION]", r:'18"', a:"D6", sk:"4+", s:"4", ap:"-1", d:"2"},
+      {n:"Fusil-rail à neutrons", t:"[BLESSURES DÉVASTATRICES]", r:'30"', a:"1", sk:"4+", s:"10", ap:"-4", d:"3"},
+      {n:"Lance-flammes t'au", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Griffes de Stingwing", t:"", r:"Mêlée", a:"1", sk:"4+", s:"4", ap:"-1", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Frappe en Profondeur"},
+      {l:"Agilité Aérienne", t:"À la fin du tour, si cette unité n'est pas à portée d'engagement d'une unité ennemie, vous pouvez la retirer du champ de bataille et la placer en Réserves Stratégiques."},
+      {l:"Drone de Supervision (équipement)", t:"Une fois par bataille, quand l'unité du porteur est choisie pour tirer, jusqu'à la fin de la phase ses armes de tir ont l'aptitude [IGNORE LE COUVERT]."}
+    ],
+    wargear:[
+      "Si l'unité compte 10 modèles, le Vespid Strain Leader peut être équipé de 1 drone de supervision.",
+      {head:"1 Vespid Stingwing peut remplacer son éclateur à neutrons par :", items:["1 lance-flammes t'au","1 lance-grenades à neutrons","1 fusil-rail à neutrons"]}
+    ],
+    comp:["5-10 Vespid Stingwings"],
+    equip:"Chaque modèle est équipé de : éclateur à neutrons, griffes de Stingwing.",
+    pts:[["5 modèles","65"],["10 modèles","130"]],
+    keywords:"INFANTERIE, VOL, VESPID STINGWINGS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tetras", base:"⌀60mm (socle volant)", role:"Fast Attack",
+    stats:['14"','7','4+','7','7+','2'], inv:'',
+    ranged:[ {n:"Fusil à impulsions", t:"[TIR RAPIDE 1]", r:'30"', a:"1", sk:"4+", s:"5", ap:"0", d:"1"} ],
+    melee:[ {n:"Armes de corps à corps", t:"", r:"Mêlée", a:"2", sk:"5+", s:"3", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Infiltrateurs"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Désignateurs Laser Haute Intensité", t:"Quand cette unité effectue une action de marquage, jusqu'à la fin du tour, chaque fois qu'une unité T'AU EMPIRE amie effectue une attaque ciblant l'unité ainsi Marquée, relancez le jet pour toucher."}
+    ],
+    comp:["2-4 Tetras"],
+    equip:"Chaque modèle est équipé de : 2 fusils à impulsions, armes de corps à corps.",
+    pts:[["2 modèles","80"],["4 modèles","160"]],
+    keywords:"VÉHICULE, VOL, DÉSIGNATEUR LASER, TETRAS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"R'varna Battlesuit", base:"⌀120 x 92mm", role:"Fast Attack",
+    stats:['8"','10','2+','15','7+','4'], inv:'5+',
+    ranged:[ {n:"Canon à sous-munitions à impulsions", t:"[DÉFLAGRATION]", r:'60"', a:"D6+2", sk:"4+", s:"8", ap:"-1", d:"2"} ],
+    melee:[ {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"6", sk:"5+", s:"6", ap:"0", d:"2"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"Ce modèle peut tirer lors d'un tour où il s'est Désengagé."},
+      {l:"Bouclier Nova", t:"Une fois par bataille, quand ce modèle est choisi comme cible d'une attaque de tir, il peut utiliser cette aptitude : jusqu'à la fin de la phase, chaque fois qu'une attaque le cible, si la Force de l'attaque est supérieure à l'Endurance de ce modèle, soustrayez 1 au jet pour blesser."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que ce modèle effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[ "Ce modèle peut être équipé de jusqu'à 2 drones lance-missiles." ],
+    comp:["1 R'varna Battlesuit"],
+    equip:"Ce modèle est équipé de : 2 canons à sous-munitions à impulsions, poings d'exo-armure.",
+    pts:[["1 modèle","200"]],
+    keywords:"VÉHICULE, MARCHEUR, EXO-ARMURE, R'VARNA",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Y'vahra Battlesuit", base:"⌀120 x 92mm", role:"Fast Attack",
+    stats:['10"','9','2+','15','7+','4'], inv:'5+',
+    ranged:[
+      {n:"Nacelle à fléchettes", t:"", r:'12"', a:"5", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Canon à décharge ionique – standard", t:"[DÉFLAGRATION]", r:'18"', a:"D6+1", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à décharge ionique – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'18"', a:"D6+1", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Lance-flammes à plasma phasé", t:"[IGNORE LE COUVERT, TORRENT]", r:'12"', a:"10", sk:"N/A", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[ {n:"Poings d'exo-armure", t:"", r:"Mêlée", a:"6", sk:"5+", s:"6", ap:"0", d:"2"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"Ce modèle peut tirer lors d'un tour où il s'est Désengagé."},
+      {l:"Décharge Nova", t:"Une fois par bataille, avant que ce modèle effectue un mouvement Normal, d'Avance ou de Retraite, il peut utiliser cette aptitude : jusqu'à la fin de la phase, il a une caractéristique de Mouvement de 18\"."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que ce modèle effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[ "Ce modèle peut être équipé de jusqu'à 2 drones lance-missiles." ],
+    comp:["1 Y'vahra Battlesuit"],
+    equip:"Ce modèle est équipé de : nacelle à fléchettes, canon à décharge ionique, lance-flammes à plasma phasé, poings d'exo-armure.",
+    pts:[["1 modèle","210"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, Y'VAHRA",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Knarloc Riders", base:"⌀65mm", role:"Fast Attack",
+    stats:['7"','5','5+','4','7+','2'], inv:'',
+    ranged:[ {n:"Fusil kroot", t:"[TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"} ],
+    melee:[
+      {n:"Bec et serres de Knarloc", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"4", sk:"3+", s:"6", ap:"-1", d:"1"},
+      {n:"Fusil kroot", t:"", r:"Mêlée", a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\", Discrétion"},
+      {l:"Bond Fracassant", t:"Chaque fois que cette unité termine un mouvement de Charge, jusqu'à la fin du tour, les bec et serres de Knarloc de ses modèles ont l'aptitude [LANCE]."}
+    ],
+    comp:["3 Knarloc Riders"],
+    equip:"Chaque modèle est équipé de : fusil kroot, bec et serres de Knarloc.",
+    pts:[["3 modèles","110"]],
+    keywords:"MONTÉ, KROOT, KNARLOC RIDERS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tx42 Piranha", base:"⌀60mm (socle volant)", role:"Fast Attack",
+    stats:['14"','7','4+','7','7+','2'], inv:'',
+    ranged:[
+      {n:"Éclateur à fusion", t:"[FUSION 2]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Fusil à plasma froid", t:"", r:'24"', a:"1", sk:"4+", s:"8", ap:"-3", d:"3"},
+      {n:"Fusil à rail", t:"[BLESSURES DÉVASTATRICES]", r:'30"', a:"1", sk:"4+", s:"10", ap:"-4", d:"3"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"2", sk:"5+", s:"4", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 1, Éclaireurs 9\""},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Débordement", t:"Quand cette unité arrive des Réserves Stratégiques, elle peut être placée dans la zone de déploiement adverse (toutes les autres restrictions s'appliquent)."}
+    ],
+    wargear:[ {head:"Les 2 fusils à plasma froid de ce modèle peuvent être remplacés par :", items:["2 éclateurs à fusion","2 nacelles de missiles","2 fusils à rail"]} ],
+    comp:["1 TX42 Piranha"],
+    equip:"Ce modèle est équipé de : 2 fusils à plasma froid, coque blindée.",
+    pts:[["1 modèle","60"]],
+    keywords:"VÉHICULE, VOL, TX42 PIRANHA",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Razorshark Strike Fighter", base:"⌀120 x 92mm (socle volant)", role:"Flyers",
+    stats:['20+"','10','3+','12','7+','0'], inv:'',
+    ranged:[
+      {n:"Canon à induction accéléré", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Tourelle quad-ions – standard", t:"[JUMELÉ]", r:'30"', a:"8", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Tourelle quad-ions – surcharge", t:"[À RISQUE, JUMELÉ]", r:'30"', a:"8", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Chasseur d'Appui au Sol", t:"Chaque fois que ce modèle effectue une attaque de tir ciblant une unité ennemie ne pouvant pas VOLER, ajoutez 1 au jet pour toucher."},
+      {l:"Endommagé : 1-4 PV restants", t:"Tant que ce modèle a 1-4 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      "Le canon à induction accéléré de ce modèle peut être remplacé par 1 nacelle de missiles."
+    ],
+    comp:["1 Razorshark Strike Fighter"],
+    equip:"Ce modèle est équipé de : canon à induction accéléré, tourelle quad-ions, 2 missiles Seeker, coque blindée.",
+    pts:[["1 modèle","170"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, RAZORSHARK STRIKE FIGHTER",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Sun Shark Bomber", base:"⌀120 x 92mm (socle volant)", role:"Flyers",
+    stats:['20+"','9','3+','12','7+','0'], inv:'',
+    ranged:[
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Nacelle de missiles jumelée", t:"[JUMELÉ]", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Fusil à ions jumelé – standard", t:"[JUMELÉ]", r:'30"', a:"3", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Fusil à ions jumelé – surcharge", t:"[À RISQUE, JUMELÉ]", r:'30"', a:"3", sk:"4+", s:"8", ap:"-2", d:"2"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Bombes à impulsions", t:"Chaque fois que ce modèle termine un mouvement Normal, vous pouvez choisir une unité ennemie survolée durant ce mouvement et jeter six D6 : pour chaque 4+, elle subit 1 blessure mortelle."},
+      {l:"Endommagé : 1-4 PV restants", t:"Tant que ce modèle a 1-4 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      "La nacelle de missiles de ce modèle peut être remplacée par 1 nacelle de missiles jumelée."
+    ],
+    comp:["1 Sun Shark Bomber"],
+    equip:"Ce modèle est équipé de : nacelle de missiles, 2 missiles Seeker, 2 fusils à ions jumelés, coque blindée.",
+    pts:[["1 modèle","160"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, SUN SHARK BOMBER",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"AX-1-0 Tiger Shark", base:"⌀160mm", role:"Flyers",
+    stats:['20+"','11','3+','18','7+','0'], inv:'5+',
+    ranged:[
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Canon-rail lourd jumelé", t:"[BLESSURES DÉVASTATRICES, JUMELÉ]", r:'120"', a:"1", sk:"4+", s:"26", ap:"-5", d:"12"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6+2"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Chasseur de Titans", t:"Le canon-rail lourd jumelé et les missiles Seeker de ce modèle ont l'aptitude [ANTI-TITANESQUE 3+] contre une unité à mi-portée ou moins."},
+      {l:"Tir Unique", t:"Le porteur ne peut tirer avec un missile Seeker qu'une fois par bataille."}
+    ],
+    wargear:[
+      "Ce modèle peut être équipé de jusqu'à 6 missiles Seeker.",
+      "Les 2 canons à induction de ce modèle peuvent être remplacés par 2 cyclo-éclateurs à ions."
+    ],
+    comp:["1 AX-1-0 Tiger Shark"],
+    equip:"Ce modèle est équipé de : 2 canons à induction, canon-rail lourd jumelé, coque blindée.",
+    pts:[["1 modèle","315"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, AX-1-0 TIGER SHARK",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Barracuda", base:"⌀120 x 92mm (socle volant)", role:"Flyers",
+    stats:['20+"','10','3+','14','7+','0'], inv:'5+',
+    ranged:[
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Canon à ions – standard", t:"[DÉFLAGRATION]", r:'60"', a:"D6+3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à ions – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'60"', a:"D6+3", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Canon à induction à long canon", t:"", r:'24"', a:"8", sk:"4+", s:"6", ap:"0", d:"1"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Canon à induction Swiftstrike", t:"", r:'36"', a:"16", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon-rail Swiftstrike", t:"[BLESSURES DÉVASTATRICES]", r:'72"', a:"1", sk:"4+", s:"20", ap:"-5", d:"D6+6"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Chasseur Agile", t:"Chaque fois qu'une attaque cible ce modèle, soustrayez 1 au jet pour toucher."},
+      {l:"Tir Unique", t:"Le porteur ne peut tirer avec un missile Seeker qu'une fois par bataille."}
+    ],
+    wargear:[
+      "Les 2 canons à induction à long canon peuvent être remplacés par 2 cyclo-éclateurs à ions.",
+      "Le canon à induction Swiftstrike peut être remplacé par 1 canon-rail Swiftstrike."
+    ],
+    comp:["1 Barracuda"],
+    equip:"Ce modèle est équipé de : 2 canons à induction à long canon, canon à ions, canon à induction Swiftstrike, coque blindée.",
+    pts:[["1 modèle","220"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, BARRACUDA",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Remora Stealth Drones", base:"⌀60mm (socle volant)", role:"Flyers",
+    stats:['16"','6','3+','5','7+','0'], inv:'',
+    ranged:[
+      {n:"Missile Seeker de Remora", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Canon à induction à long canon jumelé", t:"[JUMELÉ]", r:'24"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"}
+    ],
+    melee:[ {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"5+", s:"4", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Infiltrateurs, Discrétion"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Désengagement Aérien", t:"Une fois par tour, quand une unité ennemie termine un mouvement Normal, d'Avance ou de Retraite à 9\" ou moins de cette unité, et si celle-ci n'est pas à portée d'engagement ennemie, elle peut faire un mouvement Normal de jusqu'à 6\"."}
+    ],
+    comp:["2 Remora Stealth Drones"],
+    equip:"Chaque modèle est équipé de : canon à induction à long canon jumelé, 2 missiles Seeker de Remora, arme de corps à corps.",
+    pts:[["2 modèles","160"]],
+    keywords:"VÉHICULE, VOL, DÉSIGNATEUR LASER, REMORA STEALTH DRONES",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tiger Shark", base:"⌀160mm", role:"Flyers",
+    stats:['20+"','11','3+','18','7+','0'], inv:'5+',
+    ranged:[
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Cyclo-éclateur à ions – standard", t:"", r:'18"', a:"3", sk:"4+", s:"7", ap:"-1", d:"1"},
+      {n:"Cyclo-éclateur à ions – surcharge", t:"[À RISQUE]", r:'18"', a:"3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Canon à ions – standard", t:"[DÉFLAGRATION]", r:'60"', a:"D6+3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à ions – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'60"', a:"D6+3", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Râtelier à missiles Skyspear", t:"[ANTI-VOL 3+, DÉFLAGRATION]", r:'72"', a:"D6+1", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon à induction Swiftstrike", t:"", r:'36"', a:"16", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon-rail Swiftstrike", t:"[BLESSURES DÉVASTATRICES]", r:'72"', a:"1", sk:"4+", s:"20", ap:"-5", d:"D6+6"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6+2"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Mitraillage en Piqué", t:"Après que ce modèle a résolu son action de Tir, choisissez une unité ennemie ne pouvant pas VOLER touchée par une ou plusieurs de ces attaques ; elle doit passer un test d'Ébranlement."},
+      {l:"Tir Unique", t:"Le porteur ne peut tirer avec un missile Seeker qu'une fois par bataille."},
+      {l:"Soute de transport (équipement)", t:"Le porteur a le mot-clé TRANSPORT et une capacité de transport de 12 modèles TACTICAL DRONES."}
+    ],
+    wargear:[ "Les 2 canons à induction de ce modèle peuvent être remplacés par 2 cyclo-éclateurs à ions." ],
+    comp:["1 Tiger Shark"],
+    equip:"Ce modèle est équipé de : 2 canons à induction, canon à ions, Râtelier à missiles Skyspear, coque blindée.",
+    pts:[["1 modèle","325"]],
+    keywords:"VÉHICULE, AÉRONEF, VOL, TRANSPORT, TIGER SHARK",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Broadside Battlesuits", base:"⌀60mm", role:"Heavy Support",
+    stats:['5"','6','2+','8','7+','2'], inv:'',
+    ranged:[
+      {n:"Canon-rail lourd", t:"[LOURD, BLESSURES DÉVASTATRICES]", r:'60"', a:"2", sk:"4+", s:"12", ap:"-4", d:"D6+1"},
+      {n:"Nacelles de missiles à haut rendement", t:"[JUMELÉ]", r:'30"', a:"6", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Fusil à plasma froid jumelé", t:"[JUMELÉ]", r:'18"', a:"1", sk:"4+", s:"8", ap:"-3", d:"3"},
+      {n:"Système de missiles intelligents jumelé", t:"[TIR INDIRECT, JUMELÉ]", r:'30"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[
+      {n:"Masse écrasante", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Blindage Avancé", t:"Les modèles de cette unité ont l'aptitude Insensible à la Douleur 4+ contre les blessures mortelles."},
+      {l:"Tir Unique", t:"Le porteur ne peut tirer avec un missile Seeker qu'une fois par bataille."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      "N'importe quel nombre de modèles peuvent remplacer leur canon-rail lourd par 1 nacelles de missiles à haut rendement.",
+      {head:"N'importe quel nombre de modèles peuvent être équipés de jusqu'à 2 des choix suivants (sans doublon) :", items:["1 missile Seeker","1 fusil à plasma froid jumelé","1 système de missiles intelligents jumelé","1 système d'appui d'arme"]},
+      {head:"N'importe quel nombre de modèles peuvent être équipés de jusqu'à 2 des choix suivants (doublons autorisés) :", items:["1 drone armé","1 drone de marquage","1 drone lance-missiles","1 drone bouclier"]}
+    ],
+    comp:["1 Broadside Shas'vre","0-2 Broadside Shas'ui"],
+    equip:"Chaque modèle est équipé de : canon-rail lourd, système de missiles intelligents jumelé, masse écrasante.",
+    pts:[["1 modèle","80"],["2 modèles","170"],["3 modèles","270"]],
+    keywords:"VÉHICULE, EXO-ARMURE, BROADSIDE BATTLESUITS",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Hammerhead Gunship", base:"⌀60mm (socle volant)", role:"Heavy Support",
+    stats:['10"','10','3+','14','7+','3'], inv:'',
+    ranged:[
+      {n:"Canon à induction accéléré", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Canon à ions – standard", t:"[DÉFLAGRATION]", r:'60"', a:"D6+3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à ions – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'60"', a:"D6+3", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Canon-rail", t:"[LOURD, BLESSURES DÉVASTATRICES]", r:'72"', a:"1", sk:"4+", s:"20", ap:"-5", d:"D6+6"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Carabine à impulsions jumelée", t:"[JUMELÉ]", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles intelligents", t:"[TIR INDIRECT]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Chasseur de Blindés", t:"Chaque fois que ce modèle effectue une attaque ciblant une unité MONSTRE ou VÉHICULE, ajoutez 1 au jet pour toucher."},
+      {l:"Panoplie de Ciblage", t:"Chaque fois que ce modèle est choisi pour tirer, vous pouvez relancer un jet pour toucher ou un jet pour blesser lors de la résolution de ses attaques."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      "Le canon-rail de ce modèle peut être remplacé par 1 canon à ions.",
+      {head:"Les 2 carabines à impulsions jumelées peuvent être remplacées par :", items:["2 canons à induction accélérés","2 systèmes de missiles intelligents"]},
+      "Ce modèle peut être équipé de jusqu'à 2 missiles Seeker."
+    ],
+    comp:["1 Hammerhead Gunship"],
+    equip:"Ce modèle est équipé de : canon-rail, 2 carabines à impulsions jumelées, coque blindée.",
+    pts:[["1 modèle","145"]],
+    keywords:"VÉHICULE, VOL, HAMMERHEAD GUNSHIP",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Riptide Battlesuit", base:"⌀120 x 92mm", role:"Heavy Support",
+    stats:['10"','9','2+','14','7+','4'], inv:'4+',
+    ranged:[
+      {n:"Canon à induction lourd", t:"", r:'36"', a:"12", sk:"4+", s:"6", ap:"-1", d:"2"},
+      {n:"Accélérateur à ions – standard", t:"", r:'72"', a:"6", sk:"4+", s:"9", ap:"-2", d:"3"},
+      {n:"Accélérateur à ions – surcharge", t:"[À RISQUE]", r:'72"', a:"6", sk:"4+", s:"10", ap:"-3", d:"4"},
+      {n:"Éclateur à fusion jumelé", t:"[FUSION 2, JUMELÉ]", r:'12"', a:"1", sk:"4+", s:"9", ap:"-4", d:"D6"},
+      {n:"Fusil à plasma froid jumelé", t:"[JUMELÉ]", r:'18"', a:"1", sk:"4+", s:"8", ap:"-3", d:"3"},
+      {n:"Système de missiles intelligents jumelé", t:"[TIR INDIRECT, JUMELÉ]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Poings de Riptide", t:"", r:"Mêlée", a:"6", sk:"5+", s:"6", ap:"0", d:"2"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Charge Nova", t:"Une fois par bataille, quand cette unité est choisie pour tirer, choisissez une arme de tir de ce modèle ; jusqu'à la fin de la phase, elle a l'aptitude [BLESSURES DÉVASTATRICES]."},
+      {l:"Système d'Appui d'Exo-armure (équipement)", t:"Le porteur peut tirer lors d'un tour où il s'est Désengagé."},
+      {l:"Système d'Appui d'Arme (équipement)", t:"Chaque fois que le porteur effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."}
+    ],
+    wargear:[
+      "Le canon à induction lourd de ce modèle peut être remplacé par 1 accélérateur à ions.",
+      {head:"Le fusil à plasma froid jumelé peut être remplacé par :", items:["1 éclateur à fusion jumelé","1 système de missiles intelligents jumelé"]},
+      "Ce modèle peut être équipé de jusqu'à 2 drones lance-missiles."
+    ],
+    comp:["1 Riptide Battlesuit"],
+    equip:"Ce modèle est équipé de : canon à induction lourd, fusil à plasma froid jumelé, poings de Riptide.",
+    pts:[["1 modèle","200"]],
+    keywords:"VÉHICULE, MARCHEUR, VOL, EXO-ARMURE, RIPTIDE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Sky Ray Gunship", base:"⌀60mm (socle volant)", role:"Heavy Support",
+    stats:['10"','10','3+','14','7+','3'], inv:'',
+    ranged:[
+      {n:"Canon à induction accéléré", t:"", r:'18"', a:"4", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Râtelier à missiles Seeker", t:"[JUMELÉ]", r:'48"', a:"3", sk:"4+", s:"14", ap:"-3", d:"D6+1"},
+      {n:"Carabine à impulsions jumelée", t:"[ASSAUT, JUMELÉ]", r:'20"', a:"2", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles intelligents", t:"[TIR INDIRECT]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Traqueur de Vélocité", t:"Chaque fois que ce modèle effectue une attaque de tir ciblant une unité pouvant VOLER, relancez le jet pour toucher."},
+      {l:"Panoplie de Ciblage", t:"Chaque fois que ce modèle est choisi pour tirer, vous pouvez relancer un jet pour toucher ou un jet pour blesser lors de la résolution de ses attaques."},
+      {l:"Endommagé : 1-5 PV restants", t:"Tant que ce modèle a 1-5 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      {head:"Les 2 carabines à impulsions jumelées peuvent être remplacées par :", items:["2 canons à induction accélérés","2 systèmes de missiles intelligents"]}
+    ],
+    comp:["1 Sky Ray Gunship"],
+    equip:"Ce modèle est équipé de : 1 râtelier à missiles Seeker, 2 carabines à impulsions jumelées, coque blindée.",
+    pts:[["1 modèle","150"]],
+    keywords:"VÉHICULE, VOL, SKY RAY GUNSHIP",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Great Knarloc", base:"⌀65mm", role:"Heavy Support",
+    stats:['9"','8','4+','10','7+','3'], inv:'',
+    ranged:[
+      {n:"Baliste kroot", t:"[ACCROCHEUR]", r:'12"', a:"1", sk:"4+", s:"12", ap:"-2", d:"3"},
+      {n:"Fusil kroot", t:"[TIR RAPIDE 1]", r:'24"', a:"1", sk:"4+", s:"4", ap:"0", d:"1"},
+      {n:"Fusil kroot jumelé", t:"[JUMELÉ]", r:'36"', a:"2", sk:"4+", s:"7", ap:"0", d:"2"}
+    ],
+    melee:[
+      {n:"Bec et serres de Grand Knarloc", t:"[ATTAQUES BONUS]", r:"Mêlée", a:"4", sk:"3+", s:"7", ap:"-1", d:"3"},
+      {n:"Fusil kroot", t:"", r:"Mêlée", a:"2", sk:"3+", s:"4", ap:"0", d:"1"}
+    ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Éclaireurs 7\""},
+      {l:"Foulée Bondissante", t:"Chaque fois que ce modèle Avance, ne faites pas de jet d'Avance : ajoutez plutôt 6\" à sa caractéristique de Mouvement jusqu'à la fin de la phase."},
+      {l:"Accrocheur", t:"Chaque fois que le porteur effectue une attaque avec une arme [ACCROCHEUR] ciblant une unité MONSTRE ou VÉHICULE et qu'une touche est obtenue, jusqu'à la fin du tour, s'il cible cette unité pour une charge, ajoutez 2 aux jets de charge et les unités ennemies ne peuvent pas effectuer de Tir en État d'Alerte contre lui."}
+    ],
+    wargear:[ {head:"Ce modèle peut être équipé de l'un des choix suivants :", items:["1 baliste kroot et 1 fusil kroot","1 fusil kroot jumelé","1 harnais de bagage"]} ],
+    comp:["1 Great Knarloc"],
+    equip:"Ce modèle est équipé de : baliste kroot, fusil kroot, bec et serres de Grand Knarloc.",
+    pts:[["1 modèle","100"]],
+    keywords:"MONSTRE, KROOT, GREAT KNARLOC",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Heavy Gun Drones", base:"⌀32mm (socle volant)", role:"Heavy Support",
+    stats:['8"','5','4+','2','8+','0'], inv:'',
+    ranged:[
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Canon à induction jumelé", t:"[JUMELÉ]", r:'18"', a:"4", sk:"5+", s:"5", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Arme de corps à corps", t:"", r:"Mêlée", a:"1", sk:"6+", s:"3", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Escorte de Drones", t:"Une fois par tour, quand une unité T'AU EMPIRE amie à 6\" ou moins de cette unité est ciblée par une attaque, une unité dotée de cette aptitude peut l'utiliser : après que l'unité ennemie a fini ses attaques, l'unité dotée de cette aptitude peut immédiatement effectuer une action de Tir hors de son activation, mais ne peut cibler que cette unité ennemie."},
+      {l:"Désignateur Laser (équipement)", t:"Le porteur a le mot-clé DÉSIGNATEUR LASER."}
+    ],
+    wargear:[ "N'importe quel nombre de modèles peuvent remplacer leur canon à induction et désignateur laser par 1 canon à induction jumelé." ],
+    comp:["2 Heavy Gun Drones"],
+    equip:"Chaque modèle est équipé de : canon à induction, désignateur laser, arme de corps à corps.",
+    pts:[["2 modèles","45"]],
+    keywords:"DRONE, VOL, DÉSIGNATEUR LASER, HEAVY GUN DRONES",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Ta'unar Supremacy Armour", base:"⌀160mm", role:"Lords of War",
+    stats:['8"','13','2+','30','7+','10'], inv:'5+',
+    ranged:[
+      {n:"Canon à induction", t:"", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Lanceur d'obus à fragmentation en grappe", t:"[DÉFLAGRATION]", r:'24"', a:"2D6+6", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Éradicateur à fusion", t:"[FUSION 3]", r:'24"', a:"5", sk:"4+", s:"10", ap:"-4", d:"D6"},
+      {n:"Batterie de canons-rail lourds", t:"[BLESSURES DÉVASTATRICES, LOURD]", r:'120"', a:"2", sk:"4+", s:"26", ap:"-5", d:"16"},
+      {n:"Lance-missiles Nexus", t:"", r:'36"', a:"8", sk:"4+", s:"8", ap:"-3", d:"2"},
+      {n:"Propulseur d'artillerie à impulsions", t:"[ANTI-INFANTERIE 2+]", r:'60"', a:"8", sk:"4+", s:"5", ap:"-1", d:"3"},
+      {n:"Système de missiles intelligents", t:"[TIR INDIRECT]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Canon à ions tri-axes – standard", t:"[DÉFLAGRATION]", r:'36"', a:"D6+3", sk:"4+", s:"8", ap:"-2", d:"2"},
+      {n:"Canon à ions tri-axes – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'36"', a:"D6+3", sk:"4+", s:"9", ap:"-3", d:"3"}
+    ],
+    melee:[ {n:"Pieds écraseurs", t:"", r:"Mêlée", a:"6", sk:"5+", s:"8", ap:"-1", d:"2"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6+3"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Frappe Coordonnée", t:"Chaque fois que ce modèle effectue une attaque ciblant une unité Marquée, relancez un jet pour toucher de 1."},
+      {l:"Marcheur Super-lourd", t:"Chaque fois que ce modèle effectue un mouvement Normal, d'Avance ou de Retraite, il peut traverser les modèles (hors TITANESQUES) et les décors de 4\" ou moins de hauteur comme s'ils n'étaient pas là."},
+      {l:"Endommagé : 1-10 PV restants", t:"Tant que ce modèle a 1-10 PV restants, soustrayez 5 à son Contrôle d'Objectif et 1 à ses jets pour toucher."}
+    ],
+    wargear:[
+      "Le canon à ions tri-axes de ce modèle peut être remplacé par 1 éradicateur à fusion, et inversement.",
+      {head:"Les 3 propulseurs d'artillerie à impulsions de ce modèle peuvent être remplacés par :", items:["2 lance-missiles Nexus","1 batterie de canons-rail lourds et 1 lanceur d'obus à fragmentation en grappe"]}
+    ],
+    comp:["1 Ta'unar Supremacy Armour"],
+    equip:"Ce modèle est équipé de : 4 canons à induction, éradicateur à fusion, 3 propulseurs d'artillerie à impulsions, 4 systèmes de missiles intelligents, canon à ions tri-axes, pieds écraseurs.",
+    pts:[["1 modèle","790"]],
+    keywords:"VÉHICULE, MARCHEUR, TITANESQUE, COLOSSAL, TA'UNAR SUPREMACY ARMOUR",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Manta", base:"voir modèle", role:"Lords of War",
+    stats:['20+"','14','2+','60','7+','0'], inv:'5+',
+    ranged:[
+      {n:"Canon-rail lourd", t:"[BLESSURES DÉVASTATRICES]", r:'120"', a:"1", sk:"4+", s:"26", ap:"-5", d:"12"},
+      {n:"Canon à ions – standard", t:"[DÉFLAGRATION]", r:'60"', a:"D6+3", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Canon à ions – surcharge", t:"[DÉFLAGRATION, À RISQUE]", r:'60"', a:"D6+3", sk:"4+", s:"8", ap:"-2", d:"3"},
+      {n:"Batterie de canons à induction à long canon", t:"", r:'24"', a:"32", sk:"4+", s:"6", ap:"-1", d:"1"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"},
+      {n:"Missile Seeker", t:"[TIR UNIQUE]", r:'48"', a:"1", sk:"4+", s:"14", ap:"-3", d:"D6+1"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"8", sk:"5+", s:"6", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste 3D6, Vol stationnaire"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Déploiement Agressif", t:"Après que ce modèle a résolu son action de Tir, choisissez une unité ennemie touchée par une ou plusieurs de ces attaques ; jusqu'à la fin de la phase, chaque fois qu'un modèle ami ayant débarqué de ce TRANSPORT ce tour attaque cette unité ennemie, relancez le jet pour blesser."},
+      {l:"Colosse de la Caste de l'Air", t:"Chaque fois que vous ciblez ce modèle avec un Stratagème, vous devez dépenser le triple du coût en PC indiqué par ce Stratagème."},
+      {l:"Endommagé : 1-20 PV restants", t:"Tant que ce modèle a 1-20 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    comp:["1 Manta"],
+    equip:"Ce modèle est équipé de : 2 canons-rail lourds, 6 canons à ions, 2 batteries de canons à induction à long canon, 2 nacelles de missiles, 10 missiles Seeker, coque blindée.",
+    pts:[["1 modèle","2100"]],
+    transport:"Capacité de transport : 200 modèles INFANTERIE ou TACTICAL DRONE T'AU EMPIRE ; 4 modèles DEVILFISH, SKY RAY GUNSHIP ou HAMMERHEAD ; 8 modèles EXO-ARMURE de 9 PV ou moins.",
+    keywords:"VÉHICULE, AÉRONEF, VOL, TITANESQUE, TRANSPORT, DÉSIGNATEUR LASER, MANTA",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Orca Dropship", base:"voir modèle", role:"Lords of War",
+    stats:['20+"','12','3+','28','7+','0'], inv:'',
+    ranged:[
+      {n:"Canon à induction à long canon", t:"", r:'36"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Nacelle de missiles", t:"", r:'30"', a:"2", sk:"4+", s:"7", ap:"-1", d:"2"}
+    ],
+    melee:[ {n:"Coque blindée", t:"", r:"Mêlée", a:"3", sk:"5+", s:"8", ap:"0", d:"1"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6+2, Vol stationnaire"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Insertion par Réacteur Dorsal", t:"À la fin d'une activation ennemie, une ou plusieurs unités embarquées peuvent débarquer, à condition que chaque modèle de ces unités ait l'aptitude Frappe en Profondeur."},
+      {l:"Endommagé : 1-9 PV restants", t:"Tant que ce modèle a 1-9 PV restants, soustrayez 1 à ses jets pour toucher."}
+    ],
+    comp:["1 Orca Dropship"],
+    equip:"Ce modèle est équipé de : 2 canons à induction à long canon, nacelle de missiles, coque blindée.",
+    pts:[["1 modèle","275"]],
+    transport:"Capacité de transport de 48 modèles INFANTERIE T'AU EMPIRE. Peut aussi transporter jusqu'à 6 modèles EXO-ARMURE (chacun occupe un nombre de places égal à sa caractéristique de PV).",
+    keywords:"VÉHICULE, AÉRONEF, TRANSPORT, VOL, ORCA DROPSHIP",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Stormsurge", base:"⌀170 x 109mm", role:"Lords of War",
+    stats:['8"','11','2+','20','7+','6'], inv:'4+',
+    ranged:[
+      {n:"Système de roquettes en grappe", t:"[DÉFLAGRATION, LOURD]", r:'48"', a:"4D6", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Missiles Destroyer", t:"[LOURD]", r:'72"', a:"1", sk:"4+", s:"16", ap:"-4", d:"D6+2"},
+      {n:"Canon à explosion à impulsions – focalisé", t:"[LOURD]", r:'24"', a:"2", sk:"4+", s:"24", ap:"-6", d:"12"},
+      {n:"Canon à explosion à impulsions – dispersé", t:"[LOURD]", r:'48"', a:"6", sk:"4+", s:"10", ap:"-2", d:"4"},
+      {n:"Canon propulseur à impulsions", t:"[DÉFLAGRATION, LOURD]", r:'72"', a:"D6+3", sk:"4+", s:"12", ap:"-3", d:"3"},
+      {n:"Lanceur de charges à dispersion jumelé", t:"[DÉFLAGRATION, LOURD, TIR INDIRECT, JUMELÉ]", r:'24"', a:"D6", sk:"4+", s:"3", ap:"0", d:"1"},
+      {n:"Canon à induction jumelé", t:"[LOURD, JUMELÉ]", r:'18"', a:"4", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Système de missiles intelligents jumelé", t:"[LOURD, TIR INDIRECT, JUMELÉ]", r:'30"', a:"3", sk:"4+", s:"5", ap:"0", d:"1"},
+      {n:"Lance-flammes t'au jumelé", t:"[IGNORE LE COUVERT, TORRENT, JUMELÉ]", r:'12"', a:"D6", sk:"N/A", s:"4", ap:"0", d:"1"}
+    ],
+    melee:[ {n:"Pas tonitruants", t:"", r:"Mêlée", a:"3", sk:"5+", s:"8", ap:"-1", d:"2"} ],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D6+2"},
+      {l:"Faction", t:"Pour le Bien Suprême"},
+      {l:"Marcheur Lourd", t:"Chaque fois que ce modèle effectue un mouvement Normal, d'Avance ou de Retraite, il peut traverser les modèles (hors TITANESQUES) et les décors de 4\" ou moins de hauteur comme s'ils n'étaient pas là."},
+      {l:"Système d'Appui", t:"Chaque fois que ce modèle effectue une attaque de tir, vous pouvez ignorer tout ou partie des modificateurs au jet pour toucher."},
+      {l:"Tueur de Titans", t:"Chaque fois que ce modèle effectue une attaque de tir ciblant une unité TITANESQUE ou COLOSSALE, relancez le jet pour toucher."}
+    ],
+    wargear:[
+      "Le canon propulseur à impulsions de ce modèle peut être remplacé par 1 canon à explosion à impulsions.",
+      {head:"Le lance-flammes t'au jumelé peut être remplacé par :", items:["1 lanceur de charges à dispersion jumelé","1 canon à induction jumelé"]}
+    ],
+    comp:["1 Stormsurge"],
+    equip:"Ce modèle est équipé de : système de roquettes en grappe, missiles Destroyer, canon propulseur à impulsions, lanceur de charges à dispersion jumelé, système de missiles intelligents jumelé, lance-flammes t'au jumelé, pas tonitruants.",
+    pts:[["1 modèle","360"]],
+    keywords:"VÉHICULE, MARCHEUR, TITANESQUE, COLOSSAL, STORMSURGE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tidewall Droneport", base:"voir modèle", role:"Fortifications",
+    stats:['4"','8','3+','10','7+','0'], inv:'',
+    ranged:[ {n:"Drones défenseurs", t:"[ASSAUT, JUMELÉ]", r:'20"', a:"8", sk:"5+", s:"5", ap:"0", d:"1"} ],
+    melee:[],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de Tir 11"},
+      {l:"Droneport", t:"Chaque fois que cette FORTIFICATION est choisie pour tirer, l'arme de ses drones défenseurs cible et résout des attaques contre chaque unité ennemie qui lui est une cible éligible."},
+      {l:"Fortification", t:"Tant qu'une unité ennemie est uniquement à portée d'engagement d'une ou plusieurs FORTIFICATIONS de votre armée : elle peut encore être ciblée par des attaques de tir, mais chaque telle attaque (hors Pistolet) subit -1 au jet pour toucher ; ses modèles n'ont pas à passer de test de Fuite Désespérée en se Désengageant sous Ébranlement (sauf s'ils traversent des modèles ennemis)."},
+      {l:"Couvert Tidewall", t:"Chaque fois qu'une attaque de tir est répartie sur un modèle, s'il n'est pas entièrement visible pour tous les modèles de l'unité attaquante à cause de cette FORTIFICATION, il bénéficie du Couvert contre cette attaque."}
+    ],
+    comp:["1 Tidewall Droneport"],
+    equip:"Ce modèle est équipé de : drones défenseurs.",
+    pts:[["1 modèle","85"]],
+    keywords:"FORTIFICATION, VÉHICULE, TIDEWALL DRONEPORT",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tidewall Gunrig", base:"voir modèle", role:"Fortifications",
+    stats:['4"','8','3+','14','7+','0'], inv:'',
+    ranged:[ {n:"Canon-rail de suprématie", t:"[BLESSURES DÉVASTATRICES, JUMELÉ]", r:'72"', a:"1", sk:"5+", s:"20", ap:"-5", d:"D6+6"} ],
+    melee:[],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de Tir 11"},
+      {l:"Fortification", t:"Tant qu'une unité ennemie est uniquement à portée d'engagement d'une ou plusieurs FORTIFICATIONS de votre armée : elle peut encore être ciblée par des attaques de tir, mais chaque telle attaque (hors Pistolet) subit -1 au jet pour toucher ; ses modèles n'ont pas à passer de test de Fuite Désespérée en se Désengageant sous Ébranlement (sauf s'ils traversent des modèles ennemis)."},
+      {l:"Couvert Tidewall", t:"Chaque fois qu'une attaque de tir est répartie sur un modèle, s'il n'est pas entièrement visible pour tous les modèles de l'unité attaquante à cause de cette FORTIFICATION, il bénéficie du Couvert contre cette attaque."}
+    ],
+    comp:["1 Tidewall Gunrig"],
+    equip:"Ce modèle est équipé de : canon-rail de suprématie.",
+    pts:[["1 modèle","90"]],
+    keywords:"FORTIFICATION, VÉHICULE, TIDEWALL GUNRIG",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Tidewall Shieldline", base:"voir modèle", role:"Fortifications",
+    stats:['4"','8','3+','10','7+','0'], inv:'5+',
+    ranged:[],
+    melee:[],
+    abilities:[
+      {l:"Aptitudes de base", t:"Destruction Néfaste D3, Pont de Tir 20"},
+      {l:"Plateforme de défense Tidewall (équipement)", t:"Si elle est équipée d'une plateforme de défense Tidewall, cette FORTIFICATION voit sa caractéristique de PV augmentée."},
+      {l:"Fortification", t:"Tant qu'une unité ennemie est uniquement à portée d'engagement d'une ou plusieurs FORTIFICATIONS de votre armée : elle peut encore être ciblée par des attaques de tir, mais chaque telle attaque (hors Pistolet) subit -1 au jet pour toucher ; ses modèles n'ont pas à passer de test de Fuite Désespérée en se Désengageant sous Ébranlement (sauf s'ils traversent des modèles ennemis)."},
+      {l:"Couvert Tidewall", t:"Chaque fois qu'une attaque de tir est répartie sur un modèle, s'il n'est pas entièrement visible pour tous les modèles de l'unité attaquante à cause de cette FORTIFICATION, il bénéficie du Couvert contre cette attaque."}
+    ],
+    wargear:[ "Ce modèle peut être équipé de 1 plateforme de défense Tidewall." ],
+    comp:["1 Tidewall Shieldline"],
+    equip:"Ce modèle n'est équipé d'aucune arme.",
+    pts:[["1 modèle","85"]],
+    keywords:"FORTIFICATION, VÉHICULE, TIDEWALL SHIELDLINE",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Drone Sentry Turret", base:"voir modèle", role:"Fortifications",
+    stats:['-','8','4+','4','8+','0'], inv:'',
+    ranged:[
+      {n:"Canon à induction jumelé", t:"[JUMELÉ]", r:'18"', a:"4", sk:"5+", s:"5", ap:"0", d:"1"},
+      {n:"Éclateur à fusion jumelé", t:"[FUSION 2, JUMELÉ]", r:'12"', a:"1", sk:"5+", s:"9", ap:"-4", d:"D6"},
+      {n:"Nacelle de missiles jumelée", t:"[JUMELÉ]", r:'30"', a:"2", sk:"5+", s:"7", ap:"-1", d:"2"},
+      {n:"Fusil à plasma froid jumelé", t:"[JUMELÉ]", r:'24"', a:"1", sk:"5+", s:"8", ap:"-3", d:"3"}
+    ],
+    melee:[],
+    abilities:[
+      {l:"Protocoles Sentinelles", t:"Chaque fois que cette FORTIFICATION effectue un Tir en État d'Alerte, les touches sont obtenues sur des jets pour toucher non modifiés de 5+."},
+      {l:"Couvert Renforcé", t:"Chaque fois qu'une attaque de tir est répartie sur un modèle, s'il n'est pas entièrement visible pour tous les modèles de l'unité attaquante à cause de cette FORTIFICATION, il bénéficie du Couvert contre cette attaque."},
+      {l:"Fortification", t:"Tant qu'une unité ennemie est uniquement à portée d'engagement d'une ou plusieurs FORTIFICATIONS de votre armée : elle peut encore être ciblée par des attaques de tir, mais chaque telle attaque (hors Pistolet) subit -1 au jet pour toucher ; ses modèles n'ont pas à passer de test de Fuite Désespérée en se Désengageant sous Ébranlement (sauf s'ils traversent des modèles ennemis)."}
+    ],
+    wargear:[ {head:"Le fusil à plasma froid jumelé de ce modèle peut être remplacé par :", items:["1 canon à induction jumelé","1 éclateur à fusion jumelé","1 nacelle de missiles jumelée"]} ],
+    comp:["1 Drone Sentry Turret"],
+    equip:"Ce modèle est équipé de : fusil à plasma froid jumelé.",
+    pts:[["1 modèle","50"]],
+    keywords:"FORTIFICATION, DRONE, DRONE SENTRY TURRET",
+    faction:"T'AU EMPIRE"
+  },
+  {
+    name:"Remote Sensor Tower", base:"voir modèle", role:"Fortifications",
+    stats:['-','8','4+','4','8+','0'], inv:'',
+    ranged:[],
+    melee:[],
+    abilities:[
+      {l:"Réseau de Comms Orbitales (Aura)", t:"Tant qu'une unité T'AU EMPIRE amie est à 6\" ou moins de cette FORTIFICATION, chaque fois que vous la ciblez avec un Stratagème, jetez 1 D6 : sur 5+, vous regagnez l'activation d'un Stratagème coûtant 1 PC ou moins."},
+      {l:"Couvert Renforcé", t:"Chaque fois qu'une attaque de tir est répartie sur un modèle, s'il n'est pas entièrement visible pour tous les modèles de l'unité attaquante à cause de cette FORTIFICATION, il bénéficie du Couvert contre cette attaque."},
+      {l:"Fortification", t:"Tant qu'une unité ennemie est uniquement à portée d'engagement d'une ou plusieurs FORTIFICATIONS de votre armée : elle peut encore être ciblée par des attaques de tir, mais chaque telle attaque (hors Pistolet) subit -1 au jet pour toucher ; ses modèles n'ont pas à passer de test de Fuite Désespérée en se Désengageant sous Ébranlement (sauf s'ils traversent des modèles ennemis)."}
+    ],
+    comp:["1 Remote Sensor Tower"],
+    equip:"Ce modèle n'est équipé d'aucune arme.",
+    pts:[["1 modèle","50"]],
+    keywords:"FORTIFICATION, DÉSIGNATEUR LASER, REMOTE SENSOR TOWER",
+    faction:"T'AU EMPIRE"
+  }
+];;;
+
+function weaponRows(list, skLabel){
+  if(!list.length) return '';
+  const title = skLabel==='CT' ? 'Armes à distance' : 'Armes de mêlée';
+  let rows = `<div class="wrow whead"><span></span><span>${title}</span>`+
+    `<span class="sub">PORT.</span><span class="sub">A</span><span class="sub">${skLabel}</span>`+
+    `<span class="sub">F</span><span class="sub">PA</span><span class="sub">D</span></div>`;
+  for(const w of list){
+    const tag = w.t ? ` <span class="tag">${w.t}</span>` : '';
+    rows += `<div class="wrow wdata"><span class="dot"></span>`+
+      `<span class="wn">${w.n}${tag}</span>`+
+      `<span class="num">${w.r}</span><span class="num">${w.a}</span><span class="num">${w.sk}</span>`+
+      `<span class="num">${w.s}</span><span class="num">${w.ap}</span><span class="num">${w.d}</span></div>`;
+  }
+  return `<div class="wtable">${rows}</div>`;
+}
+
+function render(){
+  const deck = document.getElementById('deck');
+  deck.innerHTML = UNITS.map(u=>{
+    let statBlock;
+    if(u.profiles){
+      const phead = `<tr><th class="name">Profil</th>${STAT_LABELS.map(l=>`<th>${l}</th>`).join('')}<th>Invu</th></tr>`;
+      const prows = u.profiles.map(p=>`<tr><td class="name">${p.name}${p.base?`<small>${p.base}</small>`:''}</td>`+
+        `${p.stats.map(s=>`<td>${s}</td>`).join('')}<td class="inv">${p.inv||'—'}</td></tr>`).join('');
+      statBlock = `<table class="pf"><thead>${phead}</thead><tbody>${prows}</tbody></table>`;
+    } else {
+      const statCells = STAT_LABELS.map(l=>`<div class="lbl">${l}</div>`).join('')
+        + STAT_LABELS.map((l,i)=>`<div class="val">${u.stats[i]}</div>`).join('');
+      const invul = u.inv ? `<div class="invul"><div class="circle">${u.inv}</div>`+
+        `<div class="txt">Sauvegarde invulnérable</div></div>` : '';
+      statBlock = `<div class="statline">${statCells}</div>${invul}`;
+    }
+    const abLine = a=>`<div class="ability"><span class="al">${a.l} : </span>`+
+      `<span class="at">${a.t}</span></div>`;
+    const abBase = u.abilities.filter(a=>a.l==="Aptitudes de base");
+    const abFac  = u.abilities.filter(a=>a.l==="Faction");
+    const abRest = u.abilities.filter(a=>a.l!=="Aptitudes de base" && a.l!=="Faction");
+    let abilities = abBase.map(abLine).join('');
+    if(abFac.length) abilities += `<div class="ability"><span class="al">Faction : </span>`+
+      `<span class="at">${abFac.map(a=>a.t).join(', ')}</span></div>`;
+    abilities += abRest.map(abLine).join('');
+    const leftSection = u.leftSection ? `<div class="section-h" style="margin-top:20px">${u.leftSection.title}</div>`+
+      `<div class="note">${u.leftSection.text}</div>` : '';
+    const wargear = (u.wargear&&u.wargear.length) ? `<div class="section-h" style="margin-top:20px">Options d'équipement</div>`+
+      `<ul class="wg-list">${u.wargear.map(o=> (typeof o==='string')
+        ? `<li>${o}</li>`
+        : `<li>${o.head}<ul class="wg-sub">${o.items.map(it=>`<li>${it}</li>`).join('')}</ul></li>`
+      ).join('')}</ul>` : '';
+    const comp = `<ul class="comp-list">${u.comp.map(c=>`<li>${c}</li>`).join('')}</ul>`
+      + `<div class="note">${u.equip}</div>`;
+    const pts = `<div class="pts-table">${u.pts.map(p=>`<div class="pts-row"><span class="m">${p[0]}</span>`+
+      `<span class="p">${p[1]} pts</span></div>`).join('')}</div>`;
+    const transport = u.transport ? `<div class="section-h" style="margin-top:16px">Transport</div>`+
+      `<div class="note">${u.transport}</div>` : '';
+    const leader = u.leader ? `<div class="section-h" style="margin-top:16px">Meneur</div>`+
+      `<div class="lead-intro">Ce modèle peut être attaché aux unités suivantes :</div>`+
+      `<ul class="lead-list">${u.leader.map(t=>`<li>${t}</li>`).join('')}</ul>`+
+      (u.leaderNote?`<div class="note" style="margin-top:6px">${u.leaderNote}</div>`:'') : '';
+    return `<div class="card">
+      <div class="card-head">
+        <div><span class="name">${u.name}</span><span class="base">[${u.base}]</span></div>
+        <span class="role">${u.role}</span>
+      </div>
+      <div class="body-grid">
+        <div class="col-left">
+          ${statBlock}
+          ${weaponRows(u.ranged,'CT')}
+          ${weaponRows(u.melee,'CC')}
+          ${wargear}
+          ${leftSection}
+        </div>
+        <div class="col-right">
+          <div class="section-h">Aptitudes</div>
+          ${abilities}
+          <div class="section-h" style="margin-top:16px">Composition d'unité</div>
+          ${comp}
+          <div style="margin-top:10px">${pts}</div>
+          ${transport}
+          ${leader}
+        </div>
+      </div>
+      <div class="kw-grid">
+        <div class="kw-cell"><span class="k">MOTS-CLÉS : </span><span class="v">${u.keywords}</span></div>
+        <div class="kw-cell"><span class="k">MOTS-CLÉS DE FACTION : </span><span class="v">${u.faction}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+render();
+</script>
+</body>
+</html>
